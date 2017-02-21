@@ -27,6 +27,9 @@ namespace MissionPlanner
 {
     public partial class MainV2 : Form
     {
+        private bool isMouseDown = false;
+        private Point mouseOffset; //记录鼠标指针的坐标
+
         private static readonly ILog log =
             LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -408,9 +411,9 @@ namespace MissionPlanner
 
         public void updateLayout(object sender, EventArgs e)
         {
-            MenuSimulation.Visible = DisplayConfiguration.displaySimulation;
-            MenuTerminal.Visible = DisplayConfiguration.displayTerminal;
-            MenuHelp.Visible = DisplayConfiguration.displayHelp;
+            //MenuSimulation.Visible = DisplayConfiguration.displaySimulation;
+            //MenuTerminal.Visible = DisplayConfiguration.displayTerminal;
+            //MenuHelp.Visible = DisplayConfiguration.displayHelp;
             MissionPlanner.Controls.BackstageView.BackstageView.Advanced = DisplayConfiguration.isAdvancedMode;
 
             if (MainV2.instance.FlightData != null)
@@ -504,15 +507,15 @@ namespace MissionPlanner
             }
 
             InitializeComponent();
-            try
-            {
-                if(Settings.Instance["theme"] != null)
-                    ThemeManager.SetTheme((ThemeManager.Themes)Enum.Parse(typeof(ThemeManager.Themes), Settings.Instance["theme"]));
-            }
-            catch
-            {
-            }
-            Utilities.ThemeManager.ApplyThemeTo(this);
+            //try
+            //{
+            //    if(Settings.Instance["theme"] != null)
+            //        ThemeManager.SetTheme((ThemeManager.Themes)Enum.Parse(typeof(ThemeManager.Themes), Settings.Instance["theme"]));
+            //}
+            //catch
+            //{
+            //}
+            //Utilities.ThemeManager.ApplyThemeTo(this);
             MyView = new MainSwitcher(this);
 
             View = MyView;
@@ -632,41 +635,41 @@ namespace MissionPlanner
 
             ChangeUnits();
 
-            if (Settings.Instance["theme"] != null)
-            {
-                try
-                {
-                    ThemeManager.SetTheme(
-                        (ThemeManager.Themes)
-                            Enum.Parse(typeof (ThemeManager.Themes), Settings.Instance["theme"].ToString()));
-                }
-                catch (Exception exception)
-                {
-                    log.Error(exception);
-                }
+            //if (Settings.Instance["theme"] != null)
+            //{
+            //    try
+            //    {
+            //        ThemeManager.SetTheme(
+            //            (ThemeManager.Themes)
+            //                Enum.Parse(typeof (ThemeManager.Themes), Settings.Instance["theme"].ToString()));
+            //    }
+            //    catch (Exception exception)
+            //    {
+            //        log.Error(exception);
+            //    }
 
-                if (ThemeManager.CurrentTheme == ThemeManager.Themes.Custom)
-                {
-                    try
-                    {
-                        ThemeManager.BGColor = Color.FromArgb(int.Parse(Settings.Instance["theme_bg"].ToString()));
-                        ThemeManager.ControlBGColor = Color.FromArgb(int.Parse(Settings.Instance["theme_ctlbg"].ToString()));
-                        ThemeManager.TextColor = Color.FromArgb(int.Parse(Settings.Instance["theme_text"].ToString()));
-                        ThemeManager.ButBG = Color.FromArgb(int.Parse(Settings.Instance["theme_butbg"].ToString()));
-                        ThemeManager.ButBorder = Color.FromArgb(int.Parse(Settings.Instance["theme_butbord"].ToString()));
-                    }
-                    catch
-                    {
-                        log.Error("Bad Custom theme - reset to standard");
-                        ThemeManager.SetTheme(ThemeManager.Themes.BurntKermit);
-                    }
-                }
+            //    if (ThemeManager.CurrentTheme == ThemeManager.Themes.Custom)
+            //    {
+            //        try
+            //        {
+            //            ThemeManager.BGColor = Color.FromArgb(int.Parse(Settings.Instance["theme_bg"].ToString()));
+            //            ThemeManager.ControlBGColor = Color.FromArgb(int.Parse(Settings.Instance["theme_ctlbg"].ToString()));
+            //            ThemeManager.TextColor = Color.FromArgb(int.Parse(Settings.Instance["theme_text"].ToString()));
+            //            ThemeManager.ButBG = Color.FromArgb(int.Parse(Settings.Instance["theme_butbg"].ToString()));
+            //            ThemeManager.ButBorder = Color.FromArgb(int.Parse(Settings.Instance["theme_butbord"].ToString()));
+            //        }
+            //        catch
+            //        {
+            //            log.Error("Bad Custom theme - reset to standard");
+            //            ThemeManager.SetTheme(ThemeManager.Themes.BurntKermit);
+            //        }
+            //    }
 
-                if (ThemeManager.CurrentTheme == ThemeManager.Themes.HighContrast)
-                {
-                    switchicons(new highcontrastmenuicons());
-                }
-            }
+            //    if (ThemeManager.CurrentTheme == ThemeManager.Themes.HighContrast)
+            //    {
+            //        switchicons(new highcontrastmenuicons());
+            //    }
+            //}
 
             if (Settings.Instance["showairports"] != null)
             {
@@ -882,28 +885,28 @@ namespace MissionPlanner
                 this.Icon = Icon.FromHandle(((Bitmap)Program.IconFile).GetHicon());
             }
 
-            if (Program.Logo != null && Program.name == "VVVVZ")
-            {
-                MenuDonate.Click -= this.toolStripMenuItem1_Click;
-                MenuDonate.Text = "";
-                MenuDonate.Image = Program.Logo;
+            //if (Program.Logo != null && Program.name == "VVVVZ")
+            //{
+            //    MenuDonate.Click -= this.toolStripMenuItem1_Click;
+            //    MenuDonate.Text = "";
+            //    MenuDonate.Image = Program.Logo;
 
-                MenuDonate.Click += MenuCustom_Click;
+            //    MenuDonate.Click += MenuCustom_Click;
 
-                MenuFlightData.Visible = false;
-                MenuFlightPlanner.Visible = true;
-                MenuConfigTune.Visible = false;
-                MenuHelp.Visible = false;
-                MenuInitConfig.Visible = false;
-                MenuSimulation.Visible = false;
-                MenuTerminal.Visible = false;
-            }
-            else if (Program.Logo != null && Program.names.Contains(Program.name))
-            {
-                MenuDonate.Click -= this.toolStripMenuItem1_Click;
-                MenuDonate.Text = "";
-                MenuDonate.Image = Program.Logo;
-            }
+            //    MenuFlightData.Visible = false;
+            //    MenuFlightPlanner.Visible = true;
+            //    MenuConfigTune.Visible = false;
+            //    MenuHelp.Visible = false;
+            //    MenuInitConfig.Visible = false;
+            //    MenuSimulation.Visible = false;
+            //    MenuTerminal.Visible = false;
+            //}
+            //else if (Program.Logo != null && Program.names.Contains(Program.name))
+            //{
+            //    MenuDonate.Click -= this.toolStripMenuItem1_Click;
+            //    MenuDonate.Text = "";
+            //    MenuDonate.Image = Program.Logo;
+            //}
 
             Application.DoEvents();
 
@@ -989,58 +992,58 @@ namespace MissionPlanner
 
             displayicons = icons;
 
-            MainMenu.BackColor = SystemColors.MenuBar;
+            //MainMenu.BackColor = SystemColors.MenuBar;
 
-            MainMenu.BackgroundImage = displayicons.bg;
+            //MainMenu.BackgroundImage = displayicons.bg;
 
-            MenuFlightData.Image = displayicons.fd;
-            MenuFlightPlanner.Image = displayicons.fp;
-            MenuInitConfig.Image = displayicons.initsetup;
-            MenuSimulation.Image = displayicons.sim;
-            MenuConfigTune.Image = displayicons.config_tuning;
-            MenuTerminal.Image = displayicons.terminal;
-            MenuConnect.Image = displayicons.connect;
-            MenuHelp.Image = displayicons.help;
-            MenuDonate.Image = displayicons.donate;
+            //MenuFlightData.Image = displayicons.fd;
+            //MenuFlightPlanner.Image = displayicons.fp;
+            //MenuInitConfig.Image = displayicons.initsetup;
+            //MenuSimulation.Image = displayicons.sim;
+            //MenuConfigTune.Image = displayicons.config_tuning;
+            //MenuTerminal.Image = displayicons.terminal;
+            //MenuConnect.Image = displayicons.connect;
+            //MenuHelp.Image = displayicons.help;
+            //MenuDonate.Image = displayicons.donate;
 
 
-            MenuFlightData.ForeColor = ThemeManager.TextColor;
-            MenuFlightPlanner.ForeColor = ThemeManager.TextColor;
-            MenuInitConfig.ForeColor = ThemeManager.TextColor;
-            MenuSimulation.ForeColor = ThemeManager.TextColor;
-            MenuConfigTune.ForeColor = ThemeManager.TextColor;
-            MenuTerminal.ForeColor = ThemeManager.TextColor;
-            MenuConnect.ForeColor = ThemeManager.TextColor;
-            MenuHelp.ForeColor = ThemeManager.TextColor;
-            MenuDonate.ForeColor = ThemeManager.TextColor;
+            //MenuFlightData.ForeColor = ThemeManager.TextColor;
+            //MenuFlightPlanner.ForeColor = ThemeManager.TextColor;
+            //MenuInitConfig.ForeColor = ThemeManager.TextColor;
+            //MenuSimulation.ForeColor = ThemeManager.TextColor;
+            //MenuConfigTune.ForeColor = ThemeManager.TextColor;
+            //MenuTerminal.ForeColor = ThemeManager.TextColor;
+            //MenuConnect.ForeColor = ThemeManager.TextColor;
+            //MenuHelp.ForeColor = ThemeManager.TextColor;
+            //MenuDonate.ForeColor = ThemeManager.TextColor;
         }
 
-        void MenuCustom_Click(object sender, EventArgs e)
-        {
-            if (Settings.Instance.GetBoolean("password_protect") == false)
-            {
-                MenuFlightData.Visible = true;
-                MenuFlightPlanner.Visible = true;
-                MenuConfigTune.Visible = true;
-                MenuHelp.Visible = true;
-                MenuInitConfig.Visible = true;
-                MenuSimulation.Visible = true;
-                MenuTerminal.Visible = true;
-            }
-            else
-            {
-                if (Password.VerifyPassword())
-                {
-                    MenuFlightData.Visible = true;
-                    MenuFlightPlanner.Visible = true;
-                    MenuConfigTune.Visible = true;
-                    MenuHelp.Visible = true;
-                    MenuInitConfig.Visible = true;
-                    MenuSimulation.Visible = true;
-                    MenuTerminal.Visible = true;
-                }
-            }
-        }
+        //void MenuCustom_Click(object sender, EventArgs e)
+        //{
+        //    if (Settings.Instance.GetBoolean("password_protect") == false)
+        //    {
+        //        MenuFlightData.Visible = true;
+        //        MenuFlightPlanner.Visible = true;
+        //        MenuConfigTune.Visible = true;
+        //        MenuHelp.Visible = true;
+        //        MenuInitConfig.Visible = true;
+        //        MenuSimulation.Visible = true;
+        //        MenuTerminal.Visible = true;
+        //    }
+        //    else
+        //    {
+        //        if (Password.VerifyPassword())
+        //        {
+        //            MenuFlightData.Visible = true;
+        //            MenuFlightPlanner.Visible = true;
+        //            MenuConfigTune.Visible = true;
+        //            MenuHelp.Visible = true;
+        //            MenuInitConfig.Visible = true;
+        //            MenuSimulation.Visible = true;
+        //            MenuTerminal.Visible = true;
+        //        }
+        //    }
+        //}
 
         void adsb_UpdatePlanePosition(object sender, EventArgs e)
         {
@@ -2669,16 +2672,19 @@ namespace MissionPlanner
             if (Program.Logo != null && Program.name == "VVVVZ")
             {
                 this.PerformLayout();
-                MenuFlightPlanner_Click(this, e);
-                MainMenu_ItemClicked(this, new ToolStripItemClickedEventArgs(MenuFlightPlanner));
+                toolStripButton2_Click(this, e);
+                //MenuFlightPlanner_Click(this, e);
+
+                //MainMenu_ItemClicked(this, new ToolStripItemClickedEventArgs(MenuFlightPlanner));
             }
             else
             {
                 this.PerformLayout();
                 log.Info("show FlightData");
-                MenuFlightData_Click(this, e);
+                toolStripButton1_Click(this, e);
+               // MenuFlightData_Click(this, e);
                 log.Info("show FlightData... Done");
-                MainMenu_ItemClicked(this, new ToolStripItemClickedEventArgs(MenuFlightData));
+               // MainMenu_ItemClicked(this, new ToolStripItemClickedEventArgs(MenuFlightData));
             }
 
             // for long running tasks using own threads.
@@ -3331,12 +3337,12 @@ namespace MissionPlanner
 
         private void MainMenu_MouseLeave(object sender, EventArgs e)
         {
-            if (_connectionControl.PointToClient(Control.MousePosition).Y < MainMenu.Height)
-                return;
+            //if (_connectionControl.PointToClient(Control.MousePosition).Y < MainMenu.Height)
+            //    return;
 
-            this.SuspendLayout();
+            //this.SuspendLayout();
 
-            panel1.Visible = false;
+            //panel1.Visible = false;
 
             this.ResumeLayout();
         }
@@ -3344,10 +3350,10 @@ namespace MissionPlanner
         void menu_MouseEnter(object sender, EventArgs e)
         {
             this.SuspendLayout();
-            panel1.Location = new Point(0, 0);
-            panel1.Width = menu.Width;
-            panel1.BringToFront();
-            panel1.Visible = true;
+            //panel1.Location = new Point(0, 0);
+            //panel1.Width = menu.Width;
+            //panel1.BringToFront();
+            //panel1.Visible = true;
             this.ResumeLayout();
         }
 
@@ -3362,30 +3368,30 @@ namespace MissionPlanner
         {
             autoHideToolStripMenuItem.Checked = hide;
 
-            if (!hide)
-            {
-                this.SuspendLayout();
-                panel1.Dock = DockStyle.Top;
-                panel1.SendToBack();
-                panel1.Visible = true;
-                menu.Visible = false;
-                MainMenu.MouseLeave -= MainMenu_MouseLeave;
-                panel1.MouseLeave -= MainMenu_MouseLeave;
-                toolStripConnectionControl.MouseLeave -= MainMenu_MouseLeave;
-                this.ResumeLayout(false);
-            }
-            else
-            {
-                this.SuspendLayout();
-                panel1.Dock = DockStyle.None;
-                panel1.Visible = false;
-                MainMenu.MouseLeave += MainMenu_MouseLeave;
-                panel1.MouseLeave += MainMenu_MouseLeave;
-                toolStripConnectionControl.MouseLeave += MainMenu_MouseLeave;
-                menu.Visible = true;
-                menu.SendToBack();
-                this.ResumeLayout(false);
-            }
+            //if (!hide)
+            //{
+            //    this.SuspendLayout();
+            //    panel1.Dock = DockStyle.Top;
+            //    panel1.SendToBack();
+            //    panel1.Visible = true;
+            //    menu.Visible = false;
+            //    MainMenu.MouseLeave -= MainMenu_MouseLeave;
+            //    panel1.MouseLeave -= MainMenu_MouseLeave;
+            //    toolStripConnectionControl.MouseLeave -= MainMenu_MouseLeave;
+            //    this.ResumeLayout(false);
+            //}
+            //else
+            //{
+            //    this.SuspendLayout();
+            //    panel1.Dock = DockStyle.None;
+            //    panel1.Visible = false;
+            //    MainMenu.MouseLeave += MainMenu_MouseLeave;
+            //    panel1.MouseLeave += MainMenu_MouseLeave;
+            //    toolStripConnectionControl.MouseLeave += MainMenu_MouseLeave;
+            //    menu.Visible = true;
+            //    menu.SendToBack();
+            //    this.ResumeLayout(false);
+            //}
         }
 
         private void MainV2_KeyDown(object sender, KeyEventArgs e)
@@ -3581,23 +3587,23 @@ namespace MissionPlanner
             DBT_USERDEFINED = 0xFFFF,
         }
 
-        private void MainMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            foreach (ToolStripItem item in MainMenu.Items)
-            {
-                if (e.ClickedItem == item)
-                {
-                    item.BackColor = ThemeManager.ControlBGColor;
-                }
-                else
-                {
-                    item.BackColor = Color.Transparent;
-                    item.BackgroundImage = displayicons.bg; //.BackColor = Color.Black;
-                }
-            }
-            //MainMenu.BackColor = Color.Black;
-            //MainMenu.BackgroundImage = MissionPlanner.Properties.Resources.bgdark;
-        }
+        //private void MainMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        //{
+        //    foreach (ToolStripItem item in MainMenu.Items)
+        //    {
+        //        if (e.ClickedItem == item)
+        //        {
+        //            item.BackColor = ThemeManager.ControlBGColor;
+        //        }
+        //        else
+        //        {
+        //            item.BackColor = Color.Transparent;
+        //            item.BackgroundImage = displayicons.bg; //.BackColor = Color.Black;
+        //        }
+        //    }
+        //    //MainMenu.BackColor = Color.Black;
+        //    //MainMenu.BackgroundImage = MissionPlanner.Properties.Resources.bgdark;
+        //}
 
         private void fullScreenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -3625,6 +3631,75 @@ namespace MissionPlanner
         private void connectionOptionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new ConnectionOptions().Show(this);
+        }
+
+        private void toolStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mouseOffset.X = e.X;
+                mouseOffset.Y = e.Y;
+                isMouseDown = true;
+            }
+        }
+
+        private void toolStrip1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isMouseDown = false;
+            }
+        }
+
+        private void toolStrip1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isMouseDown)
+            {
+                int left = panel2.Left + e.X - mouseOffset.X;
+                int top = panel2.Top + e.Y - mouseOffset.Y;
+                panel2.Location = new Point(left, top);
+            }
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            MyView.ShowScreen("FlightData");
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            MyView.ShowScreen("FlightPlanner");
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            if (Settings.Instance.GetBoolean("password_protect") == false)
+            {
+                MyView.ShowScreen("HWConfig");
+            }
+            else
+            {
+                if (Password.VerifyPassword())
+                {
+                    MyView.ShowScreen("HWConfig");
+                }
+            }
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            if (Settings.Instance.GetBoolean("password_protect") == false)
+            {
+                MyView.ShowScreen("SWConfig");
+            }
+            else
+            {
+                if (Password.VerifyPassword())
+                {
+                    MyView.ShowScreen("SWConfig");
+                }
+            }
         }
     }
 }
