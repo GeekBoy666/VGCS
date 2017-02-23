@@ -187,13 +187,13 @@ namespace MissionPlanner.GCSViews
 
             mymap.Paint += mymap_Paint;
 
-            // populate the unmodified base list
+            // populate the unmodified base list 填充未更改的基础列表
             tabControlactions.TabPages.ForEach(i => { TabListOriginal.Add((TabPage)i); });
 
             //  mymap.Manager.UseMemoryCache = false;
 
             log.Info("Tunning Graph Settings");
-            // setup default tuning graph
+            // setup default tuning graph 设置默认调整图
             if (Settings.Instance["Tuning_Graph_Selected"] != null)
             {
                 string line = Settings.Instance["Tuning_Graph_Selected"].ToString();

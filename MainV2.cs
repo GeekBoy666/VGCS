@@ -22,14 +22,18 @@ using MissionPlanner.Warnings;
 using System.Collections.Concurrent;
 using MissionPlanner.GCSViews.ConfigurationView;
 using WebCamService;
-
+using OpenTK;
 namespace MissionPlanner
 {
     public partial class MainV2 : Form
     {
         private bool isMouseDown = false;
         private Point mouseOffset; //记录鼠标指针的坐标
-
+        Thread thisthread1;
+        public static bool threadrun;
+        public static HUD myhud;
+        AviWriter aviwriter;
+        double LogPlayBackSpeed = 1.0;
         private static readonly ILog log =
             LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -467,7 +471,9 @@ namespace MissionPlanner
         public MainV2()
         {
             log.Info("Mainv2 ctor");
-
+            //myhud = hud1;
+            //HUD.Custom.src = MainV2.comPort.MAV.cs;
+            //MissionPlanner.Controls.PreFlight.CheckListItem.defaultsrc = MainV2.comPort.MAV.cs;
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
 
             // set this before we reset it
@@ -2900,8 +2906,739 @@ namespace MissionPlanner
 
                 Settings.Instance["newuser"] = DateTime.Now.ToShortDateString();
             }
+            hud1.doResize();
+
+            thisthread1 = new Thread(mainloop);
+            thisthread1.Name = "F Mainloop";
+            thisthread1.IsBackground = true;
+            thisthread1.Start();
+        }
+        private void mainloop()
+        {
+            //while (!IsHandleCreated)
+            //    Thread.Sleep(1000);
+            //threadrun = true;
+            //while (threadrun)
+            //{
+            //    if (MainV2.comPort.giveComport)
+            //    {
+            //        Thread.Sleep(50);
+            //        updateBindingSource();
+            //        continue;
+            //    }
+            //    if (!MainV2.comPort.logreadmode)
+            //        Thread.Sleep(50); // max is only ever 10 hz but we go a little faster to empty the serial queue
+
+            //    if (this.IsDisposed)
+            //    {
+            //        threadrun = false;
+            //        break;
+            //    }
+            //    hud1.streamjpgenable = true;
+            //    try
+            //    {
+            //        if (!MainV2.comPort.giveComport)
+            //            MainV2.comPort.readPacket();
+
+            //        // update currentstate of sysids on the port
+            //        foreach (var MAV in MainV2.comPort.MAVlist)
+            //        {
+            //            try
+            //            {
+            //                MAV.cs.UpdateCurrentSettings(null, false, MainV2.comPort, MAV);
+            //            }
+            //            catch (Exception ex)
+            //            {
+            //                log.Error(ex);
+            //            }
+            //        }
+            //    }
+            //    catch
+            //    {
+            //        log.Error("Failed to read log packet");
+            //    }
+            //}
+            threadrun = true;
+            //EndPoint Remote = new IPEndPoint(IPAddress.Any, 0);
+
+            DateTime tracklast = DateTime.Now.AddSeconds(0);
+
+            DateTime tunning = DateTime.Now.AddSeconds(0);
+
+            DateTime mapupdate = DateTime.Now.AddSeconds(0);
+
+            DateTime vidrec = DateTime.Now.AddSeconds(0);
+
+            DateTime waypoints = DateTime.Now.AddSeconds(0);
+
+            DateTime updatescreen = DateTime.Now;
+
+            DateTime tsreal = DateTime.Now;
+            double taketime = 0;
+            double timeerror = 0;
+
+            while (!IsHandleCreated)
+                Thread.Sleep(1000);
+
+            while (threadrun)
+            {
+                if (MainV2.comPort.giveComport)
+                {
+                    Thread.Sleep(50);
+                    updateBindingSource();
+                    continue;
+                }
+
+                if (!MainV2.comPort.logreadmode)
+                    Thread.Sleep(50); // max is only ever 10 hz but we go a little faster to empty the serial queue
+
+                if (this.IsDisposed)
+                {
+                    threadrun = false;
+                    break;
+                }
+
+                try
+                {
+                    if (aviwriter != null && vidrec.AddMilliseconds(100) <= DateTime.Now)
+                    {
+                        vidrec = DateTime.Now;
+
+                        hud1.streamjpgenable = true;
+
+                        //aviwriter.avi_start("test.avi");
+                        // add a frame
+                        aviwriter.avi_add(hud1.streamjpg.ToArray(), (uint)hud1.streamjpg.Length);
+                        // write header - so even partial files will play
+                        aviwriter.avi_end(hud1.Width, hud1.Height, 10);
+                    }
+                }
+                catch
+                {
+                    log.Error("Failed to write avi");
+                }
+
+                // log playback
+                if (MainV2.comPort.logreadmode && MainV2.comPort.logplaybackfile != null)
+                {
+                    if (MainV2.comPort.BaseStream.IsOpen)
+                    {
+                        MainV2.comPort.logreadmode = false;
+                        try
+                        {
+                            MainV2.comPort.logplaybackfile.Close();
+                        }
+                        catch
+                        {
+                            log.Error("Failed to close logfile");
+                        }
+                        MainV2.comPort.logplaybackfile = null;
+                    }
+
+
+
+
+                    //Console.WriteLine(DateTime.Now.Millisecond + " done ");
+
+                    DateTime logplayback = MainV2.comPort.lastlogread;
+                    try
+                    {
+                        if (!MainV2.comPort.giveComport)
+                            MainV2.comPort.readPacket();
+
+                        // update currentstate of sysids on the port
+                        foreach (var MAV in MainV2.comPort.MAVlist)
+                        {
+                            try
+                            {
+                                MAV.cs.UpdateCurrentSettings(null, false, MainV2.comPort, MAV);
+                            }
+                            catch (Exception ex)
+                            {
+                                log.Error(ex);
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        log.Error("Failed to read log packet");
+                    }
+
+                    double act = (MainV2.comPort.lastlogread - logplayback).TotalMilliseconds;
+
+                    if (act > 9999 || act < 0)
+                        act = 0;
+
+                    double ts = 0;
+                    
+
+                    if (LogPlayBackSpeed >= 4 && MainV2.speechEnable)
+                        MainV2.speechEngine.SpeakAsyncCancelAll();
+
+                    double timetook = (DateTime.Now - tsreal).TotalMilliseconds;
+                    if (timetook != 0)
+                    {
+                        //Console.WriteLine("took: " + timetook + "=" + taketime + " " + (taketime - timetook) + " " + ts);
+                        //Console.WriteLine(MainV2.comPort.lastlogread.Second + " " + DateTime.Now.Second + " " + (MainV2.comPort.lastlogread.Second - DateTime.Now.Second));
+                        //if ((taketime - timetook) < 0)
+                        {
+                            timeerror += (taketime - timetook);
+                            if (ts != 0)
+                            {
+                                ts += timeerror;
+                                timeerror = 0;
+                            }
+                        }
+                        if (Math.Abs(ts) > 1000)
+                            ts = 1000;
+                    }
+
+                    taketime = ts;
+                    tsreal = DateTime.Now;
+
+                    if (ts > 0 && ts < 1000)
+                        Thread.Sleep((int)ts);
+
+                    tracklast = tracklast.AddMilliseconds(ts - act);
+                    tunning = tunning.AddMilliseconds(ts - act);
+
+                    if (tracklast.Month != DateTime.Now.Month)
+                    {
+                        tracklast = DateTime.Now;
+                        tunning = DateTime.Now;
+                    }
+
+                    try
+                    {
+                        if (MainV2.comPort.logplaybackfile != null &&
+                            MainV2.comPort.logplaybackfile.BaseStream.Position ==
+                            MainV2.comPort.logplaybackfile.BaseStream.Length)
+                        {
+                            MainV2.comPort.logreadmode = false;
+                        }
+                    }
+                    catch
+                    {
+                        MainV2.comPort.logreadmode = false;
+                    }
+                }
+                else
+                {
+                    //// ensure we know to stop
+                    //if (MainV2.comPort.logreadmode)
+                    //    MainV2.comPort.logreadmode = false;
+                    //updatePlayPauseButton(false);
+
+                    //if (!playingLog && MainV2.comPort.logplaybackfile != null)
+                    //{
+                    //    continue;
+                    //}
+                }
+
+                try
+                {
+                    //CheckAndBindPreFlightData();
+                    //Console.WriteLine(DateTime.Now.Millisecond);
+                    //int fixme;
+                    updateBindingSource();
+                    // Console.WriteLine(DateTime.Now.Millisecond + " done ");
+
+                    // battery warning.
+                    float warnvolt = Settings.Instance.GetFloat("speechbatteryvolt");
+                    float warnpercent = Settings.Instance.GetFloat("speechbatterypercent");
+
+                    if (MainV2.comPort.MAV.cs.battery_voltage <= warnvolt)
+                    {
+                        hud1.lowvoltagealert = true;
+                    }
+                    else if ((MainV2.comPort.MAV.cs.battery_remaining) < warnpercent)
+                    {
+                        hud1.lowvoltagealert = true;
+                    }
+                    else
+                    {
+                        hud1.lowvoltagealert = false;
+                    }
+
+                    // update opengltest
+                    if (OpenGLtest.instance != null)
+                    {
+                        OpenGLtest.instance.rpy = new Vector3(MainV2.comPort.MAV.cs.roll, MainV2.comPort.MAV.cs.pitch,
+                            MainV2.comPort.MAV.cs.yaw);
+                        OpenGLtest.instance.LocationCenter = new PointLatLngAlt(MainV2.comPort.MAV.cs.lat,
+                            MainV2.comPort.MAV.cs.lng, MainV2.comPort.MAV.cs.altasl, "here");
+                    }
+
+                    // update opengltest2
+                    if (OpenGLtest2.instance != null)
+                    {
+                        OpenGLtest2.instance.rpy = new Vector3(MainV2.comPort.MAV.cs.roll, MainV2.comPort.MAV.cs.pitch,
+                            MainV2.comPort.MAV.cs.yaw);
+                        OpenGLtest2.instance.LocationCenter = new PointLatLngAlt(MainV2.comPort.MAV.cs.lat,
+                            MainV2.comPort.MAV.cs.lng, MainV2.comPort.MAV.cs.altasl, "here");
+                    }
+
+                    // update vario info
+                    Vario.SetValue(MainV2.comPort.MAV.cs.climbrate);
+
+                    // udpate tunning tab
+                    //if (tunning.AddMilliseconds(50) < DateTime.Now && CB_tuning.Checked)
+                    //{
+                    //    double time = (Environment.TickCount - tickStart) / 1000.0;
+                    //    if (list1item != null)
+                    //        list1.Add(time, ConvertToDouble(list1item.GetValue(MainV2.comPort.MAV.cs, null)));
+                    //    if (list2item != null)
+                    //        list2.Add(time, ConvertToDouble(list2item.GetValue(MainV2.comPort.MAV.cs, null)));
+                    //    if (list3item != null)
+                    //        list3.Add(time, ConvertToDouble(list3item.GetValue(MainV2.comPort.MAV.cs, null)));
+                    //    if (list4item != null)
+                    //        list4.Add(time, ConvertToDouble(list4item.GetValue(MainV2.comPort.MAV.cs, null)));
+                    //    if (list5item != null)
+                    //        list5.Add(time, ConvertToDouble(list5item.GetValue(MainV2.comPort.MAV.cs, null)));
+                    //    if (list6item != null)
+                    //        list6.Add(time, ConvertToDouble(list6item.GetValue(MainV2.comPort.MAV.cs, null)));
+                    //    if (list7item != null)
+                    //        list7.Add(time, ConvertToDouble(list7item.GetValue(MainV2.comPort.MAV.cs, null)));
+                    //    if (list8item != null)
+                    //        list8.Add(time, ConvertToDouble(list8item.GetValue(MainV2.comPort.MAV.cs, null)));
+                    //    if (list9item != null)
+                    //        list9.Add(time, ConvertToDouble(list9item.GetValue(MainV2.comPort.MAV.cs, null)));
+                    //    if (list10item != null)
+                    //        list10.Add(time, ConvertToDouble(list10item.GetValue(MainV2.comPort.MAV.cs, null)));
+                    //}
+
+                    // update map
+                    if (tracklast.AddSeconds(1.2) < DateTime.Now)
+                    {
+                        // show disable joystick button
+                        if (MainV2.joystick != null && MainV2.joystick.enabled)
+                        {
+                            this.Invoke((MethodInvoker)delegate {
+                                //but_disablejoystick.Visible = true;
+                            });
+                        }
+
+                        if (Settings.Instance.GetBoolean("CHK_maprotation"))
+                        {
+                            // dont holdinvalidation here
+                            //setMapBearing();
+                        }
+
+                        //if (route == null)
+                        //{
+                        //    route = new GMapRoute(trackPoints, "track");
+                        //    routes.Routes.Add(route);
+                        //}
+
+                        //PointLatLng currentloc = new PointLatLng(MainV2.comPort.MAV.cs.lat, MainV2.comPort.MAV.cs.lng);
+
+                        //gMapControl1.HoldInvalidation = true;
+
+                        int numTrackLength = Settings.Instance.GetInt32("NUM_tracklength");
+                        // maintain route history length
+                        //if (route.Points.Count > numTrackLength)
+                        //{
+                        //    route.Points.RemoveRange(0,
+                        //        route.Points.Count - numTrackLength);
+                        //}
+                        // add new route point
+                        //if (MainV2.comPort.MAV.cs.lat != 0 && MainV2.comPort.MAV.cs.lng != 0)
+                        //{
+                        //    route.Points.Add(currentloc);
+                        //}
+
+                        if (!this.IsHandleCreated)
+                            continue;
+
+                        //updateRoutePosition();
+
+                        // update programed wp course
+                        if (waypoints.AddSeconds(5) < DateTime.Now)
+                        {
+                            //Console.WriteLine("Doing FD WP's");
+                            //updateClearMissionRouteMarkers();
+
+                            //float dist = 0;
+                            //float travdist = 0;
+                            //distanceBar1.ClearWPDist();
+                            //MAVLink.mavlink_mission_item_t lastplla = new MAVLink.mavlink_mission_item_t();
+                            //MAVLink.mavlink_mission_item_t home = new MAVLink.mavlink_mission_item_t();
+
+                            //foreach (MAVLink.mavlink_mission_item_t plla in MainV2.comPort.MAV.wps.Values)
+                            //{
+                            //    if (plla.x == 0 || plla.y == 0)
+                            //        continue;
+
+                            //    if (plla.command == (ushort)MAVLink.MAV_CMD.DO_SET_ROI)
+                            //    {
+                            //        addpolygonmarkerred(plla.seq.ToString(), plla.y, plla.x, (int)plla.z, Color.Red,
+                            //            routes);
+                            //        continue;
+                            //    }
+
+                            //    string tag = plla.seq.ToString();
+                            //    if (plla.seq == 0 && plla.current != 2)
+                            //    {
+                            //        tag = "Home";
+                            //        home = plla;
+                            //    }
+                            //    if (plla.current == 2)
+                            //    {
+                            //        continue;
+                            //    }
+
+                            //    if (lastplla.command == 0)
+                            //        lastplla = plla;
+
+                            //    try
+                            //    {
+                            //        dist =
+                            //            (float)
+                            //                new PointLatLngAlt(plla.x, plla.y).GetDistance(new PointLatLngAlt(
+                            //                    lastplla.x, lastplla.y));
+
+                            //        distanceBar1.AddWPDist(dist);
+
+                            //        if (plla.seq <= MainV2.comPort.MAV.cs.wpno)
+                            //        {
+                            //            travdist += dist;
+                            //        }
+
+                            //        lastplla = plla;
+                            //    }
+                            //    catch
+                            //    {
+                            //    }
+
+                            //    addpolygonmarker(tag, plla.y, plla.x, (int)plla.z, Color.White, polygons);
+                            //}
+
+                            try
+                            {
+                                //dist = (float)new PointLatLngAlt(home.x, home.y).GetDistance(new PointLatLngAlt(lastplla.x, lastplla.y));
+                                // distanceBar1.AddWPDist(dist);
+                            }
+                            catch
+                            {
+                            }
+
+                            //travdist -= MainV2.comPort.MAV.cs.wp_dist;
+
+                            //if (MainV2.comPort.MAV.cs.mode.ToUpper() == "AUTO")
+                            //    distanceBar1.traveleddist = travdist;
+
+                            //RegeneratePolygon();
+
+                            //// update rally points
+
+                            //rallypointoverlay.Markers.Clear();
+
+                            //foreach (var mark in MainV2.comPort.MAV.rallypoints.Values)
+                            //{
+                            //    rallypointoverlay.Markers.Add(new GMapMarkerRallyPt(mark));
+                            //}
+
+                            // optional on Flight data
+                            if (MainV2.ShowAirports)
+                            {
+                                // airports
+                            //    foreach (var item in Airports.getAirports(gMapControl1.Position).ToArray())
+                            //    {
+                            //        try
+                            //        {
+                            //            rallypointoverlay.Markers.Add(new GMapMarkerAirport(item)
+                            //            {
+                            //                ToolTipText = item.Tag,
+                            //                ToolTipMode = MarkerTooltipMode.OnMouseOver
+                            //            });
+                            //        }
+                            //        catch (Exception e)
+                            //        {
+                            //            log.Error(e);
+                            //        }
+                            //    }
+                            //}
+                            //waypoints = DateTime.Now;
+                        }
+
+                       // updateClearRoutesMarkers();
+
+                        // add this after the mav icons are drawn
+                        if (MainV2.comPort.MAV.cs.MovingBase != null)
+                        {
+                            //addMissionRouteMarker(new GMarkerGoogle(currentloc, GMarkerGoogleType.blue_dot)
+                            //{
+                            //    Position = MainV2.comPort.MAV.cs.MovingBase,
+                            //    ToolTipText = "Moving Base",
+                            //    ToolTipMode = MarkerTooltipMode.OnMouseOver
+                            //});
+                        }
+
+                        // add gimbal point center
+                        try
+                        {
+                            if (MainV2.comPort.MAV.param.ContainsKey("MNT_STAB_TILT")
+                                && MainV2.comPort.MAV.param.ContainsKey("MNT_STAB_ROLL")
+                                && MainV2.comPort.MAV.param.ContainsKey("MNT_TYPE"))
+                            {
+                                float temp1 = (float)MainV2.comPort.MAV.param["MNT_STAB_TILT"];
+                                float temp2 = (float)MainV2.comPort.MAV.param["MNT_STAB_ROLL"];
+
+                                float temp3 = (float)MainV2.comPort.MAV.param["MNT_TYPE"];
+
+                                if (MainV2.comPort.MAV.param.ContainsKey("MNT_STAB_PAN") &&
+                                    // (float)MainV2.comPort.MAV.param["MNT_STAB_PAN"] == 1 &&
+                                    ((float)MainV2.comPort.MAV.param["MNT_STAB_TILT"] == 1 &&
+                                      (float)MainV2.comPort.MAV.param["MNT_STAB_ROLL"] == 0) ||
+                                     (float)MainV2.comPort.MAV.param["MNT_TYPE"] == 4) // storm driver
+                                {
+                                    var marker = GimbalPoint.ProjectPoint();
+
+                                    if (marker != PointLatLngAlt.Zero)
+                                    {
+                                        MainV2.comPort.MAV.cs.GimbalPoint = marker;
+
+                                        //addMissionRouteMarker(new GMarkerGoogle(marker, GMarkerGoogleType.blue_dot)
+                                        //{
+                                        //    ToolTipText = "Camera Target\n" + marker,
+                                        //    ToolTipMode = MarkerTooltipMode.OnMouseOver
+                                        //});
+                                    }
+                                }
+                            }
+
+
+                            // cleanup old - no markers where added, so remove all old 
+                            if (MainV2.comPort.MAV.camerapoints.Count == 0)
+                                //photosoverlay.Markers.Clear();
+
+                            //var min_interval = 0.0;
+                            //if (MainV2.comPort.MAV.param.ContainsKey("CAM_MIN_INTERVAL"))
+                            //    min_interval = MainV2.comPort.MAV.param["CAM_MIN_INTERVAL"].Value / 1000.0;
+
+                            // set fov's based on last grid calc
+                            if (Settings.Instance["camera_fovh"] != null)
+                            {
+                                GMapMarkerPhoto.hfov = Settings.Instance.GetDouble("camera_fovh");
+                                GMapMarkerPhoto.vfov = Settings.Instance.GetDouble("camera_fovv");
+                            }
+
+                            // add new - populate camera_feedback to map
+                            double oldtime = double.MinValue;
+                            foreach (var mark in MainV2.comPort.MAV.camerapoints.ToArray())
+                            {
+                                var timesincelastshot = (mark.time_usec / 1000.0) / 1000.0 - oldtime;
+                                MainV2.comPort.MAV.cs.timesincelastshot = timesincelastshot;
+                                //bool contains = photosoverlay.Markers.Any(p => p.Tag.Equals(mark.time_usec));
+                                //if (!contains)
+                                //{
+                                //    if (timesincelastshot < min_interval)
+                                //        addMissionPhotoMarker(new GMapMarkerPhoto(mark, true));
+                                //    else
+                                //        addMissionPhotoMarker(new GMapMarkerPhoto(mark, false));
+                                //}
+                                oldtime = (mark.time_usec / 1000.0) / 1000.0;
+                            }
+
+                            // age current
+                            int camcount = MainV2.comPort.MAV.camerapoints.Count;
+                            int a = 0;
+                            //foreach (var mark in photosoverlay.Markers)
+                            //{
+                            //    if (mark is GMapMarkerPhoto)
+                            //    {
+                            //        if (CameraOverlap)
+                            //        {
+                            //            var marker = ((GMapMarkerPhoto)mark);
+                            //            // abandon roll higher than 25 degrees
+                            //            if (Math.Abs(marker.Roll) < 25)
+                            //            {
+                            //                MainV2.comPort.MAV.GMapMarkerOverlapCount.Add(
+                            //                    ((GMapMarkerPhoto)mark).footprintpoly);
+                            //            }
+                            //        }
+                            //        if (a < (camcount - 4))
+                            //            ((GMapMarkerPhoto)mark).drawfootprint = false;
+                            //    }
+                            //    a++;
+                            //}
+
+                            //if (CameraOverlap)
+                            //{
+                            //    if (!kmlpolygons.Markers.Contains(MainV2.comPort.MAV.GMapMarkerOverlapCount) &&
+                            //        camcount > 0)
+                            //    {
+                            //        kmlpolygons.Markers.Clear();
+                            //        kmlpolygons.Markers.Add(MainV2.comPort.MAV.GMapMarkerOverlapCount);
+                            //    }
+                            //}
+                            //else if (kmlpolygons.Markers.Contains(MainV2.comPort.MAV.GMapMarkerOverlapCount))
+                            //{
+                            //    kmlpolygons.Markers.Clear();
+                            //}
+                        }
+                        catch
+                        {
+                        }
+
+                        lock (MainV2.instance.adsblock)
+                        {
+                            foreach (adsb.PointLatLngAltHdg plla in MainV2.instance.adsbPlanes.Values)
+                            {
+                                // 30 seconds history
+                                if (((DateTime)plla.Time) > DateTime.Now.AddSeconds(-30))
+                                {
+                                    var adsbplane = new GMapMarkerADSBPlane(plla, plla.Heading)
+                                    {
+                                        ToolTipText = "ICAO: " + plla.Tag + " " + plla.Alt.ToString("0"),
+                                        //ToolTipMode = MarkerTooltipMode.OnMouseOver,
+                                        Tag = plla
+                                    };
+
+                                    if (plla.DisplayICAO)
+                                        //adsbplane.ToolTipMode = MarkerTooltipMode.Always;
+
+                                    switch (plla.ThreatLevel)
+                                    {
+                                        case MAVLink.MAV_COLLISION_THREAT_LEVEL.NONE:
+                                            adsbplane.AlertLevel = GMapMarkerADSBPlane.AlertLevelOptions.Green;
+                                            break;
+                                        case MAVLink.MAV_COLLISION_THREAT_LEVEL.LOW:
+                                            adsbplane.AlertLevel = GMapMarkerADSBPlane.AlertLevelOptions.Orange;
+                                            break;
+                                        case MAVLink.MAV_COLLISION_THREAT_LEVEL.HIGH:
+                                            adsbplane.AlertLevel = GMapMarkerADSBPlane.AlertLevelOptions.Red;
+                                            break;
+                                    }
+
+                                    ///addMissionRouteMarker(adsbplane);
+                                }
+                            }
+                        }
+
+
+                        //if (route.Points.Count > 0)
+                        //{
+                        //    // add primary route icon
+
+                        //    // draw guide mode point for only main mav
+                        //    if (MainV2.comPort.MAV.cs.mode.ToLower() == "guided" && MainV2.comPort.MAV.GuidedMode.x != 0)
+                        //    {
+                        //        addpolygonmarker("Guided Mode", MainV2.comPort.MAV.GuidedMode.y,
+                        //            MainV2.comPort.MAV.GuidedMode.x, (int)MainV2.comPort.MAV.GuidedMode.z, Color.Blue,
+                        //            routes);
+                        //    }
+
+                        //    // draw all icons for all connected mavs
+                        //    foreach (var port in MainV2.Comports)
+                        //    {
+                        //        // draw the mavs seen on this port
+                        //        foreach (var MAV in port.MAVlist)
+                        //        {
+                        //            var marker = Common.getMAVMarker(MAV);
+
+                        //            if (marker.Position.Lat == 0 && marker.Position.Lng == 0)
+                        //                continue;
+
+                        //            addMissionRouteMarker(marker);
+                        //        }
+                        //    }
+
+                            //if (route.Points.Count == 0 || route.Points[route.Points.Count - 1].Lat != 0 &&
+                            //    (mapupdate.AddSeconds(3) < DateTime.Now) && CHK_autopan.Checked)
+                            //{
+                            //    updateMapPosition(currentloc);
+                            //    mapupdate = DateTime.Now;
+                            //}
+
+                            //if (route.Points.Count == 1 && gMapControl1.Zoom == 3) // 3 is the default load zoom
+                            //{
+                            //    updateMapPosition(currentloc);
+                            //    updateMapZoom(17);
+                            //}
+                        }
+
+                        //gMapControl1.HoldInvalidation = false;
+
+                        //if (gMapControl1.Visible)
+                        //{
+                        //    gMapControl1.Invalidate();
+                        //}
+
+                        tracklast = DateTime.Now;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    log.Error(ex);
+                    Tracking.AddException(ex);
+                    Console.WriteLine("FD Main loop exception " + ex);
+                }
+            }
+            Console.WriteLine("FD Main loop exit");
         }
 
+
+        object updateBindingSourcelock = new object();
+        volatile int updateBindingSourcecount;
+        string updateBindingSourceThreadName = "";
+        DateTime lastscreenupdate = DateTime.Now;
+        private void updateBindingSource()
+        {
+            //  run at 25 hz.
+            if (lastscreenupdate.AddMilliseconds(40) < DateTime.Now)
+            {
+                // this is an attempt to prevent an invoke queue on the binding update on slow machines
+                if (updateBindingSourcecount > 0)
+                    return;
+
+                lock (updateBindingSourcelock)
+                {
+                    updateBindingSourcecount++;
+                    updateBindingSourceThreadName = Thread.CurrentThread.Name;
+                }
+
+                this.BeginInvokeIfRequired((MethodInvoker)delegate
+                {
+                    updateBindingSourceWork();
+
+                    lock (updateBindingSourcelock)
+                    {
+                        updateBindingSourcecount--;
+                    }
+                });
+            }
+        }
+        private void updateBindingSourceWork()
+        {
+         
+                    //Console.WriteLine("Null Binding");
+                   // MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSource_hub);
+          
+                //lastscreenupdate = DateTime.Now;
+            try
+            {
+                //if (this.Visible)
+                //{
+                //Console.Write("bindingSource1 ");
+                //MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSource1);
+                //Console.Write("bindingSourceHud ");
+                MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSource_hub);
+                //Console.WriteLine("DONE ");
+
+
+                //}
+                //else
+                //{
+                //    //Console.WriteLine("Null Binding");
+                //    MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSource_hub);
+                //}
+                lastscreenupdate = DateTime.Now;
+            }
+            catch
+            {
+            }
+        }
         private Dictionary<string, string> ProcessCommandLine(string[] args)
         {
             Dictionary<string, string> cmdargs = new Dictionary<string, string>();
@@ -3664,42 +4401,60 @@ namespace MissionPlanner
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            MyView.ShowScreen("FlightData");
+            //MyView.ShowScreen("FlightData");
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            MyView.ShowScreen("FlightPlanner");
+            //MyView.ShowScreen("FlightPlanner");
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            if (Settings.Instance.GetBoolean("password_protect") == false)
-            {
-                MyView.ShowScreen("HWConfig");
-            }
-            else
-            {
-                if (Password.VerifyPassword())
-                {
-                    MyView.ShowScreen("HWConfig");
-                }
-            }
+            //if (Settings.Instance.GetBoolean("password_protect") == false)
+            //{
+            //    MyView.ShowScreen("HWConfig");
+            //}
+            //else
+            //{
+            //    if (Password.VerifyPassword())
+            //    {
+            //        MyView.ShowScreen("HWConfig");
+            //    }
+            //}
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            if (Settings.Instance.GetBoolean("password_protect") == false)
-            {
-                MyView.ShowScreen("SWConfig");
-            }
-            else
-            {
-                if (Password.VerifyPassword())
-                {
-                    MyView.ShowScreen("SWConfig");
-                }
-            }
+            //if (Settings.Instance.GetBoolean("password_protect") == false)
+            //{
+            //    MyView.ShowScreen("SWConfig");
+            //}
+            //else
+            //{
+            //    if (Password.VerifyPassword())
+            //    {
+            //        MyView.ShowScreen("SWConfig");
+            //    }
+            //}
+        }
+
+        private void MainV2_Load(object sender, EventArgs e)
+        {
+            //hud1.doResize();
+
+            //thisthread1 = new Thread(mainloop);
+            //thisthread1.Name = "F Mainloop";
+            //thisthread1.IsBackground = true;
+            //thisthread1.Start();
+        }
+
+        private void hud1_Resize(object sender, EventArgs e)
+        {
+            Console.WriteLine("HUD resize " + hud1.Width + " " + hud1.Height); // +"\n"+ System.Environment.StackTrace);
+
+            if (hud1.Parent == this.panel1)
+                panel1.Height = hud1.Height;
         }
     }
 }
