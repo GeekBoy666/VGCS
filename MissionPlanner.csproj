@@ -130,6 +130,7 @@
     <LangVersion>default</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -350,6 +351,12 @@
     </Compile>
     <Compile Include="Controls\MyDataGridView.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\Calibra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\Calibra.Designer.cs">
+      <DependentUpon>Calibra.cs</DependentUpon>
     </Compile>
     <Compile Include="GCSViews\ConfigurationView\ConfigFrameClassType.cs">
       <SubType>UserControl</SubType>
@@ -1156,6 +1163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FollowMe.ar.resx">
       <DependentUpon>FollowMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\Calibra.resx">
+      <DependentUpon>Calibra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAccelerometerCalibration.ar.resx">
       <DependentUpon>ConfigAccelerometerCalibration.cs</DependentUpon>
@@ -2930,6 +2940,7 @@
     <None Include="aot.sh">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Drivers\arduinomega2560.cat" />
     <None Include="Drivers\ArduinoMEGA2560.inf" />
     <None Include="Drivers\mindpx.cat">
@@ -4004,6 +4015,32 @@
     <None Include="Resources\FW icons 2013+logos-012.png" />
     <None Include="Resources\uavcanesc.jpg" />
     <None Include="Resources\boat.png" />
+    <None Include="Resources\0003.png" />
+    <None Include="Resources\0006.png" />
+    <None Include="Resources\0009.png" />
+    <None Include="Resources\enlarge.png" />
+    <None Include="Resources\narrow.png" />
+    <None Include="Resources\WP.png" />
+    <None Include="Resources\00010.png" />
+    <None Include="Resources\down90.png" />
+    <None Include="Resources\r0.png" />
+    <None Include="Resources\r90.png" />
+    <None Include="Resources\r180.png" />
+    <None Include="Resources\r270.png" />
+    <None Include="Resources\rotor.png" />
+    <None Include="Resources\rotoricon.png" />
+    <None Include="Resources\rotoricon1.png" />
+    <None Include="Resources\up90.png" />
+    <None Include="Resources\compass61.png" />
+    <None Include="Resources\Rarido.png" />
+    <None Include="Resources\Motor.png" />
+    <None Include="Resources\10010.png" />
+    <None Include="Resources\10011.png" />
+    <None Include="Resources\10013.png" />
+    <None Include="Resources\10015.png" />
+    <None Include="Resources\10016.png" />
+    <None Include="Resources\connect001.png" />
+    <None Include="Resources\disconnect001.png" />
     <Content Include="Scripts\example7.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

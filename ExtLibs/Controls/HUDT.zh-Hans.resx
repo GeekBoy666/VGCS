@@ -140,22 +140,22 @@
     <value>Microsoft Yahei</value>
   </data>
   <data name="GPS0" xml:space="preserve">
-    <value>GPS: 无GPS</value>
+    <value>无GPS</value>
   </data>
   <data name="GPS1" xml:space="preserve">
-    <value>GPS: 未定位</value>
+    <value>未定位</value>
   </data>
   <data name="GPS2" xml:space="preserve">
-    <value>GPS: 2D定位</value>
+    <value>2D定位</value>
   </data>
   <data name="GPS3" xml:space="preserve">
-    <value>GPS: 3D定位</value>
+    <value>3D定位</value>
   </data>
   <data name="GPS4" xml:space="preserve">
-    <value>GPS: 3D DGPS</value>
+    <value>3D DGPS</value>
   </data>
   <data name="GPS5" xml:space="preserve">
-    <value>GPS: 3D RTK</value>
+    <value>3D RTK</value>
   </data>
   <data name="GS" xml:space="preserve">
     <value>地速 </value>

@@ -32,29 +32,69 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigAccelerometerCalibration));
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lbl_Accel_user = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.BUT_level = new MissionPlanner.Controls.MyButton();
             this.BUT_calib_accell = new MissionPlanner.Controls.MyButton();
             this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
-            this.BUT_level = new MissionPlanner.Controls.MyButton();
-            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
-            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Name = "label5";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
             // 
             // lbl_Accel_user
             // 
+            this.lbl_Accel_user.BackColor = System.Drawing.SystemColors.Control;
             resources.ApplyResources(this.lbl_Accel_user, "lbl_Accel_user");
             this.lbl_Accel_user.Name = "lbl_Accel_user";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MissionPlanner.Properties.Resources._00010;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MissionPlanner.Properties.Resources.r0;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::MissionPlanner.Properties.Resources.r0;
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // BUT_level
+            // 
+            resources.ApplyResources(this.BUT_level, "BUT_level");
+            this.BUT_level.Name = "BUT_level";
+            this.BUT_level.UseVisualStyleBackColor = true;
+            this.BUT_level.Click += new System.EventHandler(this.BUT_level_Click);
             // 
             // BUT_calib_accell
             // 
@@ -73,30 +113,24 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.lineSeparator2.PrimaryColor = System.Drawing.Color.Black;
             this.lineSeparator2.SecondaryColor = System.Drawing.Color.Gainsboro;
             // 
-            // BUT_level
-            // 
-            resources.ApplyResources(this.BUT_level, "BUT_level");
-            this.BUT_level.Name = "BUT_level";
-            this.BUT_level.UseVisualStyleBackColor = true;
-            this.BUT_level.Click += new System.EventHandler(this.BUT_level_Click);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
             // ConfigAccelerometerCalibration
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BUT_level);
             this.Controls.Add(this.lbl_Accel_user);
             this.Controls.Add(this.BUT_calib_accell);
             this.Controls.Add(this.lineSeparator2);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Name = "ConfigAccelerometerCalibration";
+            resources.ApplyResources(this, "$this");
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,11 +139,14 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private LineSeparator lineSeparator2;
         private MyButton BUT_calib_accell;
-        private System.Windows.Forms.Label lbl_Accel_user;
         private MyButton BUT_level;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Accel_user;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label10;
     }
 }

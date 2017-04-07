@@ -24,6 +24,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -94,6 +95,7 @@
     <Compile Include="L10NU.cs" />
     <Compile Include="LangUtility.cs" />
     <Compile Include="locationwp.cs" />
+    <Compile Include="Math.cs" />
     <Compile Include="MeasureString.cs" />
     <Compile Include="MissionFile.cs" />
     <Compile Include="PointLatLngAlt.cs" />

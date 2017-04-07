@@ -32,10 +32,10 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigRadioInput));
             this.groupBoxElevons = new System.Windows.Forms.GroupBox();
-            this.CHK_mixmode = new MavlinkCheckBox();
-            this.CHK_elevonch2rev = new MavlinkCheckBox();
-            this.CHK_elevonrev = new MavlinkCheckBox();
-            this.CHK_elevonch1rev = new MavlinkCheckBox();
+            this.CHK_mixmode = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_elevonch2rev = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_elevonrev = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_elevonch1rev = new MissionPlanner.Controls.MavlinkCheckBox();
             this.BUT_BindDSM8 = new MissionPlanner.Controls.MyButton();
             this.BUT_BindDSMX = new MissionPlanner.Controls.MyButton();
             this.BUT_BindDSM2 = new MissionPlanner.Controls.MyButton();
@@ -60,9 +60,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.CHK_revch2 = new MissionPlanner.Controls.MavlinkCheckBox();
             this.CHK_revch1 = new MissionPlanner.Controls.MavlinkCheckBox();
             this.currentStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxElevons.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxElevons
@@ -79,29 +83,37 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             resources.ApplyResources(this.CHK_mixmode, "CHK_mixmode");
             this.CHK_mixmode.Name = "CHK_mixmode";
+            this.CHK_mixmode.OffValue = 0D;
+            this.CHK_mixmode.OnValue = 1D;
+            this.CHK_mixmode.ParamName = null;
             this.CHK_mixmode.UseVisualStyleBackColor = true;
-            
             // 
             // CHK_elevonch2rev
             // 
             resources.ApplyResources(this.CHK_elevonch2rev, "CHK_elevonch2rev");
             this.CHK_elevonch2rev.Name = "CHK_elevonch2rev";
+            this.CHK_elevonch2rev.OffValue = 0D;
+            this.CHK_elevonch2rev.OnValue = 1D;
+            this.CHK_elevonch2rev.ParamName = null;
             this.CHK_elevonch2rev.UseVisualStyleBackColor = true;
-            
             // 
             // CHK_elevonrev
             // 
             resources.ApplyResources(this.CHK_elevonrev, "CHK_elevonrev");
             this.CHK_elevonrev.Name = "CHK_elevonrev";
+            this.CHK_elevonrev.OffValue = 0D;
+            this.CHK_elevonrev.OnValue = 1D;
+            this.CHK_elevonrev.ParamName = null;
             this.CHK_elevonrev.UseVisualStyleBackColor = true;
-            
             // 
             // CHK_elevonch1rev
             // 
             resources.ApplyResources(this.CHK_elevonch1rev, "CHK_elevonch1rev");
             this.CHK_elevonch1rev.Name = "CHK_elevonch1rev";
+            this.CHK_elevonch1rev.OffValue = 0D;
+            this.CHK_elevonch1rev.OnValue = 1D;
+            this.CHK_elevonch1rev.ParamName = null;
             this.CHK_elevonch1rev.UseVisualStyleBackColor = true;
-            
             // 
             // BUT_BindDSM8
             // 
@@ -408,9 +420,34 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             this.currentStateBindingSource.DataSource = typeof(MissionPlanner.CurrentState);
             // 
+            // lineSeparator2
+            // 
+            resources.ApplyResources(this.lineSeparator2, "lineSeparator2");
+            this.lineSeparator2.Name = "lineSeparator2";
+            this.lineSeparator2.Opacity1 = 0.6F;
+            this.lineSeparator2.Opacity2 = 0.7F;
+            this.lineSeparator2.Opacity3 = 0.1F;
+            this.lineSeparator2.PrimaryColor = System.Drawing.Color.Black;
+            this.lineSeparator2.SecondaryColor = System.Drawing.Color.Gainsboro;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MissionPlanner.Properties.Resources.Rarido;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
             // ConfigRadioInput
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lineSeparator2);
             this.Controls.Add(this.BAR14);
             this.Controls.Add(this.BAR13);
             this.Controls.Add(this.BAR12);
@@ -438,6 +475,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.groupBoxElevons.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,5 +512,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private HorizontalProgressBar2 BAR12;
         private HorizontalProgressBar2 BAR11;
         private HorizontalProgressBar2 BAR10;
+        private LineSeparator lineSeparator2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -127,7 +127,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 5</value>
+    <value>375, 110</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 12</value>
@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -157,7 +157,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 5</value>
+    <value>117, 110</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 12</value>
@@ -178,7 +178,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <metadata name="currentStateBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -190,7 +190,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_currentmode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>473, 19</value>
+    <value>506, 124</value>
   </data>
   <data name="lbl_currentmode.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 32</value>
@@ -214,40 +214,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_currentmode.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="LNK_wiki.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="LNK_wiki.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LNK_wiki.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LNK_wiki.Location" type="System.Drawing.Point, System.Drawing">
-    <value>657, 5</value>
-  </data>
-  <data name="LNK_wiki.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
-  </data>
-  <data name="LNK_wiki.TabIndex" type="System.Int32, mscorlib">
-    <value>143</value>
-  </data>
-  <data name="LNK_wiki.Text" xml:space="preserve">
-    <value>Wiki</value>
-  </data>
-  <data name="&gt;&gt;LNK_wiki.Name" xml:space="preserve">
-    <value>LNK_wiki</value>
-  </data>
-  <data name="&gt;&gt;LNK_wiki.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LNK_wiki.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LNK_wiki.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>214, 17</value>
@@ -271,7 +238,7 @@
     <value>mavlinkNumericUpDownlow_voltage</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDownlow_voltage.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDownlow_voltage.Parent" xml:space="preserve">
     <value>PNL_low_bat</value>
@@ -310,7 +277,7 @@
     <value>mavlinkCheckBoxlong_fs</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxlong_fs.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxlong_fs.Parent" xml:space="preserve">
     <value>groupBox3</value>
@@ -349,7 +316,7 @@
     <value>mavlinkCheckBoxshort_fs</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxshort_fs.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxshort_fs.Parent" xml:space="preserve">
     <value>groupBox3</value>
@@ -388,7 +355,7 @@
     <value>mavlinkCheckBoxgcs_fs</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxgcs_fs.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxgcs_fs.Parent" xml:space="preserve">
     <value>groupBox3</value>
@@ -428,7 +395,7 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>mavlinkCheckBoxthr_fs_action</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxthr_fs_action.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxthr_fs_action.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -461,7 +428,7 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>mavlinkNumericUpDownfs_thr_value</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDownfs_thr_value.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDownfs_thr_value.Parent" xml:space="preserve">
     <value>PNL_thr_fs_value</value>
@@ -494,7 +461,7 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>mavlinkNumericUpDownthr_fs_value</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDownthr_fs_value.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDownthr_fs_value.Parent" xml:space="preserve">
     <value>PNL_thr_fs_value</value>
@@ -533,7 +500,7 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>mavlinkCheckBoxthr_fs</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxthr_fs.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxthr_fs.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -566,7 +533,7 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>mavlinkComboBox_fs_thr_enable</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox_fs_thr_enable.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox_fs_thr_enable.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -596,7 +563,7 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>mavlinkComboBoxfs_batt_enable</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBoxfs_batt_enable.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBoxfs_batt_enable.Parent" xml:space="preserve">
     <value>groupBox4</value>
@@ -632,7 +599,7 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>mavlinkCheckBoxFS_GCS_ENABLE</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxFS_GCS_ENABLE.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBoxFS_GCS_ENABLE.Parent" xml:space="preserve">
     <value>groupBox3</value>
@@ -686,7 +653,7 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>mavlinkNumericUpDownFS_BATT_MAH</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDownFS_BATT_MAH.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.5626.41543, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6298.30862, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDownFS_BATT_MAH.Parent" xml:space="preserve">
     <value>pnlmah</value>
@@ -833,7 +800,7 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>NoControl</value>
   </data>
   <data name="lbl_armed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>473, 60</value>
+    <value>506, 165</value>
   </data>
   <data name="lbl_armed.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 33</value>
@@ -848,13 +815,13 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>lbl_armed</value>
   </data>
   <data name="&gt;&gt;lbl_armed.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbl_armed.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_armed.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="lbl_gpslock.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 26.25pt</value>
@@ -863,7 +830,7 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>NoControl</value>
   </data>
   <data name="lbl_gpslock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>473, 102</value>
+    <value>506, 207</value>
   </data>
   <data name="lbl_gpslock.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 30</value>
@@ -878,19 +845,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>lbl_gpslock</value>
   </data>
   <data name="&gt;&gt;lbl_gpslock.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbl_gpslock.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_gpslock.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="horizontalProgressBar9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 375</value>
+    <value>330, 480</value>
   </data>
   <data name="horizontalProgressBar9.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -902,19 +869,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar9</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar9.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar9.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar9.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="horizontalProgressBar10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 324</value>
+    <value>330, 429</value>
   </data>
   <data name="horizontalProgressBar10.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -926,19 +893,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar10</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar10.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar10.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar10.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="horizontalProgressBar11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 273</value>
+    <value>330, 378</value>
   </data>
   <data name="horizontalProgressBar11.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -950,19 +917,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar11</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar11.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar11.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar11.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="horizontalProgressBar12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 222</value>
+    <value>330, 327</value>
   </data>
   <data name="horizontalProgressBar12.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -974,19 +941,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar12</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar12.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar12.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar12.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="horizontalProgressBar13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 172</value>
+    <value>330, 277</value>
   </data>
   <data name="horizontalProgressBar13.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -998,19 +965,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar13</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar13.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar13.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar13.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="horizontalProgressBar14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 121</value>
+    <value>330, 226</value>
   </data>
   <data name="horizontalProgressBar14.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -1022,19 +989,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar14</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar14.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar14.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar14.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="horizontalProgressBar15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 19</value>
+    <value>330, 124</value>
   </data>
   <data name="horizontalProgressBar15.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -1046,19 +1013,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar15</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar15.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar15.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar15.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="horizontalProgressBar16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 70</value>
+    <value>330, 175</value>
   </data>
   <data name="horizontalProgressBar16.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -1070,19 +1037,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar16</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar16.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar16.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar16.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="horizontalProgressBar8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 375</value>
+    <value>48, 480</value>
   </data>
   <data name="horizontalProgressBar8.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -1094,19 +1061,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar8</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar8.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar8.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar8.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="horizontalProgressBar7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 324</value>
+    <value>48, 429</value>
   </data>
   <data name="horizontalProgressBar7.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -1118,19 +1085,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar7</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar7.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar7.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar7.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="horizontalProgressBar6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 273</value>
+    <value>48, 378</value>
   </data>
   <data name="horizontalProgressBar6.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -1142,19 +1109,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar6</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar6.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar6.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar6.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="horizontalProgressBar5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 222</value>
+    <value>48, 327</value>
   </data>
   <data name="horizontalProgressBar5.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -1166,19 +1133,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar5</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar5.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar5.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar5.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="horizontalProgressBar4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 172</value>
+    <value>48, 277</value>
   </data>
   <data name="horizontalProgressBar4.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -1190,19 +1157,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar4</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar4.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar4.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>23</value>
   </data>
   <data name="horizontalProgressBar3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 121</value>
+    <value>48, 226</value>
   </data>
   <data name="horizontalProgressBar3.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -1214,19 +1181,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar3</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar3.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar3.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>24</value>
   </data>
   <data name="horizontalProgressBar2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 19</value>
+    <value>48, 124</value>
   </data>
   <data name="horizontalProgressBar2.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -1238,19 +1205,19 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar2</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar2.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>25</value>
   </data>
   <data name="horizontalProgressBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 70</value>
+    <value>48, 175</value>
   </data>
   <data name="horizontalProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 23</value>
@@ -1262,16 +1229,16 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar1.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>26</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 222</value>
+    <value>513, 327</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 91</value>
@@ -1292,10 +1259,10 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 315</value>
+    <value>513, 420</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 73</value>
@@ -1316,10 +1283,10 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 137</value>
+    <value>513, 242</value>
   </data>
   <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 83</value>
@@ -1340,16 +1307,94 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lineSeparator2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 90</value>
+  </data>
+  <data name="lineSeparator2.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>2000, 2</value>
+  </data>
+  <data name="lineSeparator2.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 2</value>
+  </data>
+  <data name="lineSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>812, 2</value>
+  </data>
+  <data name="lineSeparator2.TabIndex" type="System.Int32, mscorlib">
+    <value>154</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator2.Name" xml:space="preserve">
+    <value>lineSeparator2</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator2.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.LineSeparator, MissionPlanner.Controls, Version=1.0.6298.27967, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 81</value>
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>155</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>华文楷体, 21.7499981pt, style=Bold</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 26</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 33</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>156</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>电机测试</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>688, 414</value>
+    <value>823, 534</value>
   </data>
   <data name="&gt;&gt;currentStateBindingSource.Name" xml:space="preserve">
     <value>currentStateBindingSource</value>

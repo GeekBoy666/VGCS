@@ -34,8 +34,6 @@
             this.cmb_Connection = new System.Windows.Forms.ComboBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.cmb_sysid = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmb_Baud
@@ -100,21 +98,9 @@
             this.cmb_sysid.SelectedIndexChanged += new System.EventHandler(this.CMB_sysid_SelectedIndexChanged);
             this.cmb_sysid.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cmb_sysid_Format);
             // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
             // ConnectionControl
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_sysid);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cmb_Connection);
@@ -136,7 +122,5 @@
         private System.Windows.Forms.ComboBox cmb_Connection;
         private System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.ComboBox cmb_sysid;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }

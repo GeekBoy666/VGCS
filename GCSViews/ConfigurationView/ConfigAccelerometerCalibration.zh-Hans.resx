@@ -130,10 +130,6 @@
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>353, 24</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>水平放置您的自驾仪，设置加速度计的默认最小/最大值（3轴）。
-这会要求您将自驾仪的每一面都放置一次。</value>
-  </data>
   <data name="BUT_calib_accell.Text" xml:space="preserve">
     <value>校准加速度计</value>
   </data>
@@ -145,9 +141,5 @@
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>377, 24</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>水平放置您的自驾仪，设置加速度计的默认偏移（1轴/航姿系统平衡）
-这需要您将自驾仪放置在水平的平面上。</value>
   </data>
 </root>

@@ -83,6 +83,24 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
                 UpdateUserMessage(message);
 
+                if (message.ToLower().Contains("left"))
+                    pictureBox2.Image = Properties.Resources.r270;
+                else
+               if (message.ToLower().Contains("right"))
+                    pictureBox2.Image = Properties.Resources.r90;
+                else
+               if (message.ToLower().Contains("back"))
+                    pictureBox2.Image = Properties.Resources.r180;
+                else
+               if (message.ToLower().Contains("up"))
+                    pictureBox2.Image = Properties.Resources.up90;
+                else
+               if (message.ToLower().Contains("down"))
+                    pictureBox2.Image = Properties.Resources.down90;
+                else
+               if (message.ToLower().Contains("up"))
+                    pictureBox2.Image = Properties.Resources.rotor;
+
                 if (message.ToLower().Contains("calibration successful") ||
                  message.ToLower().Contains("calibration failed"))
                 {
@@ -111,7 +129,36 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             Invoke((MethodInvoker) delegate
             {
                 if (message.ToLower().Contains("place vehicle") || message.ToLower().Contains("calibration"))
-                    lbl_Accel_user.Text = message;
+                {
+                    if (message.Contains("Place vehicle level"))
+                    {
+                        lbl_Accel_user.Text = "请将自驾仪水平放置";
+                    }
+                    else if (message.Contains("Place vehicle on its LEFT"))
+                    { lbl_Accel_user.Text = "请将自驾仪左侧放置"; }
+
+                    else if (message.Contains("Place vehicle on its RIGHT"))
+                    { lbl_Accel_user.Text = "请将自驾仪右侧放置"; }
+
+                    else if (message.Contains("Place vehicle nose DOWN"))
+                    { lbl_Accel_user.Text = "请将自驾仪向下放置"; }
+
+                    else if (message.Contains("Place vehicle nose UP"))
+                    { lbl_Accel_user.Text = "请将自驾仪向上放置"; }
+
+                    else if (message.Contains("Place vehicle on its BACK"))
+                    { lbl_Accel_user.Text = "请将自驾仪翻转放置"; }
+                    else if (message.Contains("Calibration FAILED"))
+                    { lbl_Accel_user.Text = "校准失败"; }
+                    else if (message.Contains("Calibration successful"))
+                    { lbl_Accel_user.Text = "校准成功"; }
+                    else
+                    {
+                        lbl_Accel_user.Text = message;
+                    }
+                }
+
+                    
             });
         }
 

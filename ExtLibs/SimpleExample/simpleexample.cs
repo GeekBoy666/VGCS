@@ -94,14 +94,18 @@ namespace SimpleExample
                     // from here we should check the the message is addressed to us
                     if (sysid != packet.sysid || compid != packet.compid)
                         continue;
-                    
+                    if (packet.msgid == 150)
+                    {
+
+                        Console.WriteLine("gungugngun");
+                    }
                     if (packet.msgid == (byte)MAVLink.MAVLINK_MSG_ID.ATTITUDE)
                     //or
                     //if (packet.data.GetType() == typeof(MAVLink.mavlink_attitude_t))
                     {
                         var att = (MAVLink.mavlink_attitude_t)packet.data;
 
-                        Console.WriteLine(att.pitch*57.2958 + " " + att.roll*57.2958);
+                        //Console.WriteLine(att.pitch*57.2958 + " " + att.roll*57.2958);
                     }
                 }
                 catch

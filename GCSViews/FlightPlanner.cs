@@ -38,13 +38,13 @@ using ILog = log4net.ILog;
 using Placemark = SharpKml.Dom.Placemark;
 using Point = System.Drawing.Point;
 using System.Text.RegularExpressions;
-using netDxf;
-using netDxf.Entities;
 
 namespace MissionPlanner.GCSViews
 {
     public partial class FlightPlanner : MyUserControl, IDeactivate, IActivate
     {
+        private bool Panel2MouseDown = false;
+        private Point mouseOffset1; //记录鼠标指针的坐标
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         int selectedrow;
         public bool quickadd;
@@ -231,23 +231,23 @@ namespace MissionPlanner.GCSViews
 
                     if (pass == false)
                     {
-                        CustomMessageBox.Show("You must have a home altitude");
+                        CustomMessageBox.Show("请设定家点高度数据");
                         string homealt = "100";
-                        if (DialogResult.Cancel == InputBox.Show("Home Alt", "Home Altitude", ref homealt))
+                        if (DialogResult.Cancel == InputBox.Show("家点高度", "家点高度", ref homealt))
                             return;
                         TXT_homealt.Text = homealt;
                     }
                     int results1;
                     if (!int.TryParse(TXT_DefaultAlt.Text, out results1))
                     {
-                        CustomMessageBox.Show("Your default alt is not valid");
+                        CustomMessageBox.Show("默认家点位置无效");
                         return;
                     }
 
                     if (results1 == 0)
                     {
                         string defalt = "100";
-                        if (DialogResult.Cancel == InputBox.Show("Default Alt", "Default Altitude", ref defalt))
+                        if (DialogResult.Cancel == InputBox.Show("默认高度", "默认高度值", ref defalt))
                             return;
                         TXT_DefaultAlt.Text = defalt;
                     }
@@ -298,7 +298,7 @@ namespace MissionPlanner.GCSViews
                 }
                 else
                 {
-                    CustomMessageBox.Show("Invalid Home or wp Alt");
+                    CustomMessageBox.Show("无效家点或航点值！");
                     cell.Style.BackColor = Color.Red;
                 }
             }
@@ -612,7 +612,7 @@ namespace MissionPlanner.GCSViews
             center = new GMarkerGoogle(MainMap.Position, GMarkerGoogleType.none);
             top.Markers.Add(center);
 
-            MainMap.Zoom = 3;
+            MainMap.Zoom = 5;
 
             CMB_altmode.DisplayMember = "Value";
             CMB_altmode.ValueMember = "Key";
@@ -1752,7 +1752,7 @@ namespace MissionPlanner.GCSViews
                             ((180.0 / Math.PI) * Math.Atan(grad)).ToString("0.0");
 
                         Commands.Rows[int.Parse(lla.Tag) - 1].Cells[Dist.Index].Value =
-                            (lla.GetDistance(last)*CurrentState.multiplierdist).ToString("0.0");
+                            (Math.Sqrt(Math.Pow(distance,2) + Math.Pow(height,2))).ToString("0.0");
 
                         Commands.Rows[int.Parse(lla.Tag) - 1].Cells[AZ.Index].Value =
                             ((lla.GetBearing(last) + 180)%360).ToString("0");
@@ -1865,7 +1865,7 @@ namespace MissionPlanner.GCSViews
                         }
                         sw.Close();
 
-                        lbl_wpfile.Text = "Saved " + Path.GetFileName(file);
+                        //lbl_wpfile.Text = "Saved " + Path.GetFileName(file);
                     }
                     catch (Exception)
                     {
@@ -1896,7 +1896,7 @@ namespace MissionPlanner.GCSViews
                 else
                 {
                     if (
-                        CustomMessageBox.Show("This will clear your existing planned mission, Continue?", "Confirm",
+                        CustomMessageBox.Show("继续操作将会清除已有航点数据，是否继续?", "警告",
                             MessageBoxButtons.OKCancel) != DialogResult.OK)
                     {
                         return;
@@ -1907,11 +1907,11 @@ namespace MissionPlanner.GCSViews
             ProgressReporterDialogue frmProgressReporter = new ProgressReporterDialogue
             {
                 StartPosition = FormStartPosition.CenterScreen,
-                Text = "Receiving WP's"
+                Text = "获取航点"
             };
 
             frmProgressReporter.DoWork += getWPs;
-            frmProgressReporter.UpdateProgressAndStatus(-1, "Receiving WP's");
+            frmProgressReporter.UpdateProgressAndStatus(-1, "获取航点");
 
             ThemeManager.ApplyThemeTo(frmProgressReporter);
 
@@ -1930,7 +1930,7 @@ namespace MissionPlanner.GCSViews
 
                 if (!port.BaseStream.IsOpen)
                 {
-                    throw new Exception("Please Connect First!");
+                    throw new Exception("请确保系统已连接!");
                 }
 
                 MainV2.comPort.giveComport = true;
@@ -1939,7 +1939,7 @@ namespace MissionPlanner.GCSViews
 
                 log.Info("Getting Home");
 
-                ((ProgressReporterDialogue) sender).UpdateProgressAndStatus(0, "Getting WP count");
+                ((ProgressReporterDialogue) sender).UpdateProgressAndStatus(0, "获取航点");
 
                 if (port.MAV.apname == MAVLink.MAV_AUTOPILOT.PX4)
                 {
@@ -1967,13 +1967,13 @@ namespace MissionPlanner.GCSViews
                     }
 
                     log.Info("Getting WP" + a);
-                    ((ProgressReporterDialogue) sender).UpdateProgressAndStatus(a*100/cmdcount, "Getting WP " + a);
+                    ((ProgressReporterDialogue) sender).UpdateProgressAndStatus(a*100/cmdcount, "读取航点 " + a);
                     cmds.Add(port.getWP(a));
                 }
 
                 port.setWPACK();
 
-                ((ProgressReporterDialogue) sender).UpdateProgressAndStatus(100, "Done");
+                ((ProgressReporterDialogue) sender).UpdateProgressAndStatus(100, "完成");
 
                 log.Info("Done");
             }
@@ -2013,8 +2013,8 @@ namespace MissionPlanner.GCSViews
 
                     MainV2.comPort.giveComport = false;
 
-                    BUT_read.Enabled = true;
-
+                    //BUT_read.Enabled = true;
+                    读取航点.Enabled = true;
                     writeKML();
                 });
             }
@@ -2434,16 +2434,22 @@ namespace MissionPlanner.GCSViews
             Commands.Enabled = false;
 
             int i = Commands.Rows.Count - 1;
+            int cmdidx = -1;
             foreach (Locationwp temp in cmds)
             {
                 i++;
+                cmdidx++;
                 //Console.WriteLine("FP processToScreen " + i);
                 if (temp.id == 0 && i != 0) // 0 and not home
                     break;
                 if (temp.id == 255 && i != 0) // bad record - never loaded any WP's - but have started the board up.
                     break;
-                if (i == 0 && append) // we dont want to add home again.
+                if (cmdidx == 0 && append)
+                {
+                    // we dont want to add home again.
+                    i--;
                     continue;
+                }
                 if (i + 1 >= Commands.Rows.Count)
                 {
                     selectedrow = Commands.Rows.Add();
@@ -2508,38 +2514,41 @@ namespace MissionPlanner.GCSViews
 
             setWPParams();
 
-            try
+            if (!append)
             {
-                DataGridViewTextBoxCell cellhome;
-                cellhome = Commands.Rows[0].Cells[Lat.Index] as DataGridViewTextBoxCell;
-                if (cellhome.Value != null)
+                try
                 {
-                    if (cellhome.Value.ToString() != TXT_homelat.Text && cellhome.Value.ToString() != "0")
+                    DataGridViewTextBoxCell cellhome;
+                    cellhome = Commands.Rows[0].Cells[Lat.Index] as DataGridViewTextBoxCell;
+                    if (cellhome.Value != null)
                     {
-                        DialogResult dr = CustomMessageBox.Show("Reset Home to loaded coords", "Reset Home Coords",
-                            MessageBoxButtons.YesNo);
-
-                        if (dr == DialogResult.Yes)
+                        if (cellhome.Value.ToString() != TXT_homelat.Text && cellhome.Value.ToString() != "0")
                         {
-                            TXT_homelat.Text = (double.Parse(cellhome.Value.ToString())).ToString();
-                            cellhome = Commands.Rows[0].Cells[Lon.Index] as DataGridViewTextBoxCell;
-                            TXT_homelng.Text = (double.Parse(cellhome.Value.ToString())).ToString();
-                            cellhome = Commands.Rows[0].Cells[Alt.Index] as DataGridViewTextBoxCell;
-                            TXT_homealt.Text =
-                                (double.Parse(cellhome.Value.ToString())*CurrentState.multiplierdist).ToString();
+                            DialogResult dr = CustomMessageBox.Show("Reset Home to loaded coords", "Reset Home Coords",
+                                MessageBoxButtons.YesNo);
+
+                            if (dr == DialogResult.Yes)
+                            {
+                                TXT_homelat.Text = (double.Parse(cellhome.Value.ToString())).ToString();
+                                cellhome = Commands.Rows[0].Cells[Lon.Index] as DataGridViewTextBoxCell;
+                                TXT_homelng.Text = (double.Parse(cellhome.Value.ToString())).ToString();
+                                cellhome = Commands.Rows[0].Cells[Alt.Index] as DataGridViewTextBoxCell;
+                                TXT_homealt.Text =
+                                    (double.Parse(cellhome.Value.ToString())*CurrentState.multiplierdist).ToString();
+                            }
                         }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                log.Error(ex.ToString());
-            } // if there is no valid home
+                catch (Exception ex)
+                {
+                    log.Error(ex.ToString());
+                } // if there is no valid home
 
-            if (Commands.RowCount > 0)
-            {
-                log.Info("remove home from list");
-                Commands.Rows.Remove(Commands.Rows[0]); // remove home row
+                if (Commands.RowCount > 0)
+                {
+                    log.Info("remove home from list");
+                    Commands.Rows.Remove(Commands.Rows[0]); // remove home row
+                }
             }
 
             quickadd = false;
@@ -2843,7 +2852,7 @@ namespace MissionPlanner.GCSViews
                         }
                     }
 
-                    lbl_wpfile.Text = "Loaded " + Path.GetFileName(file);
+                    //lbl_wpfile.Text = "Loaded " + Path.GetFileName(file);
                 }
             }
         }
@@ -4012,16 +4021,16 @@ namespace MissionPlanner.GCSViews
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            try
-            {
-                lock (thisLock)
-                {
-                    MainMap.Zoom = trackBar1.Value;
-                }
-            }
-            catch
-            {
-            }
+            //try
+            //{
+            //    lock (thisLock)
+            //    {
+            //        MainMap.Zoom = trackBar1.Value;
+            //    }
+            //}
+            //catch
+            //{
+            //}
         }
 
 
@@ -4083,9 +4092,6 @@ namespace MissionPlanner.GCSViews
             return new RectLatLng(maxy, minx, Math.Abs(maxx - minx), Math.Abs(miny - maxy));
         }
 
-        const float rad2deg = (float) (180/Math.PI);
-        const float deg2rad = (float) (1.0/rad2deg);
-
         private void BUT_grid_Click(object sender, EventArgs e)
         {
         }
@@ -4101,7 +4107,7 @@ namespace MissionPlanner.GCSViews
             else
             {
                 CustomMessageBox.Show(
-                    "If you're at the field, connect to your APM and wait for GPS lock. Then click 'Home Location' link to set home to your location");
+                    "请在空旷场地，确保飞控GPS定位后，点击获取家点位置");
             }
         }
 
@@ -4433,7 +4439,7 @@ namespace MissionPlanner.GCSViews
             MainMap.Size = new Size(panelMap.Size.Width - 50, panelMap.Size.Height);
             trackBar1.Location = new Point(panelMap.Size.Width - 50, trackBar1.Location.Y);
             trackBar1.Size = new Size(trackBar1.Size.Width, panelMap.Size.Height - trackBar1.Location.Y);
-            label11.Location = new Point(panelMap.Size.Width - 50, label11.Location.Y);
+            //label11.Location = new Point(panelMap.Size.Width - 50, label11.Location.Y);
         }
 
         DateTime mapupdate = DateTime.MinValue;
@@ -5032,13 +5038,13 @@ namespace MissionPlanner.GCSViews
                 float d = Radius;
                 float R = 6371000;
 
-                var lat2 = Math.Asin(Math.Sin(MouseDownEnd.Lat*deg2rad)*Math.Cos(d/R) +
-                                     Math.Cos(MouseDownEnd.Lat*deg2rad)*Math.Sin(d/R)*Math.Cos(a*deg2rad));
-                var lon2 = MouseDownEnd.Lng*deg2rad +
-                           Math.Atan2(Math.Sin(a*deg2rad)*Math.Sin(d/R)*Math.Cos(MouseDownEnd.Lat*deg2rad),
-                               Math.Cos(d/R) - Math.Sin(MouseDownEnd.Lat*deg2rad)*Math.Sin(lat2));
+                var lat2 = Math.Asin(Math.Sin(MouseDownEnd.Lat*MathHelper.deg2rad)*Math.Cos(d/R) +
+                                     Math.Cos(MouseDownEnd.Lat*MathHelper.deg2rad)*Math.Sin(d/R)*Math.Cos(a*MathHelper.deg2rad));
+                var lon2 = MouseDownEnd.Lng*MathHelper.deg2rad +
+                           Math.Atan2(Math.Sin(a*MathHelper.deg2rad)*Math.Sin(d/R)*Math.Cos(MouseDownEnd.Lat*MathHelper.deg2rad),
+                               Math.Cos(d/R) - Math.Sin(MouseDownEnd.Lat*MathHelper.deg2rad)*Math.Sin(lat2));
 
-                PointLatLng pll = new PointLatLng(lat2*rad2deg, lon2*rad2deg);
+                PointLatLng pll = new PointLatLng(lat2*MathHelper.rad2deg, lon2*MathHelper.rad2deg);
 
                 setfromMap(pll.Lat, pll.Lng, (int) float.Parse(TXT_DefaultAlt.Text));
             }
@@ -6711,13 +6717,13 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                     float d = Radius;
                     float R = 6371000;
 
-                    var lat2 = Math.Asin(Math.Sin(MouseDownEnd.Lat*deg2rad)*Math.Cos(d/R) +
-                                         Math.Cos(MouseDownEnd.Lat*deg2rad)*Math.Sin(d/R)*Math.Cos(a*deg2rad));
-                    var lon2 = MouseDownEnd.Lng*deg2rad +
-                               Math.Atan2(Math.Sin(a*deg2rad)*Math.Sin(d/R)*Math.Cos(MouseDownEnd.Lat*deg2rad),
-                                   Math.Cos(d/R) - Math.Sin(MouseDownEnd.Lat*deg2rad)*Math.Sin(lat2));
+                    var lat2 = Math.Asin(Math.Sin(MouseDownEnd.Lat*MathHelper.deg2rad)*Math.Cos(d/R) +
+                                         Math.Cos(MouseDownEnd.Lat*MathHelper.deg2rad)*Math.Sin(d/R)*Math.Cos(a*MathHelper.deg2rad));
+                    var lon2 = MouseDownEnd.Lng*MathHelper.deg2rad +
+                               Math.Atan2(Math.Sin(a*MathHelper.deg2rad)*Math.Sin(d/R)*Math.Cos(MouseDownEnd.Lat*MathHelper.deg2rad),
+                                   Math.Cos(d/R) - Math.Sin(MouseDownEnd.Lat*MathHelper.deg2rad)*Math.Sin(lat2));
 
-                    PointLatLng pll = new PointLatLng(lat2*rad2deg, lon2*rad2deg);
+                    PointLatLng pll = new PointLatLng(lat2*MathHelper.rad2deg, lon2*MathHelper.rad2deg);
 
                     setfromMap(pll.Lat, pll.Lng, stepalt);
 
@@ -6959,6 +6965,91 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         private void createCircleSurveyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Utilities.CircleSurveyMission.createGrid(MouseDownEnd);
+        }
+
+        private void lbl_homedist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lock (thisLock)
+                {
+                    MainMap.Zoom  -=0.5;
+                    if (MainMap.Zoom < 0)
+                        MainMap.Zoom = 0;
+                }
+            }
+            catch
+            {
+            }
+         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lock (thisLock)
+                {
+                    MainMap.Zoom  +=0.5;
+                    if (MainMap.Zoom > 24)
+                     MainMap.Zoom = 24;
+                }
+            }
+            catch
+            {
+            }
+
+
+           
+            
+        }
+
+        private void 家点设置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (MainV2.comPort.MAV.cs.lat != 0)
+            {
+                TXT_homealt.Text = (MainV2.comPort.MAV.cs.altasl).ToString("0");
+                TXT_homelat.Text = MainV2.comPort.MAV.cs.lat.ToString();
+                TXT_homelng.Text = MainV2.comPort.MAV.cs.lng.ToString();
+            }
+            else
+            {
+                CustomMessageBox.Show(
+                    "请在空旷场地，确保飞控GPS定位后，点击获取家点位置");
+            }
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                mouseOffset1.X = e.X;
+                mouseOffset1.Y = e.Y;
+                Panel2MouseDown = true;
+            }
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Panel2MouseDown = false;
+            }
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Panel2MouseDown)
+            {
+                int left = panel2.Left + e.X - mouseOffset1.X;
+                int top = panel2.Top + e.Y - mouseOffset1.Y;
+                panel2.Location = new Point(left, top);
+            }
         }
     }
 }
