@@ -52,6 +52,7 @@ namespace MissionPlanner
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.tabControlactions = new System.Windows.Forms.TabControl();
             this.tabQuick = new System.Windows.Forms.TabPage();
@@ -150,10 +151,10 @@ namespace MissionPlanner
             this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.hud1 = new MissionPlanner.Controls.HUD();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Messagetabletimer1 = new System.Windows.Forms.Timer(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CTX_mainmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_hub)).BeginInit();
             this.panel1.SuspendLayout();
@@ -191,6 +192,10 @@ namespace MissionPlanner
             this.tabPagemessages.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // CTX_mainmenu
@@ -332,6 +337,12 @@ namespace MissionPlanner
             // 
             resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
+            // 
+            // tabPage1
+            // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // splitContainer3
             // 
@@ -1713,11 +1724,6 @@ namespace MissionPlanner
             this.hud1.wpno = 0;
             this.hud1.xtrack_error = 0F;
             // 
-            // panel3
-            // 
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
@@ -1728,18 +1734,30 @@ namespace MissionPlanner
             this.Messagetabletimer1.Interval = 200;
             this.Messagetabletimer1.Tick += new System.EventHandler(this.Messagetalbetimer1_Tick);
             // 
-            // tabPage1
+            // splitContainer4
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.splitContainer4, "splitContainer4");
+            this.splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.BackColor = System.Drawing.SystemColors.Menu;
+            this.splitContainer4.Panel1.Controls.Add(this.pictureBox1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MissionPlanner.Properties.Resources.dark_initialsetup_icon;
+            this.pictureBox1.InitialImage = global::MissionPlanner.Properties.Resources.dark_initialsetup_icon;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // MainV2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.splitContainer4);
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
             this.Name = "MainV2";
@@ -1792,6 +1810,10 @@ namespace MissionPlanner
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1807,7 +1829,6 @@ namespace MissionPlanner
         private System.Windows.Forms.Panel panel2;
         private Controls.HUD hud1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
@@ -1917,5 +1938,7 @@ namespace MissionPlanner
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Timer Messagetabletimer1;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

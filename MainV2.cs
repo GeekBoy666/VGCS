@@ -3183,6 +3183,7 @@ namespace MissionPlanner
 
                 Settings.Instance["newuser"] = DateTime.Now.ToShortDateString();
             }
+            splitContainer4.SplitterDistance = splitContainer4.Height / 22;
             splitContainer2.SplitterDistance = splitContainer2.Height / 7;
             splitContainer3.SplitterDistance = splitContainer3.Height - splitContainer3.Height / 6;
             //groupBox1.Height = tabControl1.Height / 3;
@@ -4758,28 +4759,28 @@ namespace MissionPlanner
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
+            splitContainer4.Panel2.Controls.Clear();
             GCSViews.FlightPlanner w1 = new GCSViews.FlightPlanner();
-            w1.Parent = panel3;
+            w1.Parent = splitContainer4.Panel2;
             w1.Dock = DockStyle.Fill;
             w1.Show();
         }
 
         private void toolStripButton3_Click_1(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
+            splitContainer4.Panel2.Controls.Clear();
             GCSViews.InitialSetup w1 = new GCSViews.InitialSetup();
-            w1.Parent = panel3;
+            w1.Parent = splitContainer4.Panel2;
             w1.Dock = DockStyle.Fill;
             w1.Show();
         }
 
         private void toolStripButton2_Click_1(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
+            splitContainer4.Panel2.Controls.Clear();
 
             GCSViews.ConfigurationView.Calibra w1 = new GCSViews.ConfigurationView.Calibra();
-            w1.Parent = panel3;
+            w1.Parent = splitContainer4.Panel2;
             w1.Dock = DockStyle.Fill;
             w1.Show();
 
@@ -4787,19 +4788,19 @@ namespace MissionPlanner
 
         private void toolStripButton4_Click_1(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
+            splitContainer4.Panel2.Controls.Clear();
             GCSViews.SoftwareConfig w1 = new GCSViews.SoftwareConfig();
-            w1.Parent = panel3;
+            w1.Parent = splitContainer4.Panel2;
             w1.Dock = DockStyle.Fill;
             w1.Show();
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
+            splitContainer4.Panel2.Controls.Clear();
 
             GCSViews.ConfigurationView.ConfigFlightModes w1 = new GCSViews.ConfigurationView.ConfigFlightModes();
-            w1.Parent = panel3;
+            w1.Parent = splitContainer4.Panel2;
             w1.Dock = DockStyle.Fill;
             w1.Show();
         }
