@@ -3186,6 +3186,9 @@ namespace MissionPlanner
             splitContainer4.SplitterDistance = splitContainer4.Height / 22;
             splitContainer2.SplitterDistance = splitContainer2.Height / 7;
             splitContainer3.SplitterDistance = splitContainer3.Height - splitContainer3.Height / 6;
+            tabControl1_SelectedIndexChanged(this, e);
+            //
+
             //groupBox1.Height = tabControl1.Height / 3;
             hud1.doResize();
 
@@ -3908,10 +3911,10 @@ namespace MissionPlanner
                     MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSource_hub);
                     //Console.WriteLine("DONE ");
 
-                    if (tabControlactions.SelectedTab == tabQuick)
-                    {
-                        MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceQTab);
-                    }
+                    //if (tabControlactions.SelectedTab == tabQuick)
+                    //{
+                    //    MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceQTab);
+                    //}
                     //else if (tabControlactions.SelectedTab == tabQuick)
                     //{
                     //    MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSourceQuickTab);
@@ -4807,11 +4810,13 @@ namespace MissionPlanner
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             Messagetabletimer1.Stop();
-            if (tabControlactions.SelectedTab == tabPage11)
-            {
+            if (tabControl1.SelectedTab == tabPage11)
+             {
                 Messagetabletimer1.Start();
-            }
+             }
+
         }
         int messagecount;
         private void Messagetalbetimer1_Tick(object sender, EventArgs e)
@@ -4831,6 +4836,11 @@ namespace MissionPlanner
                 {
                 }
             }
+        }
+
+        private void label1_BindingContextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
