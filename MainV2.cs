@@ -4842,5 +4842,10 @@ namespace MissionPlanner
         {
 
         }
+
+        private void tabActions_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -70,6 +70,10 @@ namespace MissionPlanner
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.tabControlactions = new System.Windows.Forms.TabControl();
             this.tabActions = new System.Windows.Forms.TabPage();
+            this.myButton6 = new MissionPlanner.Controls.MyButton();
+            this.myButton7 = new MissionPlanner.Controls.MyButton();
+            this.myButton4 = new MissionPlanner.Controls.MyButton();
+            this.myButton5 = new MissionPlanner.Controls.MyButton();
             this.modifyandSetLoiterRad = new MissionPlanner.Controls.ModifyandSet();
             this.BUT_ARM = new MissionPlanner.Controls.MyButton();
             this.BUT_quickmanual = new MissionPlanner.Controls.MyButton();
@@ -153,10 +157,6 @@ namespace MissionPlanner
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.currentStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.myButton4 = new MissionPlanner.Controls.MyButton();
-            this.myButton5 = new MissionPlanner.Controls.MyButton();
-            this.myButton6 = new MissionPlanner.Controls.MyButton();
-            this.myButton7 = new MissionPlanner.Controls.MyButton();
             this.CTX_mainmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_hub)).BeginInit();
             this.panel1.SuspendLayout();
@@ -487,6 +487,55 @@ namespace MissionPlanner
             resources.ApplyResources(this.tabActions, "tabActions");
             this.tabActions.Name = "tabActions";
             this.tabActions.UseVisualStyleBackColor = true;
+            this.tabActions.Click += new System.EventHandler(this.tabActions_Click);
+            // 
+            // myButton6
+            // 
+            this.myButton6.BGGradBot = System.Drawing.Color.Gainsboro;
+            this.myButton6.BGGradTop = System.Drawing.Color.DarkGray;
+            this.myButton6.ColorMouseDown = System.Drawing.Color.Gray;
+            this.myButton6.ColorMouseOver = System.Drawing.Color.Empty;
+            this.myButton6.ColorNotEnabled = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.myButton6, "myButton6");
+            this.myButton6.Name = "myButton6";
+            this.myButton6.TextColor = System.Drawing.Color.LightYellow;
+            this.myButton6.UseVisualStyleBackColor = true;
+            // 
+            // myButton7
+            // 
+            this.myButton7.BGGradBot = System.Drawing.Color.Gainsboro;
+            this.myButton7.BGGradTop = System.Drawing.Color.DarkGray;
+            this.myButton7.ColorMouseDown = System.Drawing.Color.Gray;
+            this.myButton7.ColorMouseOver = System.Drawing.Color.Empty;
+            this.myButton7.ColorNotEnabled = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.myButton7, "myButton7");
+            this.myButton7.Name = "myButton7";
+            this.myButton7.TextColor = System.Drawing.Color.LightYellow;
+            this.myButton7.UseVisualStyleBackColor = true;
+            // 
+            // myButton4
+            // 
+            this.myButton4.BGGradBot = System.Drawing.Color.Gainsboro;
+            this.myButton4.BGGradTop = System.Drawing.Color.DarkGray;
+            this.myButton4.ColorMouseDown = System.Drawing.Color.Gray;
+            this.myButton4.ColorMouseOver = System.Drawing.Color.Empty;
+            this.myButton4.ColorNotEnabled = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.myButton4, "myButton4");
+            this.myButton4.Name = "myButton4";
+            this.myButton4.TextColor = System.Drawing.Color.LightYellow;
+            this.myButton4.UseVisualStyleBackColor = true;
+            // 
+            // myButton5
+            // 
+            this.myButton5.BGGradBot = System.Drawing.Color.Gainsboro;
+            this.myButton5.BGGradTop = System.Drawing.Color.DarkGray;
+            this.myButton5.ColorMouseDown = System.Drawing.Color.Gray;
+            this.myButton5.ColorMouseOver = System.Drawing.Color.Empty;
+            this.myButton5.ColorNotEnabled = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.myButton5, "myButton5");
+            this.myButton5.Name = "myButton5";
+            this.myButton5.TextColor = System.Drawing.Color.LightYellow;
+            this.myButton5.UseVisualStyleBackColor = true;
             // 
             // modifyandSetLoiterRad
             // 
@@ -1717,54 +1766,6 @@ namespace MissionPlanner
             // currentStateBindingSource
             // 
             this.currentStateBindingSource.DataSource = typeof(MissionPlanner.CurrentState);
-            // 
-            // myButton4
-            // 
-            this.myButton4.BGGradBot = System.Drawing.Color.Gainsboro;
-            this.myButton4.BGGradTop = System.Drawing.Color.DarkGray;
-            this.myButton4.ColorMouseDown = System.Drawing.Color.Gray;
-            this.myButton4.ColorMouseOver = System.Drawing.Color.Empty;
-            this.myButton4.ColorNotEnabled = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.myButton4, "myButton4");
-            this.myButton4.Name = "myButton4";
-            this.myButton4.TextColor = System.Drawing.Color.LightYellow;
-            this.myButton4.UseVisualStyleBackColor = true;
-            // 
-            // myButton5
-            // 
-            this.myButton5.BGGradBot = System.Drawing.Color.Gainsboro;
-            this.myButton5.BGGradTop = System.Drawing.Color.DarkGray;
-            this.myButton5.ColorMouseDown = System.Drawing.Color.Gray;
-            this.myButton5.ColorMouseOver = System.Drawing.Color.Empty;
-            this.myButton5.ColorNotEnabled = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.myButton5, "myButton5");
-            this.myButton5.Name = "myButton5";
-            this.myButton5.TextColor = System.Drawing.Color.LightYellow;
-            this.myButton5.UseVisualStyleBackColor = true;
-            // 
-            // myButton6
-            // 
-            this.myButton6.BGGradBot = System.Drawing.Color.Gainsboro;
-            this.myButton6.BGGradTop = System.Drawing.Color.DarkGray;
-            this.myButton6.ColorMouseDown = System.Drawing.Color.Gray;
-            this.myButton6.ColorMouseOver = System.Drawing.Color.Empty;
-            this.myButton6.ColorNotEnabled = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.myButton6, "myButton6");
-            this.myButton6.Name = "myButton6";
-            this.myButton6.TextColor = System.Drawing.Color.LightYellow;
-            this.myButton6.UseVisualStyleBackColor = true;
-            // 
-            // myButton7
-            // 
-            this.myButton7.BGGradBot = System.Drawing.Color.Gainsboro;
-            this.myButton7.BGGradTop = System.Drawing.Color.DarkGray;
-            this.myButton7.ColorMouseDown = System.Drawing.Color.Gray;
-            this.myButton7.ColorMouseOver = System.Drawing.Color.Empty;
-            this.myButton7.ColorNotEnabled = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.myButton7, "myButton7");
-            this.myButton7.Name = "myButton7";
-            this.myButton7.TextColor = System.Drawing.Color.LightYellow;
-            this.myButton7.UseVisualStyleBackColor = true;
             // 
             // MainV2
             // 
