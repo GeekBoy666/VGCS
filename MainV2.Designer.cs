@@ -51,11 +51,11 @@ namespace MissionPlanner
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.bindingSourceQTab = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -330,10 +330,10 @@ namespace MissionPlanner
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label11);
@@ -347,10 +347,17 @@ namespace MissionPlanner
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource_hub, "alt", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
+            this.label1.Name = "label1";
+            this.label1.BindingContextChanged += new System.EventHandler(this.label1_BindingContextChanged);
+            // 
             // label14
             // 
             resources.ApplyResources(this.label14, "label14");
-            this.label14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceQTab, "groundspeed", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "N/A", "N2"));
+            this.label14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource_hub, "groundspeed", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "N/A", "N2"));
             this.label14.Name = "label14";
             // 
             // bindingSourceQTab
@@ -367,17 +374,10 @@ namespace MissionPlanner
             resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
             // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceQTab, "alt", true));
-            this.label1.Name = "label1";
-            this.label1.BindingContextChanged += new System.EventHandler(this.label1_BindingContextChanged);
-            // 
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
-            this.label12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceQTab, "verticalspeed", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "N/A", "N2"));
+            this.label12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource_hub, "verticalspeed", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "N/A", "N2"));
             this.label12.Name = "label12";
             // 
             // label4
@@ -398,13 +398,13 @@ namespace MissionPlanner
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
-            this.label10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceQTab, "yaw", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "N/A", "N2"));
+            this.label10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource_hub, "yaw", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "N/A", "N2"));
             this.label10.Name = "label10";
             // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
-            this.label6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceQTab, "roll", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "N/A", "N2"));
+            this.label6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource_hub, "roll", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
             this.label6.Name = "label6";
             // 
             // label9
@@ -420,7 +420,7 @@ namespace MissionPlanner
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
-            this.label8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceQTab, "pitch", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "N/A", "N2"));
+            this.label8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource_hub, "pitch", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "N/A", "N2"));
             this.label8.Name = "label8";
             // 
             // tabPage11
@@ -498,7 +498,7 @@ namespace MissionPlanner
             this.myButton6.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.myButton6, "myButton6");
             this.myButton6.Name = "myButton6";
-            this.myButton6.TextColor = System.Drawing.Color.LightYellow;
+            this.myButton6.TextColor = System.Drawing.Color.WhiteSmoke;
             this.myButton6.UseVisualStyleBackColor = true;
             // 
             // myButton7
@@ -510,7 +510,7 @@ namespace MissionPlanner
             this.myButton7.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.myButton7, "myButton7");
             this.myButton7.Name = "myButton7";
-            this.myButton7.TextColor = System.Drawing.Color.LightYellow;
+            this.myButton7.TextColor = System.Drawing.Color.WhiteSmoke;
             this.myButton7.UseVisualStyleBackColor = true;
             // 
             // myButton4
@@ -522,7 +522,7 @@ namespace MissionPlanner
             this.myButton4.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.myButton4, "myButton4");
             this.myButton4.Name = "myButton4";
-            this.myButton4.TextColor = System.Drawing.Color.LightYellow;
+            this.myButton4.TextColor = System.Drawing.Color.WhiteSmoke;
             this.myButton4.UseVisualStyleBackColor = true;
             // 
             // myButton5
@@ -534,7 +534,7 @@ namespace MissionPlanner
             this.myButton5.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.myButton5, "myButton5");
             this.myButton5.Name = "myButton5";
-            this.myButton5.TextColor = System.Drawing.Color.LightYellow;
+            this.myButton5.TextColor = System.Drawing.Color.WhiteSmoke;
             this.myButton5.UseVisualStyleBackColor = true;
             // 
             // modifyandSetLoiterRad
@@ -568,7 +568,7 @@ namespace MissionPlanner
             resources.ApplyResources(this.BUT_ARM, "BUT_ARM");
             this.BUT_ARM.Name = "BUT_ARM";
             this.BUT_ARM.Outline = System.Drawing.Color.Gray;
-            this.BUT_ARM.TextColor = System.Drawing.Color.LightYellow;
+            this.BUT_ARM.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_ARM.UseVisualStyleBackColor = true;
             // 
             // BUT_quickmanual
@@ -580,7 +580,7 @@ namespace MissionPlanner
             this.BUT_quickmanual.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_quickmanual, "BUT_quickmanual");
             this.BUT_quickmanual.Name = "BUT_quickmanual";
-            this.BUT_quickmanual.TextColor = System.Drawing.Color.LightYellow;
+            this.BUT_quickmanual.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_quickmanual.UseVisualStyleBackColor = true;
             // 
             // BUT_quickrtl
@@ -592,7 +592,7 @@ namespace MissionPlanner
             this.BUT_quickrtl.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_quickrtl, "BUT_quickrtl");
             this.BUT_quickrtl.Name = "BUT_quickrtl";
-            this.BUT_quickrtl.TextColor = System.Drawing.Color.LightYellow;
+            this.BUT_quickrtl.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_quickrtl.UseVisualStyleBackColor = true;
             // 
             // BUT_quickauto
@@ -604,7 +604,7 @@ namespace MissionPlanner
             this.BUT_quickauto.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_quickauto, "BUT_quickauto");
             this.BUT_quickauto.Name = "BUT_quickauto";
-            this.BUT_quickauto.TextColor = System.Drawing.Color.LightYellow;
+            this.BUT_quickauto.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_quickauto.UseVisualStyleBackColor = true;
             // 
             // CMB_setwp
@@ -625,7 +625,7 @@ namespace MissionPlanner
             this.BUT_setwp.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_setwp, "BUT_setwp");
             this.BUT_setwp.Name = "BUT_setwp";
-            this.BUT_setwp.TextColor = System.Drawing.Color.LightYellow;
+            this.BUT_setwp.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_setwp.UseVisualStyleBackColor = true;
             // 
             // CMB_modes
@@ -644,7 +644,7 @@ namespace MissionPlanner
             this.BUT_setmode.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_setmode, "BUT_setmode");
             this.BUT_setmode.Name = "BUT_setmode";
-            this.BUT_setmode.TextColor = System.Drawing.Color.LightYellow;
+            this.BUT_setmode.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_setmode.UseVisualStyleBackColor = true;
             // 
             // CMB_action
@@ -664,7 +664,7 @@ namespace MissionPlanner
             this.BUT_Homealt.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_Homealt, "BUT_Homealt");
             this.BUT_Homealt.Name = "BUT_Homealt";
-            this.BUT_Homealt.TextColor = System.Drawing.Color.LightYellow;
+            this.BUT_Homealt.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_Homealt.UseVisualStyleBackColor = true;
             // 
             // BUTactiondo
@@ -676,7 +676,7 @@ namespace MissionPlanner
             this.BUTactiondo.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUTactiondo, "BUTactiondo");
             this.BUTactiondo.Name = "BUTactiondo";
-            this.BUTactiondo.TextColor = System.Drawing.Color.LightYellow;
+            this.BUTactiondo.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUTactiondo.UseVisualStyleBackColor = true;
             // 
             // modifyandSetSpeed
