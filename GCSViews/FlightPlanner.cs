@@ -2013,8 +2013,8 @@ namespace MissionPlanner.GCSViews
 
                     MainV2.comPort.giveComport = false;
 
-                    //BUT_read.Enabled = true;
-                    读取航点.Enabled = true;
+                    BUT_read.Enabled = true;
+                    ///读取航点.Enabled = true;
                     writeKML();
                 });
             }

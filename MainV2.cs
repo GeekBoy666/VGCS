@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
+using System.Reflection;
 using MissionPlanner.Utilities;
 using IronPython.Hosting;
 using log4net;
@@ -4808,14 +4809,128 @@ namespace MissionPlanner
             w1.Show();
         }
 
+          void tabFilghtStatus_Resize(object sender, EventArgs e)
+        {
+            // localise it
+            //Control tabStatus = sender as Control;
+
+            //  tabStatus.SuspendLayout();
+
+            //foreach (Control temp in tabStatus.Controls)
+            {
+                //  temp.DataBindings.Clear();
+                //temp.Dispose();
+            }
+            //tabStatus.Controls.Clear();
+
+            int x = 10;
+            int y = 10;
+
+            object thisBoxed = MainV2.comPort.MAV.cs;
+            Type test = thisBoxed.GetType();
+
+            PropertyInfo[] props = test.GetProperties();
+
+            //props
+
+            foreach (var field in props)
+            {
+                // field.Name has the field's name.
+                object fieldValue;
+                TypeCode typeCode;
+                try
+                {
+                    fieldValue = field.GetValue(thisBoxed, null); // Get value
+
+                    if (fieldValue == null)
+                        continue;
+                    // Get the TypeCode enumeration. Multiple types get mapped to a common typecode.
+                    typeCode = Type.GetTypeCode(fieldValue.GetType());
+                }
+                catch
+                {
+                    continue;
+                }
+
+                MyLabel lbl1 = null;
+                MyLabel lbl2 = null;
+                try
+                {
+                    var temp = tabPageStatustext.Controls.Find(field.Name, false);
+
+                    if (temp.Length > 0)
+                        lbl1 = (MyLabel) temp[0];
+
+                    var temp2 = tabPageStatustext.Controls.Find(field.Name + "value", false);
+
+                    if (temp2.Length > 0)
+                        lbl2 = (MyLabel) temp2[0];
+                }
+                catch
+                {
+                }
+
+
+                if (lbl1 == null)
+                    lbl1 = new MyLabel();
+
+                lbl1.Location = new Point(x, y);
+                lbl1.Size = new Size(90, 13);
+                lbl1.Text = field.Name;
+                lbl1.Name = field.Name;
+                lbl1.Visible = true;
+
+                if (lbl2 == null)
+                    lbl2 = new MyLabel();
+
+                lbl2.AutoSize = false;
+
+                lbl2.Location = new Point(lbl1.Right + 5, y);
+                lbl2.Size = new Size(50, 13);
+                //if (lbl2.Name == "")
+                lbl2.DataBindings.Clear();
+                lbl2.DataBindings.Add(new Binding("Text", bindingSource_hub, field.Name, false,
+                    DataSourceUpdateMode.Never, "0"));
+                lbl2.Name = field.Name + "value";
+                lbl2.Visible = true;
+                //lbl2.Text = fieldValue.ToString();
+
+                tabPageStatustext.Controls.Add(lbl1);
+                tabPageStatustext.Controls.Add(lbl2);
+
+
+                x += 0;
+                y += 15;
+
+                if (y > tabPageStatustext.Height - 30)
+                {
+                    x = lbl2.Right + 10; //+= 165;
+                    y = 10;
+                }
+            }
+
+            tabPageStatustext.Width = x;
+
+            //ThemeManager.ApplyThemeTo(tabPageStatus);
+        }
+
+
+
+
+
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             Messagetabletimer1.Stop();
-            if (tabControl1.SelectedTab == tabPage11)
+            if (tabControlactions.SelectedTab == tabPageStatustext)
+            {
+                tabFilghtStatus_Resize(sender, e);
+            }
+            else if (tabControl1.SelectedTab == tabPage11)
              {
                 Messagetabletimer1.Start();
-             }
+                tabFilghtStatus_Resize(sender, e);
+            }
 
         }
         int messagecount;
