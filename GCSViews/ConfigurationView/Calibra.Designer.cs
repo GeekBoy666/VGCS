@@ -28,20 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.configAccelerometerCalibration1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigAccelerometerCalibration();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.configHWCompass1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigHWCompass();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.configRadioInput1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigRadioInput();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.configFailSafe1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigFailSafe();
+            this.backstageView = new MissionPlanner.Controls.BackstageView.BackstageView();
+            this.currentStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.configRadioInput1 = new MissionPlanner.GCSViews.ConfigurationView.ConfigRadioInput();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -59,6 +63,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1145, 645);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -113,15 +118,6 @@
             this.tabPage3.Text = "遥控器校准";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // configRadioInput1
-            // 
-            this.configRadioInput1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.configRadioInput1.Font = new System.Drawing.Font("宋体", 9F);
-            this.configRadioInput1.Location = new System.Drawing.Point(0, 0);
-            this.configRadioInput1.Name = "configRadioInput1";
-            this.configRadioInput1.Size = new System.Drawing.Size(1109, 637);
-            this.configRadioInput1.TabIndex = 0;
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.configFailSafe1);
@@ -143,6 +139,29 @@
             this.configFailSafe1.Size = new System.Drawing.Size(1109, 637);
             this.configFailSafe1.TabIndex = 0;
             // 
+            // backstageView
+            // 
+            this.backstageView.HighlightColor1 = System.Drawing.SystemColors.Highlight;
+            this.backstageView.HighlightColor2 = System.Drawing.SystemColors.MenuHighlight;
+            this.backstageView.Location = new System.Drawing.Point(0, 0);
+            this.backstageView.Margin = new System.Windows.Forms.Padding(4);
+            this.backstageView.Name = "backstageView";
+            this.backstageView.Size = new System.Drawing.Size(657, 422);
+            this.backstageView.TabIndex = 0;
+            this.backstageView.WidthMenu = 203;
+            // 
+            // currentStateBindingSource
+            // 
+            this.currentStateBindingSource.DataSource = typeof(MissionPlanner.CurrentState);
+            // 
+            // configRadioInput1
+            // 
+            this.configRadioInput1.Font = new System.Drawing.Font("华文楷体", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.configRadioInput1.Location = new System.Drawing.Point(21, 14);
+            this.configRadioInput1.Name = "configRadioInput1";
+            this.configRadioInput1.Size = new System.Drawing.Size(828, 539);
+            this.configRadioInput1.TabIndex = 0;
+            // 
             // Calibra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -156,20 +175,22 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private ConfigHWCompass configHWCompass1;
-        private ConfigRadioInput configRadioInput1;
         private System.Windows.Forms.TabPage tabPage4;
         private ConfigFailSafe configFailSafe1;
         private ConfigAccelerometerCalibration configAccelerometerCalibration1;
+        private System.Windows.Forms.BindingSource currentStateBindingSource;
+        internal Controls.BackstageView.BackstageView backstageView;
+        internal System.Windows.Forms.TabControl tabControl1;
+        private ConfigRadioInput configRadioInput1;
     }
 }

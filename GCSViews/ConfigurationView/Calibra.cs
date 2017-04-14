@@ -6,16 +6,47 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using log4net;
+using MissionPlanner.Controls;
+using MissionPlanner.Controls.BackstageView;
+using MissionPlanner.GCSViews.ConfigurationView;
+using MissionPlanner.Utilities;
+using System.Resources;
+using System.Reflection;
 
 namespace MissionPlanner.GCSViews.ConfigurationView
 {
-    public partial class Calibra : UserControl
+    public partial class Calibra : MyUserControl, IActivate
     {
+
+        internal static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        private static string lastpagename = "";
+
         public Calibra()
         {
             InitializeComponent();
             tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             tabControl1.DrawItem += new DrawItemEventHandler(this.TabControl_DrawItem);
+        }
+        public bool isConnected
+        {
+            get { return MainV2.comPort.BaseStream.IsOpen; }
+        }
+        private BackstageViewPage AddBackstageViewPage(Type userControl, string headerText, bool enabled = true,
+    BackstageViewPage Parent = null, bool advanced = false)
+        {
+            try
+            {
+                if (enabled)
+                    return backstageView.AddPage(userControl, headerText, Parent, advanced);
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex);
+                return null;
+            }
+
+            return null;
         }
         private void TabControl_DrawItem(object sender, System.Windows.Forms.DrawItemEventArgs e)
         {
@@ -47,5 +78,39 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         {
             //tabPage1.BackColor = Color.LightBlue;
         }
+        public void Activate()
+        {
+        }
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabPage3)
+            {
+                configRadioInput1.Activate();
+            }
+
+
+            //ResourceManager rm = new ResourceManager(this.GetType());
+            //if (tabControl1.SelectedTab == tabPage3)
+            //{
+
+                //    var mand = AddBackstageViewPage(typeof(ConfigMandatory), rm.GetString("backstageViewPagemand.Text"), isConnected);
+                //    AddBackstageViewPage(typeof(ConfigRadioInput), rm.GetString("backstageViewPageradio.Text"), isConnected, mand);
+                //    // remeber last page accessed
+                //    foreach (BackstageViewPage page in backstageView.Pages)
+                //    {
+                //        if (page.LinkText == lastpagename && page.Show)
+                //        {
+                //            backstageView.ActivatePage(page);
+                //            break;
+                //        }
+                //    }
+                //    GCSViews.ConfigurationView.ConfigRadioInput w1 = new GCSViews.ConfigurationView.ConfigRadioInput();
+                //    w1.Parent = tabPage3;
+                //    w1.Dock = DockStyle.Fill;
+                //    w1.Show();
+                //}
+        }
+
+
     }
 }

@@ -4786,15 +4786,19 @@ namespace MissionPlanner
             GCSViews.ConfigurationView.Calibra w1 = new GCSViews.ConfigurationView.Calibra();
             w1.Parent = splitContainer4.Panel2;
             w1.Dock = DockStyle.Fill;
+            //w1.Activate();
+            //ThemeManager.ApplyThemeTo(this);
             w1.Show();
+            
 
         }
 
         private void toolStripButton4_Click_1(object sender, EventArgs e)
         {
             splitContainer4.Panel2.Controls.Clear();
-            GCSViews.SoftwareConfig w1 = new GCSViews.SoftwareConfig();
+            GCSViews.InitialSetup w1 = new GCSViews.InitialSetup();
             w1.Parent = splitContainer4.Panel2;
+            
             w1.Dock = DockStyle.Fill;
             w1.Show();
         }
@@ -4803,9 +4807,14 @@ namespace MissionPlanner
         {
             splitContainer4.Panel2.Controls.Clear();
 
+
+            GCSViews.ConfigurationView.ConfigRadioInput w2 = new GCSViews.ConfigurationView.ConfigRadioInput();
             GCSViews.ConfigurationView.ConfigFlightModes w1 = new GCSViews.ConfigurationView.ConfigFlightModes();
+            w2.Deactivate();
+            w1.Activate();
             w1.Parent = splitContainer4.Panel2;
             w1.Dock = DockStyle.Fill;
+            //ThemeManager.ApplyThemeTo(this);
             w1.Show();
         }
 

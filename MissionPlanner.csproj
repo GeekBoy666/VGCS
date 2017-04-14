@@ -4042,6 +4042,24 @@
     <None Include="Resources\10016.png" />
     <None Include="Resources\connect001.png" />
     <None Include="Resources\disconnect001.png" />
+    <None Include="Resources\000102.png" />
+    <None Include="Resources\000103.png" />
+    <None Include="Resources\000104.png" />
+    <None Include="Resources\000105.png" />
+    <None Include="Resources\000106.png" />
+    <None Include="Resources\000108.png" />
+    <None Include="Resources\000110.png" />
+    <None Include="Resources\000111.png" />
+    <None Include="Resources\000113.png" />
+    <None Include="Resources\000114.png" />
+    <None Include="Resources\000115.png" />
+    <None Include="Resources\000116.png" />
+    <None Include="Resources\100200.png" />
+    <None Include="Resources\100201.png" />
+    <None Include="Resources\100202.png" />
+    <None Include="Resources\100203.png" />
+    <None Include="Resources\100204.png" />
+    <None Include="Resources\100205.png" />
     <Content Include="Scripts\example7.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
