@@ -781,14 +781,14 @@ mc:Ignorable=""d""
 
             if (MainV2.instance != null && MainV2.instance.FlightPlanner != null)
             {
-                BSE.Windows.Forms.Panel actionPanel = MainV2.instance.FlightPlanner.panelAction;
+                //BSE.Windows.Forms.Panel actionPanel = MainV2.instance.FlightPlanner.panelAction;
                 BSE.Windows.Forms.Panel waypointsPanel = MainV2.instance.FlightPlanner.panelWaypoints;
 
-                actionPanel.CustomColors.BorderColor = Color.Black;       //these statements control the colours of the actions panel in the flight planner window
-                actionPanel.CustomColors.CaptionGradientBegin = ButBG;
-                actionPanel.CustomColors.CaptionGradientEnd = ButBGBot;
-                actionPanel.CustomColors.CaptionText = ButtonTextColor;
-                actionPanel.CustomColors.CollapsedCaptionText = ButtonTextColor;
+                //actionPanel.CustomColors.BorderColor = Color.Black;       //these statements control the colours of the actions panel in the flight planner window
+                //actionPanel.CustomColors.CaptionGradientBegin = ButBG;
+                //actionPanel.CustomColors.CaptionGradientEnd = ButBGBot;
+                //actionPanel.CustomColors.CaptionText = ButtonTextColor;
+                //actionPanel.CustomColors.CollapsedCaptionText = ButtonTextColor;
 
                 waypointsPanel.CustomColors.BorderColor = Color.Black;    //these statements control the colours of the Waypoints panel in the flight planner window
                 waypointsPanel.CustomColors.CaptionGradientBegin = ButBG;
@@ -835,14 +835,14 @@ mc:Ignorable=""d""
 
             if (MainV2.instance != null && MainV2.instance.FlightPlanner != null)
             {
-                BSE.Windows.Forms.Panel actionPanel = MainV2.instance.FlightPlanner.panelAction;
+                //BSE.Windows.Forms.Panel actionPanel = MainV2.instance.FlightPlanner.panelAction;
                 BSE.Windows.Forms.Panel waypointsPanel = MainV2.instance.FlightPlanner.panelWaypoints;
 
-                actionPanel.CustomColors.BorderColor = Color.Black;       //these statements control the colours of the actions panel in the flight planner window
-                actionPanel.CustomColors.CaptionGradientBegin = ButBG;
-                actionPanel.CustomColors.CaptionGradientEnd = ButBGBot;
-                actionPanel.CustomColors.CaptionText = ButtonTextColor;
-                actionPanel.CustomColors.CollapsedCaptionText = ButtonTextColor;
+                //actionPanel.CustomColors.BorderColor = Color.Black;       //these statements control the colours of the actions panel in the flight planner window
+                //actionPanel.CustomColors.CaptionGradientBegin = ButBG;
+                //actionPanel.CustomColors.CaptionGradientEnd = ButBGBot;
+                //actionPanel.CustomColors.CaptionText = ButtonTextColor;
+                //actionPanel.CustomColors.CollapsedCaptionText = ButtonTextColor;
 
                 waypointsPanel.CustomColors.BorderColor = Color.Black;    //these statements control the colours of the Waypoints panel in the flight planner window
                 waypointsPanel.CustomColors.CaptionGradientBegin = ButBG;

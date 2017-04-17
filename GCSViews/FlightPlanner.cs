@@ -6589,20 +6589,20 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void switchDockingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (panelAction.Dock == DockStyle.Bottom)
-            {
-                panelAction.Dock = DockStyle.Right;
-                panelWaypoints.Dock = DockStyle.Bottom;
-            }
-            else
-            {
-                panelAction.Dock = DockStyle.Bottom;
-                panelAction.Height = 120;
-                panelWaypoints.Dock = DockStyle.Right;
-                panelWaypoints.Width = Width/2;
-            }
+            //if (panelAction.Dock == DockStyle.Bottom)
+            //{
+            //    panelAction.Dock = DockStyle.Right;
+            //    panelWaypoints.Dock = DockStyle.Bottom;
+            //}
+            //else
+            //{
+            //    panelAction.Dock = DockStyle.Bottom;
+            //    panelAction.Height = 120;
+            //    panelWaypoints.Dock = DockStyle.Right;
+            //    panelWaypoints.Width = Width/2;
+            //}
 
-            Settings.Instance["FP_docking"] = panelAction.Dock.ToString();
+            //Settings.Instance["FP_docking"] = panelAction.Dock.ToString();
         }
 
         private void insertSplineWPToolStripMenuItem_Click(object sender, EventArgs e)
