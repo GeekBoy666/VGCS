@@ -4710,7 +4710,7 @@ namespace MissionPlanner
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            //MyView.ShowScreen("FlightPlanner");
+           // MyView.ShowScreen("FlightPlanner");
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -4763,16 +4763,24 @@ namespace MissionPlanner
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            splitContainer4.Panel2.Controls.Clear();
+            //splitContainer4.Panel2.Controls.Clear();
+            
             GCSViews.FlightPlanner w1 = new GCSViews.FlightPlanner();
             w1.Parent = splitContainer4.Panel2;
+
+            w1.MainMap.Position = new GMap.NET.PointLatLng(39.7716824,116.5296914);
+            w1.MainMap.Zoom = 18;
             w1.Dock = DockStyle.Fill;
-            w1.Show();
+            w1.Activate();
+            w1.Visible = true;
+            w1.Focus();
+           // w1.Show();
+           // MyView.ShowScreen("FlightPlanner");
         }
 
         private void toolStripButton3_Click_1(object sender, EventArgs e)
         {
-            splitContainer4.Panel2.Controls.Clear();
+            //splitContainer4.Panel2.Controls.Clear();
             GCSViews.InitialSetup w1 = new GCSViews.InitialSetup();
             w1.Parent = splitContainer4.Panel2;
             w1.Dock = DockStyle.Fill;
@@ -4786,6 +4794,7 @@ namespace MissionPlanner
             GCSViews.ConfigurationView.Calibra w1 = new GCSViews.ConfigurationView.Calibra();
             w1.Parent = splitContainer4.Panel2;
             w1.Dock = DockStyle.Fill;
+            
             //w1.Activate();
             //ThemeManager.ApplyThemeTo(this);
             w1.Show();
