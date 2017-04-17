@@ -849,7 +849,7 @@ namespace MissionPlanner.GCSViews
             if (Settings.Instance["WMSserver"] != null)
                 WMSProvider.CustomWMSURL = Settings.Instance["WMSserver"];
 
-            trackBar1.Value = (int) MainMap.Zoom;
+            ///trackBar1.Value = (int) MainMap.Zoom;
 
             // check for net and set offline if needed
             try
@@ -1888,36 +1888,7 @@ namespace MissionPlanner.GCSViews
         /// <param name="e"></param>
         public void BUT_read_Click(object sender, EventArgs e)
         {
-            if (Commands.Rows.Count > 0)
-            {
-                if (sender is FlightData)
-                {
-                }
-                else
-                {
-                    if (
-                        CustomMessageBox.Show("继续操作将会清除已有航点数据，是否继续?", "警告",
-                            MessageBoxButtons.OKCancel) != DialogResult.OK)
-                    {
-                        return;
-                    }
-                }
-            }
-
-            ProgressReporterDialogue frmProgressReporter = new ProgressReporterDialogue
-            {
-                StartPosition = FormStartPosition.CenterScreen,
-                Text = "获取航点"
-            };
-
-            frmProgressReporter.DoWork += getWPs;
-            frmProgressReporter.UpdateProgressAndStatus(-1, "获取航点");
-
-            ThemeManager.ApplyThemeTo(frmProgressReporter);
-
-            frmProgressReporter.RunBackgroundOperationAsync();
-
-            frmProgressReporter.Dispose();
+           
         }
 
         void getWPs(object sender, ProgressWorkerEventArgs e, object passdata = null)
@@ -2013,7 +1984,7 @@ namespace MissionPlanner.GCSViews
 
                     MainV2.comPort.giveComport = false;
 
-                    BUT_read.Enabled = true;
+                    pictureBox5.Enabled = true;
                     ///读取航点.Enabled = true;
                     writeKML();
                 });
@@ -2031,88 +2002,7 @@ namespace MissionPlanner.GCSViews
         /// <param name="e"></param>
         public void BUT_write_Click(object sender, EventArgs e)
         {
-            if ((altmode) CMB_altmode.SelectedValue == altmode.Absolute)
-            {
-                if (DialogResult.No ==
-                    CustomMessageBox.Show("Absolute Alt is selected are you sure?", "Alt Mode", MessageBoxButtons.YesNo))
-                {
-                    CMB_altmode.SelectedValue = (int) altmode.Relative;
-                }
-            }
-
-            // check home
-            Locationwp home = new Locationwp();
-            try
-            {
-                home.id = (ushort)MAVLink.MAV_CMD.WAYPOINT;
-                home.lat = (double.Parse(TXT_homelat.Text));
-                home.lng = (double.Parse(TXT_homelng.Text));
-                home.alt = (float.Parse(TXT_homealt.Text) / CurrentState.multiplierdist); // use saved home
-            }
-            catch
-            {
-                CustomMessageBox.Show("Your home location is invalid", Strings.ERROR);
-                return;
-            }
-
-            // check for invalid grid data
-            for (int a = 0; a < Commands.Rows.Count - 0; a++)
-            {
-                for (int b = 0; b < Commands.ColumnCount - 0; b++)
-                {
-                    double answer;
-                    if (b >= 1 && b <= 7)
-                    {
-                        if (!double.TryParse(Commands[b, a].Value.ToString(), out answer))
-                        {
-                            CustomMessageBox.Show("There are errors in your mission");
-                            return;
-                        }
-                    }
-
-                    if (TXT_altwarn.Text == "")
-                        TXT_altwarn.Text = (0).ToString();
-
-                    if (Commands.Rows[a].Cells[Command.Index].Value.ToString().Contains("UNKNOWN"))
-                        continue;
-
-                    byte cmd =
-                        (byte)
-                            (int)
-                                Enum.Parse(typeof (MAVLink.MAV_CMD),
-                                    Commands.Rows[a].Cells[Command.Index].Value.ToString(), false);
-
-                    if (cmd < (byte) MAVLink.MAV_CMD.LAST &&
-                        double.Parse(Commands[Alt.Index, a].Value.ToString()) < double.Parse(TXT_altwarn.Text))
-                    {
-                        if (cmd != (byte) MAVLink.MAV_CMD.TAKEOFF &&
-                            cmd != (byte) MAVLink.MAV_CMD.LAND &&
-                            cmd != (byte) MAVLink.MAV_CMD.RETURN_TO_LAUNCH)
-                        {
-                            CustomMessageBox.Show("Low alt on WP#" + (a + 1) +
-                                                  "\nPlease reduce the alt warning, or increase the altitude");
-                            return;
-                        }
-                    }
-                }
-            }
-
-            ProgressReporterDialogue frmProgressReporter = new ProgressReporterDialogue
-            {
-                StartPosition = FormStartPosition.CenterScreen,
-                Text = "Sending WP's"
-            };
-
-            frmProgressReporter.DoWork += saveWPs;
-            frmProgressReporter.UpdateProgressAndStatus(-1, "Sending WP's");
-
-            ThemeManager.ApplyThemeTo(frmProgressReporter);
-
-            frmProgressReporter.RunBackgroundOperationAsync();
-
-            frmProgressReporter.Dispose();
-
-            MainMap.Focus();
+           
         }
 
         Locationwp DataViewtoLocationwp(int a)
@@ -2813,48 +2703,7 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_loadwpfile_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog fd = new OpenFileDialog())
-            {
-                fd.Filter = "All Supported Types|*.txt;*.waypoints;*.shp;*.mission";
-                DialogResult result = fd.ShowDialog();
-                string file = fd.FileName;
-
-                if (File.Exists(file))
-                {
-                    if (file.ToLower().EndsWith(".shp"))
-                    {
-                        LoadSHPFile(file);
-                    }
-                    else
-                    {
-                        string line = "";
-                        using (var fs = File.OpenText(file))
-                        {
-                            line = fs.ReadLine();
-                        }
-
-                        if (line.StartsWith("{"))
-                        {
-                            var format = MissionFile.ReadFile(file);
-
-                            var cmds = MissionFile.ConvertToLocationwps(format);
-
-                            processToScreen(cmds);
-
-                            writeKML();
-
-                            MainMap.ZoomAndCenterMarkers("objects");
-                        }
-                        else
-                        {
-                            wpfilename = file;
-                            readQGC110wpfile(file);
-                        }
-                    }
-
-                    //lbl_wpfile.Text = "Loaded " + Path.GetFileName(file);
-                }
-            }
+           
         }
 
         public void readQGC110wpfile(string file, bool append = false)
@@ -2942,7 +2791,7 @@ namespace MissionPlanner.GCSViews
             {
                 lock (thisLock)
                 {
-                    MainMap.Zoom = trackBar1.Value;
+                    //MainMap.Zoom = trackBar1.Value;
                 }
             }
             catch
@@ -3731,7 +3580,7 @@ namespace MissionPlanner.GCSViews
             {
                 try
                 {
-                    trackBar1.Value = (int) (MainMap.Zoom);
+                    //trackBar1.Value = (int) (MainMap.Zoom);
                 }
                 catch
                 {
@@ -3825,7 +3674,7 @@ namespace MissionPlanner.GCSViews
             {
                 MainMap.ZoomAndCenterMarkers(null);
             }
-            trackBar1.Value = (int) MainMap.Zoom;
+            //trackBar1.Value = (int) MainMap.Zoom;
         }
 
         // ensure focus on map, trackbar can have it too
@@ -3963,7 +3812,7 @@ namespace MissionPlanner.GCSViews
 
         private void Planner_Resize(object sender, EventArgs e)
         {
-            MainMap.Zoom = trackBar1.Value;
+            //MainMap.Zoom = trackBar1.Value;
         }
 
         protected override void OnPaint(PaintEventArgs pe)
@@ -4437,8 +4286,8 @@ namespace MissionPlanner.GCSViews
             // this is a mono fix for the zoom bar
             //Console.WriteLine("panelmap "+panelMap.Size.ToString());
             MainMap.Size = new Size(panelMap.Size.Width - 50, panelMap.Size.Height);
-            trackBar1.Location = new Point(panelMap.Size.Width - 50, trackBar1.Location.Y);
-            trackBar1.Size = new Size(trackBar1.Size.Width, panelMap.Size.Height - trackBar1.Location.Y);
+            //trackBar1.Location = new Point(panelMap.Size.Width - 50, trackBar1.Location.Y);
+            //trackBar1.Size = new Size(trackBar1.Size.Width, panelMap.Size.Height - trackBar1.Location.Y);
             //label11.Location = new Point(panelMap.Size.Width - 50, label11.Location.Y);
         }
 
@@ -7046,10 +6895,213 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         {
             if (Panel2MouseDown)
             {
-                int left = panel2.Left + e.X - mouseOffset1.X;
-                int top = panel2.Top + e.Y - mouseOffset1.Y;
-                panel2.Location = new Point(left, top);
+                //int left = panel2.Left + e.X - mouseOffset1.X;
+                //int top = panel2.Top + e.Y - mouseOffset1.Y;
+                //panel2.Location = new Point(left, top);
             }
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                lock (thisLock)
+                {
+                    MainMap.Zoom += 0.5;
+                    if (MainMap.Zoom > 24)
+                        MainMap.Zoom = 24;
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                lock (thisLock)
+                {
+                    MainMap.Zoom -= 0.5;
+                    if (MainMap.Zoom < 0)
+                        MainMap.Zoom = 0;
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog fd = new OpenFileDialog())
+            {
+                fd.Filter = "All Supported Types|*.txt;*.waypoints;*.shp;*.mission";
+                DialogResult result = fd.ShowDialog();
+                string file = fd.FileName;
+
+                if (File.Exists(file))
+                {
+                    if (file.ToLower().EndsWith(".shp"))
+                    {
+                        LoadSHPFile(file);
+                    }
+                    else
+                    {
+                        string line = "";
+                        using (var fs = File.OpenText(file))
+                        {
+                            line = fs.ReadLine();
+                        }
+
+                        if (line.StartsWith("{"))
+                        {
+                            var format = MissionFile.ReadFile(file);
+
+                            var cmds = MissionFile.ConvertToLocationwps(format);
+
+                            processToScreen(cmds);
+
+                            writeKML();
+
+                            MainMap.ZoomAndCenterMarkers("objects");
+                        }
+                        else
+                        {
+                            wpfilename = file;
+                            readQGC110wpfile(file);
+                        }
+                    }
+
+                    //lbl_wpfile.Text = "Loaded " + Path.GetFileName(file);
+                }
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            SaveFile_Click(null, null);
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (Commands.Rows.Count > 0)
+            {
+                if (sender is FlightData)
+                {
+                }
+                else
+                {
+                    if (
+                        CustomMessageBox.Show("继续操作将会清除已有航点数据，是否继续?", "警告",
+                            MessageBoxButtons.OKCancel) != DialogResult.OK)
+                    {
+                        return;
+                    }
+                }
+            }
+
+            ProgressReporterDialogue frmProgressReporter = new ProgressReporterDialogue
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                Text = "获取航点"
+            };
+
+            frmProgressReporter.DoWork += getWPs;
+            frmProgressReporter.UpdateProgressAndStatus(-1, "获取航点");
+
+            ThemeManager.ApplyThemeTo(frmProgressReporter);
+
+            frmProgressReporter.RunBackgroundOperationAsync();
+
+            frmProgressReporter.Dispose();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            if ((altmode)CMB_altmode.SelectedValue == altmode.Absolute)
+            {
+                if (DialogResult.No ==
+                    CustomMessageBox.Show("Absolute Alt is selected are you sure?", "Alt Mode", MessageBoxButtons.YesNo))
+                {
+                    CMB_altmode.SelectedValue = (int)altmode.Relative;
+                }
+            }
+
+            // check home
+            Locationwp home = new Locationwp();
+            try
+            {
+                home.id = (ushort)MAVLink.MAV_CMD.WAYPOINT;
+                home.lat = (double.Parse(TXT_homelat.Text));
+                home.lng = (double.Parse(TXT_homelng.Text));
+                home.alt = (float.Parse(TXT_homealt.Text) / CurrentState.multiplierdist); // use saved home
+            }
+            catch
+            {
+                CustomMessageBox.Show("Your home location is invalid", Strings.ERROR);
+                return;
+            }
+
+            // check for invalid grid data
+            for (int a = 0; a < Commands.Rows.Count - 0; a++)
+            {
+                for (int b = 0; b < Commands.ColumnCount - 0; b++)
+                {
+                    double answer;
+                    if (b >= 1 && b <= 7)
+                    {
+                        if (!double.TryParse(Commands[b, a].Value.ToString(), out answer))
+                        {
+                            CustomMessageBox.Show("There are errors in your mission");
+                            return;
+                        }
+                    }
+
+                    if (TXT_altwarn.Text == "")
+                        TXT_altwarn.Text = (0).ToString();
+
+                    if (Commands.Rows[a].Cells[Command.Index].Value.ToString().Contains("UNKNOWN"))
+                        continue;
+
+                    byte cmd =
+                        (byte)
+                            (int)
+                                Enum.Parse(typeof(MAVLink.MAV_CMD),
+                                    Commands.Rows[a].Cells[Command.Index].Value.ToString(), false);
+
+                    if (cmd < (byte)MAVLink.MAV_CMD.LAST &&
+                        double.Parse(Commands[Alt.Index, a].Value.ToString()) < double.Parse(TXT_altwarn.Text))
+                    {
+                        if (cmd != (byte)MAVLink.MAV_CMD.TAKEOFF &&
+                            cmd != (byte)MAVLink.MAV_CMD.LAND &&
+                            cmd != (byte)MAVLink.MAV_CMD.RETURN_TO_LAUNCH)
+                        {
+                            CustomMessageBox.Show("Low alt on WP#" + (a + 1) +
+                                                  "\nPlease reduce the alt warning, or increase the altitude");
+                            return;
+                        }
+                    }
+                }
+            }
+
+            ProgressReporterDialogue frmProgressReporter = new ProgressReporterDialogue
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                Text = "Sending WP's"
+            };
+
+            frmProgressReporter.DoWork += saveWPs;
+            frmProgressReporter.UpdateProgressAndStatus(-1, "Sending WP's");
+
+            ThemeManager.ApplyThemeTo(frmProgressReporter);
+
+            frmProgressReporter.RunBackgroundOperationAsync();
+
+            frmProgressReporter.Dispose();
+
+            MainMap.Focus();
         }
     }
 }

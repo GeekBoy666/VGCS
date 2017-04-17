@@ -4063,6 +4063,8 @@
     <None Include="Resources\100500.png" />
     <None Include="Resources\100506.png" />
     <None Include="Resources\100700.png" />
+    <None Include="Resources\000117.png" />
+    <None Include="Resources\100900.png" />
     <Content Include="Scripts\example7.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

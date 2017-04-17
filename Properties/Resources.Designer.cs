@@ -193,6 +193,26 @@ namespace MissionPlanner.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        public static System.Drawing.Bitmap _000117 {
+            get {
+                object obj = ResourceManager.GetObject("_000117", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _0009 {
+            get {
+                object obj = ResourceManager.GetObject("_0009", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         public static System.Drawing.Bitmap _01_01 {
             get {
                 object obj = ResourceManager.GetObject("_01_01", resourceCulture);
@@ -366,6 +386,16 @@ namespace MissionPlanner.Properties {
         public static System.Drawing.Bitmap _100700 {
             get {
                 object obj = ResourceManager.GetObject("_100700", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _100900 {
+            get {
+                object obj = ResourceManager.GetObject("_100900", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -896,6 +926,16 @@ namespace MissionPlanner.Properties {
         public static System.Drawing.Bitmap down90 {
             get {
                 object obj = ResourceManager.GetObject("down90", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap enlarge {
+            get {
+                object obj = ResourceManager.GetObject("enlarge", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1516,6 +1556,16 @@ namespace MissionPlanner.Properties {
             get {
                 object obj = ResourceManager.GetObject("mpdesktop", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap narrow {
+            get {
+                object obj = ResourceManager.GetObject("narrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
