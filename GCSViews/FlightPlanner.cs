@@ -6984,7 +6984,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             SaveFile_Click(null, null);
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        public void pictureBox5_Click(object sender, EventArgs e)
         {
             if (Commands.Rows.Count > 0)
             {
@@ -7102,6 +7102,147 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             frmProgressReporter.Dispose();
 
             MainMap.Focus();
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            pictureBox1.BackColor = Color.FromArgb(153, 248, 154);
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox1.BackColor = Color.FromArgb(153, 248, 154);
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox1.BackColor = Color.FromArgb(226, 253, 235);
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox2.BackColor = Color.FromArgb(153, 248, 154);
+        }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox2.BackColor = Color.FromArgb(226, 253, 235);
+        }
+
+        private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox3.BackColor = Color.FromArgb(153, 248, 154);
+        }
+
+        private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox3.BackColor = Color.FromArgb(226, 253, 235);
+        }
+
+        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox4.BackColor = Color.FromArgb(153, 248, 154);
+        }
+
+        private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox4.BackColor = Color.FromArgb(226, 253, 235);
+        }
+
+        private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox5.BackColor = Color.FromArgb(153, 248, 154);
+        }
+
+        private void pictureBox5_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox5.BackColor = Color.FromArgb(226, 253, 235);
+        }
+
+        private void pictureBox6_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox6.BackColor = Color.FromArgb(153, 248, 154);
+        }
+
+        private void pictureBox6_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox6.BackColor = Color.FromArgb(226, 253, 235);
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            panel1.Show();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            panel3.Show();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            panel3.Hide();
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            if (!MainV2.comPort.BaseStream.IsOpen)
+                return;
+
+            // arm the MAV
+            try
+            {
+                if (MainV2.comPort.MAV.cs.armed)
+                    if (CustomMessageBox.Show("Are you sure you want to Disarm?", "Disarm?", MessageBoxButtons.YesNo) !=
+                        DialogResult.Yes)
+                        return;
+
+                bool ans = MainV2.comPort.doARM(!MainV2.comPort.MAV.cs.armed);
+                if (ans == false)
+                    CustomMessageBox.Show(Strings.ErrorRejectedByMAV, Strings.ERROR);
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.ErrorNoResponce, Strings.ERROR);
+            }
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ((PictureBox)sender).Enabled = false;
+                if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduPlane ||
+                    MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.Ateryx ||
+                    MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduRover)
+                    MainV2.comPort.setMode("Loiter");
+                if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
+                    MainV2.comPort.setMode("Loiter");
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.CommandFailed, Strings.ERROR);
+            }
+            ((PictureBox)sender).Enabled = true;
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ((PictureBox)sender).Enabled = false;
+                MainV2.comPort.setMode("Auto");
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.CommandFailed, Strings.ERROR);
+            }
+            ((PictureBox)sender).Enabled = true;
         }
     }
 }

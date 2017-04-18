@@ -12,6 +12,11 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Reflection;
+
+using GMap.NET;
+using GMap.NET.MapProviders;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
 using MissionPlanner.Utilities;
 using IronPython.Hosting;
 using log4net;
@@ -24,6 +29,10 @@ using System.Collections.Concurrent;
 using MissionPlanner.GCSViews.ConfigurationView;
 using WebCamService;
 using OpenTK;
+using MissionPlanner.GCSViews;
+using IronPython.Runtime;
+using static IronPython.Modules._ast;
+
 namespace MissionPlanner
 {
     public partial class MainV2 : Form
@@ -35,9 +44,12 @@ namespace MissionPlanner
         public static HUD myhud;
         AviWriter aviwriter;
         double LogPlayBackSpeed = 1.0;
+
+
+
         private static readonly ILog log =
             LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
+        //public static FlightData instance1;
         private static class NativeMethods
         {
             // used to hide/show console window
@@ -915,6 +927,30 @@ namespace MissionPlanner
             //    MenuDonate.Text = "";
             //    MenuDonate.Image = Program.Logo;
             //}
+            List<string> list = new List<string>();
+
+            {
+                list.Add("LOITER_UNLIM");
+                list.Add("RETURN_TO_LAUNCH");
+                list.Add("PREFLIGHT_CALIBRATION");
+                list.Add("MISSION_START");
+                list.Add("PREFLIGHT_REBOOT_SHUTDOWN");
+                list.Add("Trigger Camera NOW");
+                //DO_SET_SERVO
+                //DO_REPEAT_SERVO
+            }
+
+
+            CMB_action.DataSource = list;
+
+            CMB_modes.DataSource = Common.getModesList(MainV2.comPort.MAV.cs);
+            CMB_modes.ValueMember = "Key";
+            CMB_modes.DisplayMember = "Value";
+
+            //default to auto
+            CMB_modes.Text = "Auto";
+
+            CMB_setwp.SelectedIndex = 0;
 
             Application.DoEvents();
 
@@ -4763,7 +4799,7 @@ namespace MissionPlanner
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            //splitContainer4.Panel2.Controls.Clear();
+            splitContainer4.Panel2.Controls.Clear();
             
             GCSViews.FlightPlanner w1 = new GCSViews.FlightPlanner();
             w1.Parent = splitContainer4.Panel2;
@@ -4780,7 +4816,7 @@ namespace MissionPlanner
 
         private void toolStripButton3_Click_1(object sender, EventArgs e)
         {
-            //splitContainer4.Panel2.Controls.Clear();
+            splitContainer4.Panel2.Controls.Clear();
             GCSViews.InitialSetup w1 = new GCSViews.InitialSetup();
             w1.Parent = splitContainer4.Panel2;
             w1.Dock = DockStyle.Fill;
@@ -4979,6 +5015,382 @@ namespace MissionPlanner
         private void tabActions_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BUT_quickauto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ((Button)sender).Enabled = false;
+                MainV2.comPort.setMode("Auto");
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.CommandFailed, Strings.ERROR);
+            }
+            ((Button)sender).Enabled = true;
+        }
+
+        private void BUT_quickmanual_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ((Button)sender).Enabled = false;
+                if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduPlane ||
+                    MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.Ateryx ||
+                    MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduRover)
+                    MainV2.comPort.setMode("Loiter");
+                if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
+                    MainV2.comPort.setMode("Loiter");
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.CommandFailed, Strings.ERROR);
+            }
+            ((Button)sender).Enabled = true;
+        }
+
+        private void BUT_Homealt_Click(object sender, EventArgs e)
+        {
+            if (MainV2.comPort.MAV.cs.altoffsethome != 0)
+            {
+                MainV2.comPort.MAV.cs.altoffsethome = 0;
+            }
+            else
+            {
+                MainV2.comPort.MAV.cs.altoffsethome = -MainV2.comPort.MAV.cs.HomeAlt / CurrentState.multiplierdist;
+            }
+        }
+
+        private void myButton5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ((Button)sender).Enabled = false;
+
+                MainV2.comPort.setWPCurrent(0); // set nav to
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.CommandFailed, Strings.ERROR);
+            }
+            ((Button)sender).Enabled = true;
+        }
+
+        private void myButton4_Click(object sender, EventArgs e)
+        {
+            if (
+               Common.MessageShowAgain("Resume Mission",
+                   "Warning this will reprogram your mission, arm and issue a takeoff command (copter)") !=
+               DialogResult.OK)
+                return;
+
+            try
+            {
+                if (MainV2.comPort.BaseStream.IsOpen)
+                {
+                    string lastwp = MainV2.comPort.MAV.cs.lastautowp.ToString();
+                    if (lastwp == "-1")
+                        lastwp = "1";
+
+                    if (InputBox.Show("Resume at", "Resume mission at waypoint#", ref lastwp) == DialogResult.OK)
+                    {
+                        int timeout = 0;
+                        int lastwpno = int.Parse(lastwp);
+
+                        // scan and check wp's we are skipping
+                        // get our target wp
+                        var lastwpdata = MainV2.comPort.getWP((ushort)lastwpno);
+
+                        // get all
+                        List<Locationwp> cmds = new List<Locationwp>();
+
+                        var wpcount = MainV2.comPort.getWPCount();
+
+                        for (ushort a = 0; a < wpcount; a++)
+                        {
+                            var wpdata = MainV2.comPort.getWP(a);
+
+                            if (a < lastwpno && a != 0) // allow home
+                            {
+                                if (wpdata.id != (ushort)MAVLink.MAV_CMD.TAKEOFF)
+                                    if (wpdata.id < (ushort)MAVLink.MAV_CMD.LAST)
+                                        continue;
+
+                                if (wpdata.id > (ushort)MAVLink.MAV_CMD.DO_LAST)
+                                    continue;
+                            }
+
+                            cmds.Add(wpdata);
+                        }
+
+                        ushort wpno = 0;
+                        // upload from wp 0 to end
+                        MainV2.comPort.setWPTotal((ushort)(cmds.Count));
+
+                        // add our do commands
+                        foreach (var loc in cmds)
+                        {
+                            MAVLink.MAV_MISSION_RESULT ans = MainV2.comPort.setWP(loc, wpno,
+                                (MAVLink.MAV_FRAME)(loc.options));
+                            if (ans != MAVLink.MAV_MISSION_RESULT.MAV_MISSION_ACCEPTED)
+                            {
+                                CustomMessageBox.Show("Upload wps failed " +
+                                                      Enum.Parse(typeof(MAVLink.MAV_CMD), loc.id.ToString()) + " " +
+                                                      Enum.Parse(typeof(MAVLink.MAV_MISSION_RESULT), ans.ToString()));
+                                return;
+                            }
+                            wpno++;
+                        }
+
+                        MainV2.comPort.setWPACK();
+
+                        FlightPlanner.instance.pictureBox5_Click(this, null);
+
+                        // set index back to 1
+                        MainV2.comPort.setWPCurrent(1);
+
+                        if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
+                        {
+                            while (MainV2.comPort.MAV.cs.mode.ToLower() != "Guided".ToLower())
+                            {
+                                MainV2.comPort.setMode("GUIDED");
+                                Thread.Sleep(1000);
+                                Application.DoEvents();
+                                timeout++;
+
+                                if (timeout > 30)
+                                {
+                                    CustomMessageBox.Show(Strings.ERROR, Strings.ErrorNoResponce);
+                                    return;
+                                }
+                            }
+
+                            timeout = 0;
+                            while (!MainV2.comPort.MAV.cs.armed)
+                            {
+                                MainV2.comPort.doARM(true);
+                                Thread.Sleep(1000);
+                                Application.DoEvents();
+                                timeout++;
+
+                                if (timeout > 30)
+                                {
+                                    CustomMessageBox.Show(Strings.ERROR, Strings.ErrorNoResponce);
+                                    return;
+                                }
+                            }
+
+                            timeout = 0;
+                            while (MainV2.comPort.MAV.cs.alt < (lastwpdata.alt - 2))
+                            {
+                                MainV2.comPort.doCommand(MAVLink.MAV_CMD.TAKEOFF, 0, 0, 0, 0, 0, 0, lastwpdata.alt);
+                                Thread.Sleep(1000);
+                                Application.DoEvents();
+                                timeout++;
+
+                                if (timeout > 40)
+                                {
+                                    CustomMessageBox.Show(Strings.ERROR, Strings.ErrorNoResponce);
+                                    return;
+                                }
+                            }
+                        }
+
+                        timeout = 0;
+                        while (MainV2.comPort.MAV.cs.mode.ToLower() != "AUTO".ToLower())
+                        {
+                            MainV2.comPort.setMode("AUTO");
+                            Thread.Sleep(1000);
+                            Application.DoEvents();
+                            timeout++;
+
+                            if (timeout > 30)
+                            {
+                                CustomMessageBox.Show(Strings.ERROR, Strings.ErrorNoResponce);
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                CustomMessageBox.Show(Strings.CommandFailed + "\n" + ex.ToString(), Strings.ERROR);
+            }
+        }
+        GMapRoute route;
+        private void myButton6_Click(object sender, EventArgs e)
+        {
+            if (route != null)
+                route.Points.Clear();
+        }
+
+        private void BUT_ARM_Click(object sender, EventArgs e)
+        {
+            if (!MainV2.comPort.BaseStream.IsOpen)
+                return;
+
+            // arm the MAV
+            try
+            {
+                if (MainV2.comPort.MAV.cs.armed)
+                    if (CustomMessageBox.Show("Are you sure you want to Disarm?", "Disarm?", MessageBoxButtons.YesNo) !=
+                        DialogResult.Yes)
+                        return;
+
+                bool ans = MainV2.comPort.doARM(!MainV2.comPort.MAV.cs.armed);
+                if (ans == false)
+                    CustomMessageBox.Show(Strings.ErrorRejectedByMAV, Strings.ERROR);
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.ErrorNoResponce, Strings.ERROR);
+            }
+        }
+
+            
+
+        private void BUTactiondo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CMB_action.Text == "Trigger Camera NOW")
+                {
+                    MainV2.comPort.setDigicamControl(true);
+                    return;
+                }
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.CommandFailed, Strings.ERROR);
+                return;
+            }
+
+            if (
+                CustomMessageBox.Show("Are you sure you want to do " + CMB_action.Text + " ?", "Action",
+                    MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    ((Button)sender).Enabled = false;
+
+                    int param1 = 0;
+                    int param3 = 1;
+
+                    // request gyro
+                    if (CMB_action.Text == "PREFLIGHT_CALIBRATION")
+                    {
+                        if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduCopter2)
+                            param1 = 1; // gyro
+                        param3 = 1; // baro / airspeed
+                    }
+                    if (CMB_action.Text == "PREFLIGHT_REBOOT_SHUTDOWN")
+                    {
+                        param1 = 1; // reboot
+                    }
+
+                    MainV2.comPort.doCommand((MAVLink.MAV_CMD)Enum.Parse(typeof(MAVLink.MAV_CMD), CMB_action.Text),
+                        param1, 0, param3, 0, 0, 0, 0);
+                }
+                catch
+                {
+                    CustomMessageBox.Show(Strings.CommandFailed, Strings.ERROR);
+                }
+                ((Button)sender).Enabled = true;
+            }
+        }
+
+        private void BUT_setmode_Click(object sender, EventArgs e)
+        {
+            MainV2.comPort.setMode(CMB_modes.Text);
+        }
+
+        private void BUT_setwp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ((Button)sender).Enabled = false;
+                MainV2.comPort.setWPCurrent((ushort)CMB_setwp.SelectedIndex); // set nav to
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.CommandFailed, Strings.ERROR);
+            }
+            ((Button)sender).Enabled = true;
+        }
+
+        private void modifyandSetAlt_Click(object sender, EventArgs e)
+        {
+            // QUAD
+            if (MainV2.comPort.MAV.param.ContainsKey("WP_SPEED_MAX"))
+            {
+                try
+                {
+                    MainV2.comPort.setParam("WP_SPEED_MAX", ((float)modifyandSetSpeed.Value * 100.0f));
+                }
+                catch
+                {
+                    CustomMessageBox.Show(String.Format(Strings.ErrorSetValueFailed, "WP_SPEED_MAX"), Strings.ERROR);
+                }
+            } // plane with airspeed
+            else if (MainV2.comPort.MAV.param.ContainsKey("TRIM_ARSPD_CM") &&
+                     MainV2.comPort.MAV.param.ContainsKey("ARSPD_ENABLE")
+                     && MainV2.comPort.MAV.param.ContainsKey("ARSPD_USE") &&
+                     (float)MainV2.comPort.MAV.param["ARSPD_ENABLE"] == 1
+                     && (float)MainV2.comPort.MAV.param["ARSPD_USE"] == 1)
+            {
+                try
+                {
+                    MainV2.comPort.setParam("TRIM_ARSPD_CM", ((float)modifyandSetSpeed.Value * 100.0f));
+                }
+                catch
+                {
+                    CustomMessageBox.Show(String.Format(Strings.ErrorSetValueFailed, "TRIM_ARSPD_CM"), Strings.ERROR);
+                }
+            } // plane without airspeed
+            else if (MainV2.comPort.MAV.param.ContainsKey("TRIM_THROTTLE") &&
+                     MainV2.comPort.MAV.param.ContainsKey("ARSPD_USE")
+                     && (float)MainV2.comPort.MAV.param["ARSPD_USE"] == 0)
+            {
+                try
+                {
+                    MainV2.comPort.setParam("TRIM_THROTTLE", (float)modifyandSetSpeed.Value);
+                }
+                catch
+                {
+                    CustomMessageBox.Show(String.Format(Strings.ErrorSetValueFailed, "TRIM_THROTTLE"),
+                        Strings.ERROR);
+                }
+            }
+        }
+
+        private void modifyandSetSpeed_Click(object sender, EventArgs e)
+        {
+            int newalt = (int)modifyandSetAlt.Value;
+            try
+            {
+                MainV2.comPort.setNewWPAlt(new Locationwp { alt = newalt / CurrentState.multiplierdist });
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.ErrorCommunicating, Strings.ERROR);
+            }
+            //MainV2.comPort.setNextWPTargetAlt((ushort)MainV2.comPort.MAV.cs.wpno, newalt);
+        }
+
+        private void modifyandSetLoiterRad_Click(object sender, EventArgs e)
+        {
+            int newrad = (int)modifyandSetLoiterRad.Value;
+
+            try
+            {
+                MainV2.comPort.setParam(new[] { "LOITER_RAD", "WP_LOITER_RAD" }, newrad / CurrentState.multiplierdist);
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.ErrorCommunicating, Strings.ERROR);
+            }
         }
     }
 }
