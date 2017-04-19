@@ -1322,6 +1322,9 @@
   <data name="pictureBox16.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
   </data>
+  <data name="pictureBox16.ToolTip" xml:space="preserve">
+    <value>降落</value>
+  </data>
   <data name="&gt;&gt;pictureBox16.Name" xml:space="preserve">
     <value>pictureBox16</value>
   </data>
@@ -1345,6 +1348,9 @@
   </data>
   <data name="pictureBox15.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
+  </data>
+  <data name="pictureBox15.ToolTip" xml:space="preserve">
+    <value>飞至家点</value>
   </data>
   <data name="&gt;&gt;pictureBox15.Name" xml:space="preserve">
     <value>pictureBox15</value>
@@ -1370,6 +1376,9 @@
   <data name="pictureBox14.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
+  <data name="pictureBox14.ToolTip" xml:space="preserve">
+    <value>自动</value>
+  </data>
   <data name="&gt;&gt;pictureBox14.Name" xml:space="preserve">
     <value>pictureBox14</value>
   </data>
@@ -1393,6 +1402,9 @@
   </data>
   <data name="pictureBox13.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
+  </data>
+  <data name="pictureBox13.ToolTip" xml:space="preserve">
+    <value>旋停</value>
   </data>
   <data name="&gt;&gt;pictureBox13.Name" xml:space="preserve">
     <value>pictureBox13</value>
@@ -1418,6 +1430,9 @@
   <data name="pictureBox12.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
+  <data name="pictureBox12.ToolTip" xml:space="preserve">
+    <value>起飞</value>
+  </data>
   <data name="&gt;&gt;pictureBox12.Name" xml:space="preserve">
     <value>pictureBox12</value>
   </data>
@@ -1441,6 +1456,9 @@
   </data>
   <data name="pictureBox11.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
+  </data>
+  <data name="pictureBox11.ToolTip" xml:space="preserve">
+    <value>解锁/锁定</value>
   </data>
   <data name="&gt;&gt;pictureBox11.Name" xml:space="preserve">
     <value>pictureBox11</value>

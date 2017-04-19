@@ -7106,12 +7106,12 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            pictureBox1.BackColor = Color.FromArgb(153, 248, 154);
+            pictureBox1.BackColor = Color.FromArgb(168, 237, 201);
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            pictureBox1.BackColor = Color.FromArgb(153, 248, 154);
+            pictureBox1.BackColor = Color.FromArgb(168, 237, 201);
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
@@ -7121,7 +7121,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
-            pictureBox2.BackColor = Color.FromArgb(153, 248, 154);
+            pictureBox2.BackColor = Color.FromArgb(168, 237, 201);
         }
 
         private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
@@ -7131,7 +7131,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
         {
-            pictureBox3.BackColor = Color.FromArgb(153, 248, 154);
+            pictureBox3.BackColor = Color.FromArgb(168, 237, 201);
         }
 
         private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
@@ -7141,7 +7141,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
         {
-            pictureBox4.BackColor = Color.FromArgb(153, 248, 154);
+            pictureBox4.BackColor = Color.FromArgb(168, 237, 201);
         }
 
         private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
@@ -7151,7 +7151,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void pictureBox5_MouseDown(object sender, MouseEventArgs e)
         {
-            pictureBox5.BackColor = Color.FromArgb(153, 248, 154);
+            pictureBox5.BackColor = Color.FromArgb(168, 237, 201);
         }
 
         private void pictureBox5_MouseUp(object sender, MouseEventArgs e)
@@ -7161,7 +7161,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void pictureBox6_MouseDown(object sender, MouseEventArgs e)
         {
-            pictureBox6.BackColor = Color.FromArgb(153, 248, 154);
+            pictureBox6.BackColor = Color.FromArgb(168, 237, 201);
         }
 
         private void pictureBox6_MouseUp(object sender, MouseEventArgs e)
@@ -7192,7 +7192,10 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         private void pictureBox11_Click(object sender, EventArgs e)
         {
             if (!MainV2.comPort.BaseStream.IsOpen)
+            {
+                CustomMessageBox.Show("请首先进行系统连接!");
                 return;
+            }
 
             // arm the MAV
             try
@@ -7214,6 +7217,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
+            if (!MainV2.comPort.BaseStream.IsOpen)
+            {
+                CustomMessageBox.Show("请首先进行系统连接!");
+                return;
+            }
             try
             {
                 ((PictureBox)sender).Enabled = false;
@@ -7233,6 +7241,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
+            if (!MainV2.comPort.BaseStream.IsOpen)
+            {
+                CustomMessageBox.Show("请首先进行系统连接!");
+                return;
+            }
             try
             {
                 ((PictureBox)sender).Enabled = false;
@@ -7243,6 +7256,78 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 CustomMessageBox.Show(Strings.CommandFailed, Strings.ERROR);
             }
             ((PictureBox)sender).Enabled = true;
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            selectedrow = Commands.Rows.Add();
+
+            Commands.Rows[selectedrow].Cells[Command.Index].Value = MAVLink.MAV_CMD.LAND.ToString();
+
+            //Commands.Rows[selectedrow].Cells[Param1.Index].Value = time;
+
+            ChangeColumnHeader(MAVLink.MAV_CMD.LAND.ToString());
+
+            setfromMap(MouseDownEnd.Lat, MouseDownEnd.Lng, 1);
+
+            writeKML();
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            // altitude
+            string alt = "10";
+
+            if (DialogResult.Cancel == InputBox.Show("Altitude", "Please enter your takeoff altitude", ref alt))
+                return;
+
+            int alti = -1;
+
+            if (!int.TryParse(alt, out alti))
+            {
+                MessageBox.Show("Bad Alt");
+                return;
+            }
+
+            // take off pitch
+            int topi = 0;
+
+            if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduPlane ||
+                MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.Ateryx)
+            {
+                string top = "15";
+
+                if (DialogResult.Cancel == InputBox.Show("Takeoff Pitch", "Please enter your takeoff pitch", ref top))
+                    return;
+
+                if (!int.TryParse(top, out topi))
+                {
+                    MessageBox.Show("Bad Takeoff pitch");
+                    return;
+                }
+            }
+
+            selectedrow = Commands.Rows.Add();
+
+            Commands.Rows[selectedrow].Cells[Command.Index].Value = MAVLink.MAV_CMD.TAKEOFF.ToString();
+
+            Commands.Rows[selectedrow].Cells[Param1.Index].Value = topi;
+
+            Commands.Rows[selectedrow].Cells[Alt.Index].Value = alti;
+
+            ChangeColumnHeader(MAVLink.MAV_CMD.TAKEOFF.ToString());
+
+            writeKML();
+        }
+
+        private void pictureBox11_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox11.BackColor = Color.FromArgb(208, 251, 196);
+        }
+
+        private void pictureBox11_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox11.BackColor = Color.FromArgb(226, 253, 235);
         }
     }
 }
