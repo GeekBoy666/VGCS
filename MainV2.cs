@@ -32,6 +32,7 @@ using OpenTK;
 using MissionPlanner.GCSViews;
 using IronPython.Runtime;
 using static IronPython.Modules._ast;
+using ZedGraph;
 
 namespace MissionPlanner
 {
@@ -44,8 +45,40 @@ namespace MissionPlanner
         public static HUD myhud;
         AviWriter aviwriter;
         double LogPlayBackSpeed = 1.0;
+        int tickStart;
+        bool playingLog;
+        RollingPointPairList list1 = new RollingPointPairList(1200);
+        RollingPointPairList list2 = new RollingPointPairList(1200);
+        RollingPointPairList list3 = new RollingPointPairList(1200);
+        RollingPointPairList list4 = new RollingPointPairList(1200);
+        RollingPointPairList list5 = new RollingPointPairList(1200);
+        RollingPointPairList list6 = new RollingPointPairList(1200);
+        RollingPointPairList list7 = new RollingPointPairList(1200);
+        RollingPointPairList list8 = new RollingPointPairList(1200);
+        RollingPointPairList list9 = new RollingPointPairList(1200);
+        RollingPointPairList list10 = new RollingPointPairList(1200);
 
+        PropertyInfo list1item;
+        PropertyInfo list2item;
+        PropertyInfo list3item;
+        PropertyInfo list4item;
+        PropertyInfo list5item;
+        PropertyInfo list6item;
+        PropertyInfo list7item;
+        PropertyInfo list8item;
+        PropertyInfo list9item;
+        PropertyInfo list10item;
 
+        CurveItem list1curve;
+        CurveItem list2curve;
+        CurveItem list3curve;
+        CurveItem list4curve;
+        CurveItem list5curve;
+        CurveItem list6curve;
+        CurveItem list7curve;
+        CurveItem list8curve;
+        CurveItem list9curve;
+        CurveItem list10curve;
 
         private static readonly ILog log =
             LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -1088,7 +1121,62 @@ namespace MissionPlanner
         //        }
         //    }
         //}
+        private double ConvertToDouble(object input)
+        {
+            if (input.GetType() == typeof(float))
+            {
+                return (float)input;
+            }
+            if (input.GetType() == typeof(double))
+            {
+                return (double)input;
+            }
+            if (input.GetType() == typeof(ulong))
+            {
+                return (ulong)input;
+            }
+            if (input.GetType() == typeof(long))
+            {
+                return (long)input;
+            }
+            if (input.GetType() == typeof(int))
+            {
+                return (int)input;
+            }
+            if (input.GetType() == typeof(uint))
+            {
+                return (uint)input;
+            }
+            if (input.GetType() == typeof(short))
+            {
+                return (short)input;
+            }
+            if (input.GetType() == typeof(ushort))
+            {
+                return (ushort)input;
+            }
+            if (input.GetType() == typeof(bool))
+            {
+                return (bool)input ? 1 : 0;
+            }
+            if (input.GetType() == typeof(string))
+            {
+                double ans = 0;
+                if (double.TryParse((string)input, out ans))
+                {
+                    return ans;
+                }
+            }
+            if (input is Enum)
+            {
+                return Convert.ToInt32(input);
+            }
 
+            if (input == null)
+                throw new Exception("Bad Type Null");
+            else
+                throw new Exception("Bad Type " + input.GetType().ToString());
+        }
         void adsb_UpdatePlanePosition(object sender, EventArgs e)
         {
             lock (adsblock)
@@ -3501,32 +3589,32 @@ namespace MissionPlanner
 
                     // update vario info
                     Vario.SetValue(MainV2.comPort.MAV.cs.climbrate);
-
+                    
                     // udpate tunning tab
-                    //if (tunning.AddMilliseconds(50) < DateTime.Now && CB_tuning.Checked)
-                    //{
-                    //    double time = (Environment.TickCount - tickStart) / 1000.0;
-                    //    if (list1item != null)
-                    //        list1.Add(time, ConvertToDouble(list1item.GetValue(MainV2.comPort.MAV.cs, null)));
-                    //    if (list2item != null)
-                    //        list2.Add(time, ConvertToDouble(list2item.GetValue(MainV2.comPort.MAV.cs, null)));
-                    //    if (list3item != null)
-                    //        list3.Add(time, ConvertToDouble(list3item.GetValue(MainV2.comPort.MAV.cs, null)));
-                    //    if (list4item != null)
-                    //        list4.Add(time, ConvertToDouble(list4item.GetValue(MainV2.comPort.MAV.cs, null)));
-                    //    if (list5item != null)
-                    //        list5.Add(time, ConvertToDouble(list5item.GetValue(MainV2.comPort.MAV.cs, null)));
-                    //    if (list6item != null)
-                    //        list6.Add(time, ConvertToDouble(list6item.GetValue(MainV2.comPort.MAV.cs, null)));
-                    //    if (list7item != null)
-                    //        list7.Add(time, ConvertToDouble(list7item.GetValue(MainV2.comPort.MAV.cs, null)));
-                    //    if (list8item != null)
-                    //        list8.Add(time, ConvertToDouble(list8item.GetValue(MainV2.comPort.MAV.cs, null)));
-                    //    if (list9item != null)
-                    //        list9.Add(time, ConvertToDouble(list9item.GetValue(MainV2.comPort.MAV.cs, null)));
-                    //    if (list10item != null)
-                    //        list10.Add(time, ConvertToDouble(list10item.GetValue(MainV2.comPort.MAV.cs, null)));
-                    //}
+                    if (tunning.AddMilliseconds(50) < DateTime.Now && CB_Dbug.Checked)
+                    {
+                        double time = (Environment.TickCount - tickStart) / 1000.0;
+                        if (list1item != null)
+                            list1.Add(time, ConvertToDouble(list1item.GetValue(MainV2.comPort.MAV.cs, null)));
+                        if (list2item != null)
+                            list2.Add(time, ConvertToDouble(list2item.GetValue(MainV2.comPort.MAV.cs, null)));
+                        if (list3item != null)
+                            list3.Add(time, ConvertToDouble(list3item.GetValue(MainV2.comPort.MAV.cs, null)));
+                        if (list4item != null)
+                            list4.Add(time, ConvertToDouble(list4item.GetValue(MainV2.comPort.MAV.cs, null)));
+                        if (list5item != null)
+                            list5.Add(time, ConvertToDouble(list5item.GetValue(MainV2.comPort.MAV.cs, null)));
+                        if (list6item != null)
+                            list6.Add(time, ConvertToDouble(list6item.GetValue(MainV2.comPort.MAV.cs, null)));
+                        if (list7item != null)
+                            list7.Add(time, ConvertToDouble(list7item.GetValue(MainV2.comPort.MAV.cs, null)));
+                        if (list8item != null)
+                            list8.Add(time, ConvertToDouble(list8item.GetValue(MainV2.comPort.MAV.cs, null)));
+                        if (list9item != null)
+                            list9.Add(time, ConvertToDouble(list9item.GetValue(MainV2.comPort.MAV.cs, null)));
+                        if (list10item != null)
+                            list10.Add(time, ConvertToDouble(list10item.GetValue(MainV2.comPort.MAV.cs, null)));
+                    }
 
                     // update map
                     if (tracklast.AddSeconds(1.2) < DateTime.Now)
@@ -4799,7 +4887,7 @@ namespace MissionPlanner
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            splitContainer4.Panel2.Controls.Clear();
+            //splitContainer4.Panel2.Controls.Clear();
             
             GCSViews.FlightPlanner w1 = new GCSViews.FlightPlanner();
             w1.Parent = splitContainer4.Panel2;
@@ -5390,6 +5478,500 @@ namespace MissionPlanner
             catch
             {
                 CustomMessageBox.Show(Strings.ErrorCommunicating, Strings.ERROR);
+            }
+        }
+
+        private void BUT_loadtelem_Click(object sender, EventArgs e)
+        {
+            LBL_logfn.Text = "";
+
+            if (MainV2.comPort.logplaybackfile != null)
+            {
+                try
+                {
+                    MainV2.comPort.logplaybackfile.Close();
+                    MainV2.comPort.logplaybackfile = null;
+                }
+                catch
+                {
+                }
+            }
+
+            using (OpenFileDialog fd = new OpenFileDialog())
+            {
+                fd.AddExtension = true;
+                fd.Filter = "Telemetry log (*.tlog)|*.tlog;*.tlog.*|Mavlink Log (*.mavlog)|*.mavlog";
+                fd.InitialDirectory = Settings.Instance.LogDir;
+                fd.DefaultExt = ".tlog";
+                DialogResult result = fd.ShowDialog();
+                string file = fd.FileName;
+                LoadLogFile(file);
+            }
+        }
+        public void LoadLogFile(string file)
+        {
+            if (file != "")
+            {
+                try
+                {
+                    myButton6_Click(null, null);
+
+                    MainV2.comPort.logreadmode = true;
+                    MainV2.comPort.logplaybackfile = new BinaryReader(File.OpenRead(file));
+                    MainV2.comPort.lastlogread = DateTime.MinValue;
+
+                    LBL_logfn.Text = Path.GetFileName(file);
+
+                    log.Info("Open logfile " + file);
+
+                    MainV2.comPort.getHeartBeat();
+
+                    tracklog.Value = 0;
+                    tracklog.Minimum = 0;
+                    tracklog.Maximum = 100;
+                }
+                catch
+                {
+                    CustomMessageBox.Show(Strings.PleaseLoadValidFile, Strings.ERROR);
+                }
+            }
+        }
+
+        private void BUT_playlog_Click(object sender, EventArgs e)
+        {
+            if (MainV2.comPort.logreadmode)
+            {
+                MainV2.comPort.logreadmode = false;
+                ZedTimer.Stop();
+                playingLog = false;
+            }
+            else
+            {
+                // BUT_clear_track_Click(sender, e);
+                MainV2.comPort.logreadmode = true;
+                list1.Clear();
+                list2.Clear();
+                list3.Clear();
+                list4.Clear();
+                list5.Clear();
+                list6.Clear();
+                list7.Clear();
+                list8.Clear();
+                list9.Clear();
+                list10.Clear();
+                tickStart = Environment.TickCount;
+
+                zedGraphControl1.GraphPane.XAxis.Scale.Min = 0;
+                zedGraphControl1.GraphPane.XAxis.Scale.Max = 1;
+                ZedTimer.Start();
+                playingLog = true;
+            }
+        }
+
+        private void ZedTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                // Make sure that the curvelist has at least one curve
+                if (zedGraphControl1.GraphPane.CurveList.Count <= 0)
+                    return;
+
+                // Get the first CurveItem in the graph
+                LineItem curve = zedGraphControl1.GraphPane.CurveList[0] as LineItem;
+                if (curve == null)
+                    return;
+
+                // Get the PointPairList
+                IPointListEdit list = curve.Points as IPointListEdit;
+                // If this is null, it means the reference at curve.Points does not
+                // support IPointListEdit, so we won't be able to modify it
+                if (list == null)
+                    return;
+
+                // Time is measured in seconds
+                double time = (Environment.TickCount - tickStart) / 1000.0;
+
+                // Keep the X scale at a rolling 30 second interval, with one
+                // major step between the max X value and the end of the axis
+                Scale xScale = zedGraphControl1.GraphPane.XAxis.Scale;
+                if (time > xScale.Max - xScale.MajorStep)
+                {
+                    xScale.Max = time + xScale.MajorStep;
+                    xScale.Min = xScale.Max - 10.0;
+                }
+
+                // Make sure the Y axis is rescaled to accommodate actual data确保Y轴调整以适应实际的数据
+                zedGraphControl1.AxisChange();
+
+                // Force a redraw
+
+                zedGraphControl1.Invalidate();
+            }
+            catch
+            {
+            }
+        }
+
+        private void zedGraphControl1_DoubleClick(object sender, EventArgs e)
+        {
+            string formname = "select";
+            Form selectform = Application.OpenForms[formname];
+            if (selectform != null)
+            {
+                selectform.WindowState = FormWindowState.Minimized;
+                selectform.Show();
+                selectform.WindowState = FormWindowState.Normal;
+                return;
+            }
+
+            selectform = new Form
+            {
+                Name = formname,
+                Width = 50,
+                Height = 550,
+                Text = "Graph This"
+            };
+
+            int x = 10;
+            int y = 10;
+
+            {
+                CheckBox chk_box = new CheckBox();
+                chk_box.Text = "Logarithmic";
+                chk_box.Name = "Logarithmic";
+                chk_box.Location = new Point(x, y);
+                chk_box.Size = new Size(100, 20);
+                chk_box.CheckedChanged += chk_log_CheckedChanged;
+
+                selectform.Controls.Add(chk_box);
+            }
+
+            ThemeManager.ApplyThemeTo(selectform);
+
+            y += 20;
+
+            object thisBoxed = MainV2.comPort.MAV.cs;
+            Type test = thisBoxed.GetType();
+
+            foreach (var field in test.GetProperties())
+            {
+                // field.Name has the field's name.
+                object fieldValue;
+                TypeCode typeCode;
+                try
+                {
+                    fieldValue = field.GetValue(thisBoxed, null); // Get value
+
+                    if (fieldValue == null)
+                        continue;
+
+                    // Get the TypeCode enumeration. Multiple types get mapped to a common typecode.
+                    typeCode = Type.GetTypeCode(fieldValue.GetType());
+                }
+                catch
+                {
+                    continue;
+                }
+
+                if (
+                    !(typeCode == TypeCode.Single || typeCode == TypeCode.Double || typeCode == TypeCode.Int32 ||
+                      typeCode == TypeCode.UInt16))
+                    continue;
+
+                CheckBox chk_box = new CheckBox();
+
+                ThemeManager.ApplyThemeTo(chk_box);
+
+                if (list1item != null && list1item.Name == field.Name)
+                {
+                    chk_box.Checked = true;
+                    chk_box.BackColor = Color.Green;
+                }
+                if (list2item != null && list2item.Name == field.Name)
+                {
+                    chk_box.Checked = true;
+                    chk_box.BackColor = Color.Green;
+                }
+                if (list3item != null && list3item.Name == field.Name)
+                {
+                    chk_box.Checked = true;
+                    chk_box.BackColor = Color.Green;
+                }
+                if (list4item != null && list4item.Name == field.Name)
+                {
+                    chk_box.Checked = true;
+                    chk_box.BackColor = Color.Green;
+                }
+                if (list5item != null && list5item.Name == field.Name)
+                {
+                    chk_box.Checked = true;
+                    chk_box.BackColor = Color.Green;
+                }
+                if (list6item != null && list6item.Name == field.Name)
+                {
+                    chk_box.Checked = true;
+                    chk_box.BackColor = Color.Green;
+                }
+                if (list7item != null && list7item.Name == field.Name)
+                {
+                    chk_box.Checked = true;
+                    chk_box.BackColor = Color.Green;
+                }
+                if (list8item != null && list8item.Name == field.Name)
+                {
+                    chk_box.Checked = true;
+                    chk_box.BackColor = Color.Green;
+                }
+                if (list9item != null && list9item.Name == field.Name)
+                {
+                    chk_box.Checked = true;
+                    chk_box.BackColor = Color.Green;
+                }
+                if (list10item != null && list10item.Name == field.Name)
+                {
+                    chk_box.Checked = true;
+                    chk_box.BackColor = Color.Green;
+                }
+
+                chk_box.Text = field.Name;
+                chk_box.Name = field.Name;
+                chk_box.Location = new Point(x, y);
+                chk_box.Size = new Size(100, 20);
+                chk_box.CheckedChanged += chk_box_CheckedChanged;
+
+                selectform.Controls.Add(chk_box);
+
+                Application.DoEvents();
+
+                x += 0;
+                y += 20;
+
+                if (y > selectform.Height - 50)
+                {
+                    x += 100;
+                    y = 10;
+
+                    selectform.Width = x + 100;
+                }
+            }
+
+            selectform.Show();
+        }
+        bool setupPropertyInfo(ref PropertyInfo input, string name, object source)
+        {
+            Type test = source.GetType();
+
+            foreach (var field in test.GetProperties())
+            {
+                if (field.Name == name)
+                {
+                    input = field;
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        void chk_log_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((CheckBox)sender).Checked)
+            {
+                zedGraphControl1.GraphPane.YAxis.Type = AxisType.Log;
+            }
+            else
+            {
+                zedGraphControl1.GraphPane.YAxis.Type = AxisType.Linear;
+            }
+        }
+
+        void chk_box_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((CheckBox)sender).Checked)
+            {
+                ((CheckBox)sender).BackColor = Color.Green;
+
+                if (list1item == null)
+                {
+                    if (setupPropertyInfo(ref list1item, ((CheckBox)sender).Name, MainV2.comPort.MAV.cs))
+                    {
+                        list1.Clear();
+                        list1curve = zedGraphControl1.GraphPane.AddCurve(((CheckBox)sender).Name, list1, Color.Red, SymbolType.None);
+                    }
+                }
+                else if (list2item == null)
+                {
+                    if (setupPropertyInfo(ref list2item, ((CheckBox)sender).Name, MainV2.comPort.MAV.cs))
+                    {
+                        list2.Clear();
+                        list2curve = zedGraphControl1.GraphPane.AddCurve(((CheckBox)sender).Name, list2, Color.Blue, SymbolType.None);
+                    }
+                }
+                else if (list3item == null)
+                {
+                    if (setupPropertyInfo(ref list3item, ((CheckBox)sender).Name, MainV2.comPort.MAV.cs))
+                    {
+                        list3.Clear();
+                        list3curve = zedGraphControl1.GraphPane.AddCurve(((CheckBox)sender).Name, list3, Color.Green,
+                            SymbolType.None);
+                    }
+                }
+                else if (list4item == null)
+                {
+                    if (setupPropertyInfo(ref list4item, ((CheckBox)sender).Name, MainV2.comPort.MAV.cs))
+                    {
+                        list4.Clear();
+                        list4curve = zedGraphControl1.GraphPane.AddCurve(((CheckBox)sender).Name, list4, Color.Orange,
+                            SymbolType.None);
+                    }
+                }
+                else if (list5item == null)
+                {
+                    if (setupPropertyInfo(ref list5item, ((CheckBox)sender).Name, MainV2.comPort.MAV.cs))
+                    {
+                        list5.Clear();
+                        list5curve = zedGraphControl1.GraphPane.AddCurve(((CheckBox)sender).Name, list5, Color.Yellow,
+                            SymbolType.None);
+                    }
+                }
+                else if (list6item == null)
+                {
+                    if (setupPropertyInfo(ref list6item, ((CheckBox)sender).Name, MainV2.comPort.MAV.cs))
+                    {
+                        list6.Clear();
+                        list6curve = zedGraphControl1.GraphPane.AddCurve(((CheckBox)sender).Name, list6, Color.Magenta,
+                            SymbolType.None);
+                    }
+                }
+                else if (list7item == null)
+                {
+                    if (setupPropertyInfo(ref list7item, ((CheckBox)sender).Name, MainV2.comPort.MAV.cs))
+                    {
+                        list7.Clear();
+                        list7curve = zedGraphControl1.GraphPane.AddCurve(((CheckBox)sender).Name, list7, Color.Purple,
+                            SymbolType.None);
+                    }
+                }
+                else if (list8item == null)
+                {
+                    if (setupPropertyInfo(ref list8item, ((CheckBox)sender).Name, MainV2.comPort.MAV.cs))
+                    {
+                        list8.Clear();
+                        list8curve = zedGraphControl1.GraphPane.AddCurve(((CheckBox)sender).Name, list8, Color.LimeGreen,
+                            SymbolType.None);
+                    }
+                }
+                else if (list9item == null)
+                {
+                    if (setupPropertyInfo(ref list9item, ((CheckBox)sender).Name, MainV2.comPort.MAV.cs))
+                    {
+                        list9.Clear();
+                        list9curve = zedGraphControl1.GraphPane.AddCurve(((CheckBox)sender).Name, list9, Color.Cyan, SymbolType.None);
+                    }
+                }
+                else if (list10item == null)
+                {
+                    if (setupPropertyInfo(ref list10item, ((CheckBox)sender).Name, MainV2.comPort.MAV.cs))
+                    {
+                        list10.Clear();
+                        list10curve = zedGraphControl1.GraphPane.AddCurve(((CheckBox)sender).Name, list10, Color.Violet,
+                            SymbolType.None);
+                    }
+                }
+                else
+                {
+                    CustomMessageBox.Show("Max 10 at a time.");
+                    ((CheckBox)sender).Checked = false;
+                }
+                ThemeManager.ApplyThemeTo((Control)sender);
+
+                string selected = "";
+                try
+                {
+                    foreach (var curve in zedGraphControl1.GraphPane.CurveList)
+                    {
+                        selected = selected + curve.Label.Text + "|";
+                    }
+                }
+                catch
+                {
+                }
+                Settings.Instance["Tuning_Graph_Selected"] = selected;
+            }
+            else
+            {
+                ((CheckBox)sender).BackColor = Color.Transparent;
+
+                // reset old stuff
+                if (list1item != null && list1item.Name == ((CheckBox)sender).Name)
+                {
+                    list1item = null;
+                    zedGraphControl1.GraphPane.CurveList.Remove(list1curve);
+                }
+                if (list2item != null && list2item.Name == ((CheckBox)sender).Name)
+                {
+                    list2item = null;
+                    zedGraphControl1.GraphPane.CurveList.Remove(list2curve);
+                }
+                if (list3item != null && list3item.Name == ((CheckBox)sender).Name)
+                {
+                    list3item = null;
+                    zedGraphControl1.GraphPane.CurveList.Remove(list3curve);
+                }
+                if (list4item != null && list4item.Name == ((CheckBox)sender).Name)
+                {
+                    list4item = null;
+                    zedGraphControl1.GraphPane.CurveList.Remove(list4curve);
+                }
+                if (list5item != null && list5item.Name == ((CheckBox)sender).Name)
+                {
+                    list5item = null;
+                    zedGraphControl1.GraphPane.CurveList.Remove(list5curve);
+                }
+                if (list6item != null && list6item.Name == ((CheckBox)sender).Name)
+                {
+                    list6item = null;
+                    zedGraphControl1.GraphPane.CurveList.Remove(list6curve);
+                }
+                if (list7item != null && list7item.Name == ((CheckBox)sender).Name)
+                {
+                    list7item = null;
+                    zedGraphControl1.GraphPane.CurveList.Remove(list7curve);
+                }
+                if (list8item != null && list8item.Name == ((CheckBox)sender).Name)
+                {
+                    list8item = null;
+                    zedGraphControl1.GraphPane.CurveList.Remove(list8curve);
+                }
+                if (list9item != null && list9item.Name == ((CheckBox)sender).Name)
+                {
+                    list9item = null;
+                    zedGraphControl1.GraphPane.CurveList.Remove(list9curve);
+                }
+                if (list10item != null && list10item.Name == ((CheckBox)sender).Name)
+                {
+                    list10item = null;
+                    zedGraphControl1.GraphPane.CurveList.Remove(list10curve);
+                }
+            }
+        }
+
+        private void CB_Dbug_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CB_Dbug .Checked)
+            {
+                //splitContainer1.Panel1Collapsed = false;
+                ZedTimer.Enabled = true;
+                ZedTimer.Start();
+                zedGraphControl1.Visible = true;
+                zedGraphControl1.Refresh();
+            }
+            else
+            {
+                //splitContainer1.Panel1Collapsed = true;
+                ZedTimer.Enabled = false;
+                ZedTimer.Stop();
+                zedGraphControl1.Visible = false;
             }
         }
     }
