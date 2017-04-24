@@ -51,6 +51,7 @@ namespace MissionPlanner
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.CB_Dbug = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -124,10 +125,9 @@ namespace MissionPlanner
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.currentStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ZedTimer = new System.Windows.Forms.Timer(this.components);
-            this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
-            this.CB_Dbug = new System.Windows.Forms.CheckBox();
             this.CTX_mainmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_hub)).BeginInit();
             this.panel1.SuspendLayout();
@@ -320,6 +320,13 @@ namespace MissionPlanner
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // CB_Dbug
+            // 
+            resources.ApplyResources(this.CB_Dbug, "CB_Dbug");
+            this.CB_Dbug.Name = "CB_Dbug";
+            this.CB_Dbug.UseVisualStyleBackColor = true;
+            this.CB_Dbug.CheckedChanged += new System.EventHandler(this.CB_Dbug_CheckedChanged);
             // 
             // label1
             // 
@@ -1121,14 +1128,6 @@ namespace MissionPlanner
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
-            // currentStateBindingSource
-            // 
-            this.currentStateBindingSource.DataSource = typeof(MissionPlanner.CurrentState);
-            // 
-            // ZedTimer
-            // 
-            this.ZedTimer.Tick += new System.EventHandler(this.ZedTimer_Tick);
-            // 
             // zedGraphControl1
             // 
             resources.ApplyResources(this.zedGraphControl1, "zedGraphControl1");
@@ -1142,12 +1141,13 @@ namespace MissionPlanner
             this.zedGraphControl1.ScrollMinY2 = 0D;
             this.zedGraphControl1.DoubleClick += new System.EventHandler(this.zedGraphControl1_DoubleClick);
             // 
-            // CB_Dbug
+            // currentStateBindingSource
             // 
-            resources.ApplyResources(this.CB_Dbug, "CB_Dbug");
-            this.CB_Dbug.Name = "CB_Dbug";
-            this.CB_Dbug.UseVisualStyleBackColor = true;
-            this.CB_Dbug.CheckedChanged += new System.EventHandler(this.CB_Dbug_CheckedChanged);
+            this.currentStateBindingSource.DataSource = typeof(MissionPlanner.CurrentState);
+            // 
+            // ZedTimer
+            // 
+            this.ZedTimer.Tick += new System.EventHandler(this.ZedTimer_Tick);
             // 
             // MainV2
             // 
