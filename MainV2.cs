@@ -1219,7 +1219,7 @@ namespace MissionPlanner
                 this.connectionStatsForm.Controls.Clear();
                 _connectionStats = new ConnectionStats(comPort);
                 this.connectionStatsForm.Controls.Add(_connectionStats);
-                ThemeManager.ApplyThemeTo(this.connectionStatsForm);
+                //ThemeManager.ApplyThemeTo(this.connectionStatsForm);
             }
         }
 
@@ -1246,7 +1246,7 @@ namespace MissionPlanner
             }
 
             this.connectionStatsForm.Show();
-            ThemeManager.ApplyThemeTo(this.connectionStatsForm);
+            //ThemeManager.ApplyThemeTo(this.connectionStatsForm);
         }
 
         private void CMB_serialport_Click(object sender, EventArgs e)
@@ -3237,7 +3237,7 @@ namespace MissionPlanner
                          (cmds["file"].ToLower().EndsWith(".log") || cmds["file"].ToLower().EndsWith(".bin")))
                 {
                     LogBrowse logbrowse = new LogBrowse();
-                    ThemeManager.ApplyThemeTo(logbrowse);
+                    //ThemeManager.ApplyThemeTo(logbrowse);
                     logbrowse.logfilename = Program.args[0];
                     logbrowse.Show(this);
                     logbrowse.BringToFront();
@@ -3370,6 +3370,7 @@ namespace MissionPlanner
             threadrun = true;
             //EndPoint Remote = new IPEndPoint(IPAddress.Any, 0);
 
+            
             DateTime tracklast = DateTime.Now.AddSeconds(0);
 
             DateTime tunning = DateTime.Now.AddSeconds(0);
@@ -3391,6 +3392,7 @@ namespace MissionPlanner
 
             while (threadrun)
             {
+                //labelhome.Text = FlightPlanner.hometext;
                 if (MainV2.comPort.giveComport)
                 {
                     Thread.Sleep(50);
@@ -3445,7 +3447,7 @@ namespace MissionPlanner
                     }
 
 
-
+                   labelhome.Text= GCSViews.FlightPlanner.instance.hometext;
 
                     //Console.WriteLine(DateTime.Now.Millisecond + " done ");
 
@@ -4290,7 +4292,7 @@ namespace MissionPlanner
             if (keyData == (Keys.Control | Keys.F)) // temp
             {
                 Form frm = new temp();
-                ThemeManager.ApplyThemeTo(frm);
+                //ThemeManager.ApplyThemeTo(frm);
                 frm.Show();
                 return true;
             }
@@ -4302,7 +4304,7 @@ namespace MissionPlanner
             if (keyData == (Keys.Control | Keys.G)) // nmea out
             {
                 Form frm = new SerialOutputNMEA();
-                ThemeManager.ApplyThemeTo(frm);
+                //ThemeManager.ApplyThemeTo(frm);
                 frm.Show();
                 return true;
             }
@@ -4715,7 +4717,7 @@ namespace MissionPlanner
                     if (child is Form)
                     {
                         log.Debug("ApplyThemeTo " + child.Name);
-                        ThemeManager.ApplyThemeTo(child);
+                        //ThemeManager.ApplyThemeTo(child);
                     }
                     break;
                 default:
@@ -5572,6 +5574,7 @@ namespace MissionPlanner
         {
             try
             {
+                
                 // Make sure that the curvelist has at least one curve
                 if (zedGraphControl1.GraphPane.CurveList.Count <= 0)
                     return;
@@ -5646,7 +5649,7 @@ namespace MissionPlanner
                 selectform.Controls.Add(chk_box);
             }
 
-            ThemeManager.ApplyThemeTo(selectform);
+            //ThemeManager.ApplyThemeTo(selectform);
 
             y += 20;
 
@@ -5680,7 +5683,7 @@ namespace MissionPlanner
 
                 CheckBox chk_box = new CheckBox();
 
-                ThemeManager.ApplyThemeTo(chk_box);
+                //ThemeManager.ApplyThemeTo(chk_box);
 
                 if (list1item != null && list1item.Name == field.Name)
                 {
@@ -5883,7 +5886,7 @@ namespace MissionPlanner
                     CustomMessageBox.Show("Max 10 at a time.");
                     ((CheckBox)sender).Checked = false;
                 }
-                ThemeManager.ApplyThemeTo((Control)sender);
+                //ThemeManager.ApplyThemeTo((Control)sender);
 
                 string selected = "";
                 try
@@ -5973,6 +5976,74 @@ namespace MissionPlanner
                 ZedTimer.Stop();
                 zedGraphControl1.Visible = false;
             }
+        }
+        private void updateLogPlayPosition()
+        {
+            BeginInvoke((MethodInvoker)delegate
+            {
+                try
+                {
+                    if (tracklog.Visible)
+                        tracklog.Value =
+                            (int)
+                                (MainV2.comPort.logplaybackfile.BaseStream.Position /
+                                 (double)MainV2.comPort.logplaybackfile.BaseStream.Length * 100);
+                    if (lbl_logpercent.Visible)
+                        lbl_logpercent.Text =
+                            (MainV2.comPort.logplaybackfile.BaseStream.Position /
+                             (double)MainV2.comPort.logplaybackfile.BaseStream.Length).ToString("0.00%");
+
+                    if (lbl_playbackspeed.Visible)
+                        lbl_playbackspeed.Text = "x " + LogPlayBackSpeed;
+                }
+                catch
+                {
+                }
+            });
+        }
+        private void tracklog_Scroll(object sender, EventArgs e)
+        {
+            try
+            {
+                myButton6_Click(sender, e);
+
+                MainV2.comPort.lastlogread = DateTime.MinValue;
+                MainV2.comPort.MAV.cs.ResetInternals();
+
+                if (MainV2.comPort.logplaybackfile != null)
+                    MainV2.comPort.logplaybackfile.BaseStream.Position =
+                        (long)(MainV2.comPort.logplaybackfile.BaseStream.Length * (tracklog.Value / 100.0));
+
+                updateLogPlayPosition();
+            }
+            catch
+            {
+            } // ignore any invalid 
+        }
+
+        private void BUT_log2kml_Click(object sender, EventArgs e)
+        {
+            Form frm = new MavlinkLog();
+            //ThemeManager.ApplyThemeTo(frm);
+            frm.Show();
+        }
+
+        private void BUT_speed1_10_Click(object sender, EventArgs e)
+        {
+            LogPlayBackSpeed = double.Parse(((MyButton)sender).Tag.ToString(), CultureInfo.InvariantCulture);
+            lbl_playbackspeed.Text = "x " + LogPlayBackSpeed;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //if (!MainV2.comPort.BaseStream.IsOpen)
+            //{
+            //    CustomMessageBox.Show("请首先进行系统连接!");
+            //    return;
+            //}
+            Form ConfigWindow = new InitConfig();
+           
+            ConfigWindow.Show();
         }
     }
 }

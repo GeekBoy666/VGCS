@@ -184,7 +184,7 @@
     <value>25, 38</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
+    <value>41, 12</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
@@ -214,7 +214,7 @@
     <value>8, 118</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 13</value>
+    <value>71, 12</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
@@ -241,7 +241,7 @@
     <value>83, 9</value>
   </data>
   <data name="pictureBoxPlus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 75</value>
+    <value>283, 75</value>
   </data>
   <data name="pictureBoxPlus.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -253,7 +253,7 @@
     <value>pictureBoxPlus</value>
   </data>
   <data name="&gt;&gt;pictureBoxPlus.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6215.11320, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6323.30842, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pictureBoxPlus.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -280,7 +280,7 @@
     <value>pictureBoxX</value>
   </data>
   <data name="&gt;&gt;pictureBoxX.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6215.11320, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6323.30842, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pictureBoxX.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -298,7 +298,7 @@
     <value>38, 203</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 13</value>
+    <value>23, 12</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>86</value>
@@ -364,7 +364,7 @@
     <value>pictureBoxV</value>
   </data>
   <data name="&gt;&gt;pictureBoxV.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6215.11320, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6323.30842, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pictureBoxV.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -382,7 +382,7 @@
     <value>38, 287</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 13</value>
+    <value>23, 12</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>89</value>
@@ -448,7 +448,7 @@
     <value>pictureBoxH</value>
   </data>
   <data name="&gt;&gt;pictureBoxH.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6215.11320, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6323.30842, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pictureBoxH.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -490,7 +490,7 @@
     <value>19, 371</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
+    <value>35, 12</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
@@ -556,7 +556,7 @@
     <value>pictureBoxY</value>
   </data>
   <data name="&gt;&gt;pictureBoxY.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6215.11320, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6323.30842, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pictureBoxY.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -601,7 +601,7 @@
     <value>313, 203</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
+    <value>53, 12</value>
   </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -667,7 +667,7 @@
     <value>pictureBoxVTail</value>
   </data>
   <data name="&gt;&gt;pictureBoxVTail.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6215.11320, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.PictureBoxWithPseudoOpacity, MissionPlanner.Controls, Version=1.0.6323.30842, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pictureBoxVTail.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -1066,6 +1066,6 @@
     <value>ConfigFrameClassType</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MyUserControl, MissionPlanner.Controls, Version=1.0.6215.11320, Culture=neutral, PublicKeyToken=null</value>
+    <value>System.Windows.Forms.MyUserControl, MissionPlanner.Controls, Version=1.0.6323.30842, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

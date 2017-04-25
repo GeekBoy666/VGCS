@@ -1607,7 +1607,7 @@
         private System.Windows.Forms.ComboBox comboBoxMapType;
         private System.Windows.Forms.LinkLabel lnk_kml;
         private System.Windows.Forms.Label lbl_distance;
-        private System.Windows.Forms.Label lbl_homedist;
+        public System.Windows.Forms.Label lbl_homedist;
         private System.Windows.Forms.Label lbl_prevdist;
         public Controls.myGMAP MainMap;
         private System.Windows.Forms.PictureBox pictureBox6;

@@ -54,7 +54,7 @@ namespace MissionPlanner.GCSViews
         Hashtable param = new Hashtable();
         bool splinemode;
         altmode currentaltmode = altmode.Relative;
-
+        public string hometext = "";
         bool grid;
 
         public static FlightPlanner instance;
@@ -79,6 +79,10 @@ namespace MissionPlanner.GCSViews
             Relative = MAVLink.MAV_FRAME.GLOBAL_RELATIVE_ALT,
             Absolute = MAVLink.MAV_FRAME.GLOBAL,
             Terrain = MAVLink.MAV_FRAME.GLOBAL_TERRAIN_ALT
+        }
+        public string Homedis
+        {
+            get { return hometext;}
         }
 
         private void poieditToolStripMenuItem_Click(object sender, EventArgs e)
@@ -448,11 +452,15 @@ namespace MissionPlanner.GCSViews
                     double homedist = MainMap.MapProvider.Projection.GetDistance(currentMarker.Position, pointlist[0]);
 
                     lbl_homedist.Text = rm.GetString("lbl_homedist.Text") + ": " + FormatDistance(homedist, true);
+                    
+                    hometext = FormatDistance(homedist, true);
+                    
                 }
             }
             catch
             {
             }
+            
         }
 
         /// <summary>
@@ -5071,7 +5079,7 @@ namespace MissionPlanner.GCSViews
                     area.WidthLng = right - left;
 
                     TilePrefetcher obj = new TilePrefetcher();
-                    ThemeManager.ApplyThemeTo(obj);
+                    //ThemeManager.ApplyThemeTo(obj);
                     obj.KeyDown += obj_KeyDown;
                     obj.ShowCompleteMessage = false;
                     obj.Start(area, i, MainMap.MapProvider, 0, 0);
@@ -5126,7 +5134,7 @@ namespace MissionPlanner.GCSViews
                 for (int i = 1; i <= maxzoom; i++)
                 {
                     TilePrefetcher obj = new TilePrefetcher();
-                    ThemeManager.ApplyThemeTo(obj);
+                    //ThemeManager.ApplyThemeTo(obj);
                     obj.ShowCompleteMessage = false;
                     obj.Start(area, i, MainMap.MapProvider, 0, 0);
 
@@ -5440,7 +5448,7 @@ namespace MissionPlanner.GCSViews
             writeKML();
             double homealt = MainV2.comPort.MAV.cs.HomeAlt;
             Form temp = new ElevationProfile(pointlist, homealt, (altmode) CMB_altmode.SelectedValue);
-            ThemeManager.ApplyThemeTo(temp);
+            //ThemeManager.ApplyThemeTo(temp);
             temp.ShowDialog();
         }
 
@@ -7011,7 +7019,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             frmProgressReporter.DoWork += getWPs;
             frmProgressReporter.UpdateProgressAndStatus(-1, "获取航点");
 
-            ThemeManager.ApplyThemeTo(frmProgressReporter);
+            //ThemeManager.ApplyThemeTo(frmProgressReporter);
 
             frmProgressReporter.RunBackgroundOperationAsync();
 
@@ -7095,7 +7103,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             frmProgressReporter.DoWork += saveWPs;
             frmProgressReporter.UpdateProgressAndStatus(-1, "Sending WP's");
 
-            ThemeManager.ApplyThemeTo(frmProgressReporter);
+            //ThemeManager.ApplyThemeTo(frmProgressReporter);
 
             frmProgressReporter.RunBackgroundOperationAsync();
 

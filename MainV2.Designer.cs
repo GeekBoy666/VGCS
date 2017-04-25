@@ -94,9 +94,8 @@ namespace MissionPlanner
             this.tabTLogs = new System.Windows.Forms.TabPage();
             this.tableLayoutPaneltlogs = new System.Windows.Forms.TableLayoutPanel();
             this.BUT_loadtelem = new MissionPlanner.Controls.MyButton();
-            this.lbl_playbackspeed = new MissionPlanner.Controls.MyLabel();
-            this.lbl_logpercent = new MissionPlanner.Controls.MyLabel();
             this.tracklog = new System.Windows.Forms.TrackBar();
+            this.lbl_logpercent = new MissionPlanner.Controls.MyLabel();
             this.LBL_logfn = new MissionPlanner.Controls.MyLabel();
             this.BUT_log2kml = new MissionPlanner.Controls.MyButton();
             this.BUT_playlog = new MissionPlanner.Controls.MyButton();
@@ -109,6 +108,7 @@ namespace MissionPlanner
             this.BUT_speed1_2 = new MissionPlanner.Controls.MyButton();
             this.BUT_speed1_4 = new MissionPlanner.Controls.MyButton();
             this.BUT_speed1_10 = new MissionPlanner.Controls.MyButton();
+            this.lbl_playbackspeed = new MissionPlanner.Controls.MyLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.MenuConnect = new System.Windows.Forms.ToolStripButton();
             this.toolStripConnectionControl = new MissionPlanner.Controls.ToolStripConnectionControl();
@@ -118,6 +118,7 @@ namespace MissionPlanner
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Messagetabletimer1 = new System.Windows.Forms.Timer(this.components);
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.labelhome = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -128,6 +129,7 @@ namespace MissionPlanner
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.currentStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ZedTimer = new System.Windows.Forms.Timer(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.CTX_mainmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_hub)).BeginInit();
             this.panel1.SuspendLayout();
@@ -168,6 +170,7 @@ namespace MissionPlanner
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // CTX_mainmenu
@@ -733,13 +736,13 @@ namespace MissionPlanner
             // 
             resources.ApplyResources(this.tableLayoutPaneltlogs, "tableLayoutPaneltlogs");
             this.tableLayoutPaneltlogs.Controls.Add(this.BUT_loadtelem, 0, 0);
-            this.tableLayoutPaneltlogs.Controls.Add(this.lbl_playbackspeed, 2, 2);
-            this.tableLayoutPaneltlogs.Controls.Add(this.lbl_logpercent, 2, 1);
             this.tableLayoutPaneltlogs.Controls.Add(this.tracklog, 1, 1);
+            this.tableLayoutPaneltlogs.Controls.Add(this.lbl_logpercent, 2, 1);
             this.tableLayoutPaneltlogs.Controls.Add(this.LBL_logfn, 1, 0);
             this.tableLayoutPaneltlogs.Controls.Add(this.BUT_log2kml, 0, 2);
             this.tableLayoutPaneltlogs.Controls.Add(this.BUT_playlog, 0, 1);
             this.tableLayoutPaneltlogs.Controls.Add(this.panel4, 1, 2);
+            this.tableLayoutPaneltlogs.Controls.Add(this.lbl_playbackspeed, 2, 2);
             this.tableLayoutPaneltlogs.Name = "tableLayoutPaneltlogs";
             // 
             // BUT_loadtelem
@@ -755,24 +758,19 @@ namespace MissionPlanner
             this.BUT_loadtelem.UseVisualStyleBackColor = true;
             this.BUT_loadtelem.Click += new System.EventHandler(this.BUT_loadtelem_Click);
             // 
-            // lbl_playbackspeed
-            // 
-            resources.ApplyResources(this.lbl_playbackspeed, "lbl_playbackspeed");
-            this.lbl_playbackspeed.Name = "lbl_playbackspeed";
-            this.lbl_playbackspeed.resize = false;
-            // 
-            // lbl_logpercent
-            // 
-            resources.ApplyResources(this.lbl_logpercent, "lbl_logpercent");
-            this.lbl_logpercent.Name = "lbl_logpercent";
-            this.lbl_logpercent.resize = false;
-            // 
             // tracklog
             // 
             resources.ApplyResources(this.tracklog, "tracklog");
             this.tracklog.Maximum = 100;
             this.tracklog.Name = "tracklog";
             this.tracklog.TickFrequency = 5;
+            this.tracklog.Scroll += new System.EventHandler(this.tracklog_Scroll);
+            // 
+            // lbl_logpercent
+            // 
+            resources.ApplyResources(this.lbl_logpercent, "lbl_logpercent");
+            this.lbl_logpercent.Name = "lbl_logpercent";
+            this.lbl_logpercent.resize = false;
             // 
             // LBL_logfn
             // 
@@ -792,6 +790,7 @@ namespace MissionPlanner
             this.BUT_log2kml.Name = "BUT_log2kml";
             this.BUT_log2kml.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_log2kml.UseVisualStyleBackColor = true;
+            this.BUT_log2kml.Click += new System.EventHandler(this.BUT_log2kml_Click);
             // 
             // BUT_playlog
             // 
@@ -836,6 +835,7 @@ namespace MissionPlanner
             this.BUT_speed10.Tag = "10";
             this.BUT_speed10.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_speed10.UseVisualStyleBackColor = true;
+            this.BUT_speed10.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
             // BUT_speed5
             // 
@@ -849,6 +849,7 @@ namespace MissionPlanner
             this.BUT_speed5.Tag = "5";
             this.BUT_speed5.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_speed5.UseVisualStyleBackColor = true;
+            this.BUT_speed5.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
             // BUT_speed2
             // 
@@ -862,6 +863,7 @@ namespace MissionPlanner
             this.BUT_speed2.Tag = "2";
             this.BUT_speed2.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_speed2.UseVisualStyleBackColor = true;
+            this.BUT_speed2.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
             // BUT_speed1
             // 
@@ -875,6 +877,7 @@ namespace MissionPlanner
             this.BUT_speed1.Tag = "1";
             this.BUT_speed1.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_speed1.UseVisualStyleBackColor = true;
+            this.BUT_speed1.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
             // BUT_speed1_2
             // 
@@ -888,6 +891,7 @@ namespace MissionPlanner
             this.BUT_speed1_2.Tag = "0.5";
             this.BUT_speed1_2.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_speed1_2.UseVisualStyleBackColor = true;
+            this.BUT_speed1_2.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
             // BUT_speed1_4
             // 
@@ -901,6 +905,7 @@ namespace MissionPlanner
             this.BUT_speed1_4.Tag = "0.25";
             this.BUT_speed1_4.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_speed1_4.UseVisualStyleBackColor = true;
+            this.BUT_speed1_4.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
             // BUT_speed1_10
             // 
@@ -914,6 +919,13 @@ namespace MissionPlanner
             this.BUT_speed1_10.Tag = "0.1";
             this.BUT_speed1_10.TextColor = System.Drawing.Color.WhiteSmoke;
             this.BUT_speed1_10.UseVisualStyleBackColor = true;
+            this.BUT_speed1_10.Click += new System.EventHandler(this.BUT_speed1_10_Click);
+            // 
+            // lbl_playbackspeed
+            // 
+            resources.ApplyResources(this.lbl_playbackspeed, "lbl_playbackspeed");
+            this.lbl_playbackspeed.Name = "lbl_playbackspeed";
+            this.lbl_playbackspeed.resize = false;
             // 
             // toolStrip1
             // 
@@ -1067,6 +1079,7 @@ namespace MissionPlanner
             // splitContainer4.Panel1
             // 
             this.splitContainer4.Panel1.BackColor = System.Drawing.Color.Azure;
+            this.splitContainer4.Panel1.Controls.Add(this.labelhome);
             this.splitContainer4.Panel1.Controls.Add(this.pictureBox6);
             this.splitContainer4.Panel1.Controls.Add(this.pictureBox5);
             this.splitContainer4.Panel1.Controls.Add(this.pictureBox4);
@@ -1078,6 +1091,11 @@ namespace MissionPlanner
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.zedGraphControl1);
+            // 
+            // labelhome
+            // 
+            resources.ApplyResources(this.labelhome, "labelhome");
+            this.labelhome.Name = "labelhome";
             // 
             // pictureBox6
             // 
@@ -1127,6 +1145,7 @@ namespace MissionPlanner
             this.pictureBox1.InitialImage = global::MissionPlanner.Properties.Resources.dark_initialsetup_icon;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // zedGraphControl1
             // 
@@ -1148,6 +1167,10 @@ namespace MissionPlanner
             // ZedTimer
             // 
             this.ZedTimer.Tick += new System.EventHandler(this.ZedTimer_Tick);
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(MissionPlanner.GCSViews.FlightPlanner);
             // 
             // MainV2
             // 
@@ -1190,7 +1213,6 @@ namespace MissionPlanner
             this.tabPagePreFlight.ResumeLayout(false);
             this.tabTLogs.ResumeLayout(false);
             this.tableLayoutPaneltlogs.ResumeLayout(false);
-            this.tableLayoutPaneltlogs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tracklog)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -1210,6 +1232,7 @@ namespace MissionPlanner
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1260,7 +1283,6 @@ namespace MissionPlanner
         private Controls.MyButton BUT_loadtelem;
         private Controls.MyLabel lbl_playbackspeed;
         private Controls.MyLabel lbl_logpercent;
-        private System.Windows.Forms.TrackBar tracklog;
         private Controls.MyLabel LBL_logfn;
         private Controls.MyButton BUT_log2kml;
         private Controls.MyButton BUT_playlog;
@@ -1309,5 +1331,8 @@ namespace MissionPlanner
         private System.Windows.Forms.Timer ZedTimer;
         private System.Windows.Forms.CheckBox CB_Dbug;
         private ZedGraph.ZedGraphControl zedGraphControl1;
+        private System.Windows.Forms.TrackBar tracklog;
+        private System.Windows.Forms.Label labelhome;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
