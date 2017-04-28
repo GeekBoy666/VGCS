@@ -4079,6 +4079,31 @@
     <None Include="Resources\100900.png" />
     <None Include="Resources\200100.png" />
     <None Include="Resources\1020.ico" />
+    <None Include="Resources\HEXA+.png" />
+    <None Include="Resources\HEXAX.png" />
+    <None Include="Resources\NEWY6.png" />
+    <None Include="Resources\OCTO+.png" />
+    <None Include="Resources\OCTOXX.png" />
+    <None Include="Resources\OldY6.png" />
+    <None Include="Resources\QUAD+.png" />
+    <None Include="Resources\QUADH.png" />
+    <None Include="Resources\QUADX.png" />
+    <None Include="Resources\Undefined.png" />
+    <None Include="Resources\500100.png" />
+    <None Include="Resources\5001001.png" />
+    <None Include="Resources\5001003.png" />
+    <None Include="Resources\5001004.png" />
+    <None Include="Resources\5001005.png" />
+    <None Include="Resources\5001006.png" />
+    <None Include="Resources\5001007.png" />
+    <None Include="Resources\5001008.png" />
+    <None Include="Resources\5001009.png" />
+    <None Include="Resources\5001010.png" />
+    <None Include="Resources\5001011.png" />
+    <None Include="Resources\5001012.png" />
+    <None Include="Resources\50010013.png" />
+    <None Include="Resources\50010014.png" />
+    <None Include="Resources\50010015.png" />
     <Content Include="Scripts\example7.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

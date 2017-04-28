@@ -6042,7 +6042,7 @@ namespace MissionPlanner
             //    return;
             //}
             Form ConfigWindow = new InitConfig();
-           
+            ConfigWindow.Activate();
             ConfigWindow.Show();
         }
     }

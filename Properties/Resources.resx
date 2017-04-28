@@ -1760,9 +1760,6 @@ Control-S - save grid file\par
   <data name="disconnect001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\disconnect001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_000102" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\000102.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_000103" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\000103.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1843,5 +1840,83 @@ Control-S - save grid file\par
   </data>
   <data name="_1020" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1020.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HEXAX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HEXAX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HEXA_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HEXA+.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NEWY6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NEWY6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OCTOXX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OCTOXX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OCTO_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OCTO+.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OldY6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OldY6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QUADH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QUADH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QUADX1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QUADX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QUAD_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QUAD+.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Undefined" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Undefined.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_000102" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\000102.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_500100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\500100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5001001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5001001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_50010013" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\50010013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_50010014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\50010014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_50010015" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\50010015.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5001003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5001003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5001004" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5001004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5001005" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5001005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5001006" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5001006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5001007" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5001007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5001008" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5001008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5001009" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5001009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5001010" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5001010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5001011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5001011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5001012" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5001012.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -423,6 +423,156 @@ namespace MissionPlanner.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        public static System.Drawing.Bitmap _500100 {
+            get {
+                object obj = ResourceManager.GetObject("_500100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _5001001 {
+            get {
+                object obj = ResourceManager.GetObject("_5001001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _50010013 {
+            get {
+                object obj = ResourceManager.GetObject("_50010013", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _50010014 {
+            get {
+                object obj = ResourceManager.GetObject("_50010014", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _50010015 {
+            get {
+                object obj = ResourceManager.GetObject("_50010015", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _5001003 {
+            get {
+                object obj = ResourceManager.GetObject("_5001003", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _5001004 {
+            get {
+                object obj = ResourceManager.GetObject("_5001004", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _5001005 {
+            get {
+                object obj = ResourceManager.GetObject("_5001005", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _5001006 {
+            get {
+                object obj = ResourceManager.GetObject("_5001006", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _5001007 {
+            get {
+                object obj = ResourceManager.GetObject("_5001007", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _5001008 {
+            get {
+                object obj = ResourceManager.GetObject("_5001008", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _5001009 {
+            get {
+                object obj = ResourceManager.GetObject("_5001009", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _5001010 {
+            get {
+                object obj = ResourceManager.GetObject("_5001010", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _5001011 {
+            get {
+                object obj = ResourceManager.GetObject("_5001011", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _5001012 {
+            get {
+                object obj = ResourceManager.GetObject("_5001012", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         public static System.Drawing.Bitmap airspeed {
             get {
                 object obj = ResourceManager.GetObject("airspeed", resourceCulture);
@@ -1227,6 +1377,26 @@ namespace MissionPlanner.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        public static System.Drawing.Bitmap HEXA_ {
+            get {
+                object obj = ResourceManager.GetObject("HEXA_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap HEXAX {
+            get {
+                object obj = ResourceManager.GetObject("HEXAX", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         public static System.Drawing.Bitmap Hframe {
             get {
                 object obj = ResourceManager.GetObject("Hframe", resourceCulture);
@@ -1602,9 +1772,29 @@ namespace MissionPlanner.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        public static System.Drawing.Bitmap NEWY6 {
+            get {
+                object obj = ResourceManager.GetObject("NEWY6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         public static System.Drawing.Bitmap octo {
             get {
                 object obj = ResourceManager.GetObject("octo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap OCTO_ {
+            get {
+                object obj = ResourceManager.GetObject("OCTO_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1625,6 +1815,26 @@ namespace MissionPlanner.Properties {
         public static System.Drawing.Bitmap octox {
             get {
                 object obj = ResourceManager.GetObject("octox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap OCTOXX {
+            get {
+                object obj = ResourceManager.GetObject("OCTOXX", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap OldY6 {
+            get {
+                object obj = ResourceManager.GetObject("OldY6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1782,6 +1992,16 @@ namespace MissionPlanner.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        public static System.Drawing.Bitmap QUAD_ {
+            get {
+                object obj = ResourceManager.GetObject("QUAD_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         public static System.Drawing.Bitmap quadframesnormal_01 {
             get {
                 object obj = ResourceManager.GetObject("quadframesnormal_01", resourceCulture);
@@ -1845,6 +2065,16 @@ namespace MissionPlanner.Properties {
         public static System.Drawing.Bitmap quadframesnormal_14 {
             get {
                 object obj = ResourceManager.GetObject("quadframesnormal_14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap QUADH {
+            get {
+                object obj = ResourceManager.GetObject("QUADH", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1935,6 +2165,16 @@ namespace MissionPlanner.Properties {
         public static System.Drawing.Bitmap quadx {
             get {
                 object obj = ResourceManager.GetObject("quadx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap QUADX1 {
+            get {
+                object obj = ResourceManager.GetObject("QUADX1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2115,6 +2355,16 @@ namespace MissionPlanner.Properties {
         public static System.Drawing.Bitmap uavcanesc {
             get {
                 object obj = ResourceManager.GetObject("uavcanesc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap Undefined {
+            get {
+                object obj = ResourceManager.GetObject("Undefined", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
