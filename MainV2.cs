@@ -6036,11 +6036,11 @@ namespace MissionPlanner
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //if (!MainV2.comPort.BaseStream.IsOpen)
-            //{
-            //    CustomMessageBox.Show("请首先进行系统连接!");
-            //    return;
-            //}
+            if (!MainV2.comPort.BaseStream.IsOpen)
+            {
+                CustomMessageBox.Show("请首先进行系统连接!");
+                return;
+            }
             Form ConfigWindow = new InitConfig();
             ConfigWindow.Activate();
             ConfigWindow.Show();

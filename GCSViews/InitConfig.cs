@@ -80,7 +80,7 @@ namespace MissionPlanner.GCSViews
             this.comboBoxSelectairframe.DrawItem+= new DrawItemEventHandler(ComboBox1_DrawItem);
             this.comboBoxSelectairframe.DrawMode = DrawMode.OwnerDrawFixed;
             comboBoxSelectairframe.DataSource = list;
-            
+            //comboBoxSelectairframe.SelectedIndex = 1;
         }
         public new void Activate()
         {
@@ -97,9 +97,11 @@ namespace MissionPlanner.GCSViews
                 Enum.Parse(typeof(motor_frame_type), MainV2.comPort.MAV.param["FRAME_TYPE"].ToString());
 
             this.LogInfoFormat("Existing Class: {0} Type: {1}", work_frame_class, work_frame_type);
-            if ((work_frame_class == motor_frame_class.MOTOR_FRAME_QUAD) && (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS))
+            if (work_frame_class == motor_frame_class.MOTOR_FRAME_QUAD)
             {
-                comboBoxSelectairframe.SelectedIndex = 1;
+                if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
+                { comboBoxSelectairframe.SelectedIndex = 2; }
+                
             }
             //DoClass(work_frame_class);
             //DoType(work_frame_type);
@@ -241,12 +243,103 @@ namespace MissionPlanner.GCSViews
                 //    w2.Dock = DockStyle.Fill;
                 //    w2.Show();
                 //}
-            }
+                if (!MainV2.comPort.MAV.param.ContainsKey("FRAME_CLASS") || !MainV2.comPort.MAV.param.ContainsKey("FRAME_TYPE"))
+                {
+                    Enabled = false;
+                    return;
+                }
+
+                // pre seed the correct values
+                work_frame_class = (motor_frame_class)
+                    Enum.Parse(typeof(motor_frame_class), MainV2.comPort.MAV.param["FRAME_CLASS"].ToString());
+                work_frame_type = (motor_frame_type)
+                    Enum.Parse(typeof(motor_frame_type), MainV2.comPort.MAV.param["FRAME_TYPE"].ToString());
+
+                this.LogInfoFormat("Existing Class: {0} Type: {1}", work_frame_class, work_frame_type);
+                if (work_frame_class == motor_frame_class.MOTOR_FRAME_QUAD)
+                {
+                    if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
+                    { comboBoxSelectairframe.SelectedIndex = 1; }
+                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
+                    {
+                        comboBoxSelectairframe.SelectedIndex = 2;
+                    }
+                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_V)
+                    {
+                        comboBoxSelectairframe.SelectedIndex = 3;
+                    }
+                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_H)
+                    {
+                        comboBoxSelectairframe.SelectedIndex = 4;
+                    }
+                }
+                else if (work_frame_class == motor_frame_class.MOTOR_FRAME_HEXA)
+                {
+                    if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
+                    { comboBoxSelectairframe.SelectedIndex = 5; }
+                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
+                    {
+                        comboBoxSelectairframe.SelectedIndex = 6;
+                    }
+                }
+                else if (work_frame_class == motor_frame_class.MOTOR_FRAME_OCTA)
+                {
+                    if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
+                    { comboBoxSelectairframe.SelectedIndex = 7; }
+                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
+                    {
+                        comboBoxSelectairframe.SelectedIndex = 8;
+                    }
+                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_V)
+                    {
+                        comboBoxSelectairframe.SelectedIndex = 9;
+                    }
+                }
+                else if (work_frame_class == motor_frame_class.MOTOR_FRAME_OCTAQUAD)
+                {
+                    if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
+                    { comboBoxSelectairframe.SelectedIndex = 10; }
+                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
+                    {
+                        comboBoxSelectairframe.SelectedIndex = 11;
+                    }
+                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_V)
+                    {
+                        comboBoxSelectairframe.SelectedIndex = 12;
+                    }
+                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_H)
+                    {
+                        comboBoxSelectairframe.SelectedIndex = 13;
+                    }
+                }
+                else if (work_frame_class == motor_frame_class.MOTOR_FRAME_Y6)
+                {
+                    comboBoxSelectairframe.SelectedIndex = 14;
+                }
+                else if (work_frame_class == motor_frame_class.MOTOR_FRAME_TRI)
+                {
+                    comboBoxSelectairframe.SelectedIndex = 15;
+                }
 
             }
 
+            }
+        private void SetFrameParam(motor_frame_class frame_class, motor_frame_type frame_type)
+        {
+            try
+            {
+                MainV2.comPort.setParam("FRAME_CLASS", (int)frame_class);
+                MainV2.comPort.setParam("FRAME_TYPE", (int)frame_type);
+            }
+            catch
+            {
+                CustomMessageBox.Show(string.Format(Strings.ErrorSetValueFailed, "FRAME_CLASS OR FRAME_TYPE"), Strings.ERROR,
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         private void comboBoxSelectairframe_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (comboBoxSelectairframe.SelectedIndex == 0)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources.Undefined;
@@ -254,62 +347,77 @@ namespace MissionPlanner.GCSViews
             else if (comboBoxSelectairframe.SelectedIndex == 1)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._500100;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_QUAD, motor_frame_type.MOTOR_FRAME_TYPE_PLUS);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 2)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001001;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_QUAD, motor_frame_type.MOTOR_FRAME_TYPE_X);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 3)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001003;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_QUAD, motor_frame_type.MOTOR_FRAME_TYPE_V);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 4)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001004;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_QUAD, motor_frame_type.MOTOR_FRAME_TYPE_H);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 5)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001005;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_HEXA, motor_frame_type.MOTOR_FRAME_TYPE_PLUS);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 6)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001006;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_HEXA, motor_frame_type.MOTOR_FRAME_TYPE_X);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 7)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001007;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTA, motor_frame_type.MOTOR_FRAME_TYPE_PLUS);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 8)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001008;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTA, motor_frame_type.MOTOR_FRAME_TYPE_X);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 9)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001009;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTA, motor_frame_type.MOTOR_FRAME_TYPE_V);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 10)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001010;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTAQUAD, motor_frame_type.MOTOR_FRAME_TYPE_PLUS);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 11)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001011;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTAQUAD, motor_frame_type.MOTOR_FRAME_TYPE_X);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 12)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001012;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTAQUAD, motor_frame_type.MOTOR_FRAME_TYPE_V);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 13)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._50010013;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTAQUAD, motor_frame_type.MOTOR_FRAME_TYPE_H);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 14)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._50010014;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_Y6, motor_frame_type.MOTOR_FRAME_TYPE_ATAIL);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 15)
             {
                 pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._50010015;
+                SetFrameParam(motor_frame_class.MOTOR_FRAME_TRI, motor_frame_type.MOTOR_FRAME_TYPE_VTAIL);
             }
 
 
