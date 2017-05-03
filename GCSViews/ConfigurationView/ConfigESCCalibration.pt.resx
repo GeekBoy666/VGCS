@@ -117,4 +117,51 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Velocidade minima do motor durante voo (Ligeiramnet maio do que "volta quando armada")</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Deixe em 0 para usar o sinal de entrada.</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Velocidade máxima do motor durante voo (Quase todos os ESC tem uma zona morta no topo)</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Velocidade quando os motores estão armados mas o acelerador está zero</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Instruções:
+1. Certifiquese que está conectado na USB2. Complete calibração do radio3. Remova a Helice e retire a alimentação dos motores4. Aperte esse botão para habilitar a calibração do ESC e desligue, e conecte via USB5. Certifique-se que o acelerador esta no máximo
+6. Ligue a bateria7. Aperte o botão de segurança (se ativado) e aguarde o beep do ESC, e dois beeps adicionais8. abaixe a alavanca do acelerador.
+9. desconecte e conecte a bateria
+10. Arme e teste o giro dos motores
+11. Deconecte a bateria, re-coloque as helices</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Qual ESC:</value>
+  </data>
+  <data name="buttonStart.Text" xml:space="preserve">
+    <value>Calibração do ESC</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Calibração do ESC (AC3.3+)</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Circular quando armado</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Minimo circulo</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Saída PWM Min</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Saída PWM Max</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Marx Circulo</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Deixar em zero para usar a entrada do RX.</value>
+  </data>
 </root>
