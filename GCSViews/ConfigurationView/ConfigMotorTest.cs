@@ -35,8 +35,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         public void Activate()
         {
-            var x = 20;
-            var y = 40;
+            var x = 10;
+            var y = 10;
 
             var motormax = this.get_motormax();
 
@@ -44,42 +44,45 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             for (var a = 1; a <= motormax; a++)
             {
                 but = new MyButton();
-                but.Text = "Test motor " + (char) ((a - 1) + 'A');
+                but.Size = new Size(50, 30);
+                but.Text = "电机 " + (char) ((a - 1) + 'A');
                 but.Location = new Point(x, y);
                 but.Click += but_Click;
                 but.Tag = a;
 
                 Controls.Add(but);
-
-                y += 25;
+                x += 60;
+               
             }
-
+            x = 10;
+            y += 40;
             but = new MyButton();
-            but.Text = "Test all motors";
+            but.Text = "测试所有电机";
             but.Location = new Point(x, y);
-            but.Size = new Size(75, 37);
+            but.Size = new Size(105, 30);
             but.Click += but_TestAll;
             Controls.Add(but);
 
-            y += 39;
+            y += 40;
 
             but = new MyButton();
-            but.Text = "Stop all motors";
+            but.Text = "停止所有电机";
             but.Location = new Point(x, y);
-            but.Size = new Size(75, 37);
+            but.Size = new Size(105, 30);
             but.Click += but_StopAll;
             Controls.Add(but);
 
-            y += 39;
+
+            y += 40;
 
             but = new MyButton();
-            but.Text = "Test all in Sequence";
+            but.Text = "依次测试所有电机";
             but.Location = new Point(x, y);
-            but.Size = new Size(75, 37);
+            but.Size = new Size(105, 30);
             but.Click += but_TestAllSeq;
             Controls.Add(but);
 
-            Utilities.ThemeManager.ApplyThemeTo(this);
+           // Utilities.ThemeManager.ApplyThemeTo(this);
         }
 
         private int get_motormax()
@@ -165,8 +168,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void but_TestAll(object sender, EventArgs e)
         {
-            int speed = (int) NUM_thr_percent.Value;
-            int time = (int) NUM_duration.Value;
+            int speed = (int)numthrpercent.Value;
+            int time = (int)numduration.Value;
 
             int motormax = this.get_motormax();
             for (int i = 1; i <= motormax; i++)
@@ -178,8 +181,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private void but_TestAllSeq(object sender, EventArgs e)
         {
             int motormax = this.get_motormax();
-            int speed = (int) NUM_thr_percent.Value;
-            int time = (int) NUM_duration.Value;
+            int speed = (int)numthrpercent.Value;
+            int time = (int)numduration.Value;
 
             testMotor(1, speed, time, motormax);
         }
@@ -195,8 +198,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void but_Click(object sender, EventArgs e)
         {
-            int speed = (int) NUM_thr_percent.Value;
-            int time = (int) NUM_duration.Value;
+            int speed = (int)numthrpercent.Value;
+            int time = (int)numduration.Value;
             try
             {
                 var motor = (int) ((MyButton) sender).Tag;

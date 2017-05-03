@@ -46,11 +46,6 @@ namespace MissionPlanner.GCSViews
 
 
             InitializeComponent();
-            GCSViews.ConfigurationView.ConfigHWCompass w1 = new GCSViews.ConfigurationView.ConfigHWCompass();
-            w1.Activate();
-            w1.Parent = tabPage1;
-            w1.Dock = DockStyle.Fill;
-            w1.Show();
             List<string> list = new List<string>();
 
             {
@@ -194,60 +189,68 @@ namespace MissionPlanner.GCSViews
         {
             if (TabInitConfig.SelectedTab == tabPage1)
             {
-                InitializeComponent();
-                GCSViews.ConfigurationView.ConfigHWCompass w1 = new GCSViews.ConfigurationView.ConfigHWCompass();
-                w1.Activate();
-                w1.Parent = tabPage1;
-                w1.Dock = DockStyle.Fill;
-                w1.Show();
+                GCSViews.ConfigurationView.ConfigFlightModes FMode = new GCSViews.ConfigurationView.ConfigFlightModes();
+
+                FMode.Parent = tabPage1;
+                FMode.Dock = DockStyle.Fill;
+                FMode.ForeColor = Color.Black;
+                FMode.Activate();
+                FMode.Show();
+
             }
             else if (TabInitConfig.SelectedTab == tabPage2)
             {
-                GCSViews.ConfigurationView.ConfigFlightModes w1 = new GCSViews.ConfigurationView.ConfigFlightModes();
-                w1.Activate();
-                w1.Parent = tabPage2;
-                w1.Dock = DockStyle.Fill;
-                w1.Show();
+                GCSViews.ConfigurationView.ConfigHWCompass Compass = new GCSViews.ConfigurationView.ConfigHWCompass();
+                
+                Compass.Parent = tabPage2;
+                Compass.Dock = DockStyle.Fill;
+                Compass.ForeColor = Color.Black;
+                Compass.Activate();
+                Compass.Show();
             }
             else if (TabInitConfig.SelectedTab == tabPage3)
             {
-                GCSViews.ConfigurationView.ConfigAccelerometerCalibration w1 = new GCSViews.ConfigurationView.ConfigAccelerometerCalibration();
-                w1.Activate();
-                w1.Parent = tabPage3;
-                w1.Dock = DockStyle.Fill;
-                w1.Show();
+                GCSViews.ConfigurationView.ConfigAccelerometerCalibration Accel = new GCSViews.ConfigurationView.ConfigAccelerometerCalibration();
+
+                Accel.Parent = tabPage3;
+                Accel.Dock = DockStyle.Fill;
+                Accel.ForeColor = Color.Black;
+                Accel.Activate();
+                Accel.Show();
             }
             else if (TabInitConfig.SelectedTab == tabPage4)
             {
-                GCSViews.ConfigurationView.ConfigRadioInput w1 = new GCSViews.ConfigurationView.ConfigRadioInput();
-                w1.Activate();
-                w1.Parent = tabPage4;
-                w1.Dock = DockStyle.Fill;
-                w1.Show();
+                GCSViews.ConfigurationView.ConfigRadioInput Radio = new GCSViews.ConfigurationView.ConfigRadioInput();
+
+                Radio.Parent = tabPage4;
+                Radio.Dock = DockStyle.Fill;
+                Radio.ForeColor = Color.Black;
+                Radio.Activate();
+                Radio.Show();
             }
             else if (TabInitConfig.SelectedTab == tabPage5)
             {
-                //if (MainV2.comPort.MAV.cs.version >= Version.Parse("3.5"))
-                //{
-                //    GCSViews.ConfigurationView.ConfigFrameClassType w1 = new GCSViews.ConfigurationView.ConfigFrameClassType();
-                //    w1.Activate();
-                //    w1.Parent = tabPage5;
-                //    w1.Dock = DockStyle.Fill;
-                //    w1.Show();
-                //}
-                //else
-                //{
-                //    GCSViews.ConfigurationView.ConfigFrameType w2 = new GCSViews.ConfigurationView.ConfigFrameType();
-                //    w2.Activate();
-                //    w2.Parent = tabPage5;
-                //    w2.Dock = DockStyle.Fill;
-                //    w2.Show();
-                //}
+
                 if (!MainV2.comPort.MAV.param.ContainsKey("FRAME_CLASS") || !MainV2.comPort.MAV.param.ContainsKey("FRAME_TYPE"))
                 {
                     Enabled = false;
                     return;
                 }
+
+                GCSViews.ConfigurationView.ConfigESCCalibration ESC = new GCSViews.ConfigurationView.ConfigESCCalibration();
+
+                ESC.Parent = groupBoxEsc;
+                ESC.Dock = DockStyle.Fill;
+                ESC.ForeColor = Color.Black;
+                ESC.Activate();
+                ESC.Show();
+
+                GCSViews.ConfigurationView.ConfigMotorTest MotorTest = new GCSViews.ConfigurationView.ConfigMotorTest();
+                MotorTest.Parent = groupBoxMotorTest;
+                MotorTest.Dock = DockStyle.Fill;
+                MotorTest.ForeColor = Color.Black;
+                MotorTest.Activate();
+                MotorTest.Show();
 
                 // pre seed the correct values
                 work_frame_class = (motor_frame_class)
@@ -322,8 +325,79 @@ namespace MissionPlanner.GCSViews
                 }
 
             }
+            else if (TabInitConfig.SelectedTab == tabPage9)
+            {
+                GCSViews.ConfigurationView.ConfigBatteryMonitoring Radio = new GCSViews.ConfigurationView.ConfigBatteryMonitoring();
 
+                Radio.Parent = tabPage9;
+                Radio.Dock = DockStyle.Fill;
+                Radio.ForeColor = Color.Black;
+                Radio.Activate();
+                Radio.Show();
             }
+            else if (TabInitConfig.SelectedTab == tabPage8)
+            {
+                GCSViews.ConfigurationView.ConfigMount Radio = new GCSViews.ConfigurationView.ConfigMount();
+
+                Radio.Parent = tabPage8;
+                Radio.Dock = DockStyle.Fill;
+                Radio.ForeColor = Color.Black;
+                Radio.Activate();
+                Radio.Show();
+            }
+            else if (TabInitConfig.SelectedTab == tabPage11)
+            {
+                GCSViews.ConfigurationView.ConfigArducopter Radio = new GCSViews.ConfigurationView.ConfigArducopter();
+
+                Radio.Parent = tabPage11;
+                Radio.Dock = DockStyle.Fill;
+                Radio.ForeColor = Color.Black;
+                Radio.Activate();
+                Radio.Show();
+            }
+            else if (TabInitConfig.SelectedTab == tabPage10)
+            {
+                GCSViews.ConfigurationView.ConfigRawParams Radio = new GCSViews.ConfigurationView.ConfigRawParams();
+
+                Radio.Parent = tabPage10;
+                Radio.Dock = DockStyle.Fill;
+                Radio.ForeColor = Color.Black;
+                Radio.Activate();
+                Radio.Show();
+            }
+            else if (TabInitConfig.SelectedTab == tabPage12)
+            {
+                GCSViews.ConfigurationView.ConfigRawParamsTree Radio = new GCSViews.ConfigurationView.ConfigRawParamsTree();
+
+                Radio.Parent = tabPage12;
+                Radio.Dock = DockStyle.Fill;
+                Radio.ForeColor = Color.Black;
+                Radio.Activate();
+                Radio.Show();
+            }
+            else if (TabInitConfig.SelectedTab == tabPage13)
+            {
+                GCSViews.ConfigurationView.ConfigFailSafe Radio = new GCSViews.ConfigurationView.ConfigFailSafe();
+
+                Radio.Parent = tabPage13;
+                Radio.Dock = DockStyle.Fill;
+                Radio.ForeColor = Color.Black;
+                Radio.Activate();
+                Radio.Show();
+            }
+            else if (TabInitConfig.SelectedTab == tabPage14)
+            {
+                GCSViews.ConfigurationView.ConfigFirmware Radio = new GCSViews.ConfigurationView.ConfigFirmware();
+
+                Radio.Parent = tabPage14;
+                Radio.Dock = DockStyle.Fill;
+                Radio.ForeColor = Color.Black;
+                Radio.Activate();
+                Radio.Show();
+            }
+
+
+        }
         private void SetFrameParam(motor_frame_class frame_class, motor_frame_type frame_type)
         {
             try
