@@ -233,8 +233,9 @@ namespace MissionPlanner.GCSViews
 
                 if (!MainV2.comPort.MAV.param.ContainsKey("FRAME_CLASS") || !MainV2.comPort.MAV.param.ContainsKey("FRAME_TYPE"))
                 {
-                    Enabled = false;
-                    return;
+                    //Enabled = false;
+                    //return;
+                    comboBoxSelectairframe.SelectedIndex = 0;
                 }
 
                 GCSViews.ConfigurationView.ConfigESCCalibration ESC = new GCSViews.ConfigurationView.ConfigESCCalibration();
@@ -361,19 +362,20 @@ namespace MissionPlanner.GCSViews
 
                 Radio.Parent = tabPage10;
                 Radio.Dock = DockStyle.Fill;
-                Radio.ForeColor = Color.Black;
+                //Radio.ForeColor = Color.Black;
                 Radio.Activate();
                 Radio.Show();
             }
             else if (TabInitConfig.SelectedTab == tabPage12)
             {
-                GCSViews.ConfigurationView.ConfigRawParamsTree Radio = new GCSViews.ConfigurationView.ConfigRawParamsTree();
+                GCSViews.ConfigurationView.ConfigRawParamsTree ParamsTree = new GCSViews.ConfigurationView.ConfigRawParamsTree();
 
-                Radio.Parent = tabPage12;
-                Radio.Dock = DockStyle.Fill;
-                Radio.ForeColor = Color.Black;
-                Radio.Activate();
-                Radio.Show();
+                ParamsTree.Parent = tabPage12;
+                ParamsTree.Dock = DockStyle.Fill;
+                ParamsTree.BackColor = Color.Gray;
+                //ParamsTree.ForeColor = Color.Black;
+                ParamsTree.Activate();
+                ParamsTree.Show();
             }
             else if (TabInitConfig.SelectedTab == tabPage13)
             {
@@ -387,12 +389,13 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage14)
             {
-                GCSViews.ConfigurationView.ConfigFirmware Radio = new GCSViews.ConfigurationView.ConfigFirmware();
+                GCSViews.ConfigurationView.ConfigLoadFirmware Radio = new GCSViews.ConfigurationView.ConfigLoadFirmware();
 
                 Radio.Parent = tabPage14;
                 Radio.Dock = DockStyle.Fill;
-                Radio.ForeColor = Color.Black;
-                Radio.Activate();
+                Radio.BackColor = Color.Gray;
+                //Radio.ForeColor = Color.Black;
+                //Radio.Activate();
                 Radio.Show();
             }
 

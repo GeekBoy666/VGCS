@@ -43,12 +43,6 @@ namespace MissionPlanner
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.CB_Dbug = new System.Windows.Forms.CheckBox();
@@ -138,10 +132,8 @@ namespace MissionPlanner
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage11.SuspendLayout();
@@ -243,56 +235,11 @@ namespace MissionPlanner
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.toolStrip2);
+            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.DodgerBlue;
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tabControl1);
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.BackColor = System.Drawing.SystemColors.Highlight;
-            resources.ApplyResources(this.toolStrip2, "toolStrip2");
-            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton5,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4});
-            this.toolStrip2.Name = "toolStrip2";
-            // 
-            // toolStripButton1
-            // 
-            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.Image = global::MissionPlanner.Properties.Resources._10013;
-            resources.ApplyResources(this.toolStripButton5, "toolStripButton5");
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
-            // 
-            // toolStripButton2
-            // 
-            resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
-            // 
-            // toolStripButton3
-            // 
-            resources.ApplyResources(this.toolStripButton3, "toolStripButton3");
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click_1);
-            // 
-            // toolStripButton4
-            // 
-            resources.ApplyResources(this.toolStripButton4, "toolStripButton4");
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click_1);
             // 
             // tabControl1
             // 
@@ -1191,13 +1138,9 @@ namespace MissionPlanner
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1248,17 +1191,11 @@ namespace MissionPlanner
         private System.Windows.Forms.Panel panel2;
         private Controls.HUD hud1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         public System.Windows.Forms.ToolStripButton MenuConnect;
         private Controls.ToolStripConnectionControl toolStripConnectionControl;
         private System.Windows.Forms.BindingSource bindingSourceQTab;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.SplitContainer splitContainer3;
         public System.Windows.Forms.TabControl tabControlactions;
         public System.Windows.Forms.TabPage tabActions;

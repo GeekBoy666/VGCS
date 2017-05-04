@@ -370,6 +370,12 @@
     <Compile Include="GCSViews\ConfigurationView\ConfigGPSInject.Designer.cs">
       <DependentUpon>ConfigGPSInject.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigLoadFirmware.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\ConfigurationView\ConfigLoadFirmware.Designer.cs">
+      <DependentUpon>ConfigLoadFirmware.cs</DependentUpon>
+    </Compile>
     <Compile Include="GCSViews\InitConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2017,6 +2023,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigHWRangeFinder.zh-TW.resx">
       <DependentUpon>ConfigHWRangeFinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigLoadFirmware.resx">
+      <DependentUpon>ConfigLoadFirmware.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigMandatory.ar.resx">
       <DependentUpon>ConfigMandatory.cs</DependentUpon>

@@ -50,8 +50,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
             this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.tabPage14 = new System.Windows.Forms.TabPage();
@@ -303,15 +303,6 @@
             this.tabPage8.Text = "相机云台";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // tabPage10
-            // 
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(876, 518);
-            this.tabPage10.TabIndex = 9;
-            this.tabPage10.Text = "参数列表";
-            this.tabPage10.UseVisualStyleBackColor = true;
-            // 
             // tabPage11
             // 
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
@@ -320,6 +311,15 @@
             this.tabPage11.TabIndex = 10;
             this.tabPage11.Text = "增益";
             this.tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Size = new System.Drawing.Size(876, 518);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.Text = "参数列表";
+            this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // tabPage12
             // 
