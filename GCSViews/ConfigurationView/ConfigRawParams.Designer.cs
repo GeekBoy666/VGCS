@@ -42,7 +42,12 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.BUT_writePIDS = new MissionPlanner.Controls.MyButton();
             this.BUT_save = new MissionPlanner.Controls.MyButton();
             this.BUT_load = new MissionPlanner.Controls.MyButton();
-            this.Params = new MyDataGridView();
+            this.Params = new MissionPlanner.Controls.MyDataGridView();
+            this.Command = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Units = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Options = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.BUT_paramfileload = new MissionPlanner.Controls.MyButton();
@@ -50,11 +55,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.BUT_reset_params = new MissionPlanner.Controls.MyButton();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Command = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Units = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Options = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Params)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +101,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.Params.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             resources.ApplyResources(this.Params, "Params");
             this.Params.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.Params.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,6 +137,38 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.Params.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.Params.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Params_CellContentClick);
             this.Params.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Params_CellValueChanged);
+            // 
+            // Command
+            // 
+            resources.ApplyResources(this.Command, "Command");
+            this.Command.Name = "Command";
+            this.Command.ReadOnly = true;
+            // 
+            // Value
+            // 
+            resources.ApplyResources(this.Value, "Value");
+            this.Value.Name = "Value";
+            // 
+            // Units
+            // 
+            resources.ApplyResources(this.Units, "Units");
+            this.Units.Name = "Units";
+            this.Units.ReadOnly = true;
+            // 
+            // Options
+            // 
+            resources.ApplyResources(this.Options, "Options");
+            this.Options.Name = "Options";
+            this.Options.ReadOnly = true;
+            // 
+            // Desc
+            // 
+            this.Desc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Desc.DefaultCellStyle = dataGridViewCellStyle3;
+            resources.ApplyResources(this.Desc, "Desc");
+            this.Desc.Name = "Desc";
+            this.Desc.ReadOnly = true;
             // 
             // toolTip1
             // 
@@ -179,38 +212,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            // 
-            // Command
-            // 
-            resources.ApplyResources(this.Command, "Command");
-            this.Command.Name = "Command";
-            this.Command.ReadOnly = true;
-            // 
-            // Value
-            // 
-            resources.ApplyResources(this.Value, "Value");
-            this.Value.Name = "Value";
-            // 
-            // Units
-            // 
-            resources.ApplyResources(this.Units, "Units");
-            this.Units.Name = "Units";
-            this.Units.ReadOnly = true;
-            // 
-            // Options
-            // 
-            resources.ApplyResources(this.Options, "Options");
-            this.Options.Name = "Options";
-            this.Options.ReadOnly = true;
-            // 
-            // Desc
-            // 
-            this.Desc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Desc.DefaultCellStyle = dataGridViewCellStyle3;
-            resources.ApplyResources(this.Desc, "Desc");
-            this.Desc.Name = "Desc";
-            this.Desc.ReadOnly = true;
             // 
             // ConfigRawParams
             // 

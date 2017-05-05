@@ -362,6 +362,7 @@ namespace MissionPlanner.GCSViews
 
                 Radio.Parent = tabPage10;
                 Radio.Dock = DockStyle.Fill;
+       
                 //Radio.ForeColor = Color.Black;
                 Radio.Activate();
                 Radio.Show();

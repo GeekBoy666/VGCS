@@ -183,24 +183,24 @@ namespace GMap.NET.MapProviders
                         if(count == 2)
                         {
                            string ver = gc[1].Value;
-                           string old = GMapProviders.BingMap.Version;
-                           if(ver != old)
-                           {
-                              GMapProviders.BingMap.Version = ver;
-                              GMapProviders.BingSatelliteMap.Version = ver;
-                              GMapProviders.BingHybridMap.Version = ver;
-#if DEBUG
-                              Debug.WriteLine("GMapProviders.BingMap.Version: " + ver + ", old: " + old + ", consider updating source");
-                              if(Debugger.IsAttached)
-                              {
-                                 Thread.Sleep(5555);
-                              }
-#endif
-                           }
-                           else
-                           {
-                              Debug.WriteLine("GMapProviders.BingMap.Version: " + ver + ", OK");
-                           }
+                          // string old = GMapProviders.BingMap.Version;
+//                           if(ver != old)
+//                           {
+//                              //GMapProviders.BingMap.Version = ver;
+//                              //GMapProviders.BingSatelliteMap.Version = ver;
+//                              //GMapProviders.BingHybridMap.Version = ver;
+//#if DEBUG
+//                              Debug.WriteLine("GMapProviders.BingMap.Version: " + ver + ", old: " + old + ", consider updating source");
+//                              if(Debugger.IsAttached)
+//                              {
+//                                 Thread.Sleep(5555);
+//                              }
+//#endif
+//                           }
+//                           else
+//                           {
+//                              Debug.WriteLine("GMapProviders.BingMap.Version: " + ver + ", OK");
+//                           }
                         }
                      }
                      #endregion
