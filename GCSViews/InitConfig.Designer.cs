@@ -83,7 +83,7 @@
             this.TabInitConfig.Location = new System.Drawing.Point(0, 0);
             this.TabInitConfig.Name = "TabInitConfig";
             this.TabInitConfig.SelectedIndex = 0;
-            this.TabInitConfig.Size = new System.Drawing.Size(884, 544);
+            this.TabInitConfig.Size = new System.Drawing.Size(897, 565);
             this.TabInitConfig.TabIndex = 2;
             this.TabInitConfig.SelectedIndexChanged += new System.EventHandler(this.TabInitConfig_SelectedIndexChanged_1);
             // 
@@ -97,7 +97,7 @@
             this.tabPage6.ForeColor = System.Drawing.Color.DodgerBlue;
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(876, 518);
+            this.tabPage6.Size = new System.Drawing.Size(889, 539);
             this.tabPage6.TabIndex = 14;
             this.tabPage6.Text = "简介";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("华文楷体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(743, 478);
+            this.label4.Location = new System.Drawing.Point(780, 511);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 23);
             this.label4.TabIndex = 3;
@@ -118,7 +118,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("华文楷体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(8, 478);
+            this.label3.Location = new System.Drawing.Point(3, 511);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 23);
             this.label3.TabIndex = 2;
@@ -352,10 +352,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 544);
+            this.ClientSize = new System.Drawing.Size(897, 565);
             this.Controls.Add(this.TabInitConfig);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "InitConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "配置";

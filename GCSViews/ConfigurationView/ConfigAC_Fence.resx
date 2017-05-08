@@ -118,47 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1gftitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1gftitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1gftitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1gftitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 4</value>
-  </data>
-  <data name="label1gftitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 20</value>
-  </data>
-  <data name="label1gftitle.TabIndex" type="System.Int32, mscorlib">
-    <value>83</value>
-  </data>
-  <data name="label1gftitle.Text" xml:space="preserve">
-    <value>Geo Fence</value>
-  </data>
-  <data name="&gt;&gt;label1gftitle.Name" xml:space="preserve">
-    <value>label1gftitle</value>
-  </data>
-  <data name="&gt;&gt;label1gftitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1gftitle.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1gftitle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="label2rtlalt.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label2rtlalt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label2rtlalt.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 145</value>
   </data>
@@ -199,7 +169,7 @@
     <value>mavlinkComboBox2</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6324.28114, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6337.20742, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox2.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -223,7 +193,7 @@
     <value>mavlinkNumericUpDown1</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDown1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6324.28114, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6337.20742, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDown1.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -247,7 +217,7 @@
     <value>mavlinkNumericUpDown2</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDown2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6324.28114, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6337.20742, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDown2.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -260,6 +230,9 @@
   </data>
   <data name="mavlinkCheckBox1.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="mavlinkCheckBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="mavlinkCheckBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>136, 3</value>
@@ -277,7 +250,7 @@
     <value>mavlinkCheckBox1</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBox1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6324.28114, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6337.20742, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkCheckBox1.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -287,6 +260,9 @@
   </data>
   <data name="label3enable.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label3enable.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label3enable.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
@@ -328,7 +304,7 @@
     <value>mavlinkComboBox1</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6324.28114, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6337.20742, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkComboBox1.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -338,6 +314,9 @@
   </data>
   <data name="label4type.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label4type.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label4type.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 29</value>
@@ -366,6 +345,9 @@
   <data name="label5action.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label5action.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label5action.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 58</value>
   </data>
@@ -393,6 +375,9 @@
   <data name="label6maxalt.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label6maxalt.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label6maxalt.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 87</value>
   </data>
@@ -419,6 +404,9 @@
   </data>
   <data name="label7maxrad.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label7maxrad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label7maxrad.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 116</value>
@@ -460,7 +448,7 @@
     <value>mavlinkNumericUpDown3</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDown3.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6324.28114, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6337.20742, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDown3.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -469,7 +457,7 @@
     <value>11</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 35</value>
+    <value>3, 3</value>
   </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
     <value>6</value>
@@ -495,38 +483,11 @@
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label2rtlalt" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mavlinkComboBox2" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="mavlinkNumericUpDown1" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="mavlinkNumericUpDown2" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="mavlinkCheckBox1" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label3enable" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mavlinkComboBox1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label4type" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label5action" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label6maxalt" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label7maxrad" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mavlinkNumericUpDown3" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,29.13043,Percent,70.86957" /&gt;&lt;Rows Styles="Percent,20,Percent,20,Percent,20,Percent,20,Percent,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="lineSeparator2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 27</value>
-  </data>
-  <data name="lineSeparator2.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>2000, 2</value>
-  </data>
-  <data name="lineSeparator2.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 2</value>
-  </data>
-  <data name="lineSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 2</value>
-  </data>
-  <data name="lineSeparator2.TabIndex" type="System.Int32, mscorlib">
-    <value>82</value>
-  </data>
-  <data name="&gt;&gt;lineSeparator2.Name" xml:space="preserve">
-    <value>lineSeparator2</value>
-  </data>
-  <data name="&gt;&gt;lineSeparator2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.LineSeparator, MissionPlanner.Controls, Version=1.0.6323.30842, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lineSeparator2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lineSeparator2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>528, 231</value>
+    <value>468, 178</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ConfigAC_Fence</value>

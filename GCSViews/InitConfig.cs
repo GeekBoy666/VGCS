@@ -342,7 +342,7 @@ namespace MissionPlanner.GCSViews
 
                 Radio.Parent = tabPage8;
                 Radio.Dock = DockStyle.Fill;
-                Radio.ForeColor = Color.Black;
+                //Radio.ForeColor = Color.Black;
                 Radio.Activate();
                 Radio.Show();
             }
@@ -373,7 +373,7 @@ namespace MissionPlanner.GCSViews
 
                 ParamsTree.Parent = tabPage12;
                 ParamsTree.Dock = DockStyle.Fill;
-                ParamsTree.BackColor = Color.Gray;
+                //ParamsTree.BackColor = Color.Gray;
                 //ParamsTree.ForeColor = Color.Black;
                 ParamsTree.Activate();
                 ParamsTree.Show();
@@ -394,7 +394,7 @@ namespace MissionPlanner.GCSViews
 
                 Radio.Parent = tabPage14;
                 Radio.Dock = DockStyle.Fill;
-                Radio.BackColor = Color.Gray;
+               // Radio.BackColor = Color.Gray;
                 //Radio.ForeColor = Color.Black;
                 //Radio.Activate();
                 Radio.Show();

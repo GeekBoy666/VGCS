@@ -54,7 +54,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // lbl_Accel_user
             // 
-            this.lbl_Accel_user.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_Accel_user.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.lbl_Accel_user, "lbl_Accel_user");
             this.lbl_Accel_user.Name = "lbl_Accel_user";
             // 

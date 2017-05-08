@@ -117,17 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 110</value>
+    <value>211, 4</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 12</value>
@@ -145,10 +148,13 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>2</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -157,7 +163,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 110</value>
+    <value>59, 4</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 12</value>
@@ -175,489 +181,14 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>0</value>
   </data>
-  <metadata name="currentStateBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="lbl_currentmode.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 26.25pt</value>
-  </data>
-  <data name="lbl_currentmode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbl_currentmode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>506, 124</value>
-  </data>
-  <data name="lbl_currentmode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 32</value>
-  </data>
-  <data name="lbl_currentmode.TabIndex" type="System.Int32, mscorlib">
-    <value>140</value>
-  </data>
-  <data name="lbl_currentmode.Text" xml:space="preserve">
-    <value>Manual</value>
-  </data>
-  <data name="lbl_currentmode.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lbl_currentmode.Name" xml:space="preserve">
-    <value>lbl_currentmode</value>
-  </data>
-  <data name="&gt;&gt;lbl_currentmode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_currentmode.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_currentmode.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="currentStateBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>214, 17</value>
   </metadata>
-  <data name="mavlinkNumericUpDownlow_voltage.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mavlinkNumericUpDownlow_voltage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 0</value>
-  </data>
-  <data name="mavlinkNumericUpDownlow_voltage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 21</value>
-  </data>
-  <data name="mavlinkNumericUpDownlow_voltage.TabIndex" type="System.Int32, mscorlib">
-    <value>153</value>
-  </data>
-  <data name="mavlinkNumericUpDownlow_voltage.ToolTip" xml:space="preserve">
-    <value>Low Voltage Trigger</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownlow_voltage.Name" xml:space="preserve">
-    <value>mavlinkNumericUpDownlow_voltage</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownlow_voltage.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownlow_voltage.Parent" xml:space="preserve">
-    <value>PNL_low_bat</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownlow_voltage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="mavlinkCheckBoxlong_fs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mavlinkCheckBoxlong_fs.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mavlinkCheckBoxlong_fs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mavlinkCheckBoxlong_fs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 58</value>
-  </data>
-  <data name="mavlinkCheckBoxlong_fs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 16</value>
-  </data>
-  <data name="mavlinkCheckBoxlong_fs.TabIndex" type="System.Int32, mscorlib">
-    <value>146</value>
-  </data>
-  <data name="mavlinkCheckBoxlong_fs.Text" xml:space="preserve">
-    <value>FailSafe Long (20 sec)</value>
-  </data>
-  <data name="mavlinkCheckBoxlong_fs.ToolTip" xml:space="preserve">
-    <value>Off, no Action, On, RTL</value>
-  </data>
-  <data name="mavlinkCheckBoxlong_fs.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxlong_fs.Name" xml:space="preserve">
-    <value>mavlinkCheckBoxlong_fs</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxlong_fs.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxlong_fs.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxlong_fs.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="mavlinkCheckBoxshort_fs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mavlinkCheckBoxshort_fs.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mavlinkCheckBoxshort_fs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mavlinkCheckBoxshort_fs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 43</value>
-  </data>
-  <data name="mavlinkCheckBoxshort_fs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 16</value>
-  </data>
-  <data name="mavlinkCheckBoxshort_fs.TabIndex" type="System.Int32, mscorlib">
-    <value>145</value>
-  </data>
-  <data name="mavlinkCheckBoxshort_fs.Text" xml:space="preserve">
-    <value>FailSafe Short (1 sec)</value>
-  </data>
-  <data name="mavlinkCheckBoxshort_fs.ToolTip" xml:space="preserve">
-    <value>Off, no Action, On, RTL</value>
-  </data>
-  <data name="mavlinkCheckBoxshort_fs.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxshort_fs.Name" xml:space="preserve">
-    <value>mavlinkCheckBoxshort_fs</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxshort_fs.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxshort_fs.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxshort_fs.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="mavlinkCheckBoxgcs_fs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mavlinkCheckBoxgcs_fs.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mavlinkCheckBoxgcs_fs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mavlinkCheckBoxgcs_fs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 29</value>
-  </data>
-  <data name="mavlinkCheckBoxgcs_fs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 16</value>
-  </data>
-  <data name="mavlinkCheckBoxgcs_fs.TabIndex" type="System.Int32, mscorlib">
-    <value>144</value>
-  </data>
-  <data name="mavlinkCheckBoxgcs_fs.Text" xml:space="preserve">
-    <value>GCS FailSafe</value>
-  </data>
-  <data name="mavlinkCheckBoxgcs_fs.ToolTip" xml:space="preserve">
-    <value>Enable Failsafe on GCS loss of communication</value>
-  </data>
-  <data name="mavlinkCheckBoxgcs_fs.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxgcs_fs.Name" xml:space="preserve">
-    <value>mavlinkCheckBoxgcs_fs</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxgcs_fs.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxgcs_fs.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxgcs_fs.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs_action.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs_action.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs_action.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs_action.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 77</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs_action.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 16</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs_action.TabIndex" type="System.Int32, mscorlib">
-    <value>147</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs_action.Text" xml:space="preserve">
-    <value>Throttle Failsafe Action</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs_action.ToolTip" xml:space="preserve">
-    <value>Arducopter Auto: Off, no Action, On, RTL
-Arducopter Other: if have gps, RTL, Otherwise Land</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs_action.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxthr_fs_action.Name" xml:space="preserve">
-    <value>mavlinkCheckBoxthr_fs_action</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxthr_fs_action.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxthr_fs_action.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxthr_fs_action.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="mavlinkNumericUpDownfs_thr_value.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="mavlinkNumericUpDownfs_thr_value.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mavlinkNumericUpDownfs_thr_value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="mavlinkNumericUpDownfs_thr_value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 21</value>
-  </data>
-  <data name="mavlinkNumericUpDownfs_thr_value.TabIndex" type="System.Int32, mscorlib">
-    <value>153</value>
-  </data>
-  <data name="mavlinkNumericUpDownfs_thr_value.ToolTip" xml:space="preserve">
-    <value>Trigger Throttle Pwm</value>
-  </data>
-  <data name="mavlinkNumericUpDownfs_thr_value.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownfs_thr_value.Name" xml:space="preserve">
-    <value>mavlinkNumericUpDownfs_thr_value</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownfs_thr_value.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownfs_thr_value.Parent" xml:space="preserve">
-    <value>PNL_thr_fs_value</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownfs_thr_value.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="mavlinkNumericUpDownthr_fs_value.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="mavlinkNumericUpDownthr_fs_value.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mavlinkNumericUpDownthr_fs_value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 0</value>
-  </data>
-  <data name="mavlinkNumericUpDownthr_fs_value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 21</value>
-  </data>
-  <data name="mavlinkNumericUpDownthr_fs_value.TabIndex" type="System.Int32, mscorlib">
-    <value>142</value>
-  </data>
-  <data name="mavlinkNumericUpDownthr_fs_value.ToolTip" xml:space="preserve">
-    <value>Trigger Throttle Pwm</value>
-  </data>
-  <data name="mavlinkNumericUpDownthr_fs_value.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownthr_fs_value.Name" xml:space="preserve">
-    <value>mavlinkNumericUpDownthr_fs_value</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownthr_fs_value.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownthr_fs_value.Parent" xml:space="preserve">
-    <value>PNL_thr_fs_value</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownthr_fs_value.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 60</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 16</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs.TabIndex" type="System.Int32, mscorlib">
-    <value>141</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs.Text" xml:space="preserve">
-    <value>Throttle FailSafe</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs.ToolTip" xml:space="preserve">
-    <value>Enable Failsafe on low throttle pwm</value>
-  </data>
-  <data name="mavlinkCheckBoxthr_fs.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxthr_fs.Name" xml:space="preserve">
-    <value>mavlinkCheckBoxthr_fs</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxthr_fs.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxthr_fs.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxthr_fs.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="mavlinkComboBox_fs_thr_enable.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mavlinkComboBox_fs_thr_enable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="mavlinkComboBox_fs_thr_enable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 6</value>
-  </data>
-  <data name="mavlinkComboBox_fs_thr_enable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 20</value>
-  </data>
-  <data name="mavlinkComboBox_fs_thr_enable.TabIndex" type="System.Int32, mscorlib">
-    <value>151</value>
-  </data>
-  <data name="mavlinkComboBox_fs_thr_enable.ToolTip" xml:space="preserve">
-    <value>Failsafe mode on low pwm</value>
-  </data>
-  <data name="mavlinkComboBox_fs_thr_enable.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mavlinkComboBox_fs_thr_enable.Name" xml:space="preserve">
-    <value>mavlinkComboBox_fs_thr_enable</value>
-  </data>
-  <data name="&gt;&gt;mavlinkComboBox_fs_thr_enable.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkComboBox_fs_thr_enable.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;mavlinkComboBox_fs_thr_enable.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="mavlinkComboBoxfs_batt_enable.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mavlinkComboBoxfs_batt_enable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 62</value>
-  </data>
-  <data name="mavlinkComboBoxfs_batt_enable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 6</value>
-  </data>
-  <data name="mavlinkComboBoxfs_batt_enable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 20</value>
-  </data>
-  <data name="mavlinkComboBoxfs_batt_enable.TabIndex" type="System.Int32, mscorlib">
-    <value>158</value>
-  </data>
-  <data name="mavlinkComboBoxfs_batt_enable.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mavlinkComboBoxfs_batt_enable.Name" xml:space="preserve">
-    <value>mavlinkComboBoxfs_batt_enable</value>
-  </data>
-  <data name="&gt;&gt;mavlinkComboBoxfs_batt_enable.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkComboBoxfs_batt_enable.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;mavlinkComboBoxfs_batt_enable.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="mavlinkCheckBoxFS_GCS_ENABLE.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mavlinkCheckBoxFS_GCS_ENABLE.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="mavlinkCheckBoxFS_GCS_ENABLE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mavlinkCheckBoxFS_GCS_ENABLE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 14</value>
-  </data>
-  <data name="mavlinkCheckBoxFS_GCS_ENABLE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 16</value>
-  </data>
-  <data name="mavlinkCheckBoxFS_GCS_ENABLE.TabIndex" type="System.Int32, mscorlib">
-    <value>156</value>
-  </data>
-  <data name="mavlinkCheckBoxFS_GCS_ENABLE.Text" xml:space="preserve">
-    <value>GCS FS Enable</value>
-  </data>
-  <data name="mavlinkCheckBoxFS_GCS_ENABLE.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxFS_GCS_ENABLE.Name" xml:space="preserve">
-    <value>mavlinkCheckBoxFS_GCS_ENABLE</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxFS_GCS_ENABLE.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxFS_GCS_ENABLE.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;mavlinkCheckBoxFS_GCS_ENABLE.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>pnlmah</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownFS_BATT_MAH.Name" xml:space="preserve">
-    <value>mavlinkNumericUpDownFS_BATT_MAH</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownFS_BATT_MAH.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownFS_BATT_MAH.Parent" xml:space="preserve">
-    <value>pnlmah</value>
-  </data>
-  <data name="&gt;&gt;mavlinkNumericUpDownFS_BATT_MAH.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pnlmah.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 40</value>
-  </data>
-  <data name="pnlmah.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 21</value>
-  </data>
-  <data name="pnlmah.TabIndex" type="System.Int32, mscorlib">
-    <value>157</value>
-  </data>
-  <data name="pnlmah.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pnlmah.Name" xml:space="preserve">
-    <value>pnlmah</value>
-  </data>
-  <data name="&gt;&gt;pnlmah.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlmah.Parent" xml:space="preserve">
-    <value>groupBox4</value>
-  </data>
-  <data name="&gt;&gt;pnlmah.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -704,7 +235,7 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>mavlinkNumericUpDownFS_BATT_MAH</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDownFS_BATT_MAH.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6332.24012, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mavlinkNumericUpDownFS_BATT_MAH.Parent" xml:space="preserve">
     <value>pnlmah</value>
@@ -712,41 +243,29 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
   <data name="&gt;&gt;mavlinkNumericUpDownFS_BATT_MAH.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="pnlmah.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 40</value>
   </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>PNL_low_bat</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PNL_low_bat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 18</value>
-  </data>
-  <data name="PNL_low_bat.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pnlmah.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 21</value>
   </data>
-  <data name="PNL_low_bat.TabIndex" type="System.Int32, mscorlib">
-    <value>154</value>
+  <data name="pnlmah.TabIndex" type="System.Int32, mscorlib">
+    <value>157</value>
   </data>
-  <data name="PNL_low_bat.Visible" type="System.Boolean, mscorlib">
+  <data name="pnlmah.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;PNL_low_bat.Name" xml:space="preserve">
-    <value>PNL_low_bat</value>
+  <data name="&gt;&gt;pnlmah.Name" xml:space="preserve">
+    <value>pnlmah</value>
   </data>
-  <data name="&gt;&gt;PNL_low_bat.Type" xml:space="preserve">
+  <data name="&gt;&gt;pnlmah.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PNL_low_bat.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnlmah.Parent" xml:space="preserve">
     <value>groupBox4</value>
   </data>
-  <data name="&gt;&gt;PNL_low_bat.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;pnlmah.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -778,37 +297,55 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
+  <data name="mavlinkNumericUpDownlow_voltage.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="mavlinkNumericUpDownlow_voltage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 0</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>PNL_thr_fs_value</value>
+  <data name="mavlinkNumericUpDownlow_voltage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="mavlinkNumericUpDownlow_voltage.TabIndex" type="System.Int32, mscorlib">
+    <value>153</value>
   </data>
-  <data name="PNL_thr_fs_value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 35</value>
+  <data name="mavlinkNumericUpDownlow_voltage.ToolTip" xml:space="preserve">
+    <value>Low Voltage Trigger</value>
   </data>
-  <data name="PNL_thr_fs_value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 23</value>
+  <data name="&gt;&gt;mavlinkNumericUpDownlow_voltage.Name" xml:space="preserve">
+    <value>mavlinkNumericUpDownlow_voltage</value>
   </data>
-  <data name="PNL_thr_fs_value.TabIndex" type="System.Int32, mscorlib">
-    <value>149</value>
+  <data name="&gt;&gt;mavlinkNumericUpDownlow_voltage.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;PNL_thr_fs_value.Name" xml:space="preserve">
-    <value>PNL_thr_fs_value</value>
+  <data name="&gt;&gt;mavlinkNumericUpDownlow_voltage.Parent" xml:space="preserve">
+    <value>PNL_low_bat</value>
   </data>
-  <data name="&gt;&gt;PNL_thr_fs_value.Type" xml:space="preserve">
+  <data name="&gt;&gt;mavlinkNumericUpDownlow_voltage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PNL_low_bat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 18</value>
+  </data>
+  <data name="PNL_low_bat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 21</value>
+  </data>
+  <data name="PNL_low_bat.TabIndex" type="System.Int32, mscorlib">
+    <value>154</value>
+  </data>
+  <data name="PNL_low_bat.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PNL_low_bat.Name" xml:space="preserve">
+    <value>PNL_low_bat</value>
+  </data>
+  <data name="&gt;&gt;PNL_low_bat.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PNL_thr_fs_value.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;PNL_low_bat.Parent" xml:space="preserve">
+    <value>groupBox4</value>
   </data>
-  <data name="&gt;&gt;PNL_thr_fs_value.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PNL_low_bat.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
@@ -844,74 +381,107 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="lbl_armed.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 26.25pt</value>
+  <data name="mavlinkNumericUpDownfs_thr_value.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
   </data>
-  <data name="lbl_armed.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="mavlinkNumericUpDownfs_thr_value.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="lbl_armed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>506, 165</value>
+  <data name="mavlinkNumericUpDownfs_thr_value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
   </data>
-  <data name="lbl_armed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 33</value>
+  <data name="mavlinkNumericUpDownfs_thr_value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 21</value>
   </data>
-  <data name="lbl_armed.TabIndex" type="System.Int32, mscorlib">
+  <data name="mavlinkNumericUpDownfs_thr_value.TabIndex" type="System.Int32, mscorlib">
+    <value>153</value>
+  </data>
+  <data name="mavlinkNumericUpDownfs_thr_value.ToolTip" xml:space="preserve">
+    <value>Trigger Throttle Pwm</value>
+  </data>
+  <data name="mavlinkNumericUpDownfs_thr_value.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;mavlinkNumericUpDownfs_thr_value.Name" xml:space="preserve">
+    <value>mavlinkNumericUpDownfs_thr_value</value>
+  </data>
+  <data name="&gt;&gt;mavlinkNumericUpDownfs_thr_value.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mavlinkNumericUpDownfs_thr_value.Parent" xml:space="preserve">
+    <value>PNL_thr_fs_value</value>
+  </data>
+  <data name="&gt;&gt;mavlinkNumericUpDownfs_thr_value.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mavlinkNumericUpDownthr_fs_value.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="mavlinkNumericUpDownthr_fs_value.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mavlinkNumericUpDownthr_fs_value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 0</value>
+  </data>
+  <data name="mavlinkNumericUpDownthr_fs_value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 21</value>
+  </data>
+  <data name="mavlinkNumericUpDownthr_fs_value.TabIndex" type="System.Int32, mscorlib">
+    <value>142</value>
+  </data>
+  <data name="mavlinkNumericUpDownthr_fs_value.ToolTip" xml:space="preserve">
+    <value>Trigger Throttle Pwm</value>
+  </data>
+  <data name="mavlinkNumericUpDownthr_fs_value.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;mavlinkNumericUpDownthr_fs_value.Name" xml:space="preserve">
+    <value>mavlinkNumericUpDownthr_fs_value</value>
+  </data>
+  <data name="&gt;&gt;mavlinkNumericUpDownthr_fs_value.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkNumericUpDown, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mavlinkNumericUpDownthr_fs_value.Parent" xml:space="preserve">
+    <value>PNL_thr_fs_value</value>
+  </data>
+  <data name="&gt;&gt;mavlinkNumericUpDownthr_fs_value.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PNL_thr_fs_value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 47</value>
+  </data>
+  <data name="PNL_thr_fs_value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 23</value>
+  </data>
+  <data name="PNL_thr_fs_value.TabIndex" type="System.Int32, mscorlib">
     <value>149</value>
   </data>
-  <data name="lbl_armed.Text" xml:space="preserve">
-    <value>Dissarmed</value>
+  <data name="&gt;&gt;PNL_thr_fs_value.Name" xml:space="preserve">
+    <value>PNL_thr_fs_value</value>
   </data>
-  <data name="&gt;&gt;lbl_armed.Name" xml:space="preserve">
-    <value>lbl_armed</value>
+  <data name="&gt;&gt;PNL_thr_fs_value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_armed.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;PNL_thr_fs_value.Parent" xml:space="preserve">
+    <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;lbl_armed.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;PNL_thr_fs_value.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;lbl_armed.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="horizontalProgressBar9.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="lbl_gpslock.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 26.25pt</value>
-  </data>
-  <data name="lbl_gpslock.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbl_gpslock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>506, 207</value>
-  </data>
-  <data name="lbl_gpslock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 30</value>
-  </data>
-  <data name="lbl_gpslock.TabIndex" type="System.Int32, mscorlib">
-    <value>150</value>
-  </data>
-  <data name="lbl_gpslock.Text" xml:space="preserve">
-    <value>No Lock</value>
-  </data>
-  <data name="&gt;&gt;lbl_gpslock.Name" xml:space="preserve">
-    <value>lbl_gpslock</value>
-  </data>
-  <data name="&gt;&gt;lbl_gpslock.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbl_gpslock.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_gpslock.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
+  <metadata name="currentStateBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="horizontalProgressBar9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 480</value>
+    <value>179, 258</value>
   </data>
   <data name="horizontalProgressBar9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 23</value>
   </data>
   <data name="horizontalProgressBar9.TabIndex" type="System.Int32, mscorlib">
     <value>102</value>
@@ -920,22 +490,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar9</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar9.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar9.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar9.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>6</value>
+  </data>
+  <data name="horizontalProgressBar10.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 429</value>
+    <value>179, 226</value>
   </data>
   <data name="horizontalProgressBar10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 23</value>
   </data>
   <data name="horizontalProgressBar10.TabIndex" type="System.Int32, mscorlib">
     <value>101</value>
@@ -944,22 +517,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar10</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar10.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar10.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar10.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
+  </data>
+  <data name="horizontalProgressBar11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 378</value>
+    <value>179, 196</value>
   </data>
   <data name="horizontalProgressBar11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 23</value>
   </data>
   <data name="horizontalProgressBar11.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
@@ -968,22 +544,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar11</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar11.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar11.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar11.ZOrder" xml:space="preserve">
     <value>11</value>
+  </data>
+  <data name="horizontalProgressBar12.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 327</value>
+    <value>179, 164</value>
   </data>
   <data name="horizontalProgressBar12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 23</value>
   </data>
   <data name="horizontalProgressBar12.TabIndex" type="System.Int32, mscorlib">
     <value>99</value>
@@ -992,22 +571,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar12</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar12.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar12.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar12.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
+  </data>
+  <data name="horizontalProgressBar13.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 277</value>
+    <value>179, 137</value>
   </data>
   <data name="horizontalProgressBar13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 20</value>
   </data>
   <data name="horizontalProgressBar13.TabIndex" type="System.Int32, mscorlib">
     <value>98</value>
@@ -1016,22 +598,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar13</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar13.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar13.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar13.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
+  </data>
+  <data name="horizontalProgressBar14.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 226</value>
+    <value>179, 104</value>
   </data>
   <data name="horizontalProgressBar14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 23</value>
   </data>
   <data name="horizontalProgressBar14.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -1040,22 +625,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar14</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar14.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar14.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar14.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>10</value>
+  </data>
+  <data name="horizontalProgressBar15.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 124</value>
+    <value>179, 31</value>
   </data>
   <data name="horizontalProgressBar15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 19</value>
   </data>
   <data name="horizontalProgressBar15.TabIndex" type="System.Int32, mscorlib">
     <value>96</value>
@@ -1064,46 +652,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar15</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar15.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar15.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar15.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>3</value>
   </data>
-  <data name="horizontalProgressBar16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="horizontalProgressBar16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 175</value>
-  </data>
-  <data name="horizontalProgressBar16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
-  </data>
-  <data name="horizontalProgressBar16.TabIndex" type="System.Int32, mscorlib">
-    <value>95</value>
-  </data>
-  <data name="&gt;&gt;horizontalProgressBar16.Name" xml:space="preserve">
-    <value>horizontalProgressBar16</value>
-  </data>
-  <data name="&gt;&gt;horizontalProgressBar16.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;horizontalProgressBar16.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;horizontalProgressBar16.ZOrder" xml:space="preserve">
-    <value>16</value>
+  <data name="horizontalProgressBar8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 480</value>
+    <value>6, 258</value>
   </data>
   <data name="horizontalProgressBar8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 23</value>
   </data>
   <data name="horizontalProgressBar8.TabIndex" type="System.Int32, mscorlib">
     <value>94</value>
@@ -1112,22 +679,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar8</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar8.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar8.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar8.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>8</value>
+  </data>
+  <data name="horizontalProgressBar7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 429</value>
+    <value>6, 226</value>
   </data>
   <data name="horizontalProgressBar7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 23</value>
   </data>
   <data name="horizontalProgressBar7.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
@@ -1136,22 +706,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar7</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar7.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar7.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar7.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>12</value>
+  </data>
+  <data name="horizontalProgressBar6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 378</value>
+    <value>6, 196</value>
   </data>
   <data name="horizontalProgressBar6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 23</value>
   </data>
   <data name="horizontalProgressBar6.TabIndex" type="System.Int32, mscorlib">
     <value>92</value>
@@ -1160,22 +733,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar6</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar6.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar6.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar6.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>16</value>
+  </data>
+  <data name="horizontalProgressBar5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 327</value>
+    <value>6, 164</value>
   </data>
   <data name="horizontalProgressBar5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 23</value>
   </data>
   <data name="horizontalProgressBar5.TabIndex" type="System.Int32, mscorlib">
     <value>91</value>
@@ -1184,22 +760,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar5</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar5.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar5.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar5.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>17</value>
+  </data>
+  <data name="horizontalProgressBar4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 277</value>
+    <value>6, 137</value>
   </data>
   <data name="horizontalProgressBar4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 20</value>
   </data>
   <data name="horizontalProgressBar4.TabIndex" type="System.Int32, mscorlib">
     <value>90</value>
@@ -1208,22 +787,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar4</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar4.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar4.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar4.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>13</value>
+  </data>
+  <data name="horizontalProgressBar3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 226</value>
+    <value>6, 104</value>
   </data>
   <data name="horizontalProgressBar3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 23</value>
   </data>
   <data name="horizontalProgressBar3.TabIndex" type="System.Int32, mscorlib">
     <value>89</value>
@@ -1232,22 +814,25 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar3</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar3.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar3.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar3.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>7</value>
+  </data>
+  <data name="horizontalProgressBar2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="horizontalProgressBar2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="horizontalProgressBar2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 124</value>
+    <value>6, 31</value>
   </data>
   <data name="horizontalProgressBar2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+    <value>159, 19</value>
   </data>
   <data name="horizontalProgressBar2.TabIndex" type="System.Int32, mscorlib">
     <value>88</value>
@@ -1256,43 +841,131 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>horizontalProgressBar2</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar2.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;horizontalProgressBar2.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>1</value>
   </data>
-  <data name="horizontalProgressBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="mavlinkComboBox_fs_thr_enable.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mavlinkComboBox_fs_thr_enable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 20</value>
+  </data>
+  <data name="mavlinkComboBox_fs_thr_enable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 6</value>
+  </data>
+  <data name="mavlinkComboBox_fs_thr_enable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 20</value>
+  </data>
+  <data name="mavlinkComboBox_fs_thr_enable.TabIndex" type="System.Int32, mscorlib">
+    <value>151</value>
+  </data>
+  <data name="mavlinkComboBox_fs_thr_enable.ToolTip" xml:space="preserve">
+    <value>Failsafe mode on low pwm</value>
+  </data>
+  <data name="mavlinkComboBox_fs_thr_enable.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;mavlinkComboBox_fs_thr_enable.Name" xml:space="preserve">
+    <value>mavlinkComboBox_fs_thr_enable</value>
+  </data>
+  <data name="&gt;&gt;mavlinkComboBox_fs_thr_enable.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mavlinkComboBox_fs_thr_enable.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;mavlinkComboBox_fs_thr_enable.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="horizontalProgressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 175</value>
+  <data name="mavlinkCheckBoxthr_fs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 78</value>
   </data>
-  <data name="horizontalProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
+  <data name="mavlinkCheckBoxthr_fs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 16</value>
   </data>
-  <data name="horizontalProgressBar1.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
+  <data name="mavlinkCheckBoxthr_fs.TabIndex" type="System.Int32, mscorlib">
+    <value>141</value>
   </data>
-  <data name="&gt;&gt;horizontalProgressBar1.Name" xml:space="preserve">
-    <value>horizontalProgressBar1</value>
+  <data name="mavlinkCheckBoxthr_fs.Text" xml:space="preserve">
+    <value>Throttle FailSafe</value>
   </data>
-  <data name="&gt;&gt;horizontalProgressBar1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+  <data name="mavlinkCheckBoxthr_fs.ToolTip" xml:space="preserve">
+    <value>Enable Failsafe on low throttle pwm</value>
   </data>
-  <data name="&gt;&gt;horizontalProgressBar1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="mavlinkCheckBoxthr_fs.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;horizontalProgressBar1.ZOrder" xml:space="preserve">
-    <value>24</value>
+  <data name="&gt;&gt;mavlinkCheckBoxthr_fs.Name" xml:space="preserve">
+    <value>mavlinkCheckBoxthr_fs</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxthr_fs.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxthr_fs.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxthr_fs.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs_action.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs_action.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs_action.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs_action.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 100</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs_action.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 16</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs_action.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs_action.Text" xml:space="preserve">
+    <value>Throttle Failsafe Action</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs_action.ToolTip" xml:space="preserve">
+    <value>Arducopter Auto: Off, no Action, On, RTL
+Arducopter Other: if have gps, RTL, Otherwise Land</value>
+  </data>
+  <data name="mavlinkCheckBoxthr_fs_action.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxthr_fs_action.Name" xml:space="preserve">
+    <value>mavlinkCheckBoxthr_fs_action</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxthr_fs_action.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxthr_fs_action.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxthr_fs_action.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>513, 327</value>
+    <value>14, 390</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 91</value>
+    <value>392, 125</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>151</value>
@@ -1310,13 +983,166 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="mavlinkCheckBoxFS_GCS_ENABLE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mavlinkCheckBoxFS_GCS_ENABLE.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mavlinkCheckBoxFS_GCS_ENABLE.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mavlinkCheckBoxFS_GCS_ENABLE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 14</value>
+  </data>
+  <data name="mavlinkCheckBoxFS_GCS_ENABLE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 16</value>
+  </data>
+  <data name="mavlinkCheckBoxFS_GCS_ENABLE.TabIndex" type="System.Int32, mscorlib">
+    <value>156</value>
+  </data>
+  <data name="mavlinkCheckBoxFS_GCS_ENABLE.Text" xml:space="preserve">
+    <value>GCS FS Enable</value>
+  </data>
+  <data name="mavlinkCheckBoxFS_GCS_ENABLE.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxFS_GCS_ENABLE.Name" xml:space="preserve">
+    <value>mavlinkCheckBoxFS_GCS_ENABLE</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxFS_GCS_ENABLE.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxFS_GCS_ENABLE.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxFS_GCS_ENABLE.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mavlinkCheckBoxgcs_fs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mavlinkCheckBoxgcs_fs.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mavlinkCheckBoxgcs_fs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mavlinkCheckBoxgcs_fs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 33</value>
+  </data>
+  <data name="mavlinkCheckBoxgcs_fs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 16</value>
+  </data>
+  <data name="mavlinkCheckBoxgcs_fs.TabIndex" type="System.Int32, mscorlib">
+    <value>144</value>
+  </data>
+  <data name="mavlinkCheckBoxgcs_fs.Text" xml:space="preserve">
+    <value>GCS FailSafe</value>
+  </data>
+  <data name="mavlinkCheckBoxgcs_fs.ToolTip" xml:space="preserve">
+    <value>Enable Failsafe on GCS loss of communication</value>
+  </data>
+  <data name="mavlinkCheckBoxgcs_fs.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxgcs_fs.Name" xml:space="preserve">
+    <value>mavlinkCheckBoxgcs_fs</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxgcs_fs.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxgcs_fs.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxgcs_fs.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mavlinkCheckBoxshort_fs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mavlinkCheckBoxshort_fs.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mavlinkCheckBoxshort_fs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mavlinkCheckBoxshort_fs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 53</value>
+  </data>
+  <data name="mavlinkCheckBoxshort_fs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 16</value>
+  </data>
+  <data name="mavlinkCheckBoxshort_fs.TabIndex" type="System.Int32, mscorlib">
+    <value>145</value>
+  </data>
+  <data name="mavlinkCheckBoxshort_fs.Text" xml:space="preserve">
+    <value>FailSafe Short (1 sec)</value>
+  </data>
+  <data name="mavlinkCheckBoxshort_fs.ToolTip" xml:space="preserve">
+    <value>Off, no Action, On, RTL</value>
+  </data>
+  <data name="mavlinkCheckBoxshort_fs.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxshort_fs.Name" xml:space="preserve">
+    <value>mavlinkCheckBoxshort_fs</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxshort_fs.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxshort_fs.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxshort_fs.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="mavlinkCheckBoxlong_fs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mavlinkCheckBoxlong_fs.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mavlinkCheckBoxlong_fs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mavlinkCheckBoxlong_fs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 75</value>
+  </data>
+  <data name="mavlinkCheckBoxlong_fs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 16</value>
+  </data>
+  <data name="mavlinkCheckBoxlong_fs.TabIndex" type="System.Int32, mscorlib">
+    <value>146</value>
+  </data>
+  <data name="mavlinkCheckBoxlong_fs.Text" xml:space="preserve">
+    <value>FailSafe Long (20 sec)</value>
+  </data>
+  <data name="mavlinkCheckBoxlong_fs.ToolTip" xml:space="preserve">
+    <value>Off, no Action, On, RTL</value>
+  </data>
+  <data name="mavlinkCheckBoxlong_fs.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxlong_fs.Name" xml:space="preserve">
+    <value>mavlinkCheckBoxlong_fs</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxlong_fs.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxlong_fs.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;mavlinkCheckBoxlong_fs.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>513, 420</value>
+    <value>412, 420</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 73</value>
+    <value>392, 95</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>152</value>
@@ -1334,13 +1160,43 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
+  </data>
+  <data name="mavlinkComboBoxfs_batt_enable.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mavlinkComboBoxfs_batt_enable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 67</value>
+  </data>
+  <data name="mavlinkComboBoxfs_batt_enable.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 6</value>
+  </data>
+  <data name="mavlinkComboBoxfs_batt_enable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 20</value>
+  </data>
+  <data name="mavlinkComboBoxfs_batt_enable.TabIndex" type="System.Int32, mscorlib">
+    <value>158</value>
+  </data>
+  <data name="mavlinkComboBoxfs_batt_enable.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;mavlinkComboBoxfs_batt_enable.Name" xml:space="preserve">
+    <value>mavlinkComboBoxfs_batt_enable</value>
+  </data>
+  <data name="&gt;&gt;mavlinkComboBoxfs_batt_enable.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MavlinkComboBox, MissionPlanner, Version=1.1.6337.20406, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mavlinkComboBoxfs_batt_enable.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;mavlinkComboBoxfs_batt_enable.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>513, 242</value>
+    <value>412, 319</value>
   </data>
   <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 83</value>
+    <value>392, 95</value>
   </data>
   <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
     <value>153</value>
@@ -1358,33 +1214,198 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
-  <data name="lineSeparator2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 37</value>
+  <data name="lineSeparator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 47</value>
   </data>
-  <data name="lineSeparator2.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="lineSeparator1.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>2000, 2</value>
   </data>
-  <data name="lineSeparator2.MinimumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="lineSeparator1.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>0, 2</value>
   </data>
-  <data name="lineSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>812, 2</value>
+  <data name="lineSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>790, 2</value>
   </data>
-  <data name="lineSeparator2.TabIndex" type="System.Int32, mscorlib">
-    <value>154</value>
+  <data name="lineSeparator1.TabIndex" type="System.Int32, mscorlib">
+    <value>155</value>
   </data>
-  <data name="&gt;&gt;lineSeparator2.Name" xml:space="preserve">
-    <value>lineSeparator2</value>
+  <data name="&gt;&gt;lineSeparator1.Name" xml:space="preserve">
+    <value>lineSeparator1</value>
   </data>
-  <data name="&gt;&gt;lineSeparator2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.LineSeparator, MissionPlanner.Controls, Version=1.0.6332.23993, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;lineSeparator1.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.LineSeparator, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;lineSeparator2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lineSeparator1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lineSeparator2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lineSeparator1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>华文行楷, 15.749999pt</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 15</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 22</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>156</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>故障保护</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="horizontalProgressBar1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="horizontalProgressBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="horizontalProgressBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 68</value>
+  </data>
+  <data name="horizontalProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 22</value>
+  </data>
+  <data name="horizontalProgressBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;horizontalProgressBar1.Name" xml:space="preserve">
+    <value>horizontalProgressBar1</value>
+  </data>
+  <data name="&gt;&gt;horizontalProgressBar1.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;horizontalProgressBar1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;horizontalProgressBar1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="horizontalProgressBar16.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="horizontalProgressBar16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="horizontalProgressBar16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 68</value>
+  </data>
+  <data name="horizontalProgressBar16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 22</value>
+  </data>
+  <data name="horizontalProgressBar16.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;horizontalProgressBar16.Name" xml:space="preserve">
+    <value>horizontalProgressBar16</value>
+  </data>
+  <data name="&gt;&gt;horizontalProgressBar16.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.HorizontalProgressBar, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;horizontalProgressBar16.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;horizontalProgressBar16.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 20</value>
+  </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 287</value>
+  </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>157</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar15" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar1" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar16" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar9" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar3" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar8" Row="8" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar10" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar14" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar11" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar7" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar4" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar12" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar13" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar6" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="horizontalProgressBar5" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,32.43243,Percent,67.56757,Absolute,36,Absolute,37,Absolute,26,Absolute,32,Absolute,31,Absolute,30,Absolute,33" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 60</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>392, 322</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>158</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>遥控输入/电机输出</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>412, 60</value>
+  </data>
+  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>392, 253</value>
+  </data>
+  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>159</value>
+  </data>
+  <data name="groupBox5.Text" xml:space="preserve">
+    <value>地理围栏</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
+    <value>groupBox5</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1393,17 +1414,17 @@ Arducopter Other: if have gps, RTL, Otherwise Land</value>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>823, 534</value>
   </data>
-  <data name="&gt;&gt;currentStateBindingSource.Name" xml:space="preserve">
-    <value>currentStateBindingSource</value>
-  </data>
-  <data name="&gt;&gt;currentStateBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
     <value>toolTip1</value>
   </data>
   <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;currentStateBindingSource.Name" xml:space="preserve">
+    <value>currentStateBindingSource</value>
+  </data>
+  <data name="&gt;&gt;currentStateBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ConfigFailSafe</value>

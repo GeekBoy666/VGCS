@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigRawParamsTree));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.CMB_paramfiles = new System.Windows.Forms.ComboBox();
             this.Params = new BrightIdeasSoftware.DataTreeListView();
             this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -57,11 +56,6 @@
             this.toolTip1.InitialDelay = 500;
             this.toolTip1.ReshowDelay = 100;
             // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
             // CMB_paramfiles
             // 
             resources.ApplyResources(this.CMB_paramfiles, "CMB_paramfiles");
@@ -83,7 +77,7 @@
             this.olvColumn4,
             this.olvColumn5});
             this.Params.DataSource = null;
-            this.Params.ForeColor = System.Drawing.Color.White;
+            this.Params.ForeColor = System.Drawing.Color.Black;
             this.Params.Name = "Params";
             this.Params.OwnerDraw = true;
             this.Params.RootKeyValueString = "";
@@ -139,49 +133,77 @@
             // BUT_compare
             // 
             resources.ApplyResources(this.BUT_compare, "BUT_compare");
+            this.BUT_compare.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_compare.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_compare.ColorMouseDown = System.Drawing.Color.Gray;
             this.BUT_compare.Name = "BUT_compare";
+            this.BUT_compare.TextColor = System.Drawing.Color.White;
             this.BUT_compare.UseVisualStyleBackColor = true;
             this.BUT_compare.Click += new System.EventHandler(this.BUT_compare_Click);
             // 
             // BUT_rerequestparams
             // 
             resources.ApplyResources(this.BUT_rerequestparams, "BUT_rerequestparams");
+            this.BUT_rerequestparams.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_rerequestparams.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_rerequestparams.ColorMouseDown = System.Drawing.Color.Gray;
             this.BUT_rerequestparams.Name = "BUT_rerequestparams";
+            this.BUT_rerequestparams.TextColor = System.Drawing.Color.White;
             this.BUT_rerequestparams.UseVisualStyleBackColor = true;
             this.BUT_rerequestparams.Click += new System.EventHandler(this.BUT_rerequestparams_Click);
             // 
             // BUT_writePIDS
             // 
             resources.ApplyResources(this.BUT_writePIDS, "BUT_writePIDS");
+            this.BUT_writePIDS.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_writePIDS.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_writePIDS.ColorMouseDown = System.Drawing.Color.Gray;
             this.BUT_writePIDS.Name = "BUT_writePIDS";
+            this.BUT_writePIDS.TextColor = System.Drawing.Color.White;
             this.BUT_writePIDS.UseVisualStyleBackColor = true;
             this.BUT_writePIDS.Click += new System.EventHandler(this.BUT_writePIDS_Click);
             // 
             // BUT_save
             // 
             resources.ApplyResources(this.BUT_save, "BUT_save");
+            this.BUT_save.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_save.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_save.ColorMouseDown = System.Drawing.Color.Gray;
             this.BUT_save.Name = "BUT_save";
+            this.BUT_save.TextColor = System.Drawing.Color.White;
             this.BUT_save.UseVisualStyleBackColor = true;
             this.BUT_save.Click += new System.EventHandler(this.BUT_save_Click);
             // 
             // BUT_load
             // 
             resources.ApplyResources(this.BUT_load, "BUT_load");
+            this.BUT_load.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_load.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_load.ColorMouseDown = System.Drawing.Color.Gray;
             this.BUT_load.Name = "BUT_load";
+            this.BUT_load.TextColor = System.Drawing.Color.White;
             this.BUT_load.UseVisualStyleBackColor = true;
             this.BUT_load.Click += new System.EventHandler(this.BUT_load_Click);
             // 
             // BUT_paramfileload
             // 
             resources.ApplyResources(this.BUT_paramfileload, "BUT_paramfileload");
+            this.BUT_paramfileload.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_paramfileload.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_paramfileload.ColorMouseDown = System.Drawing.Color.Gray;
             this.BUT_paramfileload.Name = "BUT_paramfileload";
+            this.BUT_paramfileload.TextColor = System.Drawing.Color.White;
             this.BUT_paramfileload.UseVisualStyleBackColor = true;
             this.BUT_paramfileload.Click += new System.EventHandler(this.BUT_paramfileload_Click);
             // 
             // BUT_reset_params
             // 
             resources.ApplyResources(this.BUT_reset_params, "BUT_reset_params");
+            this.BUT_reset_params.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_reset_params.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_reset_params.ColorMouseDown = System.Drawing.Color.Gray;
             this.BUT_reset_params.Name = "BUT_reset_params";
+            this.BUT_reset_params.TextColor = System.Drawing.Color.White;
             this.BUT_reset_params.UseVisualStyleBackColor = true;
             this.BUT_reset_params.Click += new System.EventHandler(this.BUT_reset_params_Click);
             // 
@@ -199,18 +221,19 @@
             // ConfigRawParamsTree
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.Params);
             this.Controls.Add(this.BUT_reset_params);
             this.Controls.Add(this.BUT_paramfileload);
             this.Controls.Add(this.CMB_paramfiles);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.BUT_compare);
             this.Controls.Add(this.BUT_rerequestparams);
             this.Controls.Add(this.BUT_writePIDS);
             this.Controls.Add(this.BUT_save);
             this.Controls.Add(this.BUT_load);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ConfigRawParamsTree";
             resources.ApplyResources(this, "$this");
             ((System.ComponentModel.ISupportInitialize)(this.Params)).EndInit();
@@ -227,7 +250,6 @@
         private Controls.MyButton BUT_save;
         private Controls.MyButton BUT_load;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label1;
         private Controls.MyButton BUT_paramfileload;
         private System.Windows.Forms.ComboBox CMB_paramfiles;
         private Controls.MyButton BUT_reset_params;

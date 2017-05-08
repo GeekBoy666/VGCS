@@ -33,29 +33,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigFailSafe));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_currentmode = new System.Windows.Forms.Label();
-            this.currentStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.mavlinkNumericUpDownlow_voltage = new MissionPlanner.Controls.MavlinkNumericUpDown();
-            this.mavlinkCheckBoxlong_fs = new MissionPlanner.Controls.MavlinkCheckBox();
-            this.mavlinkCheckBoxshort_fs = new MissionPlanner.Controls.MavlinkCheckBox();
-            this.mavlinkCheckBoxgcs_fs = new MissionPlanner.Controls.MavlinkCheckBox();
-            this.mavlinkCheckBoxthr_fs_action = new MissionPlanner.Controls.MavlinkCheckBox();
-            this.mavlinkNumericUpDownfs_thr_value = new MissionPlanner.Controls.MavlinkNumericUpDown();
-            this.mavlinkNumericUpDownthr_fs_value = new MissionPlanner.Controls.MavlinkNumericUpDown();
-            this.mavlinkCheckBoxthr_fs = new MissionPlanner.Controls.MavlinkCheckBox();
-            this.mavlinkComboBox_fs_thr_enable = new MissionPlanner.Controls.MavlinkComboBox();
-            this.mavlinkComboBoxfs_batt_enable = new MissionPlanner.Controls.MavlinkComboBox();
-            this.mavlinkCheckBoxFS_GCS_ENABLE = new MissionPlanner.Controls.MavlinkCheckBox();
             this.pnlmah = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.mavlinkNumericUpDownFS_BATT_MAH = new MissionPlanner.Controls.MavlinkNumericUpDown();
             this.PNL_low_bat = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.PNL_thr_fs_value = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbl_armed = new MissionPlanner.Controls.MyLabel();
-            this.lbl_gpslock = new MissionPlanner.Controls.MyLabel();
             this.horizontalProgressBar9 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.horizontalProgressBar10 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.horizontalProgressBar11 = new MissionPlanner.Controls.HorizontalProgressBar();
@@ -63,7 +47,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.horizontalProgressBar13 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.horizontalProgressBar14 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.horizontalProgressBar15 = new MissionPlanner.Controls.HorizontalProgressBar();
-            this.horizontalProgressBar16 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.horizontalProgressBar8 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.horizontalProgressBar7 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.horizontalProgressBar6 = new MissionPlanner.Controls.HorizontalProgressBar();
@@ -71,22 +54,42 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.horizontalProgressBar4 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.horizontalProgressBar3 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.horizontalProgressBar2 = new MissionPlanner.Controls.HorizontalProgressBar();
-            this.horizontalProgressBar1 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
-            ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownlow_voltage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownfs_thr_value)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownthr_fs_value)).BeginInit();
+            this.lineSeparator1 = new MissionPlanner.Controls.LineSeparator();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.horizontalProgressBar16 = new MissionPlanner.Controls.HorizontalProgressBar();
+            this.horizontalProgressBar1 = new MissionPlanner.Controls.HorizontalProgressBar();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.currentStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mavlinkComboBoxfs_batt_enable = new MissionPlanner.Controls.MavlinkComboBox();
+            this.mavlinkNumericUpDownlow_voltage = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownFS_BATT_MAH = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkCheckBoxFS_GCS_ENABLE = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkCheckBoxgcs_fs = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkCheckBoxshort_fs = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkCheckBoxlong_fs = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkComboBox_fs_thr_enable = new MissionPlanner.Controls.MavlinkComboBox();
+            this.mavlinkNumericUpDownfs_thr_value = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkNumericUpDownthr_fs_value = new MissionPlanner.Controls.MavlinkNumericUpDown();
+            this.mavlinkCheckBoxthr_fs = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkCheckBoxthr_fs_action = new MissionPlanner.Controls.MavlinkCheckBox();
             this.pnlmah.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownFS_BATT_MAH)).BeginInit();
             this.PNL_low_bat.SuspendLayout();
             this.PNL_thr_fs_value.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownlow_voltage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownFS_BATT_MAH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownfs_thr_value)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownthr_fs_value)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -99,138 +102,11 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // lbl_currentmode
-            // 
-            this.lbl_currentmode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.currentStateBindingSource, "mode", true));
-            resources.ApplyResources(this.lbl_currentmode, "lbl_currentmode");
-            this.lbl_currentmode.Name = "lbl_currentmode";
-            this.lbl_currentmode.TextChanged += new System.EventHandler(this.lbl_currentmode_TextChanged);
-            // 
-            // currentStateBindingSource
-            // 
-            this.currentStateBindingSource.DataSource = typeof(MissionPlanner.CurrentState);
-            // 
             // toolTip1
             // 
             this.toolTip1.AutoPopDelay = 20000;
             this.toolTip1.InitialDelay = 500;
             this.toolTip1.ReshowDelay = 100;
-            // 
-            // mavlinkNumericUpDownlow_voltage
-            // 
-            this.mavlinkNumericUpDownlow_voltage.DecimalPlaces = 1;
-            resources.ApplyResources(this.mavlinkNumericUpDownlow_voltage, "mavlinkNumericUpDownlow_voltage");
-            this.mavlinkNumericUpDownlow_voltage.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.mavlinkNumericUpDownlow_voltage.Max = 99F;
-            this.mavlinkNumericUpDownlow_voltage.Min = 6F;
-            this.mavlinkNumericUpDownlow_voltage.Name = "mavlinkNumericUpDownlow_voltage";
-            this.mavlinkNumericUpDownlow_voltage.ParamName = null;
-            this.toolTip1.SetToolTip(this.mavlinkNumericUpDownlow_voltage, resources.GetString("mavlinkNumericUpDownlow_voltage.ToolTip"));
-            this.mavlinkNumericUpDownlow_voltage.Value = new decimal(new int[] {
-            131,
-            0,
-            0,
-            65536});
-            // 
-            // mavlinkCheckBoxlong_fs
-            // 
-            resources.ApplyResources(this.mavlinkCheckBoxlong_fs, "mavlinkCheckBoxlong_fs");
-            this.mavlinkCheckBoxlong_fs.Name = "mavlinkCheckBoxlong_fs";
-            this.mavlinkCheckBoxlong_fs.OffValue = 0D;
-            this.mavlinkCheckBoxlong_fs.OnValue = 1D;
-            this.mavlinkCheckBoxlong_fs.ParamName = null;
-            this.toolTip1.SetToolTip(this.mavlinkCheckBoxlong_fs, resources.GetString("mavlinkCheckBoxlong_fs.ToolTip"));
-            this.mavlinkCheckBoxlong_fs.UseVisualStyleBackColor = true;
-            // 
-            // mavlinkCheckBoxshort_fs
-            // 
-            resources.ApplyResources(this.mavlinkCheckBoxshort_fs, "mavlinkCheckBoxshort_fs");
-            this.mavlinkCheckBoxshort_fs.Name = "mavlinkCheckBoxshort_fs";
-            this.mavlinkCheckBoxshort_fs.OffValue = 0D;
-            this.mavlinkCheckBoxshort_fs.OnValue = 1D;
-            this.mavlinkCheckBoxshort_fs.ParamName = null;
-            this.toolTip1.SetToolTip(this.mavlinkCheckBoxshort_fs, resources.GetString("mavlinkCheckBoxshort_fs.ToolTip"));
-            this.mavlinkCheckBoxshort_fs.UseVisualStyleBackColor = true;
-            // 
-            // mavlinkCheckBoxgcs_fs
-            // 
-            resources.ApplyResources(this.mavlinkCheckBoxgcs_fs, "mavlinkCheckBoxgcs_fs");
-            this.mavlinkCheckBoxgcs_fs.Name = "mavlinkCheckBoxgcs_fs";
-            this.mavlinkCheckBoxgcs_fs.OffValue = 0D;
-            this.mavlinkCheckBoxgcs_fs.OnValue = 1D;
-            this.mavlinkCheckBoxgcs_fs.ParamName = null;
-            this.toolTip1.SetToolTip(this.mavlinkCheckBoxgcs_fs, resources.GetString("mavlinkCheckBoxgcs_fs.ToolTip"));
-            this.mavlinkCheckBoxgcs_fs.UseVisualStyleBackColor = true;
-            // 
-            // mavlinkCheckBoxthr_fs_action
-            // 
-            resources.ApplyResources(this.mavlinkCheckBoxthr_fs_action, "mavlinkCheckBoxthr_fs_action");
-            this.mavlinkCheckBoxthr_fs_action.Name = "mavlinkCheckBoxthr_fs_action";
-            this.mavlinkCheckBoxthr_fs_action.OffValue = 0D;
-            this.mavlinkCheckBoxthr_fs_action.OnValue = 1D;
-            this.mavlinkCheckBoxthr_fs_action.ParamName = null;
-            this.toolTip1.SetToolTip(this.mavlinkCheckBoxthr_fs_action, resources.GetString("mavlinkCheckBoxthr_fs_action.ToolTip"));
-            this.mavlinkCheckBoxthr_fs_action.UseVisualStyleBackColor = true;
-            // 
-            // mavlinkNumericUpDownfs_thr_value
-            // 
-            resources.ApplyResources(this.mavlinkNumericUpDownfs_thr_value, "mavlinkNumericUpDownfs_thr_value");
-            this.mavlinkNumericUpDownfs_thr_value.Max = 1F;
-            this.mavlinkNumericUpDownfs_thr_value.Min = 0F;
-            this.mavlinkNumericUpDownfs_thr_value.Name = "mavlinkNumericUpDownfs_thr_value";
-            this.mavlinkNumericUpDownfs_thr_value.ParamName = null;
-            this.toolTip1.SetToolTip(this.mavlinkNumericUpDownfs_thr_value, resources.GetString("mavlinkNumericUpDownfs_thr_value.ToolTip"));
-            // 
-            // mavlinkNumericUpDownthr_fs_value
-            // 
-            resources.ApplyResources(this.mavlinkNumericUpDownthr_fs_value, "mavlinkNumericUpDownthr_fs_value");
-            this.mavlinkNumericUpDownthr_fs_value.Max = 1F;
-            this.mavlinkNumericUpDownthr_fs_value.Min = 0F;
-            this.mavlinkNumericUpDownthr_fs_value.Name = "mavlinkNumericUpDownthr_fs_value";
-            this.mavlinkNumericUpDownthr_fs_value.ParamName = null;
-            this.toolTip1.SetToolTip(this.mavlinkNumericUpDownthr_fs_value, resources.GetString("mavlinkNumericUpDownthr_fs_value.ToolTip"));
-            // 
-            // mavlinkCheckBoxthr_fs
-            // 
-            resources.ApplyResources(this.mavlinkCheckBoxthr_fs, "mavlinkCheckBoxthr_fs");
-            this.mavlinkCheckBoxthr_fs.Name = "mavlinkCheckBoxthr_fs";
-            this.mavlinkCheckBoxthr_fs.OffValue = 0D;
-            this.mavlinkCheckBoxthr_fs.OnValue = 1D;
-            this.mavlinkCheckBoxthr_fs.ParamName = null;
-            this.toolTip1.SetToolTip(this.mavlinkCheckBoxthr_fs, resources.GetString("mavlinkCheckBoxthr_fs.ToolTip"));
-            this.mavlinkCheckBoxthr_fs.UseVisualStyleBackColor = true;
-            // 
-            // mavlinkComboBox_fs_thr_enable
-            // 
-            this.mavlinkComboBox_fs_thr_enable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.mavlinkComboBox_fs_thr_enable, "mavlinkComboBox_fs_thr_enable");
-            this.mavlinkComboBox_fs_thr_enable.FormattingEnabled = true;
-            this.mavlinkComboBox_fs_thr_enable.Name = "mavlinkComboBox_fs_thr_enable";
-            this.mavlinkComboBox_fs_thr_enable.ParamName = null;
-            this.mavlinkComboBox_fs_thr_enable.SubControl = null;
-            this.toolTip1.SetToolTip(this.mavlinkComboBox_fs_thr_enable, resources.GetString("mavlinkComboBox_fs_thr_enable.ToolTip"));
-            // 
-            // mavlinkComboBoxfs_batt_enable
-            // 
-            this.mavlinkComboBoxfs_batt_enable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.mavlinkComboBoxfs_batt_enable, "mavlinkComboBoxfs_batt_enable");
-            this.mavlinkComboBoxfs_batt_enable.FormattingEnabled = true;
-            this.mavlinkComboBoxfs_batt_enable.Name = "mavlinkComboBoxfs_batt_enable";
-            this.mavlinkComboBoxfs_batt_enable.ParamName = null;
-            this.mavlinkComboBoxfs_batt_enable.SubControl = null;
-            // 
-            // mavlinkCheckBoxFS_GCS_ENABLE
-            // 
-            resources.ApplyResources(this.mavlinkCheckBoxFS_GCS_ENABLE, "mavlinkCheckBoxFS_GCS_ENABLE");
-            this.mavlinkCheckBoxFS_GCS_ENABLE.Name = "mavlinkCheckBoxFS_GCS_ENABLE";
-            this.mavlinkCheckBoxFS_GCS_ENABLE.OffValue = 0D;
-            this.mavlinkCheckBoxFS_GCS_ENABLE.OnValue = 1D;
-            this.mavlinkCheckBoxFS_GCS_ENABLE.ParamName = null;
-            this.mavlinkCheckBoxFS_GCS_ENABLE.UseVisualStyleBackColor = true;
             // 
             // pnlmah
             // 
@@ -243,25 +119,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            // 
-            // mavlinkNumericUpDownFS_BATT_MAH
-            // 
-            this.mavlinkNumericUpDownFS_BATT_MAH.DecimalPlaces = 1;
-            resources.ApplyResources(this.mavlinkNumericUpDownFS_BATT_MAH, "mavlinkNumericUpDownFS_BATT_MAH");
-            this.mavlinkNumericUpDownFS_BATT_MAH.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.mavlinkNumericUpDownFS_BATT_MAH.Max = 99999F;
-            this.mavlinkNumericUpDownFS_BATT_MAH.Min = 1000F;
-            this.mavlinkNumericUpDownFS_BATT_MAH.Name = "mavlinkNumericUpDownFS_BATT_MAH";
-            this.mavlinkNumericUpDownFS_BATT_MAH.ParamName = null;
-            this.mavlinkNumericUpDownFS_BATT_MAH.Value = new decimal(new int[] {
-            131,
-            0,
-            0,
-            65536});
             // 
             // PNL_low_bat
             // 
@@ -288,27 +145,11 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // lbl_armed
-            // 
-            this.lbl_armed.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.currentStateBindingSource, "armed", true));
-            resources.ApplyResources(this.lbl_armed, "lbl_armed");
-            this.lbl_armed.Name = "lbl_armed";
-            this.lbl_armed.resize = false;
-            this.lbl_armed.Paint += new System.Windows.Forms.PaintEventHandler(this.lbl_armed_Paint);
-            // 
-            // lbl_gpslock
-            // 
-            this.lbl_gpslock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.currentStateBindingSource, "gpsstatus", true));
-            resources.ApplyResources(this.lbl_gpslock, "lbl_gpslock");
-            this.lbl_gpslock.Name = "lbl_gpslock";
-            this.lbl_gpslock.resize = false;
-            this.lbl_gpslock.Paint += new System.Windows.Forms.PaintEventHandler(this.lbl_gpslock_Paint);
-            // 
             // horizontalProgressBar9
             // 
+            resources.ApplyResources(this.horizontalProgressBar9, "horizontalProgressBar9");
             this.horizontalProgressBar9.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch8out", true));
             this.horizontalProgressBar9.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar9, "horizontalProgressBar9");
             this.horizontalProgressBar9.Label = "Radio 8";
             this.horizontalProgressBar9.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar9.Maximum = 2000;
@@ -321,9 +162,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar10
             // 
+            resources.ApplyResources(this.horizontalProgressBar10, "horizontalProgressBar10");
             this.horizontalProgressBar10.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch7out", true));
             this.horizontalProgressBar10.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar10, "horizontalProgressBar10");
             this.horizontalProgressBar10.Label = "Radio 7";
             this.horizontalProgressBar10.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar10.Maximum = 2000;
@@ -336,9 +177,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar11
             // 
+            resources.ApplyResources(this.horizontalProgressBar11, "horizontalProgressBar11");
             this.horizontalProgressBar11.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch6out", true));
             this.horizontalProgressBar11.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar11, "horizontalProgressBar11");
             this.horizontalProgressBar11.Label = "Radio 6";
             this.horizontalProgressBar11.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar11.Maximum = 2000;
@@ -351,9 +192,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar12
             // 
+            resources.ApplyResources(this.horizontalProgressBar12, "horizontalProgressBar12");
             this.horizontalProgressBar12.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch5out", true));
             this.horizontalProgressBar12.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar12, "horizontalProgressBar12");
             this.horizontalProgressBar12.Label = "Radio 5";
             this.horizontalProgressBar12.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar12.Maximum = 2000;
@@ -366,9 +207,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar13
             // 
+            resources.ApplyResources(this.horizontalProgressBar13, "horizontalProgressBar13");
             this.horizontalProgressBar13.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch4out", true));
             this.horizontalProgressBar13.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar13, "horizontalProgressBar13");
             this.horizontalProgressBar13.Label = "Radio 4";
             this.horizontalProgressBar13.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar13.Maximum = 2000;
@@ -381,9 +222,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar14
             // 
+            resources.ApplyResources(this.horizontalProgressBar14, "horizontalProgressBar14");
             this.horizontalProgressBar14.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch3out", true));
             this.horizontalProgressBar14.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar14, "horizontalProgressBar14");
             this.horizontalProgressBar14.Label = "Radio 3";
             this.horizontalProgressBar14.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar14.Maximum = 2000;
@@ -396,9 +237,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar15
             // 
+            resources.ApplyResources(this.horizontalProgressBar15, "horizontalProgressBar15");
             this.horizontalProgressBar15.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch1out", true));
             this.horizontalProgressBar15.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar15, "horizontalProgressBar15");
             this.horizontalProgressBar15.Label = "Radio 1";
             this.horizontalProgressBar15.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar15.Maximum = 2000;
@@ -409,26 +250,11 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.horizontalProgressBar15.Step = 1;
             this.horizontalProgressBar15.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             // 
-            // horizontalProgressBar16
-            // 
-            this.horizontalProgressBar16.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch2out", true));
-            this.horizontalProgressBar16.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar16, "horizontalProgressBar16");
-            this.horizontalProgressBar16.Label = "Radio 2";
-            this.horizontalProgressBar16.MarqueeAnimationSpeed = 1;
-            this.horizontalProgressBar16.Maximum = 2000;
-            this.horizontalProgressBar16.maxline = 0;
-            this.horizontalProgressBar16.Minimum = 1000;
-            this.horizontalProgressBar16.minline = 0;
-            this.horizontalProgressBar16.Name = "horizontalProgressBar16";
-            this.horizontalProgressBar16.Step = 1;
-            this.horizontalProgressBar16.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            // 
             // horizontalProgressBar8
             // 
+            resources.ApplyResources(this.horizontalProgressBar8, "horizontalProgressBar8");
             this.horizontalProgressBar8.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch8in", true));
             this.horizontalProgressBar8.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar8, "horizontalProgressBar8");
             this.horizontalProgressBar8.Label = "Radio 8";
             this.horizontalProgressBar8.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar8.Maximum = 2000;
@@ -441,9 +267,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar7
             // 
+            resources.ApplyResources(this.horizontalProgressBar7, "horizontalProgressBar7");
             this.horizontalProgressBar7.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch7in", true));
             this.horizontalProgressBar7.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar7, "horizontalProgressBar7");
             this.horizontalProgressBar7.Label = "Radio 7";
             this.horizontalProgressBar7.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar7.Maximum = 2000;
@@ -456,9 +282,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar6
             // 
+            resources.ApplyResources(this.horizontalProgressBar6, "horizontalProgressBar6");
             this.horizontalProgressBar6.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch6in", true));
             this.horizontalProgressBar6.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar6, "horizontalProgressBar6");
             this.horizontalProgressBar6.Label = "Radio 6";
             this.horizontalProgressBar6.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar6.Maximum = 2000;
@@ -471,9 +297,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar5
             // 
+            resources.ApplyResources(this.horizontalProgressBar5, "horizontalProgressBar5");
             this.horizontalProgressBar5.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch5in", true));
             this.horizontalProgressBar5.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar5, "horizontalProgressBar5");
             this.horizontalProgressBar5.Label = "Radio 5";
             this.horizontalProgressBar5.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar5.Maximum = 2000;
@@ -486,9 +312,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar4
             // 
+            resources.ApplyResources(this.horizontalProgressBar4, "horizontalProgressBar4");
             this.horizontalProgressBar4.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch4in", true));
             this.horizontalProgressBar4.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar4, "horizontalProgressBar4");
             this.horizontalProgressBar4.Label = "Radio 4";
             this.horizontalProgressBar4.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar4.Maximum = 2000;
@@ -501,9 +327,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar3
             // 
+            resources.ApplyResources(this.horizontalProgressBar3, "horizontalProgressBar3");
             this.horizontalProgressBar3.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch3in", true));
             this.horizontalProgressBar3.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar3, "horizontalProgressBar3");
             this.horizontalProgressBar3.Label = "Radio 3";
             this.horizontalProgressBar3.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar3.Maximum = 2000;
@@ -516,9 +342,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // horizontalProgressBar2
             // 
+            resources.ApplyResources(this.horizontalProgressBar2, "horizontalProgressBar2");
             this.horizontalProgressBar2.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch1in", true));
             this.horizontalProgressBar2.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar2, "horizontalProgressBar2");
             this.horizontalProgressBar2.Label = "Radio 1";
             this.horizontalProgressBar2.MarqueeAnimationSpeed = 1;
             this.horizontalProgressBar2.Maximum = 2000;
@@ -528,21 +354,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.horizontalProgressBar2.Name = "horizontalProgressBar2";
             this.horizontalProgressBar2.Step = 1;
             this.horizontalProgressBar2.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            // 
-            // horizontalProgressBar1
-            // 
-            this.horizontalProgressBar1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch2in", true));
-            this.horizontalProgressBar1.DrawLabel = true;
-            resources.ApplyResources(this.horizontalProgressBar1, "horizontalProgressBar1");
-            this.horizontalProgressBar1.Label = "Radio 2";
-            this.horizontalProgressBar1.MarqueeAnimationSpeed = 1;
-            this.horizontalProgressBar1.Maximum = 2000;
-            this.horizontalProgressBar1.maxline = 0;
-            this.horizontalProgressBar1.Minimum = 1000;
-            this.horizontalProgressBar1.minline = 0;
-            this.horizontalProgressBar1.Name = "horizontalProgressBar1";
-            this.horizontalProgressBar1.Step = 1;
-            this.horizontalProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             // 
             // groupBox2
             // 
@@ -573,53 +384,246 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // lineSeparator2
+            // lineSeparator1
             // 
-            resources.ApplyResources(this.lineSeparator2, "lineSeparator2");
-            this.lineSeparator2.Name = "lineSeparator2";
-            this.lineSeparator2.Opacity1 = 0.6F;
-            this.lineSeparator2.Opacity2 = 0.7F;
-            this.lineSeparator2.Opacity3 = 0.1F;
-            this.lineSeparator2.PrimaryColor = System.Drawing.Color.Black;
-            this.lineSeparator2.SecondaryColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.lineSeparator1, "lineSeparator1");
+            this.lineSeparator1.Name = "lineSeparator1";
+            this.lineSeparator1.Opacity1 = 0.6F;
+            this.lineSeparator1.Opacity2 = 0.7F;
+            this.lineSeparator1.Opacity3 = 0.1F;
+            this.lineSeparator1.PrimaryColor = System.Drawing.Color.Black;
+            this.lineSeparator1.SecondaryColor = System.Drawing.Color.Gainsboro;
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar15, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar16, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar9, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar8, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar10, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar14, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar11, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar7, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar4, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar12, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar13, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar6, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.horizontalProgressBar5, 0, 5);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // horizontalProgressBar16
+            // 
+            resources.ApplyResources(this.horizontalProgressBar16, "horizontalProgressBar16");
+            this.horizontalProgressBar16.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch2out", true));
+            this.horizontalProgressBar16.DrawLabel = true;
+            this.horizontalProgressBar16.Label = "Radio 2";
+            this.horizontalProgressBar16.MarqueeAnimationSpeed = 1;
+            this.horizontalProgressBar16.Maximum = 2000;
+            this.horizontalProgressBar16.maxline = 0;
+            this.horizontalProgressBar16.Minimum = 1000;
+            this.horizontalProgressBar16.minline = 0;
+            this.horizontalProgressBar16.Name = "horizontalProgressBar16";
+            this.horizontalProgressBar16.Step = 1;
+            this.horizontalProgressBar16.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            // 
+            // horizontalProgressBar1
+            // 
+            resources.ApplyResources(this.horizontalProgressBar1, "horizontalProgressBar1");
+            this.horizontalProgressBar1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.currentStateBindingSource, "ch2in", true));
+            this.horizontalProgressBar1.DrawLabel = true;
+            this.horizontalProgressBar1.Label = "Radio 2";
+            this.horizontalProgressBar1.MarqueeAnimationSpeed = 1;
+            this.horizontalProgressBar1.Maximum = 2000;
+            this.horizontalProgressBar1.maxline = 0;
+            this.horizontalProgressBar1.Minimum = 1000;
+            this.horizontalProgressBar1.minline = 0;
+            this.horizontalProgressBar1.Name = "horizontalProgressBar1";
+            this.horizontalProgressBar1.Step = 1;
+            this.horizontalProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tableLayoutPanel1);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
+            // currentStateBindingSource
+            // 
+            this.currentStateBindingSource.DataSource = typeof(MissionPlanner.CurrentState);
+            // 
+            // mavlinkComboBoxfs_batt_enable
+            // 
+            this.mavlinkComboBoxfs_batt_enable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.mavlinkComboBoxfs_batt_enable, "mavlinkComboBoxfs_batt_enable");
+            this.mavlinkComboBoxfs_batt_enable.FormattingEnabled = true;
+            this.mavlinkComboBoxfs_batt_enable.Name = "mavlinkComboBoxfs_batt_enable";
+            this.mavlinkComboBoxfs_batt_enable.ParamName = null;
+            this.mavlinkComboBoxfs_batt_enable.SubControl = null;
+            // 
+            // mavlinkNumericUpDownlow_voltage
+            // 
+            this.mavlinkNumericUpDownlow_voltage.DecimalPlaces = 1;
+            resources.ApplyResources(this.mavlinkNumericUpDownlow_voltage, "mavlinkNumericUpDownlow_voltage");
+            this.mavlinkNumericUpDownlow_voltage.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.mavlinkNumericUpDownlow_voltage.Max = 99F;
+            this.mavlinkNumericUpDownlow_voltage.Min = 6F;
+            this.mavlinkNumericUpDownlow_voltage.Name = "mavlinkNumericUpDownlow_voltage";
+            this.mavlinkNumericUpDownlow_voltage.ParamName = null;
+            this.toolTip1.SetToolTip(this.mavlinkNumericUpDownlow_voltage, resources.GetString("mavlinkNumericUpDownlow_voltage.ToolTip"));
+            this.mavlinkNumericUpDownlow_voltage.Value = new decimal(new int[] {
+            131,
+            0,
+            0,
+            65536});
+            // 
+            // mavlinkNumericUpDownFS_BATT_MAH
+            // 
+            this.mavlinkNumericUpDownFS_BATT_MAH.DecimalPlaces = 1;
+            resources.ApplyResources(this.mavlinkNumericUpDownFS_BATT_MAH, "mavlinkNumericUpDownFS_BATT_MAH");
+            this.mavlinkNumericUpDownFS_BATT_MAH.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.mavlinkNumericUpDownFS_BATT_MAH.Max = 99999F;
+            this.mavlinkNumericUpDownFS_BATT_MAH.Min = 1000F;
+            this.mavlinkNumericUpDownFS_BATT_MAH.Name = "mavlinkNumericUpDownFS_BATT_MAH";
+            this.mavlinkNumericUpDownFS_BATT_MAH.ParamName = null;
+            this.mavlinkNumericUpDownFS_BATT_MAH.Value = new decimal(new int[] {
+            131,
+            0,
+            0,
+            65536});
+            // 
+            // mavlinkCheckBoxFS_GCS_ENABLE
+            // 
+            resources.ApplyResources(this.mavlinkCheckBoxFS_GCS_ENABLE, "mavlinkCheckBoxFS_GCS_ENABLE");
+            this.mavlinkCheckBoxFS_GCS_ENABLE.ForeColor = System.Drawing.Color.Black;
+            this.mavlinkCheckBoxFS_GCS_ENABLE.Name = "mavlinkCheckBoxFS_GCS_ENABLE";
+            this.mavlinkCheckBoxFS_GCS_ENABLE.OffValue = 0D;
+            this.mavlinkCheckBoxFS_GCS_ENABLE.OnValue = 1D;
+            this.mavlinkCheckBoxFS_GCS_ENABLE.ParamName = null;
+            this.mavlinkCheckBoxFS_GCS_ENABLE.UseVisualStyleBackColor = true;
+            // 
+            // mavlinkCheckBoxgcs_fs
+            // 
+            resources.ApplyResources(this.mavlinkCheckBoxgcs_fs, "mavlinkCheckBoxgcs_fs");
+            this.mavlinkCheckBoxgcs_fs.ForeColor = System.Drawing.Color.Black;
+            this.mavlinkCheckBoxgcs_fs.Name = "mavlinkCheckBoxgcs_fs";
+            this.mavlinkCheckBoxgcs_fs.OffValue = 0D;
+            this.mavlinkCheckBoxgcs_fs.OnValue = 1D;
+            this.mavlinkCheckBoxgcs_fs.ParamName = null;
+            this.toolTip1.SetToolTip(this.mavlinkCheckBoxgcs_fs, resources.GetString("mavlinkCheckBoxgcs_fs.ToolTip"));
+            this.mavlinkCheckBoxgcs_fs.UseVisualStyleBackColor = true;
+            // 
+            // mavlinkCheckBoxshort_fs
+            // 
+            resources.ApplyResources(this.mavlinkCheckBoxshort_fs, "mavlinkCheckBoxshort_fs");
+            this.mavlinkCheckBoxshort_fs.ForeColor = System.Drawing.Color.Black;
+            this.mavlinkCheckBoxshort_fs.Name = "mavlinkCheckBoxshort_fs";
+            this.mavlinkCheckBoxshort_fs.OffValue = 0D;
+            this.mavlinkCheckBoxshort_fs.OnValue = 1D;
+            this.mavlinkCheckBoxshort_fs.ParamName = null;
+            this.toolTip1.SetToolTip(this.mavlinkCheckBoxshort_fs, resources.GetString("mavlinkCheckBoxshort_fs.ToolTip"));
+            this.mavlinkCheckBoxshort_fs.UseVisualStyleBackColor = true;
+            // 
+            // mavlinkCheckBoxlong_fs
+            // 
+            resources.ApplyResources(this.mavlinkCheckBoxlong_fs, "mavlinkCheckBoxlong_fs");
+            this.mavlinkCheckBoxlong_fs.ForeColor = System.Drawing.Color.Black;
+            this.mavlinkCheckBoxlong_fs.Name = "mavlinkCheckBoxlong_fs";
+            this.mavlinkCheckBoxlong_fs.OffValue = 0D;
+            this.mavlinkCheckBoxlong_fs.OnValue = 1D;
+            this.mavlinkCheckBoxlong_fs.ParamName = null;
+            this.toolTip1.SetToolTip(this.mavlinkCheckBoxlong_fs, resources.GetString("mavlinkCheckBoxlong_fs.ToolTip"));
+            this.mavlinkCheckBoxlong_fs.UseVisualStyleBackColor = true;
+            // 
+            // mavlinkComboBox_fs_thr_enable
+            // 
+            this.mavlinkComboBox_fs_thr_enable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.mavlinkComboBox_fs_thr_enable, "mavlinkComboBox_fs_thr_enable");
+            this.mavlinkComboBox_fs_thr_enable.FormattingEnabled = true;
+            this.mavlinkComboBox_fs_thr_enable.Name = "mavlinkComboBox_fs_thr_enable";
+            this.mavlinkComboBox_fs_thr_enable.ParamName = null;
+            this.mavlinkComboBox_fs_thr_enable.SubControl = null;
+            this.toolTip1.SetToolTip(this.mavlinkComboBox_fs_thr_enable, resources.GetString("mavlinkComboBox_fs_thr_enable.ToolTip"));
+            // 
+            // mavlinkNumericUpDownfs_thr_value
+            // 
+            resources.ApplyResources(this.mavlinkNumericUpDownfs_thr_value, "mavlinkNumericUpDownfs_thr_value");
+            this.mavlinkNumericUpDownfs_thr_value.Max = 1F;
+            this.mavlinkNumericUpDownfs_thr_value.Min = 0F;
+            this.mavlinkNumericUpDownfs_thr_value.Name = "mavlinkNumericUpDownfs_thr_value";
+            this.mavlinkNumericUpDownfs_thr_value.ParamName = null;
+            this.toolTip1.SetToolTip(this.mavlinkNumericUpDownfs_thr_value, resources.GetString("mavlinkNumericUpDownfs_thr_value.ToolTip"));
+            // 
+            // mavlinkNumericUpDownthr_fs_value
+            // 
+            resources.ApplyResources(this.mavlinkNumericUpDownthr_fs_value, "mavlinkNumericUpDownthr_fs_value");
+            this.mavlinkNumericUpDownthr_fs_value.Max = 1F;
+            this.mavlinkNumericUpDownthr_fs_value.Min = 0F;
+            this.mavlinkNumericUpDownthr_fs_value.Name = "mavlinkNumericUpDownthr_fs_value";
+            this.mavlinkNumericUpDownthr_fs_value.ParamName = null;
+            this.toolTip1.SetToolTip(this.mavlinkNumericUpDownthr_fs_value, resources.GetString("mavlinkNumericUpDownthr_fs_value.ToolTip"));
+            // 
+            // mavlinkCheckBoxthr_fs
+            // 
+            resources.ApplyResources(this.mavlinkCheckBoxthr_fs, "mavlinkCheckBoxthr_fs");
+            this.mavlinkCheckBoxthr_fs.ForeColor = System.Drawing.Color.Black;
+            this.mavlinkCheckBoxthr_fs.Name = "mavlinkCheckBoxthr_fs";
+            this.mavlinkCheckBoxthr_fs.OffValue = 0D;
+            this.mavlinkCheckBoxthr_fs.OnValue = 1D;
+            this.mavlinkCheckBoxthr_fs.ParamName = null;
+            this.toolTip1.SetToolTip(this.mavlinkCheckBoxthr_fs, resources.GetString("mavlinkCheckBoxthr_fs.ToolTip"));
+            this.mavlinkCheckBoxthr_fs.UseVisualStyleBackColor = true;
+            // 
+            // mavlinkCheckBoxthr_fs_action
+            // 
+            resources.ApplyResources(this.mavlinkCheckBoxthr_fs_action, "mavlinkCheckBoxthr_fs_action");
+            this.mavlinkCheckBoxthr_fs_action.ForeColor = System.Drawing.Color.Black;
+            this.mavlinkCheckBoxthr_fs_action.Name = "mavlinkCheckBoxthr_fs_action";
+            this.mavlinkCheckBoxthr_fs_action.OffValue = 0D;
+            this.mavlinkCheckBoxthr_fs_action.OnValue = 1D;
+            this.mavlinkCheckBoxthr_fs_action.ParamName = null;
+            this.toolTip1.SetToolTip(this.mavlinkCheckBoxthr_fs_action, resources.GetString("mavlinkCheckBoxthr_fs_action.ToolTip"));
+            this.mavlinkCheckBoxthr_fs_action.UseVisualStyleBackColor = true;
             // 
             // ConfigFailSafe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.lineSeparator2);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lineSeparator1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.lbl_gpslock);
-            this.Controls.Add(this.lbl_armed);
-            this.Controls.Add(this.lbl_currentmode);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.horizontalProgressBar9);
-            this.Controls.Add(this.horizontalProgressBar10);
-            this.Controls.Add(this.horizontalProgressBar11);
-            this.Controls.Add(this.horizontalProgressBar12);
-            this.Controls.Add(this.horizontalProgressBar13);
-            this.Controls.Add(this.horizontalProgressBar14);
-            this.Controls.Add(this.horizontalProgressBar15);
-            this.Controls.Add(this.horizontalProgressBar16);
-            this.Controls.Add(this.horizontalProgressBar8);
-            this.Controls.Add(this.horizontalProgressBar7);
-            this.Controls.Add(this.horizontalProgressBar6);
-            this.Controls.Add(this.horizontalProgressBar5);
-            this.Controls.Add(this.horizontalProgressBar4);
-            this.Controls.Add(this.horizontalProgressBar3);
-            this.Controls.Add(this.horizontalProgressBar2);
-            this.Controls.Add(this.horizontalProgressBar1);
             this.Name = "ConfigFailSafe";
             resources.ApplyResources(this, "$this");
-            ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownlow_voltage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownfs_thr_value)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownthr_fs_value)).EndInit();
             this.pnlmah.ResumeLayout(false);
             this.pnlmah.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownFS_BATT_MAH)).EndInit();
             this.PNL_low_bat.ResumeLayout(false);
             this.PNL_low_bat.PerformLayout();
             this.PNL_thr_fs_value.ResumeLayout(false);
@@ -629,6 +633,14 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownlow_voltage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownFS_BATT_MAH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownfs_thr_value)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mavlinkNumericUpDownthr_fs_value)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,7 +658,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private HorizontalProgressBar horizontalProgressBar13;
         private HorizontalProgressBar horizontalProgressBar14;
         private HorizontalProgressBar horizontalProgressBar15;
-        private HorizontalProgressBar horizontalProgressBar16;
         private HorizontalProgressBar horizontalProgressBar8;
         private HorizontalProgressBar horizontalProgressBar7;
         private HorizontalProgressBar horizontalProgressBar6;
@@ -654,8 +665,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private HorizontalProgressBar horizontalProgressBar4;
         private HorizontalProgressBar horizontalProgressBar3;
         private HorizontalProgressBar horizontalProgressBar2;
-        private HorizontalProgressBar horizontalProgressBar1;
-        private System.Windows.Forms.Label lbl_currentmode;
         private Controls.MavlinkCheckBox mavlinkCheckBoxthr_fs;
         private Controls.MavlinkNumericUpDown mavlinkNumericUpDownthr_fs_value;
         private Controls.MavlinkCheckBox mavlinkCheckBoxgcs_fs;
@@ -664,8 +673,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private Controls.MavlinkCheckBox mavlinkCheckBoxlong_fs;
         private Controls.MavlinkCheckBox mavlinkCheckBoxthr_fs_action;
         private System.Windows.Forms.Label label3;
-        private Controls.MyLabel lbl_armed;
-        private Controls.MyLabel lbl_gpslock;
         private System.Windows.Forms.Panel PNL_thr_fs_value;
         private Controls.MavlinkComboBox mavlinkComboBox_fs_thr_enable;
         private Controls.MavlinkNumericUpDown mavlinkNumericUpDownlow_voltage;
@@ -680,6 +687,12 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private LineSeparator lineSeparator2;
+        private LineSeparator lineSeparator1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private HorizontalProgressBar horizontalProgressBar1;
+        private HorizontalProgressBar horizontalProgressBar16;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }

@@ -15,7 +15,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         public ConfigFailSafe()
         {
             InitializeComponent();
+            GCSViews.ConfigurationView.ConfigAC_Fence Radio = new GCSViews.ConfigurationView.ConfigAC_Fence();
 
+            Radio.Parent = groupBox5;
+            Radio.Dock = DockStyle.Fill;
+            //Radio.ForeColor = Color.Black;
+            Radio.Activate();
+            Radio.Show();
             // setup rc update
             timer.Tick += timer_Tick;
         }
@@ -96,16 +102,16 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void lbl_armed_Paint(object sender, PaintEventArgs e)
         {
-            lbl_armed.SuspendLayout();
-            if (lbl_armed.Text == "True")
-            {
-                lbl_armed.Text = "Armed";
-            }
-            else if (lbl_armed.Text == "False")
-            {
-                lbl_armed.Text = "Disarmed";
-            }
-            lbl_armed.ResumeLayout();
+            //lbl_armed.SuspendLayout();
+            //if (lbl_armed.Text == "True")
+            //{
+            //    lbl_armed.Text = "Armed";
+            //}
+            //else if (lbl_armed.Text == "False")
+            //{
+            //    lbl_armed.Text = "Disarmed";
+            //}
+            //lbl_armed.ResumeLayout();
         }
 
         private void lbl_gpslock_Paint(object sender, PaintEventArgs e)
@@ -113,8 +119,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             var _gpsfix = 0;
             try
             {
-                if (!int.TryParse(lbl_gpslock.Text, out _gpsfix))
-                    return;
+               // if (!int.TryParse(lbl_gpslock.Text, out _gpsfix))
+                   // return;
             }
             catch
             {
@@ -138,9 +144,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 gps = ("GPS: 3D Fix");
             }
-            lbl_gpslock.SuspendLayout();
-            lbl_gpslock.Text = gps;
-            lbl_gpslock.ResumeLayout();
+            //lbl_gpslock.SuspendLayout();
+            //lbl_gpslock.Text = gps;
+            //lbl_gpslock.ResumeLayout();
         }
 
         private void lbl_currentmode_TextChanged(object sender, EventArgs e)
@@ -151,11 +157,11 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 {
                     if (MainV2.comPort.MAV.cs.ch3in < (float) MainV2.comPort.MAV.param["FS_THR_VALUE"])
                     {
-                        lbl_currentmode.ForeColor = Color.Red;
+                        //lbl_currentmode.ForeColor = Color.Red;
                     }
                     else
                     {
-                        lbl_currentmode.ForeColor = Color.White;
+                        //lbl_currentmode.ForeColor = Color.White;
                     }
                 }
             }

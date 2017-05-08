@@ -6036,14 +6036,25 @@ namespace MissionPlanner
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (!MainV2.comPort.BaseStream.IsOpen)
-            {
-                CustomMessageBox.Show("请首先进行系统连接!");
-                return;
-            }
+            
+            //if (!MainV2.comPort.BaseStream.IsOpen)
+            //{
+            //    CustomMessageBox.Show("请首先进行系统连接!");
+            //    return;
+            //}
             Form ConfigWindow = new InitConfig();
             ConfigWindow.Activate();
             ConfigWindow.Show();
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox1.BackColor = Color.PaleGreen;
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox1.BackColor = Color.Azure;
         }
     }
 }

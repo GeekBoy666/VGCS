@@ -68,8 +68,28 @@
             this.chk_ss1 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.linkLabel1_ss = new System.Windows.Forms.LinkLabel();
+            this.groupboxcurrentmode = new System.Windows.Forms.GroupBox();
+            this.groupBoxsetmode = new System.Windows.Forms.GroupBox();
+            this.groupBoxincludemode = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.groupboxcurrentmode.SuspendLayout();
+            this.groupBoxsetmode.SuspendLayout();
+            this.groupBoxincludemode.SuspendLayout();
             this.SuspendLayout();
             // 
             // CB_simple6
@@ -340,21 +360,130 @@
             this.linkLabel1_ss.TabStop = true;
             this.linkLabel1_ss.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_ss_LinkClicked);
             // 
+            // groupboxcurrentmode
+            // 
+            this.groupboxcurrentmode.Controls.Add(this.label13);
+            this.groupboxcurrentmode.Controls.Add(this.lbl_currentmode);
+            this.groupboxcurrentmode.Controls.Add(this.label14);
+            this.groupboxcurrentmode.Controls.Add(this.LBL_flightmodepwm);
+            resources.ApplyResources(this.groupboxcurrentmode, "groupboxcurrentmode");
+            this.groupboxcurrentmode.Name = "groupboxcurrentmode";
+            this.groupboxcurrentmode.TabStop = false;
+            // 
+            // groupBoxsetmode
+            // 
+            this.groupBoxsetmode.Controls.Add(this.tableLayoutPanel1);
+            resources.ApplyResources(this.groupBoxsetmode, "groupBoxsetmode");
+            this.groupBoxsetmode.Name = "groupBoxsetmode";
+            this.groupBoxsetmode.TabStop = false;
+            // 
+            // groupBoxincludemode
+            // 
+            this.groupBoxincludemode.Controls.Add(this.label22);
+            this.groupBoxincludemode.Controls.Add(this.label21);
+            this.groupBoxincludemode.Controls.Add(this.label20);
+            this.groupBoxincludemode.Controls.Add(this.label19);
+            this.groupBoxincludemode.Controls.Add(this.label18);
+            this.groupBoxincludemode.Controls.Add(this.label17);
+            this.groupBoxincludemode.Controls.Add(this.label16);
+            this.groupBoxincludemode.Controls.Add(this.label15);
+            this.groupBoxincludemode.Controls.Add(this.label6);
+            this.groupBoxincludemode.Controls.Add(this.label5);
+            this.groupBoxincludemode.Controls.Add(this.label4);
+            this.groupBoxincludemode.Controls.Add(this.label3);
+            this.groupBoxincludemode.Controls.Add(this.label2);
+            this.groupBoxincludemode.Controls.Add(this.label1);
+            resources.ApplyResources(this.groupBoxincludemode, "groupBoxincludemode");
+            this.groupBoxincludemode.Name = "groupBoxincludemode";
+            this.groupBoxincludemode.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.Name = "label19";
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.Name = "label20";
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.Name = "label21";
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
+            // 
             // ConfigFlightModes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.LBL_flightmodepwm);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.lbl_currentmode);
+            this.Controls.Add(this.groupBoxincludemode);
+            this.Controls.Add(this.groupBoxsetmode);
+            this.Controls.Add(this.groupboxcurrentmode);
             this.Name = "ConfigFlightModes";
             resources.ApplyResources(this, "$this");
             ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.groupboxcurrentmode.ResumeLayout(false);
+            this.groupboxcurrentmode.PerformLayout();
+            this.groupBoxsetmode.ResumeLayout(false);
+            this.groupBoxincludemode.ResumeLayout(false);
+            this.groupBoxincludemode.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -398,5 +527,22 @@
         private System.Windows.Forms.CheckBox chk_ss1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.LinkLabel linkLabel1_ss;
+        private System.Windows.Forms.GroupBox groupboxcurrentmode;
+        private System.Windows.Forms.GroupBox groupBoxsetmode;
+        private System.Windows.Forms.GroupBox groupBoxincludemode;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
