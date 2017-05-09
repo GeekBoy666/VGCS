@@ -37,7 +37,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.TXT_battcapacity = new System.Windows.Forms.TextBox();
             this.CMB_batmontype = new System.Windows.Forms.ComboBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.CMB_apmversion = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,7 +55,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_meascurrent = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,15 +107,6 @@
             resources.ApplyResources(this.CMB_batmontype, "CMB_batmontype");
             this.CMB_batmontype.Name = "CMB_batmontype";
             this.CMB_batmontype.SelectedIndexChanged += new System.EventHandler(this.CMB_batmontype_SelectedIndexChanged);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.BackgroundImage = global::MissionPlanner.Properties.Resources.BR_APMPWRDEAN_2;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.TabStop = false;
             // 
             // timer1
             // 
@@ -259,10 +248,8 @@
             this.Controls.Add(this.label30);
             this.Controls.Add(this.TXT_battcapacity);
             this.Controls.Add(this.CMB_batmontype);
-            this.Controls.Add(this.pictureBox5);
             this.Name = "ConfigBatteryMonitoring";
             resources.ApplyResources(this, "$this");
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
@@ -278,7 +265,6 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox TXT_battcapacity;
         private System.Windows.Forms.ComboBox CMB_batmontype;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ComboBox CMB_apmversion;
         private System.Windows.Forms.Label label1;

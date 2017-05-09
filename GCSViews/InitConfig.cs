@@ -59,12 +59,8 @@ namespace MissionPlanner.GCSViews
                 list.Add("OCTA+");
                 list.Add("OCTAX");
                 list.Add("OCTAV");
-                list.Add("OCTAQUAD+");
                 list.Add("OCTAQUADX");
-                list.Add("OCTAQUADV");
-                list.Add("OCTAQUADH");
                 list.Add("Y6A");
-                list.Add("TRI");
                 //DO_SET_SERVO
                 //DO_REPEAT_SERVO
             }
@@ -113,63 +109,47 @@ namespace MissionPlanner.GCSViews
             }
             else if (text == "QUAD+")
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._500100;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600101;
             }
             else if (text == "QUADX")
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001001;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600102;
             }
             else if (text == "QUADV")
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001003;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600103;
             }
             else if (text == "QUADH")
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001004;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600104;
             }
             else if (text == "HEXA+")
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001005;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600105;
             }
             else if (text == "HEXAX")
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001006;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600106;
             }
             else if (text == "OCTA+")
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001007;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600107;
             }
             else if (text == "OCTAX")
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001008;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600108;
             }
             else if (text == "OCTAV")
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001009;
-            }
-            else if (text == "OCTAQUAD+")
-            {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001010;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600109;
             }
             else if (text == "OCTAQUADX")
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001011;
-            }
-            else if (text == "OCTAQUADV")
-            {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001012;
-            }
-            else if (text == "OCTAQUADH")
-            {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._50010013;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600110;
             }
             else if (text == "Y6A")
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._50010014;
-            }
-            else if (text == "TRI")
-            {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._50010015;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600111;
             }
 
             e.DrawBackground();
@@ -301,28 +281,14 @@ namespace MissionPlanner.GCSViews
                 }
                 else if (work_frame_class == motor_frame_class.MOTOR_FRAME_OCTAQUAD)
                 {
-                    if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
-                    { comboBoxSelectairframe.SelectedIndex = 10; }
-                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
+                  if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
                     {
-                        comboBoxSelectairframe.SelectedIndex = 11;
-                    }
-                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_V)
-                    {
-                        comboBoxSelectairframe.SelectedIndex = 12;
-                    }
-                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_H)
-                    {
-                        comboBoxSelectairframe.SelectedIndex = 13;
+                        comboBoxSelectairframe.SelectedIndex = 10;
                     }
                 }
                 else if (work_frame_class == motor_frame_class.MOTOR_FRAME_Y6)
                 {
-                    comboBoxSelectairframe.SelectedIndex = 14;
-                }
-                else if (work_frame_class == motor_frame_class.MOTOR_FRAME_TRI)
-                {
-                    comboBoxSelectairframe.SelectedIndex = 15;
+                    comboBoxSelectairframe.SelectedIndex = 11;
                 }
 
             }
@@ -424,79 +390,61 @@ namespace MissionPlanner.GCSViews
             }
             else if (comboBoxSelectairframe.SelectedIndex == 1)
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._500100;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600101;
                 SetFrameParam(motor_frame_class.MOTOR_FRAME_QUAD, motor_frame_type.MOTOR_FRAME_TYPE_PLUS);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 2)
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001001;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600102;
                 SetFrameParam(motor_frame_class.MOTOR_FRAME_QUAD, motor_frame_type.MOTOR_FRAME_TYPE_X);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 3)
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001003;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600103;
                 SetFrameParam(motor_frame_class.MOTOR_FRAME_QUAD, motor_frame_type.MOTOR_FRAME_TYPE_V);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 4)
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001004;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600104;
                 SetFrameParam(motor_frame_class.MOTOR_FRAME_QUAD, motor_frame_type.MOTOR_FRAME_TYPE_H);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 5)
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001005;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600105;
                 SetFrameParam(motor_frame_class.MOTOR_FRAME_HEXA, motor_frame_type.MOTOR_FRAME_TYPE_PLUS);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 6)
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001006;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600106;
                 SetFrameParam(motor_frame_class.MOTOR_FRAME_HEXA, motor_frame_type.MOTOR_FRAME_TYPE_X);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 7)
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001007;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600107;
                 SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTA, motor_frame_type.MOTOR_FRAME_TYPE_PLUS);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 8)
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001008;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600108;
                 SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTA, motor_frame_type.MOTOR_FRAME_TYPE_X);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 9)
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001009;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600109;
                 SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTA, motor_frame_type.MOTOR_FRAME_TYPE_V);
             }
             else if (comboBoxSelectairframe.SelectedIndex == 10)
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001010;
-                SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTAQUAD, motor_frame_type.MOTOR_FRAME_TYPE_PLUS);
-            }
-            else if (comboBoxSelectairframe.SelectedIndex == 11)
-            {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001011;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600110;
                 SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTAQUAD, motor_frame_type.MOTOR_FRAME_TYPE_X);
             }
-            else if (comboBoxSelectairframe.SelectedIndex == 12)
+
+            else if (comboBoxSelectairframe.SelectedIndex == 11)
             {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._5001012;
-                SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTAQUAD, motor_frame_type.MOTOR_FRAME_TYPE_V);
-            }
-            else if (comboBoxSelectairframe.SelectedIndex == 13)
-            {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._50010013;
-                SetFrameParam(motor_frame_class.MOTOR_FRAME_OCTAQUAD, motor_frame_type.MOTOR_FRAME_TYPE_H);
-            }
-            else if (comboBoxSelectairframe.SelectedIndex == 14)
-            {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._50010014;
+                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._600111;
                 SetFrameParam(motor_frame_class.MOTOR_FRAME_Y6, motor_frame_type.MOTOR_FRAME_TYPE_ATAIL);
             }
-            else if (comboBoxSelectairframe.SelectedIndex == 15)
-            {
-                pictureBoxAirframe.Image = MissionPlanner.Properties.Resources._50010015;
-                SetFrameParam(motor_frame_class.MOTOR_FRAME_TRI, motor_frame_type.MOTOR_FRAME_TYPE_VTAIL);
-            }
+
 
 
 

@@ -117,80 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;CHK_mixmode.Name" xml:space="preserve">
-    <value>CHK_mixmode</value>
-  </data>
-  <data name="&gt;&gt;CHK_mixmode.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CHK_mixmode.Parent" xml:space="preserve">
-    <value>groupBoxElevons</value>
-  </data>
-  <data name="&gt;&gt;CHK_mixmode.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonch2rev.Name" xml:space="preserve">
-    <value>CHK_elevonch2rev</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonch2rev.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonch2rev.Parent" xml:space="preserve">
-    <value>groupBoxElevons</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonch2rev.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonrev.Name" xml:space="preserve">
-    <value>CHK_elevonrev</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonrev.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonrev.Parent" xml:space="preserve">
-    <value>groupBoxElevons</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonrev.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonch1rev.Name" xml:space="preserve">
-    <value>CHK_elevonch1rev</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonch1rev.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonch1rev.Parent" xml:space="preserve">
-    <value>groupBoxElevons</value>
-  </data>
-  <data name="&gt;&gt;CHK_elevonch1rev.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="groupBoxElevons.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 456</value>
-  </data>
-  <data name="groupBoxElevons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>409, 42</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBoxElevons.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="groupBoxElevons.Text" xml:space="preserve">
-    <value>Elevon Config</value>
-  </data>
-  <data name="&gt;&gt;groupBoxElevons.Name" xml:space="preserve">
-    <value>groupBoxElevons</value>
-  </data>
-  <data name="&gt;&gt;groupBoxElevons.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxElevons.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBoxElevons.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <data name="CHK_mixmode.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -201,6 +128,7 @@
   <data name="CHK_mixmode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CHK_mixmode.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 19</value>
   </data>
@@ -217,7 +145,7 @@
     <value>CHK_mixmode</value>
   </data>
   <data name="&gt;&gt;CHK_mixmode.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6338.17825, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CHK_mixmode.Parent" xml:space="preserve">
     <value>groupBoxElevons</value>
@@ -250,7 +178,7 @@
     <value>CHK_elevonch2rev</value>
   </data>
   <data name="&gt;&gt;CHK_elevonch2rev.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6338.17825, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CHK_elevonch2rev.Parent" xml:space="preserve">
     <value>groupBoxElevons</value>
@@ -283,7 +211,7 @@
     <value>CHK_elevonrev</value>
   </data>
   <data name="&gt;&gt;CHK_elevonrev.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6338.17825, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CHK_elevonrev.Parent" xml:space="preserve">
     <value>groupBoxElevons</value>
@@ -316,13 +244,37 @@
     <value>CHK_elevonch1rev</value>
   </data>
   <data name="&gt;&gt;CHK_elevonch1rev.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6338.17825, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CHK_elevonch1rev.Parent" xml:space="preserve">
     <value>groupBoxElevons</value>
   </data>
   <data name="&gt;&gt;CHK_elevonch1rev.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="groupBoxElevons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 456</value>
+  </data>
+  <data name="groupBoxElevons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>409, 42</value>
+  </data>
+  <data name="groupBoxElevons.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="groupBoxElevons.Text" xml:space="preserve">
+    <value>Elevon Config</value>
+  </data>
+  <data name="&gt;&gt;groupBoxElevons.Name" xml:space="preserve">
+    <value>groupBoxElevons</value>
+  </data>
+  <data name="&gt;&gt;groupBoxElevons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxElevons.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxElevons.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="BUT_BindDSM8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -343,7 +295,7 @@
     <value>BUT_BindDSM8</value>
   </data>
   <data name="&gt;&gt;BUT_BindDSM8.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_BindDSM8.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -370,7 +322,7 @@
     <value>BUT_BindDSMX</value>
   </data>
   <data name="&gt;&gt;BUT_BindDSMX.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_BindDSMX.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -397,7 +349,7 @@
     <value>BUT_BindDSM2</value>
   </data>
   <data name="&gt;&gt;BUT_BindDSM2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_BindDSM2.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -424,7 +376,7 @@
     <value>BUT_Calibrateradio</value>
   </data>
   <data name="&gt;&gt;BUT_Calibrateradio.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_Calibrateradio.Parent" xml:space="preserve">
     <value>$this</value>
@@ -445,7 +397,7 @@
     <value>BAR8</value>
   </data>
   <data name="&gt;&gt;BAR8.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BAR8.Parent" xml:space="preserve">
     <value>$this</value>
@@ -466,7 +418,7 @@
     <value>BAR7</value>
   </data>
   <data name="&gt;&gt;BAR7.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BAR7.Parent" xml:space="preserve">
     <value>$this</value>
@@ -487,7 +439,7 @@
     <value>BAR6</value>
   </data>
   <data name="&gt;&gt;BAR6.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BAR6.Parent" xml:space="preserve">
     <value>$this</value>
@@ -508,7 +460,7 @@
     <value>BAR5</value>
   </data>
   <data name="&gt;&gt;BAR5.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BAR5.Parent" xml:space="preserve">
     <value>$this</value>
@@ -529,7 +481,7 @@
     <value>BARpitch</value>
   </data>
   <data name="&gt;&gt;BARpitch.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.VerticalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.VerticalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BARpitch.Parent" xml:space="preserve">
     <value>$this</value>
@@ -550,7 +502,7 @@
     <value>BARthrottle</value>
   </data>
   <data name="&gt;&gt;BARthrottle.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.VerticalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.VerticalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BARthrottle.Parent" xml:space="preserve">
     <value>$this</value>
@@ -571,7 +523,7 @@
     <value>BARyaw</value>
   </data>
   <data name="&gt;&gt;BARyaw.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BARyaw.Parent" xml:space="preserve">
     <value>$this</value>
@@ -592,7 +544,7 @@
     <value>BARroll</value>
   </data>
   <data name="&gt;&gt;BARroll.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BARroll.Parent" xml:space="preserve">
     <value>$this</value>
@@ -637,7 +589,7 @@
     <value>BAR9</value>
   </data>
   <data name="&gt;&gt;BAR9.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BAR9.Parent" xml:space="preserve">
     <value>$this</value>
@@ -658,7 +610,7 @@
     <value>BAR14</value>
   </data>
   <data name="&gt;&gt;BAR14.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BAR14.Parent" xml:space="preserve">
     <value>$this</value>
@@ -679,7 +631,7 @@
     <value>BAR13</value>
   </data>
   <data name="&gt;&gt;BAR13.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BAR13.Parent" xml:space="preserve">
     <value>$this</value>
@@ -700,7 +652,7 @@
     <value>BAR12</value>
   </data>
   <data name="&gt;&gt;BAR12.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BAR12.Parent" xml:space="preserve">
     <value>$this</value>
@@ -721,7 +673,7 @@
     <value>BAR11</value>
   </data>
   <data name="&gt;&gt;BAR11.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BAR11.Parent" xml:space="preserve">
     <value>$this</value>
@@ -742,13 +694,100 @@
     <value>BAR10</value>
   </data>
   <data name="&gt;&gt;BAR10.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HorizontalProgressBar2, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BAR10.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BAR10.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="lineSeparator2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 84</value>
+  </data>
+  <data name="lineSeparator2.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>2000, 2</value>
+  </data>
+  <data name="lineSeparator2.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 2</value>
+  </data>
+  <data name="lineSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>812, 2</value>
+  </data>
+  <data name="lineSeparator2.TabIndex" type="System.Int32, mscorlib">
+    <value>136</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator2.Name" xml:space="preserve">
+    <value>lineSeparator2</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator2.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.LineSeparator, MissionPlanner.Controls, Version=1.0.6334.32088, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lineSeparator2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 3</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 75</value>
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>137</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>华文楷体, 21.7499981pt, style=Bold</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>187, 23</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 33</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>138</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>遥控器校准</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="CHK_revch3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -775,7 +814,7 @@
     <value>CHK_revch3</value>
   </data>
   <data name="&gt;&gt;CHK_revch3.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6338.17825, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CHK_revch3.Parent" xml:space="preserve">
     <value>$this</value>
@@ -808,7 +847,7 @@
     <value>CHK_revch4</value>
   </data>
   <data name="&gt;&gt;CHK_revch4.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6338.17825, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CHK_revch4.Parent" xml:space="preserve">
     <value>$this</value>
@@ -841,7 +880,7 @@
     <value>CHK_revch2</value>
   </data>
   <data name="&gt;&gt;CHK_revch2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6338.17825, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CHK_revch2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -874,7 +913,7 @@
     <value>CHK_revch1</value>
   </data>
   <data name="&gt;&gt;CHK_revch1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6298.27445, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MavlinkCheckBox, MissionPlanner, Version=1.1.6338.17825, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CHK_revch1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -885,89 +924,11 @@
   <metadata name="currentStateBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="lineSeparator2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 84</value>
-  </data>
-  <data name="lineSeparator2.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>2000, 2</value>
-  </data>
-  <data name="lineSeparator2.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 2</value>
-  </data>
-  <data name="lineSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>812, 2</value>
-  </data>
-  <data name="lineSeparator2.TabIndex" type="System.Int32, mscorlib">
-    <value>136</value>
-  </data>
-  <data name="&gt;&gt;lineSeparator2.Name" xml:space="preserve">
-    <value>lineSeparator2</value>
-  </data>
-  <data name="&gt;&gt;lineSeparator2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.LineSeparator, MissionPlanner.Controls, Version=1.0.6298.27013, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lineSeparator2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lineSeparator2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 3</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 75</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>137</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 21.7499981pt, style=Bold</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>187, 23</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 33</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>138</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>遥控器校准</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>63</value>
   </metadata>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>828, 539</value>

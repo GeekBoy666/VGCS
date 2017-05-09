@@ -776,15 +776,23 @@
             // 
             // BUT_rerequestparams
             // 
+            this.BUT_rerequestparams.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_rerequestparams.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_rerequestparams.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.BUT_rerequestparams, "BUT_rerequestparams");
             this.BUT_rerequestparams.Name = "BUT_rerequestparams";
+            this.BUT_rerequestparams.TextColor = System.Drawing.Color.White;
             this.BUT_rerequestparams.UseVisualStyleBackColor = true;
             this.BUT_rerequestparams.Click += new System.EventHandler(this.BUT_rerequestparams_Click);
             // 
             // BUT_writePIDS
             // 
+            this.BUT_writePIDS.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_writePIDS.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_writePIDS.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.BUT_writePIDS, "BUT_writePIDS");
             this.BUT_writePIDS.Name = "BUT_writePIDS";
+            this.BUT_writePIDS.TextColor = System.Drawing.Color.White;
             this.BUT_writePIDS.UseVisualStyleBackColor = true;
             this.BUT_writePIDS.Click += new System.EventHandler(this.BUT_writePIDS_Click);
             // 
@@ -883,8 +891,12 @@
             // 
             // BUT_refreshpart
             // 
+            this.BUT_refreshpart.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_refreshpart.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_refreshpart.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.BUT_refreshpart, "BUT_refreshpart");
             this.BUT_refreshpart.Name = "BUT_refreshpart";
+            this.BUT_refreshpart.TextColor = System.Drawing.Color.White;
             this.BUT_refreshpart.UseVisualStyleBackColor = true;
             this.BUT_refreshpart.Click += new System.EventHandler(this.BUT_refreshpart_Click);
             // 
@@ -907,8 +919,8 @@
             // 
             // ConfigArducopter
             // 
-            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            resources.ApplyResources(this, "$this");
             this.Controls.Add(this.myLabel4);
             this.Controls.Add(this.CH8_OPT);
             this.Controls.Add(this.BUT_refreshpart);

@@ -4104,6 +4104,21 @@
     <None Include="Resources\50010013.png" />
     <None Include="Resources\50010014.png" />
     <None Include="Resources\50010015.png" />
+    <None Include="Resources\600101.png" />
+    <None Include="Resources\600102.png" />
+    <None Include="Resources\600103.png" />
+    <None Include="Resources\600104.png" />
+    <None Include="Resources\600105.png" />
+    <None Include="Resources\600106.png" />
+    <None Include="Resources\600107.png" />
+    <None Include="Resources\600108.png" />
+    <None Include="Resources\600109.png" />
+    <None Include="Resources\600110.png" />
+    <None Include="Resources\600111.png" />
+    <None Include="Resources\600112.png" />
+    <None Include="Resources\600113.png" />
+    <None Include="Resources\600114 .png" />
+    <None Include="Resources\VIGA_lOGO.png" />
     <Content Include="Scripts\example7.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

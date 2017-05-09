@@ -1919,4 +1919,46 @@ Control-S - save grid file\par
   <data name="_5001012" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5001012.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_600101" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600102" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600102.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600103" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600103.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600104" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600104.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600105" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600105.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600106" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600106.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600107" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600107.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600108" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600108.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600109" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600109.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600110" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600110.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600111" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600113" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600113.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600114" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600114 .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VIGA_lOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VIGA_lOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

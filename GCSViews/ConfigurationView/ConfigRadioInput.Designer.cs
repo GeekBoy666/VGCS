@@ -32,10 +32,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigRadioInput));
             this.groupBoxElevons = new System.Windows.Forms.GroupBox();
-            this.CHK_mixmode = new MissionPlanner.Controls.MavlinkCheckBox();
-            this.CHK_elevonch2rev = new MissionPlanner.Controls.MavlinkCheckBox();
-            this.CHK_elevonrev = new MissionPlanner.Controls.MavlinkCheckBox();
-            this.CHK_elevonch1rev = new MissionPlanner.Controls.MavlinkCheckBox();
             this.BUT_BindDSM8 = new MissionPlanner.Controls.MyButton();
             this.BUT_BindDSMX = new MissionPlanner.Controls.MyButton();
             this.BUT_BindDSM2 = new MissionPlanner.Controls.MyButton();
@@ -55,18 +51,22 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.BAR12 = new MissionPlanner.Controls.HorizontalProgressBar2();
             this.BAR11 = new MissionPlanner.Controls.HorizontalProgressBar2();
             this.BAR10 = new MissionPlanner.Controls.HorizontalProgressBar2();
+            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CHK_mixmode = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_elevonch2rev = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_elevonrev = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.CHK_elevonch1rev = new MissionPlanner.Controls.MavlinkCheckBox();
             this.CHK_revch3 = new MissionPlanner.Controls.MavlinkCheckBox();
             this.CHK_revch4 = new MissionPlanner.Controls.MavlinkCheckBox();
             this.CHK_revch2 = new MissionPlanner.Controls.MavlinkCheckBox();
             this.CHK_revch1 = new MissionPlanner.Controls.MavlinkCheckBox();
             this.currentStateBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lineSeparator2 = new MissionPlanner.Controls.LineSeparator();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxElevons.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxElevons
@@ -78,6 +78,305 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             resources.ApplyResources(this.groupBoxElevons, "groupBoxElevons");
             this.groupBoxElevons.Name = "groupBoxElevons";
             this.groupBoxElevons.TabStop = false;
+            // 
+            // BUT_BindDSM8
+            // 
+            this.BUT_BindDSM8.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_BindDSM8.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_BindDSM8.ColorMouseDown = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.BUT_BindDSM8, "BUT_BindDSM8");
+            this.BUT_BindDSM8.Name = "BUT_BindDSM8";
+            this.BUT_BindDSM8.TextColor = System.Drawing.Color.White;
+            this.BUT_BindDSM8.UseVisualStyleBackColor = true;
+            this.BUT_BindDSM8.Click += new System.EventHandler(this.BUT_Bindradiodsm8_Click);
+            // 
+            // BUT_BindDSMX
+            // 
+            this.BUT_BindDSMX.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_BindDSMX.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_BindDSMX.ColorMouseDown = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.BUT_BindDSMX, "BUT_BindDSMX");
+            this.BUT_BindDSMX.Name = "BUT_BindDSMX";
+            this.BUT_BindDSMX.TextColor = System.Drawing.Color.White;
+            this.BUT_BindDSMX.UseVisualStyleBackColor = true;
+            this.BUT_BindDSMX.Click += new System.EventHandler(this.BUT_BindradiodsmX_Click);
+            // 
+            // BUT_BindDSM2
+            // 
+            this.BUT_BindDSM2.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_BindDSM2.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_BindDSM2.ColorMouseDown = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.BUT_BindDSM2, "BUT_BindDSM2");
+            this.BUT_BindDSM2.Name = "BUT_BindDSM2";
+            this.BUT_BindDSM2.TextColor = System.Drawing.Color.White;
+            this.BUT_BindDSM2.UseVisualStyleBackColor = true;
+            this.BUT_BindDSM2.Click += new System.EventHandler(this.BUT_Bindradiodsm2_Click);
+            // 
+            // BUT_Calibrateradio
+            // 
+            this.BUT_Calibrateradio.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_Calibrateradio.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_Calibrateradio.ColorMouseDown = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.BUT_Calibrateradio, "BUT_Calibrateradio");
+            this.BUT_Calibrateradio.Name = "BUT_Calibrateradio";
+            this.BUT_Calibrateradio.TextColor = System.Drawing.Color.White;
+            this.BUT_Calibrateradio.UseVisualStyleBackColor = true;
+            this.BUT_Calibrateradio.Click += new System.EventHandler(this.BUT_Calibrateradio_Click);
+            // 
+            // BAR8
+            // 
+            this.BAR8.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BAR8.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BAR8.DisplayScale = 1F;
+            this.BAR8.DrawLabel = true;
+            this.BAR8.Label = "Radio 8";
+            resources.ApplyResources(this.BAR8, "BAR8");
+            this.BAR8.Maximum = 2200;
+            this.BAR8.maxline = 0;
+            this.BAR8.Minimum = 800;
+            this.BAR8.minline = 0;
+            this.BAR8.Name = "BAR8";
+            this.BAR8.Value = 1500;
+            this.BAR8.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BAR7
+            // 
+            this.BAR7.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BAR7.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BAR7.DisplayScale = 1F;
+            this.BAR7.DrawLabel = true;
+            this.BAR7.Label = "Radio 7";
+            resources.ApplyResources(this.BAR7, "BAR7");
+            this.BAR7.Maximum = 2200;
+            this.BAR7.maxline = 0;
+            this.BAR7.Minimum = 800;
+            this.BAR7.minline = 0;
+            this.BAR7.Name = "BAR7";
+            this.BAR7.Value = 1500;
+            this.BAR7.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BAR6
+            // 
+            this.BAR6.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BAR6.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BAR6.DisplayScale = 1F;
+            this.BAR6.DrawLabel = true;
+            this.BAR6.Label = "Radio 6";
+            resources.ApplyResources(this.BAR6, "BAR6");
+            this.BAR6.Maximum = 2200;
+            this.BAR6.maxline = 0;
+            this.BAR6.Minimum = 800;
+            this.BAR6.minline = 0;
+            this.BAR6.Name = "BAR6";
+            this.BAR6.Value = 1500;
+            this.BAR6.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BAR5
+            // 
+            this.BAR5.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BAR5.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BAR5.DisplayScale = 1F;
+            this.BAR5.DrawLabel = true;
+            this.BAR5.Label = "Radio 5";
+            resources.ApplyResources(this.BAR5, "BAR5");
+            this.BAR5.Maximum = 2200;
+            this.BAR5.maxline = 0;
+            this.BAR5.Minimum = 800;
+            this.BAR5.minline = 0;
+            this.BAR5.Name = "BAR5";
+            this.BAR5.Value = 1500;
+            this.BAR5.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BARpitch
+            // 
+            this.BARpitch.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BARpitch.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BARpitch.DisplayScale = 1F;
+            this.BARpitch.DrawLabel = true;
+            this.BARpitch.Label = "Pitch";
+            resources.ApplyResources(this.BARpitch, "BARpitch");
+            this.BARpitch.Maximum = 2200;
+            this.BARpitch.maxline = 0;
+            this.BARpitch.Minimum = 800;
+            this.BARpitch.minline = 0;
+            this.BARpitch.Name = "BARpitch";
+            this.BARpitch.Value = 1500;
+            this.BARpitch.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BARthrottle
+            // 
+            this.BARthrottle.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BARthrottle.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BARthrottle.DisplayScale = 1F;
+            this.BARthrottle.DrawLabel = true;
+            this.BARthrottle.Label = "Throttle";
+            resources.ApplyResources(this.BARthrottle, "BARthrottle");
+            this.BARthrottle.Maximum = 2200;
+            this.BARthrottle.maxline = 0;
+            this.BARthrottle.Minimum = 800;
+            this.BARthrottle.minline = 0;
+            this.BARthrottle.Name = "BARthrottle";
+            this.BARthrottle.Value = 1000;
+            this.BARthrottle.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BARyaw
+            // 
+            this.BARyaw.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BARyaw.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BARyaw.DisplayScale = 1F;
+            this.BARyaw.DrawLabel = true;
+            this.BARyaw.Label = "Yaw";
+            resources.ApplyResources(this.BARyaw, "BARyaw");
+            this.BARyaw.Maximum = 2200;
+            this.BARyaw.maxline = 0;
+            this.BARyaw.Minimum = 800;
+            this.BARyaw.minline = 0;
+            this.BARyaw.Name = "BARyaw";
+            this.BARyaw.Value = 1500;
+            this.BARyaw.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BARroll
+            // 
+            this.BARroll.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BARroll.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BARroll.DisplayScale = 1F;
+            this.BARroll.DrawLabel = true;
+            this.BARroll.Label = "Roll";
+            resources.ApplyResources(this.BARroll, "BARroll");
+            this.BARroll.Maximum = 2200;
+            this.BARroll.maxline = 0;
+            this.BARroll.Minimum = 800;
+            this.BARroll.minline = 0;
+            this.BARroll.Name = "BARroll";
+            this.BARroll.Value = 1500;
+            this.BARroll.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.BUT_BindDSM2);
+            this.groupBox1.Controls.Add(this.BUT_BindDSM8);
+            this.groupBox1.Controls.Add(this.BUT_BindDSMX);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // BAR9
+            // 
+            this.BAR9.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BAR9.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BAR9.DisplayScale = 1F;
+            this.BAR9.DrawLabel = true;
+            this.BAR9.Label = "Radio 9";
+            resources.ApplyResources(this.BAR9, "BAR9");
+            this.BAR9.Maximum = 2200;
+            this.BAR9.maxline = 0;
+            this.BAR9.Minimum = 800;
+            this.BAR9.minline = 0;
+            this.BAR9.Name = "BAR9";
+            this.BAR9.Value = 1500;
+            this.BAR9.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BAR14
+            // 
+            this.BAR14.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BAR14.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BAR14.DisplayScale = 1F;
+            this.BAR14.DrawLabel = true;
+            this.BAR14.Label = "Radio 14";
+            resources.ApplyResources(this.BAR14, "BAR14");
+            this.BAR14.Maximum = 2200;
+            this.BAR14.maxline = 0;
+            this.BAR14.Minimum = 800;
+            this.BAR14.minline = 0;
+            this.BAR14.Name = "BAR14";
+            this.BAR14.Value = 1500;
+            this.BAR14.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BAR13
+            // 
+            this.BAR13.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BAR13.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BAR13.DisplayScale = 1F;
+            this.BAR13.DrawLabel = true;
+            this.BAR13.Label = "Radio 13";
+            resources.ApplyResources(this.BAR13, "BAR13");
+            this.BAR13.Maximum = 2200;
+            this.BAR13.maxline = 0;
+            this.BAR13.Minimum = 800;
+            this.BAR13.minline = 0;
+            this.BAR13.Name = "BAR13";
+            this.BAR13.Value = 1500;
+            this.BAR13.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BAR12
+            // 
+            this.BAR12.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BAR12.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BAR12.DisplayScale = 1F;
+            this.BAR12.DrawLabel = true;
+            this.BAR12.Label = "Radio 12";
+            resources.ApplyResources(this.BAR12, "BAR12");
+            this.BAR12.Maximum = 2200;
+            this.BAR12.maxline = 0;
+            this.BAR12.Minimum = 800;
+            this.BAR12.minline = 0;
+            this.BAR12.Name = "BAR12";
+            this.BAR12.Value = 1500;
+            this.BAR12.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BAR11
+            // 
+            this.BAR11.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BAR11.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BAR11.DisplayScale = 1F;
+            this.BAR11.DrawLabel = true;
+            this.BAR11.Label = "Radio 11";
+            resources.ApplyResources(this.BAR11, "BAR11");
+            this.BAR11.Maximum = 2200;
+            this.BAR11.maxline = 0;
+            this.BAR11.Minimum = 800;
+            this.BAR11.minline = 0;
+            this.BAR11.Name = "BAR11";
+            this.BAR11.Value = 1500;
+            this.BAR11.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // BAR10
+            // 
+            this.BAR10.BackgroundColor = System.Drawing.Color.LightGray;
+            this.BAR10.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BAR10.DisplayScale = 1F;
+            this.BAR10.DrawLabel = true;
+            this.BAR10.Label = "Radio 10";
+            resources.ApplyResources(this.BAR10, "BAR10");
+            this.BAR10.Maximum = 2200;
+            this.BAR10.maxline = 0;
+            this.BAR10.Minimum = 800;
+            this.BAR10.minline = 0;
+            this.BAR10.Name = "BAR10";
+            this.BAR10.Value = 1500;
+            this.BAR10.ValueColor = System.Drawing.Color.Lime;
+            // 
+            // lineSeparator2
+            // 
+            resources.ApplyResources(this.lineSeparator2, "lineSeparator2");
+            this.lineSeparator2.Name = "lineSeparator2";
+            this.lineSeparator2.Opacity1 = 0.6F;
+            this.lineSeparator2.Opacity2 = 0.7F;
+            this.lineSeparator2.Opacity3 = 0.1F;
+            this.lineSeparator2.PrimaryColor = System.Drawing.Color.Black;
+            this.lineSeparator2.SecondaryColor = System.Drawing.Color.Gainsboro;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MissionPlanner.Properties.Resources.Rarido;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // CHK_mixmode
             // 
@@ -114,267 +413,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.CHK_elevonch1rev.OnValue = 1D;
             this.CHK_elevonch1rev.ParamName = null;
             this.CHK_elevonch1rev.UseVisualStyleBackColor = true;
-            // 
-            // BUT_BindDSM8
-            // 
-            resources.ApplyResources(this.BUT_BindDSM8, "BUT_BindDSM8");
-            this.BUT_BindDSM8.Name = "BUT_BindDSM8";
-            this.BUT_BindDSM8.UseVisualStyleBackColor = true;
-            this.BUT_BindDSM8.Click += new System.EventHandler(this.BUT_Bindradiodsm8_Click);
-            // 
-            // BUT_BindDSMX
-            // 
-            resources.ApplyResources(this.BUT_BindDSMX, "BUT_BindDSMX");
-            this.BUT_BindDSMX.Name = "BUT_BindDSMX";
-            this.BUT_BindDSMX.UseVisualStyleBackColor = true;
-            this.BUT_BindDSMX.Click += new System.EventHandler(this.BUT_BindradiodsmX_Click);
-            // 
-            // BUT_BindDSM2
-            // 
-            resources.ApplyResources(this.BUT_BindDSM2, "BUT_BindDSM2");
-            this.BUT_BindDSM2.Name = "BUT_BindDSM2";
-            this.BUT_BindDSM2.UseVisualStyleBackColor = true;
-            this.BUT_BindDSM2.Click += new System.EventHandler(this.BUT_Bindradiodsm2_Click);
-            // 
-            // BUT_Calibrateradio
-            // 
-            resources.ApplyResources(this.BUT_Calibrateradio, "BUT_Calibrateradio");
-            this.BUT_Calibrateradio.Name = "BUT_Calibrateradio";
-            this.BUT_Calibrateradio.UseVisualStyleBackColor = true;
-            this.BUT_Calibrateradio.Click += new System.EventHandler(this.BUT_Calibrateradio_Click);
-            // 
-            // BAR8
-            // 
-            this.BAR8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BAR8.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BAR8.DisplayScale = 1F;
-            this.BAR8.DrawLabel = true;
-            this.BAR8.Label = "Radio 8";
-            resources.ApplyResources(this.BAR8, "BAR8");
-            this.BAR8.Maximum = 2200;
-            this.BAR8.maxline = 0;
-            this.BAR8.Minimum = 800;
-            this.BAR8.minline = 0;
-            this.BAR8.Name = "BAR8";
-            this.BAR8.Value = 1500;
-            this.BAR8.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // BAR7
-            // 
-            this.BAR7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BAR7.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BAR7.DisplayScale = 1F;
-            this.BAR7.DrawLabel = true;
-            this.BAR7.Label = "Radio 7";
-            resources.ApplyResources(this.BAR7, "BAR7");
-            this.BAR7.Maximum = 2200;
-            this.BAR7.maxline = 0;
-            this.BAR7.Minimum = 800;
-            this.BAR7.minline = 0;
-            this.BAR7.Name = "BAR7";
-            this.BAR7.Value = 1500;
-            this.BAR7.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // BAR6
-            // 
-            this.BAR6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BAR6.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BAR6.DisplayScale = 1F;
-            this.BAR6.DrawLabel = true;
-            this.BAR6.Label = "Radio 6";
-            resources.ApplyResources(this.BAR6, "BAR6");
-            this.BAR6.Maximum = 2200;
-            this.BAR6.maxline = 0;
-            this.BAR6.Minimum = 800;
-            this.BAR6.minline = 0;
-            this.BAR6.Name = "BAR6";
-            this.BAR6.Value = 1500;
-            this.BAR6.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // BAR5
-            // 
-            this.BAR5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BAR5.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BAR5.DisplayScale = 1F;
-            this.BAR5.DrawLabel = true;
-            this.BAR5.Label = "Radio 5";
-            resources.ApplyResources(this.BAR5, "BAR5");
-            this.BAR5.Maximum = 2200;
-            this.BAR5.maxline = 0;
-            this.BAR5.Minimum = 800;
-            this.BAR5.minline = 0;
-            this.BAR5.Name = "BAR5";
-            this.BAR5.Value = 1500;
-            this.BAR5.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // BARpitch
-            // 
-            this.BARpitch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BARpitch.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BARpitch.DisplayScale = 1F;
-            this.BARpitch.DrawLabel = true;
-            this.BARpitch.Label = "Pitch";
-            resources.ApplyResources(this.BARpitch, "BARpitch");
-            this.BARpitch.Maximum = 2200;
-            this.BARpitch.maxline = 0;
-            this.BARpitch.Minimum = 800;
-            this.BARpitch.minline = 0;
-            this.BARpitch.Name = "BARpitch";
-            this.BARpitch.Value = 1500;
-            this.BARpitch.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // BARthrottle
-            // 
-            this.BARthrottle.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(68)))), ((int)(((byte)(69)))));
-            this.BARthrottle.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BARthrottle.DisplayScale = 1F;
-            this.BARthrottle.DrawLabel = true;
-            this.BARthrottle.Label = "Throttle";
-            resources.ApplyResources(this.BARthrottle, "BARthrottle");
-            this.BARthrottle.Maximum = 2200;
-            this.BARthrottle.maxline = 0;
-            this.BARthrottle.Minimum = 800;
-            this.BARthrottle.minline = 0;
-            this.BARthrottle.Name = "BARthrottle";
-            this.BARthrottle.Value = 1000;
-            this.BARthrottle.ValueColor = System.Drawing.Color.Magenta;
-            // 
-            // BARyaw
-            // 
-            this.BARyaw.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BARyaw.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BARyaw.DisplayScale = 1F;
-            this.BARyaw.DrawLabel = true;
-            this.BARyaw.Label = "Yaw";
-            resources.ApplyResources(this.BARyaw, "BARyaw");
-            this.BARyaw.Maximum = 2200;
-            this.BARyaw.maxline = 0;
-            this.BARyaw.Minimum = 800;
-            this.BARyaw.minline = 0;
-            this.BARyaw.Name = "BARyaw";
-            this.BARyaw.Value = 1500;
-            this.BARyaw.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // BARroll
-            // 
-            this.BARroll.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BARroll.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BARroll.DisplayScale = 1F;
-            this.BARroll.DrawLabel = true;
-            this.BARroll.Label = "Roll";
-            resources.ApplyResources(this.BARroll, "BARroll");
-            this.BARroll.Maximum = 2200;
-            this.BARroll.maxline = 0;
-            this.BARroll.Minimum = 800;
-            this.BARroll.minline = 0;
-            this.BARroll.Name = "BARroll";
-            this.BARroll.Value = 1500;
-            this.BARroll.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.BUT_BindDSM2);
-            this.groupBox1.Controls.Add(this.BUT_BindDSM8);
-            this.groupBox1.Controls.Add(this.BUT_BindDSMX);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            // 
-            // BAR9
-            // 
-            this.BAR9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BAR9.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BAR9.DisplayScale = 1F;
-            this.BAR9.DrawLabel = true;
-            this.BAR9.Label = "Radio 9";
-            resources.ApplyResources(this.BAR9, "BAR9");
-            this.BAR9.Maximum = 2200;
-            this.BAR9.maxline = 0;
-            this.BAR9.Minimum = 800;
-            this.BAR9.minline = 0;
-            this.BAR9.Name = "BAR9";
-            this.BAR9.Value = 1500;
-            this.BAR9.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // BAR14
-            // 
-            this.BAR14.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BAR14.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BAR14.DisplayScale = 1F;
-            this.BAR14.DrawLabel = true;
-            this.BAR14.Label = "Radio 14";
-            resources.ApplyResources(this.BAR14, "BAR14");
-            this.BAR14.Maximum = 2200;
-            this.BAR14.maxline = 0;
-            this.BAR14.Minimum = 800;
-            this.BAR14.minline = 0;
-            this.BAR14.Name = "BAR14";
-            this.BAR14.Value = 1500;
-            this.BAR14.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // BAR13
-            // 
-            this.BAR13.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BAR13.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BAR13.DisplayScale = 1F;
-            this.BAR13.DrawLabel = true;
-            this.BAR13.Label = "Radio 13";
-            resources.ApplyResources(this.BAR13, "BAR13");
-            this.BAR13.Maximum = 2200;
-            this.BAR13.maxline = 0;
-            this.BAR13.Minimum = 800;
-            this.BAR13.minline = 0;
-            this.BAR13.Name = "BAR13";
-            this.BAR13.Value = 1500;
-            this.BAR13.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // BAR12
-            // 
-            this.BAR12.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BAR12.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BAR12.DisplayScale = 1F;
-            this.BAR12.DrawLabel = true;
-            this.BAR12.Label = "Radio 12";
-            resources.ApplyResources(this.BAR12, "BAR12");
-            this.BAR12.Maximum = 2200;
-            this.BAR12.maxline = 0;
-            this.BAR12.Minimum = 800;
-            this.BAR12.minline = 0;
-            this.BAR12.Name = "BAR12";
-            this.BAR12.Value = 1500;
-            this.BAR12.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // BAR11
-            // 
-            this.BAR11.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BAR11.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BAR11.DisplayScale = 1F;
-            this.BAR11.DrawLabel = true;
-            this.BAR11.Label = "Radio 11";
-            resources.ApplyResources(this.BAR11, "BAR11");
-            this.BAR11.Maximum = 2200;
-            this.BAR11.maxline = 0;
-            this.BAR11.Minimum = 800;
-            this.BAR11.minline = 0;
-            this.BAR11.Name = "BAR11";
-            this.BAR11.Value = 1500;
-            this.BAR11.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            // 
-            // BAR10
-            // 
-            this.BAR10.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(255)))));
-            this.BAR10.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BAR10.DisplayScale = 1F;
-            this.BAR10.DrawLabel = true;
-            this.BAR10.Label = "Radio 10";
-            resources.ApplyResources(this.BAR10, "BAR10");
-            this.BAR10.Maximum = 2200;
-            this.BAR10.maxline = 0;
-            this.BAR10.Minimum = 800;
-            this.BAR10.minline = 0;
-            this.BAR10.Name = "BAR10";
-            this.BAR10.Value = 1500;
-            this.BAR10.ValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             // 
             // CHK_revch3
             // 
@@ -420,28 +458,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             this.currentStateBindingSource.DataSource = typeof(MissionPlanner.CurrentState);
             // 
-            // lineSeparator2
-            // 
-            resources.ApplyResources(this.lineSeparator2, "lineSeparator2");
-            this.lineSeparator2.Name = "lineSeparator2";
-            this.lineSeparator2.Opacity1 = 0.6F;
-            this.lineSeparator2.Opacity2 = 0.7F;
-            this.lineSeparator2.Opacity3 = 0.1F;
-            this.lineSeparator2.PrimaryColor = System.Drawing.Color.Black;
-            this.lineSeparator2.SecondaryColor = System.Drawing.Color.Gainsboro;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MissionPlanner.Properties.Resources.Rarido;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
             // ConfigRadioInput
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -469,13 +485,14 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.Controls.Add(this.BARthrottle);
             this.Controls.Add(this.BARyaw);
             this.Controls.Add(this.BARroll);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ConfigRadioInput";
             resources.ApplyResources(this, "$this");
             this.groupBoxElevons.ResumeLayout(false);
             this.groupBoxElevons.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -116,8 +116,12 @@
             // 
             // BUT_MagCalibrationLive
             // 
+            this.BUT_MagCalibrationLive.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_MagCalibrationLive.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_MagCalibrationLive.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.BUT_MagCalibrationLive, "BUT_MagCalibrationLive");
             this.BUT_MagCalibrationLive.Name = "BUT_MagCalibrationLive";
+            this.BUT_MagCalibrationLive.TextColor = System.Drawing.Color.White;
             this.BUT_MagCalibrationLive.UseVisualStyleBackColor = true;
             this.BUT_MagCalibrationLive.Click += new System.EventHandler(this.BUT_MagCalibration_Click);
             // 

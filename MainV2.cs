@@ -3455,7 +3455,7 @@ namespace MissionPlanner
                     }
 
 
-                   labelhome.Text= GCSViews.FlightPlanner.instance.hometext;
+       //            labelhome.Text= GCSViews.FlightPlanner.instance.hometext;
 
                     //Console.WriteLine(DateTime.Now.Millisecond + " done ");
 

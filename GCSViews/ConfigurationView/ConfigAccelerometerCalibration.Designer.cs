@@ -91,15 +91,23 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // BUT_level
             // 
+            this.BUT_level.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_level.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_level.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.BUT_level, "BUT_level");
             this.BUT_level.Name = "BUT_level";
+            this.BUT_level.TextColor = System.Drawing.Color.White;
             this.BUT_level.UseVisualStyleBackColor = true;
             this.BUT_level.Click += new System.EventHandler(this.BUT_level_Click);
             // 
             // BUT_calib_accell
             // 
+            this.BUT_calib_accell.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_calib_accell.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_calib_accell.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.BUT_calib_accell, "BUT_calib_accell");
             this.BUT_calib_accell.Name = "BUT_calib_accell";
+            this.BUT_calib_accell.TextColor = System.Drawing.Color.White;
             this.BUT_calib_accell.UseVisualStyleBackColor = true;
             this.BUT_calib_accell.Click += new System.EventHandler(this.BUT_calib_accell_Click);
             // 
