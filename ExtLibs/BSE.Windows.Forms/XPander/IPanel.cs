@@ -8,7 +8,7 @@ namespace BSE.Windows.Forms
    /// <summary>
    /// Used to group collections of controls. 
    /// </summary>
-   /// <copyright>Copyright © 2006-2008 Uwe Eichkorn
+   /// <copyright>Copyright ?2006-2008 Uwe Eichkorn
    /// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
    /// KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
    /// IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR

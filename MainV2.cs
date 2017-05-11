@@ -667,7 +667,7 @@ namespace MissionPlanner
                 changelanguage(CultureInfoEx.GetCultureInfo(Settings.Instance["language"]));
             }
 
-            this.Text = splash.Text;
+            //this.Text = splash.Text;
             titlebar = splash.Text;
 
             if (!MONO) // windows only
@@ -935,7 +935,7 @@ namespace MissionPlanner
 
             if (Program.IconFile != null)
             {
-                this.Icon = Icon.FromHandle(((Bitmap)Program.IconFile).GetHicon());
+                //this.Icon = Icon.FromHandle(((Bitmap)Program.IconFile).GetHicon());
             }
 
             //if (Program.Logo != null && Program.name == "VVVVZ")
@@ -1616,7 +1616,7 @@ namespace MissionPlanner
                 // save the baudrate for this port
                 Settings.Instance[_connectionControl.CMB_serialport.Text + "_BAUD"] = _connectionControl.CMB_baudrate.Text;
 
-                this.Text = titlebar + " " + comPort.MAV.VersionString;
+                //this.Text = titlebar + " " + comPort.MAV.VersionString;
 
                 // refresh config window if needed
                 if (MyView.current != null)
@@ -3089,7 +3089,7 @@ namespace MissionPlanner
                 log.Info("show FlightPlanner");
 
                 GCSViews.FlightPlanner w1 = new GCSViews.FlightPlanner();
-                w1.Parent = splitContainer4.Panel2;
+                w1.Parent = panel3;
 
                 w1.MainMap.Position = new GMap.NET.PointLatLng(39.7716824, 116.5296914);
                 w1.MainMap.Zoom = 18;
@@ -3316,8 +3316,6 @@ namespace MissionPlanner
 
                 Settings.Instance["newuser"] = DateTime.Now.ToShortDateString();
             }
-            splitContainer4.SplitterDistance = splitContainer4.Height / 22;
-            splitContainer2.SplitterDistance = splitContainer2.Height / 10;
             splitContainer3.SplitterDistance = splitContainer3.Height - splitContainer3.Height / 6;
             tabControl1_SelectedIndexChanged(this, e);
             //
@@ -4906,51 +4904,22 @@ namespace MissionPlanner
 
         private void toolStripButton3_Click_1(object sender, EventArgs e)
         {
-            splitContainer4.Panel2.Controls.Clear();
-            GCSViews.InitialSetup w1 = new GCSViews.InitialSetup();
-            w1.Parent = splitContainer4.Panel2;
-            w1.Dock = DockStyle.Fill;
-            w1.Show();
+        
         }
 
         private void toolStripButton2_Click_1(object sender, EventArgs e)
         {
-            splitContainer4.Panel2.Controls.Clear();
-
-            GCSViews.ConfigurationView.Calibra w1 = new GCSViews.ConfigurationView.Calibra();
-            w1.Parent = splitContainer4.Panel2;
-            w1.Dock = DockStyle.Fill;
-            
-            //w1.Activate();
-            //ThemeManager.ApplyThemeTo(this);
-            w1.Show();
-            
-
+         
         }
 
         private void toolStripButton4_Click_1(object sender, EventArgs e)
         {
-            splitContainer4.Panel2.Controls.Clear();
-            GCSViews.InitialSetup w1 = new GCSViews.InitialSetup();
-            w1.Parent = splitContainer4.Panel2;
-            
-            w1.Dock = DockStyle.Fill;
-            w1.Show();
+           
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            splitContainer4.Panel2.Controls.Clear();
-
-
-            GCSViews.ConfigurationView.ConfigRadioInput w2 = new GCSViews.ConfigurationView.ConfigRadioInput();
-            GCSViews.ConfigurationView.ConfigFlightModes w1 = new GCSViews.ConfigurationView.ConfigFlightModes();
-            w2.Deactivate();
-            w1.Activate();
-            w1.Parent = splitContainer4.Panel2;
-            w1.Dock = DockStyle.Fill;
-            //ThemeManager.ApplyThemeTo(this);
-            w1.Show();
+          
         }
 
           void tabFilghtStatus_Resize(object sender, EventArgs e)
@@ -6049,12 +6018,12 @@ namespace MissionPlanner
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            pictureBox1.BackColor = Color.PaleGreen;
+            
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            pictureBox1.BackColor = Color.Azure;
+   
         }
     }
 }

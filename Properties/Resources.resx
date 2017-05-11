@@ -1961,4 +1961,10 @@ Control-S - save grid file\par
   <data name="VIGA_lOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VIGA_lOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_600200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_600201" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\600201.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

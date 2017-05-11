@@ -15,7 +15,10 @@ namespace MissionPlanner.GCSViews
     {
         private motor_frame_class work_frame_class;
         private motor_frame_type work_frame_type;
-
+        public bool isCopter35plus
+        {
+            get { return MainV2.comPort.MAV.cs.version >= Version.Parse("3.5"); }
+        }
         public enum motor_frame_class
         {
             MOTOR_FRAME_UNDEFINED = 0,
@@ -211,84 +214,97 @@ namespace MissionPlanner.GCSViews
             else if (TabInitConfig.SelectedTab == tabPage5)
             {
 
-                if (!MainV2.comPort.MAV.param.ContainsKey("FRAME_CLASS") || !MainV2.comPort.MAV.param.ContainsKey("FRAME_TYPE"))
+                if (isCopter35plus)
                 {
-                    //Enabled = false;
-                    //return;
-                    comboBoxSelectairframe.SelectedIndex = 0;
-                }
+                    if (!MainV2.comPort.MAV.param.ContainsKey("FRAME_CLASS") || !MainV2.comPort.MAV.param.ContainsKey("FRAME_TYPE"))
+                    {
+                        //Enabled = false;
+                        //return;
+                        comboBoxSelectairframe.SelectedIndex = 0;
+                    }
 
-                GCSViews.ConfigurationView.ConfigESCCalibration ESC = new GCSViews.ConfigurationView.ConfigESCCalibration();
+                    GCSViews.ConfigurationView.ConfigESCCalibration ESC = new GCSViews.ConfigurationView.ConfigESCCalibration();
 
-                ESC.Parent = groupBoxEsc;
-                ESC.Dock = DockStyle.Fill;
-                ESC.ForeColor = Color.Black;
-                ESC.Activate();
-                ESC.Show();
+                    ESC.Parent = groupBoxEsc;
+                    ESC.Dock = DockStyle.Fill;
+                    ESC.ForeColor = Color.Black;
+                    ESC.Activate();
+                    ESC.Show();
 
-                GCSViews.ConfigurationView.ConfigMotorTest MotorTest = new GCSViews.ConfigurationView.ConfigMotorTest();
-                MotorTest.Parent = groupBoxMotorTest;
-                MotorTest.Dock = DockStyle.Fill;
-                MotorTest.ForeColor = Color.Black;
-                MotorTest.Activate();
-                MotorTest.Show();
+                    GCSViews.ConfigurationView.ConfigMotorTest MotorTest = new GCSViews.ConfigurationView.ConfigMotorTest();
+                    MotorTest.Parent = groupBoxMotorTest;
+                    MotorTest.Dock = DockStyle.Fill;
+                    MotorTest.ForeColor = Color.Black;
+                    MotorTest.Activate();
+                    MotorTest.Show();
 
-                // pre seed the correct values
-                work_frame_class = (motor_frame_class)
-                    Enum.Parse(typeof(motor_frame_class), MainV2.comPort.MAV.param["FRAME_CLASS"].ToString());
-                work_frame_type = (motor_frame_type)
-                    Enum.Parse(typeof(motor_frame_type), MainV2.comPort.MAV.param["FRAME_TYPE"].ToString());
+                    // pre seed the correct values
+                    work_frame_class = (motor_frame_class)
+                        Enum.Parse(typeof(motor_frame_class), MainV2.comPort.MAV.param["FRAME_CLASS"].ToString());
+                    work_frame_type = (motor_frame_type)
+                        Enum.Parse(typeof(motor_frame_type), MainV2.comPort.MAV.param["FRAME_TYPE"].ToString());
 
-                this.LogInfoFormat("Existing Class: {0} Type: {1}", work_frame_class, work_frame_type);
-                if (work_frame_class == motor_frame_class.MOTOR_FRAME_QUAD)
-                {
-                    if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
-                    { comboBoxSelectairframe.SelectedIndex = 1; }
-                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
+                    this.LogInfoFormat("Existing Class: {0} Type: {1}", work_frame_class, work_frame_type);
+                    if (work_frame_class == motor_frame_class.MOTOR_FRAME_QUAD)
                     {
-                        comboBoxSelectairframe.SelectedIndex = 2;
+                        if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
+                        { comboBoxSelectairframe.SelectedIndex = 1; }
+                        else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
+                        {
+                            comboBoxSelectairframe.SelectedIndex = 2;
+                        }
+                        else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_V)
+                        {
+                            comboBoxSelectairframe.SelectedIndex = 3;
+                        }
+                        else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_H)
+                        {
+                            comboBoxSelectairframe.SelectedIndex = 4;
+                        }
                     }
-                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_V)
+                    else if (work_frame_class == motor_frame_class.MOTOR_FRAME_HEXA)
                     {
-                        comboBoxSelectairframe.SelectedIndex = 3;
+                        if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
+                        { comboBoxSelectairframe.SelectedIndex = 5; }
+                        else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
+                        {
+                            comboBoxSelectairframe.SelectedIndex = 6;
+                        }
                     }
-                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_H)
+                    else if (work_frame_class == motor_frame_class.MOTOR_FRAME_OCTA)
                     {
-                        comboBoxSelectairframe.SelectedIndex = 4;
+                        if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
+                        { comboBoxSelectairframe.SelectedIndex = 7; }
+                        else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
+                        {
+                            comboBoxSelectairframe.SelectedIndex = 8;
+                        }
+                        else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_V)
+                        {
+                            comboBoxSelectairframe.SelectedIndex = 9;
+                        }
+                    }
+                    else if (work_frame_class == motor_frame_class.MOTOR_FRAME_OCTAQUAD)
+                    {
+                        if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
+                        {
+                            comboBoxSelectairframe.SelectedIndex = 10;
+                        }
+                    }
+                    else if (work_frame_class == motor_frame_class.MOTOR_FRAME_Y6)
+                    {
+                        comboBoxSelectairframe.SelectedIndex = 11;
                     }
                 }
-                else if (work_frame_class == motor_frame_class.MOTOR_FRAME_HEXA)
+                else
                 {
-                    if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
-                    { comboBoxSelectairframe.SelectedIndex = 5; }
-                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
-                    {
-                        comboBoxSelectairframe.SelectedIndex = 6;
-                    }
-                }
-                else if (work_frame_class == motor_frame_class.MOTOR_FRAME_OCTA)
-                {
-                    if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_PLUS)
-                    { comboBoxSelectairframe.SelectedIndex = 7; }
-                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
-                    {
-                        comboBoxSelectairframe.SelectedIndex = 8;
-                    }
-                    else if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_V)
-                    {
-                        comboBoxSelectairframe.SelectedIndex = 9;
-                    }
-                }
-                else if (work_frame_class == motor_frame_class.MOTOR_FRAME_OCTAQUAD)
-                {
-                  if (work_frame_type == motor_frame_type.MOTOR_FRAME_TYPE_X)
-                    {
-                        comboBoxSelectairframe.SelectedIndex = 10;
-                    }
-                }
-                else if (work_frame_class == motor_frame_class.MOTOR_FRAME_Y6)
-                {
-                    comboBoxSelectairframe.SelectedIndex = 11;
+                    groupBoxAirframe.Controls.Clear();
+                    GCSViews.ConfigurationView.ConfigFrameType Radio = new GCSViews.ConfigurationView.ConfigFrameType();
+                    Radio.Parent = groupBoxAirframe;
+                    Radio.Dock = DockStyle.Fill;
+                    Radio.ForeColor = Color.Black;
+                    Radio.Activate();
+                    Radio.Show();
                 }
 
             }

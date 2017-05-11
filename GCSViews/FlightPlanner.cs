@@ -915,8 +915,8 @@ namespace MissionPlanner.GCSViews
             {
                 switchDockingToolStripMenuItem_Click(null, null);
             }
-
-            Visible = true;
+            panelWaypoints.Expand = false;
+               Visible = true;
 
             timer1.Start();
         }
@@ -6994,6 +6994,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         public void pictureBox5_Click(object sender, EventArgs e)
         {
+            if (!MainV2.comPort.BaseStream.IsOpen)
+            {
+                CustomMessageBox.Show("请首先进行系统连接!");
+                return;
+            }
             if (Commands.Rows.Count > 0)
             {
                 if (sender is FlightData)
@@ -7028,6 +7033,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
+            if (!MainV2.comPort.BaseStream.IsOpen)
+            {
+                CustomMessageBox.Show("请首先进行系统连接!");
+                return;
+            }
             if ((altmode)CMB_altmode.SelectedValue == altmode.Absolute)
             {
                 if (DialogResult.No ==
@@ -7268,6 +7278,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void pictureBox16_Click(object sender, EventArgs e)
         {
+            if (!MainV2.comPort.BaseStream.IsOpen)
+            {
+                CustomMessageBox.Show("请首先进行系统连接!");
+                return;
+            }
             selectedrow = Commands.Rows.Add();
 
             Commands.Rows[selectedrow].Cells[Command.Index].Value = MAVLink.MAV_CMD.LAND.ToString();
@@ -7283,6 +7298,12 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
+            if (!MainV2.comPort.BaseStream.IsOpen)
+            {
+                CustomMessageBox.Show("请首先进行系统连接!");
+                return;
+            }
+
             // altitude
             string alt = "10";
 
@@ -7336,6 +7357,18 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         private void pictureBox11_MouseUp(object sender, MouseEventArgs e)
         {
             pictureBox11.BackColor = Color.FromArgb(226, 253, 235);
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {   if (!MainV2.comPort.BaseStream.IsOpen)
+            {
+                CustomMessageBox.Show("请首先进行系统连接!");
+                return;
+            }
+            Form ConfigWindow = new InitConfig();
+            ConfigWindow.Activate();
+            ConfigWindow.Show();
+
         }
     }
 }

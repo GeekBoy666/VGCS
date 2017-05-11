@@ -34,8 +34,8 @@ namespace MissionPlanner.Controls
         /// 创建图片资源
         /// </QYJ>
         Bitmap bmp = new Bitmap(MissionPlanner.Controls.Properties.Resources.hud);
-        Bitmap bmpLock = new Bitmap(MissionPlanner.Controls.Properties.Resources.Lock);
-        Bitmap bmpUnLock = new Bitmap(MissionPlanner.Controls.Properties.Resources.Unlock);
+        Bitmap bmpLock1= new Bitmap(MissionPlanner.Controls.Properties.Resources.Lock);
+        Bitmap bmpUnLock1 = new Bitmap(MissionPlanner.Controls.Properties.Resources.Unlock);
         /// <QYJ>
         /// 创建图片资源
         /// </QYJ>
@@ -1716,11 +1716,11 @@ namespace MissionPlanner.Controls
                     }
                     using (Pen redtemp = new Pen(Color.FromArgb(27, 46, 46), 4.0f))
                     {
-                        graphicsObjectGDIP.DrawLine(redtemp, 0, -WidthLong * 3 - Distance + 31, 0, -WidthLong * 3 - Distance + 5);
+                        graphicsObjectGDIP.DrawLine(redtemp, 0, -WidthLong * 3 - Distance + 31, 0, -WidthLong * 3 - Distance + 3);
                     }
 
                     int headvalue = (int)_heading;
-                    graphicsObjectGDIP.DrawString("偏航", new Font(new FontFamily("华文楷体"), 15, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Black, new PointF(-WidthLong * 3 + 15, -WidthLong * 4 - 23));
+                    graphicsObjectGDIP.DrawString("偏航", new Font(new FontFamily("华文楷体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(-WidthLong * 3, -WidthLong * 4 - 23));
                     graphicsObjectGDIP.DrawString(headvalue.ToString(), new Font(new FontFamily("黑体"), 18, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.White, new PointF(-WidthLong + 10, -WidthLong * 4 - 23));
 
                     int[] array = new int[] { 0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150,155,160,165,170,175,180,185,190,
@@ -1892,6 +1892,9 @@ namespace MissionPlanner.Controls
                     //{
                     //    drawstring(graphicsObject, HUDT.GS + _groundspeed.ToString("0.0"), font, fontsize, _whiteBrush, 1, scrollbg.Bottom + fontsize + 2 + 10);
                     //}
+                    graphicsObjectGDIP.DrawString("Flight Mode", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 15));
+                    graphicsObjectGDIP.DrawString(_mode, new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(scrollbg.Left, scrollbg.Bottom + 30));
+                  
                 }
 
                 //drawstring(e,, new Font("Arial", fontsize + 2), whiteBrush, 1, scrollbg.Bottom + fontsize + 2 + 10);
@@ -1901,7 +1904,7 @@ namespace MissionPlanner.Controls
 
                 if (displayalt)
                 {
-                    graphicsObjectGDIP.DrawString("相对高度", new Font(new FontFamily("华文楷体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(this.Width - this.Width / 8 - 23, halfheight - halfheight + 28));
+                    graphicsObjectGDIP.DrawString("相对高度", new Font(new FontFamily("华文楷体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(this.Width - this.Width / 8 - 33, halfheight - halfheight + 28));
                     graphicsObject.DrawRectangle(this._blackPen, scrollbg);
 
                     Point[] arrow = new Point[5];
@@ -2030,7 +2033,7 @@ namespace MissionPlanner.Controls
                     graphicsObject.ResetTransform();
 
                     // mode and wp dist and wp
-                    //drawstring(graphicsObject, _mode, font, fontsize, _whiteBrush, scrollbg.Left - 30, scrollbg.Bottom + 5);
+
                     //drawstring(graphicsObject, (int)_disttowp + ">" + _wpno, font, fontsize, _whiteBrush, scrollbg.Left - 30, scrollbg.Bottom + fontsize + 2 + 10);
                 }
 
@@ -2058,7 +2061,8 @@ namespace MissionPlanner.Controls
                         graphicsObject.DrawLine(ConnectPen, scrollbg.Right - 15, scrollbg.Top - 28, scrollbg.Right - 15, scrollbg.Top - 35);
                         graphicsObject.DrawLine(ConnectPen, scrollbg.Right - 20, scrollbg.Top - 28, scrollbg.Right - 20, scrollbg.Top - 31);
                     }
-                    //drawstring(graphicsObject, _datetime.ToString("HH:mm:ss"), font, fontsize, _whiteBrush, scrollbg.Left - 30, scrollbg.Top - fontsize - 2 - 20);
+
+                    graphicsObjectGDIP.DrawString(_datetime.ToString("HH: mm:ss"), new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left - 60, scrollbg.Bottom + 30));
                 }
                 Rectangle batteryonTop = new Rectangle((this.Width / 52 + this.Width / 27) / 2, 2, this.Width / 45, this.Width / 75);
                 RectangleF batteryonB = new RectangleF(this.Width / 52, 2 + this.Width / 75, this.Width / 27, this.Width / 21);
@@ -2131,10 +2135,10 @@ namespace MissionPlanner.Controls
                     {
                         gps = _fix.ToString();
                     }
-                    graphicsObjectGDIP.DrawString("G", new Font(new FontFamily("黑体"), 20, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 - 15, 1));
-                    graphicsObjectGDIP.DrawString("PS", new Font(new FontFamily("黑体"), 16, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 - 3, 7));
-                    graphicsObjectGDIP.DrawString("：", new Font(new FontFamily("黑体"), 20, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 + 10, 2));
-                    graphicsObjectGDIP.DrawString(gps, new Font(new FontFamily("华文楷体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(this.Width / 2 + this.Width / 4 + 2, 5));
+                    graphicsObjectGDIP.DrawString("G", new Font(new FontFamily("黑体"), 20, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 - 18, 2));
+                    graphicsObjectGDIP.DrawString("PS", new Font(new FontFamily("黑体"), 16, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 - 6, 8));
+                    graphicsObjectGDIP.DrawString("：", new Font(new FontFamily("黑体"), 20, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 + 7, 3));
+                    graphicsObjectGDIP.DrawString(gps, new Font(new FontFamily("华文楷体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(this.Width / 2 + this.Width / 4 + 2, 8));
                 }
 
                 if (isNaN)
@@ -2184,7 +2188,7 @@ namespace MissionPlanner.Controls
                 graphicsObject.TranslateTransform(this.Width / 2, this.Height / 2);
 
                 // draw armed
-                RectangleF RectUnLock = new RectangleF(scrollbg.Left + 10, scrollbg.Bottom + 8, 35, 35);
+                RectangleF RectUnLock = new RectangleF(125, 80, 30, 30);
 
                 if (status != statuslast)
                 {
@@ -2195,7 +2199,7 @@ namespace MissionPlanner.Controls
                 {
                     //if ((armedtimer.AddSeconds(8) > DateTime.Now))
                     {
-                        graphicsObjectGDIP.DrawImage(bmpLock, RectUnLock);
+                        graphicsObjectGDIP.DrawImage(bmpLock1, RectUnLock);
                         statuslast = status;
                     }
                 }
@@ -2203,14 +2207,14 @@ namespace MissionPlanner.Controls
                 {
                     if ((armedtimer.AddSeconds(8) > DateTime.Now))
                     {
-                        graphicsObjectGDIP.DrawImage(bmpUnLock, RectUnLock);
+                        graphicsObjectGDIP.DrawImage(bmpUnLock1, RectUnLock);
                         statuslast = status;
                     }
                 }
 
                 if (failsafe == true)
                 {
-                    drawstring(graphicsObject, HUDT.FAILSAFE, font, fontsize + 20, (SolidBrush)Brushes.Red, -85, halfheight / -HUDT.FailsafeH);
+                    graphicsObjectGDIP.DrawString(HUDT.FAILSAFE, new Font(new FontFamily("华文楷体"), 20, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Red, new PointF(scrollbg.Left - 150, scrollbg.Bottom + 25));
                     statuslast = status;
                 }
 

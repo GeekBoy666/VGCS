@@ -100,7 +100,7 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>mpdesktop.ico</ApplicationIcon>
+    <ApplicationIcon>rot128.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -3898,6 +3898,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="600201.ico" />
     <Content Include="acsimplepids.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -4119,6 +4120,9 @@
     <None Include="Resources\600113.png" />
     <None Include="Resources\600114 .png" />
     <None Include="Resources\VIGA_lOGO.png" />
+    <None Include="Resources\600200.png" />
+    <None Include="Resources\600201.ico" />
+    <Content Include="rot128.ico" />
     <Content Include="Scripts\example7.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
