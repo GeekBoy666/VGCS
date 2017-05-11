@@ -622,7 +622,7 @@
     <value>Vertical</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 79</value>
+    <value>297, 111</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -646,7 +646,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 85</value>
+    <value>303, 117</value>
   </data>
   <data name="tabPage11.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -673,7 +673,7 @@
     <value>4, 22</value>
   </data>
   <data name="tabPageStatustext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 85</value>
+    <value>303, 117</value>
   </data>
   <data name="tabPageStatustext.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -763,7 +763,7 @@
     <value>myButton6</value>
   </data>
   <data name="&gt;&gt;myButton6.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton6.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -793,7 +793,7 @@
     <value>myButton5</value>
   </data>
   <data name="&gt;&gt;myButton5.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton5.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -823,7 +823,7 @@
     <value>myButton7</value>
   </data>
   <data name="&gt;&gt;myButton7.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton7.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -853,7 +853,7 @@
     <value>myButton4</value>
   </data>
   <data name="&gt;&gt;myButton4.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton4.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -874,7 +874,7 @@
     <value>modifyandSetLoiterRad</value>
   </data>
   <data name="&gt;&gt;modifyandSetLoiterRad.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ModifyandSet, MissionPlanner, Version=1.1.6340.16323, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ModifyandSet, MissionPlanner, Version=1.1.6340.17465, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;modifyandSetLoiterRad.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -904,7 +904,7 @@
     <value>BUT_ARM</value>
   </data>
   <data name="&gt;&gt;BUT_ARM.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_ARM.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -934,7 +934,7 @@
     <value>BUT_quickmanual</value>
   </data>
   <data name="&gt;&gt;BUT_quickmanual.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_quickmanual.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -964,7 +964,7 @@
     <value>BUT_quickrtl</value>
   </data>
   <data name="&gt;&gt;BUT_quickrtl.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_quickrtl.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -994,7 +994,7 @@
     <value>BUT_quickauto</value>
   </data>
   <data name="&gt;&gt;BUT_quickauto.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_quickauto.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1048,7 +1048,7 @@
     <value>BUT_setwp</value>
   </data>
   <data name="&gt;&gt;BUT_setwp.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_setwp.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1099,7 +1099,7 @@
     <value>BUT_setmode</value>
   </data>
   <data name="&gt;&gt;BUT_setmode.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_setmode.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1150,7 +1150,7 @@
     <value>BUT_Homealt</value>
   </data>
   <data name="&gt;&gt;BUT_Homealt.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_Homealt.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1180,7 +1180,7 @@
     <value>BUTactiondo</value>
   </data>
   <data name="&gt;&gt;BUTactiondo.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUTactiondo.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1201,7 +1201,7 @@
     <value>modifyandSetSpeed</value>
   </data>
   <data name="&gt;&gt;modifyandSetSpeed.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ModifyandSet, MissionPlanner, Version=1.1.6340.16323, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ModifyandSet, MissionPlanner, Version=1.1.6340.17465, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;modifyandSetSpeed.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1222,7 +1222,7 @@
     <value>modifyandSetAlt</value>
   </data>
   <data name="&gt;&gt;modifyandSetAlt.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ModifyandSet, MissionPlanner, Version=1.1.6340.16323, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ModifyandSet, MissionPlanner, Version=1.1.6340.17465, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;modifyandSetAlt.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1270,7 +1270,7 @@
     <value>checkListControl1</value>
   </data>
   <data name="&gt;&gt;checkListControl1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.PreFlight.CheckListControl, MissionPlanner, Version=1.1.6340.16323, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.PreFlight.CheckListControl, MissionPlanner, Version=1.1.6340.17465, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;checkListControl1.Parent" xml:space="preserve">
     <value>tabPagePreFlight</value>
@@ -1327,7 +1327,7 @@
     <value>BUT_loadtelem</value>
   </data>
   <data name="&gt;&gt;BUT_loadtelem.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_loadtelem.Parent" xml:space="preserve">
     <value>tableLayoutPaneltlogs</value>
@@ -1381,7 +1381,7 @@
     <value>lbl_logpercent</value>
   </data>
   <data name="&gt;&gt;lbl_logpercent.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbl_logpercent.Parent" xml:space="preserve">
     <value>tableLayoutPaneltlogs</value>
@@ -1405,7 +1405,7 @@
     <value>LBL_logfn</value>
   </data>
   <data name="&gt;&gt;LBL_logfn.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LBL_logfn.Parent" xml:space="preserve">
     <value>tableLayoutPaneltlogs</value>
@@ -1435,7 +1435,7 @@
     <value>BUT_log2kml</value>
   </data>
   <data name="&gt;&gt;BUT_log2kml.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_log2kml.Parent" xml:space="preserve">
     <value>tableLayoutPaneltlogs</value>
@@ -1462,7 +1462,7 @@
     <value>BUT_playlog</value>
   </data>
   <data name="&gt;&gt;BUT_playlog.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_playlog.Parent" xml:space="preserve">
     <value>tableLayoutPaneltlogs</value>
@@ -1522,7 +1522,7 @@
     <value>BUT_speed10</value>
   </data>
   <data name="&gt;&gt;BUT_speed10.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed10.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1552,7 +1552,7 @@
     <value>BUT_speed5</value>
   </data>
   <data name="&gt;&gt;BUT_speed5.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed5.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1582,7 +1582,7 @@
     <value>BUT_speed2</value>
   </data>
   <data name="&gt;&gt;BUT_speed2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed2.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1612,7 +1612,7 @@
     <value>BUT_speed1</value>
   </data>
   <data name="&gt;&gt;BUT_speed1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed1.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1642,7 +1642,7 @@
     <value>BUT_speed1_2</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_2.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1672,7 +1672,7 @@
     <value>BUT_speed1_4</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_4.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_4.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1702,7 +1702,7 @@
     <value>BUT_speed1_10</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_10.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_10.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1750,7 +1750,7 @@
     <value>lbl_playbackspeed</value>
   </data>
   <data name="&gt;&gt;lbl_playbackspeed.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbl_playbackspeed.Parent" xml:space="preserve">
     <value>tableLayoutPaneltlogs</value>
@@ -2001,7 +2001,7 @@
     <value>hud1</value>
   </data>
   <data name="&gt;&gt;hud1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HUD, MissionPlanner.Controls, Version=1.0.6340.15841, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HUD, MissionPlanner.Controls, Version=1.0.6340.17459, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;hud1.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -2103,7 +2103,7 @@
     <value>zedGraphControl1</value>
   </data>
   <data name="&gt;&gt;zedGraphControl1.Type" xml:space="preserve">
-    <value>ZedGraph.ZedGraphControl, ZedGraph, Version=5.1.5.15844, Culture=neutral, PublicKeyToken=null</value>
+    <value>ZedGraph.ZedGraphControl, ZedGraph, Version=5.1.5.17457, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;zedGraphControl1.Parent" xml:space="preserve">
     <value>panel3</value>
@@ -3328,7 +3328,7 @@
     <value>toolStripConnectionControl</value>
   </data>
   <data name="&gt;&gt;toolStripConnectionControl.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6340.16323, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ToolStripConnectionControl, MissionPlanner, Version=1.1.6340.17465, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;bindingSourceQTab.Name" xml:space="preserve">
     <value>bindingSourceQTab</value>
