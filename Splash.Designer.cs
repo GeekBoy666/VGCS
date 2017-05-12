@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splash));
+            this.LoadTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // LoadTimer
+            // 
+            this.LoadTimer.Tick += new System.EventHandler(this.LoadTimer_Tick);
             // 
             // Splash
             // 
@@ -54,5 +60,6 @@
         }
 
         #endregion
+        private System.Windows.Forms.Timer LoadTimer;
     }
 }

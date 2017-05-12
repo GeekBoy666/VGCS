@@ -1024,6 +1024,7 @@ namespace MissionPlanner
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
             this.Name = "MainV2";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainV2_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainV2_KeyDown);
             this.Resize += new System.EventHandler(this.MainV2_Resize);

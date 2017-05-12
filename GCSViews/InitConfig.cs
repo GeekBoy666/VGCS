@@ -74,8 +74,11 @@ namespace MissionPlanner.GCSViews
             this.comboBoxSelectairframe.DrawItem+= new DrawItemEventHandler(ComboBox1_DrawItem);
             this.comboBoxSelectairframe.DrawMode = DrawMode.OwnerDrawFixed;
             comboBoxSelectairframe.DataSource = list;
+
             //comboBoxSelectairframe.SelectedIndex = 1;
         }
+
+
         public new void Activate()
         {
             if (!MainV2.comPort.MAV.param.ContainsKey("FRAME_CLASS") || !MainV2.comPort.MAV.param.ContainsKey("FRAME_TYPE"))

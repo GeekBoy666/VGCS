@@ -3203,10 +3203,9 @@ namespace MissionPlanner
             {
                 Tracking.AddException(ex);
             }
-
             this.ResumeLayout();
-
             Program.Splash.Close();
+            
 
             log.Info("appload time");
             MissionPlanner.Utilities.Tracking.AddTiming("AppLoad", "Load Time",
@@ -3330,49 +3329,6 @@ namespace MissionPlanner
         }
         private void mainloop()
         {
-            //while (!IsHandleCreated)
-            //    Thread.Sleep(1000);
-            //threadrun = true;
-            //while (threadrun)
-            //{
-            //    if (MainV2.comPort.giveComport)
-            //    {
-            //        Thread.Sleep(50);
-            //        updateBindingSource();
-            //        continue;
-            //    }
-            //    if (!MainV2.comPort.logreadmode)
-            //        Thread.Sleep(50); // max is only ever 10 hz but we go a little faster to empty the serial queue
-
-            //    if (this.IsDisposed)
-            //    {
-            //        threadrun = false;
-            //        break;
-            //    }
-            //    hud1.streamjpgenable = true;
-            //    try
-            //    {
-            //        if (!MainV2.comPort.giveComport)
-            //            MainV2.comPort.readPacket();
-
-            //        // update currentstate of sysids on the port
-            //        foreach (var MAV in MainV2.comPort.MAVlist)
-            //        {
-            //            try
-            //            {
-            //                MAV.cs.UpdateCurrentSettings(null, false, MainV2.comPort, MAV);
-            //            }
-            //            catch (Exception ex)
-            //            {
-            //                log.Error(ex);
-            //            }
-            //        }
-            //    }
-            //    catch
-            //    {
-            //        log.Error("Failed to read log packet");
-            //    }
-            //}
             threadrun = true;
             //EndPoint Remote = new IPEndPoint(IPAddress.Any, 0);
 
@@ -3542,14 +3498,14 @@ namespace MissionPlanner
                 else
                 {
                     //// ensure we know to stop
-                    //if (MainV2.comPort.logreadmode)
-                    //    MainV2.comPort.logreadmode = false;
-                    //updatePlayPauseButton(false);
+                    if (MainV2.comPort.logreadmode)
+                        MainV2.comPort.logreadmode = false;
+                    updatePlayPauseButton(false);
 
-                    //if (!playingLog && MainV2.comPort.logplaybackfile != null)
-                    //{
-                    //    continue;
-                    //}
+                    if (!playingLog && MainV2.comPort.logplaybackfile != null)
+                    {
+                        continue;
+                    }
                 }
 
                 try
@@ -3995,7 +3951,41 @@ namespace MissionPlanner
             }
             Console.WriteLine("FD Main loop exit");
         }
+        private void updatePlayPauseButton(bool playing)
+        {
+            if (playing)
+            {
+                if (BUT_playlog.Text == "Pause")
+                    return;
 
+                BeginInvoke((MethodInvoker)delegate
+                {
+                    try
+                    {
+                        BUT_playlog.Text = "Pause";
+                    }
+                    catch
+                    {
+                    }
+                });
+            }
+            else
+            {
+                if (BUT_playlog.Text == "Play")
+                    return;
+
+                BeginInvoke((MethodInvoker)delegate
+                {
+                    try
+                    {
+                        BUT_playlog.Text = "Play";
+                    }
+                    catch
+                    {
+                    }
+                });
+            }
+        }
 
         object updateBindingSourcelock = new object();
         volatile int updateBindingSourcecount;

@@ -87,18 +87,18 @@ namespace MissionPlanner
             {
             }
 
-            if (File.Exists(Settings.GetRunningDirectory() + "logo.png"))
-                Logo = new Bitmap(Settings.GetRunningDirectory() + "logo.png");
+            //if (File.Exists(Settings.GetRunningDirectory() + "logo.png"))
+            //    Logo = new Bitmap(Settings.GetRunningDirectory() + "logo.png");
 
-            if (File.Exists(Settings.GetRunningDirectory() + "icon.png"))
-            {
-                // 128*128
-                IconFile = new Bitmap(Settings.GetRunningDirectory() + "icon.png");
-            }
-            else
-            {
-                IconFile = MissionPlanner.Properties.Resources.mpdesktop.ToBitmap();
-            }
+            //if (File.Exists(Settings.GetRunningDirectory() + "icon.png"))
+            //{
+            //    // 128*128
+            //    //IconFile = new Bitmap(Settings.GetRunningDirectory() + "icon.png");
+            //}
+            //else
+            //{
+            //    IconFile = MissionPlanner.Properties.Resources.mpdesktop.ToBitmap();
+            //}
 
             if (File.Exists(Settings.GetRunningDirectory() + "splashbg.png")) // 600*375
                 SplashBG = new Bitmap(Settings.GetRunningDirectory() + "splashbg.png");
