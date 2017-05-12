@@ -115,6 +115,13 @@ namespace MissionPlanner
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
+            this.DataFlashLog = new System.Windows.Forms.TabPage();
+            this.myButton1 = new MissionPlanner.Controls.MyButton();
+            this.myButton2 = new MissionPlanner.Controls.MyButton();
+            this.myButton3 = new MissionPlanner.Controls.MyButton();
+            this.myButton8 = new MissionPlanner.Controls.MyButton();
+            this.myButton9 = new MissionPlanner.Controls.MyButton();
+            this.myButton10 = new MissionPlanner.Controls.MyButton();
             this.CTX_mainmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_hub)).BeginInit();
             this.panel1.SuspendLayout();
@@ -142,6 +149,7 @@ namespace MissionPlanner
             ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.DataFlashLog.SuspendLayout();
             this.SuspendLayout();
             // 
             // CTX_mainmenu
@@ -352,6 +360,7 @@ namespace MissionPlanner
             this.tabControlactions.Controls.Add(this.tabActions);
             this.tabControlactions.Controls.Add(this.tabPagePreFlight);
             this.tabControlactions.Controls.Add(this.tabTLogs);
+            this.tabControlactions.Controls.Add(this.DataFlashLog);
             resources.ApplyResources(this.tabControlactions, "tabControlactions");
             this.tabControlactions.Name = "tabControlactions";
             this.tabControlactions.SelectedIndex = 0;
@@ -1015,6 +1024,84 @@ namespace MissionPlanner
             this.zedGraphControl1.ScrollMinY2 = 0D;
             this.zedGraphControl1.DoubleClick += new System.EventHandler(this.zedGraphControl1_DoubleClick);
             // 
+            // DataFlashLog
+            // 
+            this.DataFlashLog.Controls.Add(this.myButton10);
+            this.DataFlashLog.Controls.Add(this.myButton9);
+            this.DataFlashLog.Controls.Add(this.myButton8);
+            this.DataFlashLog.Controls.Add(this.myButton3);
+            this.DataFlashLog.Controls.Add(this.myButton2);
+            this.DataFlashLog.Controls.Add(this.myButton1);
+            resources.ApplyResources(this.DataFlashLog, "DataFlashLog");
+            this.DataFlashLog.Name = "DataFlashLog";
+            this.DataFlashLog.UseVisualStyleBackColor = true;
+            // 
+            // myButton1
+            // 
+            this.myButton1.BGGradBot = System.Drawing.Color.LightGray;
+            this.myButton1.BGGradTop = System.Drawing.Color.DarkGray;
+            this.myButton1.ColorMouseDown = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.myButton1, "myButton1");
+            this.myButton1.Name = "myButton1";
+            this.myButton1.TextColor = System.Drawing.Color.White;
+            this.myButton1.UseVisualStyleBackColor = true;
+            this.myButton1.Click += new System.EventHandler(this.myButton1_Click);
+            // 
+            // myButton2
+            // 
+            this.myButton2.BGGradBot = System.Drawing.Color.LightGray;
+            this.myButton2.BGGradTop = System.Drawing.Color.DarkGray;
+            this.myButton2.ColorMouseDown = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.myButton2, "myButton2");
+            this.myButton2.Name = "myButton2";
+            this.myButton2.TextColor = System.Drawing.Color.White;
+            this.myButton2.UseVisualStyleBackColor = true;
+            this.myButton2.Click += new System.EventHandler(this.myButton2_Click);
+            // 
+            // myButton3
+            // 
+            this.myButton3.BGGradBot = System.Drawing.Color.LightGray;
+            this.myButton3.BGGradTop = System.Drawing.Color.DarkGray;
+            this.myButton3.ColorMouseDown = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.myButton3, "myButton3");
+            this.myButton3.Name = "myButton3";
+            this.myButton3.TextColor = System.Drawing.Color.White;
+            this.myButton3.UseVisualStyleBackColor = true;
+            this.myButton3.Click += new System.EventHandler(this.myButton3_Click);
+            // 
+            // myButton8
+            // 
+            this.myButton8.BGGradBot = System.Drawing.Color.LightGray;
+            this.myButton8.BGGradTop = System.Drawing.Color.DarkGray;
+            this.myButton8.ColorMouseDown = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.myButton8, "myButton8");
+            this.myButton8.Name = "myButton8";
+            this.myButton8.TextColor = System.Drawing.Color.White;
+            this.myButton8.UseVisualStyleBackColor = true;
+            this.myButton8.Click += new System.EventHandler(this.myButton8_Click);
+            // 
+            // myButton9
+            // 
+            this.myButton9.BGGradBot = System.Drawing.Color.LightGray;
+            this.myButton9.BGGradTop = System.Drawing.Color.DarkGray;
+            this.myButton9.ColorMouseDown = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.myButton9, "myButton9");
+            this.myButton9.Name = "myButton9";
+            this.myButton9.TextColor = System.Drawing.Color.White;
+            this.myButton9.UseVisualStyleBackColor = true;
+            this.myButton9.Click += new System.EventHandler(this.myButton9_Click);
+            // 
+            // myButton10
+            // 
+            this.myButton10.BGGradBot = System.Drawing.Color.LightGray;
+            this.myButton10.BGGradTop = System.Drawing.Color.DarkGray;
+            this.myButton10.ColorMouseDown = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.myButton10, "myButton10");
+            this.myButton10.Name = "myButton10";
+            this.myButton10.TextColor = System.Drawing.Color.White;
+            this.myButton10.UseVisualStyleBackColor = true;
+            this.myButton10.Click += new System.EventHandler(this.myButton10_Click);
+            // 
             // MainV2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1060,6 +1147,7 @@ namespace MissionPlanner
             ((System.ComponentModel.ISupportInitialize)(this.currentStateBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.DataFlashLog.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1146,5 +1234,12 @@ namespace MissionPlanner
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Panel panel3;
         private ZedGraph.ZedGraphControl zedGraphControl1;
+        private System.Windows.Forms.TabPage DataFlashLog;
+        private Controls.MyButton myButton10;
+        private Controls.MyButton myButton9;
+        private Controls.MyButton myButton8;
+        private Controls.MyButton myButton3;
+        private Controls.MyButton myButton2;
+        private Controls.MyButton myButton1;
     }
 }

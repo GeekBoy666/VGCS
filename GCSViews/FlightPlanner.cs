@@ -7370,5 +7370,15 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             ConfigWindow.Show();
 
         }
+
+        private void pictureBox17_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox17.BackColor = Color.LightGreen;
+        }
+
+        private void pictureBox17_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox17.BackColor = Color.FromArgb(226, 253, 235);
+        }
     }
 }

@@ -33,7 +33,7 @@ using MissionPlanner.GCSViews;
 using IronPython.Runtime;
 using static IronPython.Modules._ast;
 using ZedGraph;
-
+using LogAnalyzer = MissionPlanner.Utilities.LogAnalyzer;
 namespace MissionPlanner
 {
     public partial class MainV2 : Form
@@ -2760,280 +2760,7 @@ namespace MissionPlanner
             Console.WriteLine("SerialReader Done");
             SerialThreadrunner.Set();
         }
-        //protected override void OnLoad(EventArgs e)
-        //{
-        //    // check if its defined, and force to show it if not known about
-        //    if (Settings.Instance["menu_autohide"] == null)
-        //    {
-        //        Settings.Instance["menu_autohide"] = "false";
-        //    }
-
-        //    try
-        //    {
-        //        AutoHideMenu(Settings.Instance.GetBoolean("menu_autohide"));
-        //    }
-        //    catch
-        //    {
-        //    }
-
-        //    MyView.AddScreen(new MainSwitcher.Screen("FlightData", FlightData, true));
-        //    MyView.AddScreen(new MainSwitcher.Screen("FlightPlanner", FlightPlanner, true));
-        //    MyView.AddScreen(new MainSwitcher.Screen("HWConfig", typeof(GCSViews.InitialSetup), false));
-        //    MyView.AddScreen(new MainSwitcher.Screen("SWConfig", typeof(GCSViews.SoftwareConfig), false));
-        //    MyView.AddScreen(new MainSwitcher.Screen("Simulation", Simulation, true));
-        //    MyView.AddScreen(new MainSwitcher.Screen("Terminal", typeof(GCSViews.Terminal), false));
-        //    MyView.AddScreen(new MainSwitcher.Screen("Help", typeof(GCSViews.Help), false));
-
-        //    try
-        //    {
-        //        if (Control.ModifierKeys == Keys.Shift)
-        //        {
-        //        }
-        //        else
-        //        {
-        //            log.Info("Load Pluggins");
-        //            Plugin.PluginLoader.LoadAll();
-        //            log.Info("Load Pluggins... Done");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        log.Error(ex);
-        //    }
-
-        //    if (Program.Logo != null && Program.name == "VVVVZ")
-        //    {
-        //        this.PerformLayout();
-        //        //MenuFlightPlanner_Click(this, e);
-        //        //MainMenu_ItemClicked(this, new ToolStripItemClickedEventArgs(MenuFlightPlanner));
-        //    }
-        //    else
-        //    {
-        //        this.PerformLayout();
-        //        log.Info("show FlightData");
-
-        //        toolStripButton1_Click_1(this, e);
-        //        //MainMenu_ItemClicked(this, new ToolStripItemClickedEventArgs(MenuFlightData));
-        //        //MenuFlightData_Click(this, e);
-        //        log.Info("show FlightData... Done");
-        //        //MainMenu_ItemClicked(this, new ToolStripItemClickedEventArgs(MenuFlightData));
-        //    }
-
-        //    // for long running tasks using own threads.
-        //    // for short use threadpool
-
-        //    this.SuspendLayout();
-
-        //    // setup http server
-        //    try
-        //    {
-        //        log.Info("start http");
-        //        httpthread = new Thread(new httpserver().listernforclients)
-        //        {
-        //            Name = "motion jpg stream-network kml",
-        //            IsBackground = true
-        //        };
-        //        httpthread.Start();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        log.Error("Error starting TCP listener thread: ", ex);
-        //        CustomMessageBox.Show(ex.ToString());
-        //    }
-
-        //    log.Info("start joystick");
-        //    // setup joystick packet sender
-        //    joystickthread = new Thread(new ThreadStart(joysticksend))
-        //    {
-        //        IsBackground = true,
-        //        Priority = ThreadPriority.AboveNormal,
-        //        Name = "Main joystick sender"
-        //    };
-        //    joystickthread.Start();
-
-        //    log.Info("start serialreader");
-        //    // setup main serial reader
-        //    serialreaderthread = new Thread(SerialReader)
-        //    {
-        //        IsBackground = true,
-        //        Name = "Main Serial reader",
-        //        Priority = ThreadPriority.AboveNormal
-        //    };
-        //    serialreaderthread.Start();
-
-        //    log.Info("start plugin thread");
-        //    // setup main plugin thread
-        //    pluginthread = new Thread(PluginThread)
-        //    {
-        //        IsBackground = true,
-        //        Name = "plugin runner thread",
-        //        Priority = ThreadPriority.BelowNormal
-        //    };
-        //    pluginthread.Start();
-
-        //    ThreadPool.QueueUserWorkItem(BGLoadAirports);
-
-        //    ThreadPool.QueueUserWorkItem(BGCreateMaps);
-
-        //    //ThreadPool.QueueUserWorkItem(BGGetAlmanac);
-
-        //    ThreadPool.QueueUserWorkItem(BGgetTFR);
-
-        //    ThreadPool.QueueUserWorkItem(BGNoFly);
-
-        //    ThreadPool.QueueUserWorkItem(BGGetKIndex);
-
-        //    // update firmware version list - only once per day
-        //    ThreadPool.QueueUserWorkItem(BGFirmwareCheck);
-
-        //    log.Info("start udpvideoshim");
-        //    // start listener
-        //    UDPVideoShim.Start();
-
-        //    try
-        //    {
-        //        log.Info("Load AltitudeAngel");
-        //        new Utilities.AltitudeAngel.AltitudeAngel();
-
-        //        /*
-        //        // setup as a prompt once dialog
-        //        if (!Settings.Instance.GetBoolean("AACheck"))
-        //        {
-        //            if (CustomMessageBox.Show(
-        //                    "Do you wish to enable Altitude Angel airspace management data?\nFor more information visit [link;http://www.altitudeangel.com;www.altitudeangel.com]",
-        //                    "Altitude Angel - Enable", MessageBoxButtons.YesNo) == DialogResult.Yes)
-        //            {
-        //                Utilities.AltitudeAngel.AltitudeAngel.service.SignInAsync();
-        //            }
-
-        //            Settings.Instance["AACheck"] = true.ToString();
-        //        }
-        //        */
-        //        log.Info("Load AltitudeAngel... Done");
-        //    }
-        //    catch (TypeInitializationException) // windows xp lacking patch level
-        //    {
-        //        CustomMessageBox.Show("Please update your .net version. kb2468871");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Tracking.AddException(ex);
-        //    }
-
-        //    this.ResumeLayout();
-
-        //    Program.Splash.Close();
-
-        //    log.Info("appload time");
-        //    MissionPlanner.Utilities.Tracking.AddTiming("AppLoad", "Load Time",
-        //        (DateTime.Now - Program.starttime).TotalMilliseconds, "");
-
-        //    try
-        //    {
-        //        // single update check per day - in a seperate thread
-        //        if (Settings.Instance["update_check"] != DateTime.Now.ToShortDateString())
-        //        {
-        //            System.Threading.ThreadPool.QueueUserWorkItem(checkupdate);
-        //            Settings.Instance["update_check"] = DateTime.Now.ToShortDateString();
-        //        }
-        //        else if (Settings.Instance.GetBoolean("beta_updates") == true)
-        //        {
-        //            MissionPlanner.Utilities.Update.dobeta = true;
-        //            System.Threading.ThreadPool.QueueUserWorkItem(checkupdate);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        log.Error("Update check failed", ex);
-        //    }
-
-        //    // play a tlog that was passed to the program/ load a bin log passed
-        //    if (Program.args.Length > 0)
-        //    {
-        //        var cmds = ProcessCommandLine(Program.args);
-
-        //        if (cmds.ContainsKey("file") && File.Exists(cmds["file"]) && cmds["file"].ToLower().EndsWith(".tlog"))
-        //        {
-        //            FlightData.LoadLogFile(Program.args[0]);
-        //            FlightData.BUT_playlog_Click(null, null);
-        //        }
-        //        else if (cmds.ContainsKey("file") && File.Exists(cmds["file"]) &&
-        //                 (cmds["file"].ToLower().EndsWith(".log") || cmds["file"].ToLower().EndsWith(".bin")))
-        //        {
-        //            LogBrowse logbrowse = new LogBrowse();
-        //            ThemeManager.ApplyThemeTo(logbrowse);
-        //            logbrowse.logfilename = Program.args[0];
-        //            logbrowse.Show(this);
-        //            logbrowse.BringToFront();
-        //        }
-
-        //        if (cmds.ContainsKey("joy") && cmds.ContainsKey("type"))
-        //        {
-        //            if (cmds["type"].ToLower() == "plane")
-        //            {
-        //                MainV2.comPort.MAV.cs.firmware = Firmwares.ArduPlane;
-        //            }
-        //            if (cmds["type"].ToLower() == "copter")
-        //            {
-        //                MainV2.comPort.MAV.cs.firmware = Firmwares.ArduCopter2;
-        //            }
-        //            if (cmds["type"].ToLower() == "rover")
-        //            {
-        //                MainV2.comPort.MAV.cs.firmware = Firmwares.ArduRover;
-        //            }
-
-        //            var joy = new Joystick.Joystick();
-
-        //            if (joy.start(cmds["joy"]))
-        //            {
-        //                MainV2.joystick = joy;
-        //                MainV2.joystick.enabled = true;
-        //            }
-        //            else
-        //            {
-        //                CustomMessageBox.Show("Failed to start joystick");
-        //            }
-        //        }
-
-        //        if (cmds.ContainsKey("cam"))
-        //        {
-        //            try
-        //            {
-        //                MainV2.cam = new Capture(int.Parse(cmds["cam"]), null);
-
-        //                MainV2.cam.Start();
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                CustomMessageBox.Show(ex.ToString());
-        //            }
-        //        }
-
-        //        if (cmds.ContainsKey("port") && cmds.ContainsKey("baud"))
-        //        {
-        //            _connectionControl.CMB_serialport.Text = cmds["port"];
-        //            _connectionControl.CMB_baudrate.Text = cmds["baud"];
-
-        //            doConnect(MainV2.comPort, cmds["port"], cmds["baud"]);
-        //        }
-        //    }
-
-        //    // show wizard on first use
-        //    if (Settings.Instance["newuser"] == null)
-        //    {
-        //        if (CustomMessageBox.Show("This is your first run, Do you wish to use the setup wizard?\nRecomended for new users.", "Wizard", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-        //        {
-        //            Wizard.Wizard wiz = new Wizard.Wizard();
-
-        //            wiz.ShowDialog(this);
-        //        }
-
-        //        CustomMessageBox.Show("To use the wizard please goto the initial setup screen, and click the wizard icon.", "Wizard");
-
-        //        Settings.Instance["newuser"] = DateTime.Now.ToShortDateString();
-        //    }
-        //    splitContainer2.SplitterDistance = splitContainer2.Height/7;
-        //}
+   
         protected override void OnLoad(EventArgs e)
         {
             // check if its defined, and force to show it if not known about
@@ -3237,8 +2964,8 @@ namespace MissionPlanner
 
                 if (cmds.ContainsKey("file") && File.Exists(cmds["file"]) && cmds["file"].ToLower().EndsWith(".tlog"))
                 {
-                    FlightData.LoadLogFile(Program.args[0]);
-                    FlightData.BUT_playlog_Click(null, null);
+                    LoadLogFile(Program.args[0]);
+                    BUT_playlog_Click(null, null);
                 }
                 else if (cmds.ContainsKey("file") && File.Exists(cmds["file"]) &&
                          (cmds["file"].ToLower().EndsWith(".log") || cmds["file"].ToLower().EndsWith(".bin")))
@@ -3409,7 +3136,21 @@ namespace MissionPlanner
                     }
 
 
-       //            labelhome.Text= GCSViews.FlightPlanner.instance.hometext;
+                    //Console.WriteLine(DateTime.Now.Millisecond);
+
+                    if (updatescreen.AddMilliseconds(300) < DateTime.Now)
+                    {
+                        try
+                        {
+                            updatePlayPauseButton(true);
+                            updateLogPlayPosition();
+                        }
+                        catch
+                        {
+                            log.Error("Failed to update log playback pos");
+                        }
+                        updatescreen = DateTime.Now;
+                    }
 
                     //Console.WriteLine(DateTime.Now.Millisecond + " done ");
 
@@ -3443,7 +3184,15 @@ namespace MissionPlanner
                         act = 0;
 
                     double ts = 0;
-
+                    if (LogPlayBackSpeed == 0)
+                        LogPlayBackSpeed = 0.01;
+                    try
+                    {
+                        ts = Math.Min((act / LogPlayBackSpeed), 1000);
+                    }
+                    catch
+                    {
+                    }
 
                     if (LogPlayBackSpeed >= 4 && MainV2.speechEnable)
                         MainV2.speechEngine.SpeakAsyncCancelAll();
@@ -3497,7 +3246,7 @@ namespace MissionPlanner
                 }
                 else
                 {
-                    //// ensure we know to stop
+                    // ensure we know to stop
                     if (MainV2.comPort.logreadmode)
                         MainV2.comPort.logreadmode = false;
                     updatePlayPauseButton(false);
@@ -3553,7 +3302,7 @@ namespace MissionPlanner
 
                     // update vario info
                     Vario.SetValue(MainV2.comPort.MAV.cs.climbrate);
-                    
+
                     // udpate tunning tab
                     if (tunning.AddMilliseconds(50) < DateTime.Now && CB_Dbug.Checked)
                     {
@@ -6014,6 +5763,173 @@ namespace MissionPlanner
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
    
+        }
+
+        private void myButton1_Click(object sender, EventArgs e)
+        {
+            var form = new LogDownloadMavLink();
+
+            form.Show();
+        }
+
+        private void myButton2_Click(object sender, EventArgs e)
+        {
+            Form logbrowse = new LogBrowse();
+            ThemeManager.ApplyThemeTo(logbrowse);
+            logbrowse.Show();
+        }
+
+        private void myButton3_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "*.log;*.bin|*.log;*.bin";
+                ofd.ShowDialog();
+
+                if (ofd.FileName != "")
+                {
+                    string newlogfile = null;
+
+                    if (ofd.FileName.ToLower().EndsWith(".bin"))
+                    {
+                        newlogfile = Path.GetTempFileName() + ".log";
+
+                        BinaryLog.ConvertBin(ofd.FileName, newlogfile);
+
+                        ofd.FileName = newlogfile;
+                    }
+
+                    string xmlfile = LogAnalyzer.CheckLogFile(ofd.FileName);
+
+                    GC.Collect();
+
+                    if (File.Exists(xmlfile))
+                    {
+                        try
+                        {
+                            var out1 = LogAnalyzer.Results(xmlfile);
+
+                            Controls.LogAnalyzer frm = new Controls.LogAnalyzer(out1);
+
+                            ThemeManager.ApplyThemeTo(frm);
+
+                            frm.Show();
+                        }
+                        catch (Exception ex)
+                        {
+                            CustomMessageBox.Show("Failed to load analyzer results\n" + ex.ToString());
+                        }
+                    }
+                    else
+                    {
+                        CustomMessageBox.Show("Bad input file");
+                    }
+
+                    if (!String.IsNullOrEmpty(newlogfile))
+                    {
+                        try
+                        {
+                            File.Delete(newlogfile);
+                        }
+                        catch
+                        {
+                        }
+                    }
+                }
+            }
+        }
+
+        private void myButton8_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog1 = new OpenFileDialog())
+            {
+                openFileDialog1.Filter = "Log Files|*.log;*.bin";
+                openFileDialog1.FilterIndex = 2;
+                openFileDialog1.RestoreDirectory = true;
+                openFileDialog1.Multiselect = true;
+                try
+                {
+                    openFileDialog1.InitialDirectory = Settings.Instance.LogDir + Path.DirectorySeparatorChar;
+                }
+                catch
+                {
+                } // incase dir doesnt exist
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    foreach (string logfile in openFileDialog1.FileNames)
+                    {
+                        LogOutput lo = new LogOutput();
+                        try
+                        {
+                            StreamReader tr;
+
+                            if (logfile.ToLower().EndsWith(".bin"))
+                            {
+                                using (tr = new StreamReader(logfile))
+                                {
+                                    GC.Collect();
+                                    CollectionBuffer temp = new CollectionBuffer(tr.BaseStream);
+
+                                    uint a = 0;
+                                    foreach (var line in temp)
+                                    {
+                                        lo.processLine(line);
+                                        a++;
+
+                                        if ((a % 100000) == 0)
+                                            Console.WriteLine(a);
+                                    }
+
+                                    temp.Dispose();
+                                }
+                            }
+                            else
+                            {
+                                using (tr = new StreamReader(logfile))
+                                {
+                                    while (!tr.EndOfStream)
+                                    {
+                                        lo.processLine(tr.ReadLine());
+                                    }
+
+                                    tr.Close();
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            CustomMessageBox.Show("Error processing file. Make sure the file is not in use.\n" + ex);
+                        }
+
+                        lo.writeKML(logfile + ".kml");
+                    }
+                }
+            }
+        }
+
+        private void myButton9_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Binary Log|*.bin;*.BIN";
+                ofd.Multiselect = true;
+
+                ofd.ShowDialog();
+
+                foreach (string logfile in ofd.FileNames)
+                {
+                    string outfilename = Path.GetDirectoryName(logfile) + Path.DirectorySeparatorChar +
+                                         Path.GetFileNameWithoutExtension(logfile) + ".log";
+
+                    BinaryLog.ConvertBin(logfile, outfilename);
+                }
+            }
+        }
+
+        private void myButton10_Click(object sender, EventArgs e)
+        {
+            MatLab.ProcessLog();
         }
     }
 }
