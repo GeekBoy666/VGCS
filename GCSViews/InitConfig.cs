@@ -216,7 +216,20 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage5)
             {
+                GCSViews.ConfigurationView.ConfigESCCalibration ESC = new GCSViews.ConfigurationView.ConfigESCCalibration();
 
+                ESC.Parent = groupBoxEsc;
+                ESC.Dock = DockStyle.Fill;
+                ESC.ForeColor = Color.Black;
+                ESC.Activate();
+                ESC.Show();
+
+                GCSViews.ConfigurationView.ConfigMotorTest MotorTest = new GCSViews.ConfigurationView.ConfigMotorTest();
+                MotorTest.Parent = groupBoxMotorTest;
+                MotorTest.Dock = DockStyle.Fill;
+                MotorTest.ForeColor = Color.Black;
+                MotorTest.Activate();
+                MotorTest.Show();
                 if (isCopter35plus)
                 {
                     if (!MainV2.comPort.MAV.param.ContainsKey("FRAME_CLASS") || !MainV2.comPort.MAV.param.ContainsKey("FRAME_TYPE"))
@@ -225,21 +238,6 @@ namespace MissionPlanner.GCSViews
                         //return;
                         comboBoxSelectairframe.SelectedIndex = 0;
                     }
-
-                    GCSViews.ConfigurationView.ConfigESCCalibration ESC = new GCSViews.ConfigurationView.ConfigESCCalibration();
-
-                    ESC.Parent = groupBoxEsc;
-                    ESC.Dock = DockStyle.Fill;
-                    ESC.ForeColor = Color.Black;
-                    ESC.Activate();
-                    ESC.Show();
-
-                    GCSViews.ConfigurationView.ConfigMotorTest MotorTest = new GCSViews.ConfigurationView.ConfigMotorTest();
-                    MotorTest.Parent = groupBoxMotorTest;
-                    MotorTest.Dock = DockStyle.Fill;
-                    MotorTest.ForeColor = Color.Black;
-                    MotorTest.Activate();
-                    MotorTest.Show();
 
                     // pre seed the correct values
                     work_frame_class = (motor_frame_class)

@@ -3029,19 +3029,19 @@ namespace MissionPlanner
             }
 
             // show wizard on first use
-            if (Settings.Instance["newuser"] == null)
-            {
-                if (CustomMessageBox.Show("This is your first run, Do you wish to use the setup wizard?\nRecomended for new users.", "Wizard", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-                {
-                    Wizard.Wizard wiz = new Wizard.Wizard();
+            //if (Settings.Instance["newuser"] == null)
+            //{
+            //    if (CustomMessageBox.Show("This is your first run, Do you wish to use the setup wizard?\nRecomended for new users.", "Wizard", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            //    {
+            //        Wizard.Wizard wiz = new Wizard.Wizard();
 
-                    wiz.ShowDialog(this);
-                }
+            //        wiz.ShowDialog(this);
+            //    }
 
-                CustomMessageBox.Show("To use the wizard please goto the initial setup screen, and click the wizard icon.", "Wizard");
+            //    CustomMessageBox.Show("To use the wizard please goto the initial setup screen, and click the wizard icon.", "Wizard");
 
-                Settings.Instance["newuser"] = DateTime.Now.ToShortDateString();
-            }
+            //    Settings.Instance["newuser"] = DateTime.Now.ToShortDateString();
+            //}
             splitContainer3.SplitterDistance = splitContainer3.Height - splitContainer3.Height / 6;
             tabControl1_SelectedIndexChanged(this, e);
             //
@@ -3782,6 +3782,10 @@ namespace MissionPlanner
                     //Console.Write("bindingSourceHud ");
                     MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSource_hub);
                     //Console.WriteLine("DONE ");
+                    if (tabControlactions.SelectedTab == tabPagePreFlight)
+                    {
+                        MainV2.comPort.MAV.cs.UpdateCurrentSettings(bindingSourcepreflight);
+                    }
 
                     //if (tabControlactions.SelectedTab == tabQuick)
                     //{

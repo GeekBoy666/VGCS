@@ -1892,8 +1892,87 @@ namespace MissionPlanner.Controls
                     //{
                     //    drawstring(graphicsObject, HUDT.GS + _groundspeed.ToString("0.0"), font, fontsize, _whiteBrush, 1, scrollbg.Bottom + fontsize + 2 + 10);
                     //}
-                    graphicsObjectGDIP.DrawString("Flight Mode", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 15));
-                    graphicsObjectGDIP.DrawString(_mode, new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(scrollbg.Left, scrollbg.Bottom + 30));
+                    if (_mode == "Unknown")
+                    {
+                        graphicsObjectGDIP.DrawString("模式未知", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "Stabilize")
+                    {
+                        graphicsObjectGDIP.DrawString("增稳模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "Acro")
+                    {
+                        graphicsObjectGDIP.DrawString("特技模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "AlthHold")
+                    {
+                        graphicsObjectGDIP.DrawString("定高模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "Auto")
+                    {
+                        graphicsObjectGDIP.DrawString("自动模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "Guided")
+                    {
+                        graphicsObjectGDIP.DrawString("引导模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "Loiter")
+                    {
+                        graphicsObjectGDIP.DrawString("留待模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "RTL")
+                    {
+                        graphicsObjectGDIP.DrawString("返航模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "Circle")
+                    {
+                        graphicsObjectGDIP.DrawString("绕圈模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "Land")
+                    {
+                        graphicsObjectGDIP.DrawString("降落模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "Drift")
+                    {
+                        graphicsObjectGDIP.DrawString("漂移模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "Sport")
+                    {
+                        graphicsObjectGDIP.DrawString("运动模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    //else if (_mode == "Flip")
+                    //{
+                    //    graphicsObjectGDIP.DrawString("特技模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    //}
+                    else if (_mode == "AutoTune")
+                    {
+                        graphicsObjectGDIP.DrawString("自动调参模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "PosHold")
+                    {
+                        graphicsObjectGDIP.DrawString("定点模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "Brake")
+                    {
+                        graphicsObjectGDIP.DrawString("刹车模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    else if (_mode == "Throw")
+                    {
+                        graphicsObjectGDIP.DrawString("投掷模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                    //else if (_mode == "Avoid_ADSB")
+                    //{
+                    //    graphicsObjectGDIP.DrawString("特技模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    //}
+                    //else if (_mode == "Guided_NoGPS")
+                    //{
+                    //    graphicsObjectGDIP.DrawString("特技模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    //}
+                    else
+                    {
+                        graphicsObjectGDIP.DrawString(_mode, new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                    }
+                   
                   
                 }
 

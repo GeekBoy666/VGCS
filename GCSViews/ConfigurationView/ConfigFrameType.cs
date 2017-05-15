@@ -28,7 +28,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         {
             InitializeComponent();
 
-            configDefaultSettings1.OnChange += configDefaultSettings1_OnChange;
+            //configDefaultSettings1.OnChange += configDefaultSettings1_OnChange;
         }
 
         public void Activate()
