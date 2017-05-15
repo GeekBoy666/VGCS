@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BUT_MagCalibrationLive.Text" xml:space="preserve">
-    <value>校准</value>
+    <value>现场校准</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="linkLabelmagdec.Size" type="System.Drawing.Size, System.Drawing">
@@ -131,7 +131,7 @@
     <value>自动获取磁偏角</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>磁罗盘校准</value>
+    <value>指南针</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 12</value>
@@ -194,7 +194,7 @@
     <value>板载磁校准</value>
   </data>
   <data name="CHK_enablecompass.Text" xml:space="preserve">
-    <value>使用指南针数据</value>
+    <value>启用指南针</value>
   </data>
   <data name="groupBox5.Text" xml:space="preserve">
     <value>Mission Planner 磁校准</value>
@@ -214,6 +214,9 @@
   <data name="CHK_compass_learn.Text" xml:space="preserve">
     <value>自动学习偏移量</value>
   </data>
+  <data name="groupBoxGeneralSettings.Text" xml:space="preserve">
+    <value>常规指南针设置</value>
+  </data>
   <data name="LBL_compass1_mot.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
@@ -230,10 +233,10 @@
     <value>外部安装</value>
   </data>
   <data name="CHK_compass1_use.Text" xml:space="preserve">
-    <value>使用此指南针</value>
+    <value>使用这个指南针</value>
   </data>
   <data name="groupBoxCompass1.Text" xml:space="preserve">
-    <value>罗盘1</value>
+    <value>指南针 #1</value>
   </data>
   <data name="LBL_compass2_mot.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
@@ -251,10 +254,10 @@
     <value>外部安装</value>
   </data>
   <data name="CHK_compass2_use.Text" xml:space="preserve">
-    <value>使用此指南针</value>
+    <value>使用这个指南针</value>
   </data>
   <data name="groupBoxCompass2.Text" xml:space="preserve">
-    <value>罗盘2</value>
+    <value>指南针 #2</value>
   </data>
   <data name="LBL_compass3_mot.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
@@ -272,9 +275,9 @@
     <value>外部安装</value>
   </data>
   <data name="CHK_compass3_use.Text" xml:space="preserve">
-    <value>使用此指南针</value>
+    <value>使用这个指南针</value>
   </data>
   <data name="groupBoxCompass3.Text" xml:space="preserve">
-    <value>罗盘3</value>
+    <value>指南针 #3</value>
   </data>
 </root>

@@ -11,8 +11,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 {
     public partial class ConfigHWCompass : UserControl, IActivate
     {
-        private const float rad2deg = (float) (180/Math.PI);
-        private const float deg2rad = (float) (1.0/rad2deg);
         private const int THRESHOLD_OFS_RED = 600;
         private const int THRESHOLD_OFS_YELLOW = 400;
         private bool startup;
@@ -40,12 +38,25 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             startup = true;
 
+            if ((MainV2.comPort.MAV.cs.capabilities & MAVLink.MAV_PROTOCOL_CAPABILITY.COMPASS_CALIBRATION) == 0)
+            {
+                groupBoxonboardcalib.Visible = false;
+                label4.Visible = false;
+                groupBoxmpcalib.Visible = true;
+            }
+            else
+            {
+                groupBoxonboardcalib.Visible = true;
+                label4.Visible = false;
+                groupBoxmpcalib.Visible = false;
+            }
+
             // General Compass Settings
             CHK_enablecompass.setup(1, 0, "MAG_ENABLE", MainV2.comPort.MAV.param);
             CHK_compass_learn.setup(1, 0, "COMPASS_LEARN", MainV2.comPort.MAV.param);
             if (MainV2.comPort.MAV.param["COMPASS_DEC"] != null)
             {
-                var dec = MainV2.comPort.MAV.param["COMPASS_DEC"].Value*rad2deg;
+                var dec = MainV2.comPort.MAV.param["COMPASS_DEC"].Value*MathHelper.rad2deg;
 
                 var min = (dec - (int) dec)*60;
 
@@ -177,8 +188,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 groupBoxCompass3.Hide();
             }
 
-            //mavlinkComboBoxfitness.setup(ParameterMetaDataRepository.GetParameterOptionsInt("COMPASS_CAL_FIT",
-             //       MainV2.comPort.MAV.cs.firmware.ToString()), "COMPASS_CAL_FIT", MainV2.comPort.MAV.param);
+            mavlinkComboBoxfitness.setup(ParameterMetaDataRepository.GetParameterOptionsInt("COMPASS_CAL_FIT",
+                    MainV2.comPort.MAV.cs.firmware.ToString()), "COMPASS_CAL_FIT", MainV2.comPort.MAV.param);
 
             ShowRelevantFields();
 
@@ -255,7 +266,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                         return;
                     }
 
-                    MainV2.comPort.setParam("COMPASS_DEC", dec*deg2rad);
+                    MainV2.comPort.setParam("COMPASS_DEC", dec*MathHelper.deg2rad);
                 }
             }
             catch
@@ -408,15 +419,15 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             mprog.Clear();
             mrep.Clear();
-            //horizontalProgressBar1.Value = 0;
-            //horizontalProgressBar2.Value = 0;
-            //horizontalProgressBar3.Value = 0;
+            horizontalProgressBar1.Value = 0;
+            horizontalProgressBar2.Value = 0;
+            horizontalProgressBar3.Value = 0;
 
             packetsub1 = MainV2.comPort.SubscribeToPacketType(MAVLink.MAVLINK_MSG_ID.MAG_CAL_PROGRESS, ReceviedPacket);
             packetsub2 = MainV2.comPort.SubscribeToPacketType(MAVLink.MAVLINK_MSG_ID.MAG_CAL_REPORT, ReceviedPacket);
 
-            //BUT_OBmagcalaccept.Enabled = true;
-            //BUT_OBmagcalcancel.Enabled = true;
+            BUT_OBmagcalaccept.Enabled = true;
+            BUT_OBmagcalcancel.Enabled = true;
             timer1.Start();
         }
 
@@ -442,7 +453,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-           // lbl_obmagresult.Clear();
+            lbl_obmagresult.Clear();
             int compasscount = 0;
             int completecount = 0;
             lock (mprog)
@@ -462,19 +473,19 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
                     try
                     {
-                        //if (item.Key == 0)
-                        //    horizontalProgressBar1.Value = obj.completion_pct;
-                        //if (item.Key == 1)
-                        //    horizontalProgressBar2.Value = obj.completion_pct;
-                        //if (item.Key == 2)
-                        //    horizontalProgressBar3.Value = obj.completion_pct;
+                        if (item.Key == 0)
+                            horizontalProgressBar1.Value = obj.completion_pct;
+                        if (item.Key == 1)
+                            horizontalProgressBar2.Value = obj.completion_pct;
+                        if (item.Key == 2)
+                            horizontalProgressBar3.Value = obj.completion_pct;
                     }
                     catch { }
 
                     message += "id:" + item.Key + " " + obj.completion_pct.ToString() + "% ";
                     compasscount++;
                 }
-                //lbl_obmagresult.AppendText(message + "\n");
+                lbl_obmagresult.AppendText(message + "\n");
             }
 
             lock (mrep)
@@ -496,19 +507,19 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 {
                     var obj = (MAVLink.mavlink_mag_cal_report_t) item.data;
 
-                    //lbl_obmagresult.AppendText("id:" + obj.compass_id + " x:" + obj.ofs_x.ToString("0.0") + " y:" +
-                    //                           obj.ofs_y.ToString("0.0") + " z:" +
-                    //                           obj.ofs_z.ToString("0.0") + " fit:" + obj.fitness.ToString("0.0") + " " +
-                    //                           (MAVLink.MAG_CAL_STATUS) obj.cal_status + "\n");
+                    lbl_obmagresult.AppendText("id:" + obj.compass_id + " x:" + obj.ofs_x.ToString("0.0") + " y:" +
+                                               obj.ofs_y.ToString("0.0") + " z:" +
+                                               obj.ofs_z.ToString("0.0") + " fit:" + obj.fitness.ToString("0.0") + " " +
+                                               (MAVLink.MAG_CAL_STATUS) obj.cal_status + "\n");
 
                     try
                     {
-                        //if (obj.compass_id == 0)
-                        //    horizontalProgressBar1.Value = 100;
-                        //if (obj.compass_id == 1)
-                        //    horizontalProgressBar2.Value = 100;
-                        //if (obj.compass_id == 2)
-                        //    horizontalProgressBar3.Value = 100;
+                        if (obj.compass_id == 0)
+                            horizontalProgressBar1.Value = 100;
+                        if (obj.compass_id == 1)
+                            horizontalProgressBar2.Value = 100;
+                        if (obj.compass_id == 2)
+                            horizontalProgressBar3.Value = 100;
                     }
                     catch
                     {
@@ -529,8 +540,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (compasscount == completecount && compasscount != 0)
             {
-               // BUT_OBmagcalcancel.Enabled = false;
-                //BUT_OBmagcalaccept.Enabled = false;
+                BUT_OBmagcalcancel.Enabled = false;
+                BUT_OBmagcalaccept.Enabled = false;
                 timer1.Stop();
                 CustomMessageBox.Show("Please reboot the autopilot");
             }
