@@ -1904,7 +1904,7 @@ namespace MissionPlanner.Controls
                     {
                         graphicsObjectGDIP.DrawString("特技模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
                     }
-                    else if (_mode == "AlthHold")
+                    else if (_mode == "AltHold")
                     {
                         graphicsObjectGDIP.DrawString("定高模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
                     }

@@ -181,6 +181,8 @@ namespace MissionPlanner.GCSViews
                 FMode.Dock = DockStyle.Fill;
                 FMode.ForeColor = Color.Black;
                 FMode.Activate();
+                ThemeManager.SetTheme(ThemeManager.Themes.HighContrast);
+                ThemeManager.ApplyThemeTo(FMode);
                 FMode.Show();
 
             }
