@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using log4net;
 using MissionPlanner.Utilities;
+using System.Diagnostics;
 
 namespace MissionPlanner.GCSViews
 {
@@ -175,6 +176,11 @@ namespace MissionPlanner.GCSViews
         {
             if (TabInitConfig.SelectedTab == tabPage1)
             {
+                if (!MainV2.comPort.BaseStream.IsOpen)
+                {
+                    CustomMessageBox.Show("请首先进行系统连接!");
+                    return;
+                }
                 GCSViews.ConfigurationView.ConfigFlightModes FMode = new GCSViews.ConfigurationView.ConfigFlightModes();
 
                 FMode.Parent = tabPage1;
@@ -188,6 +194,11 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage2)
             {
+                if (!MainV2.comPort.BaseStream.IsOpen)
+                {
+                    CustomMessageBox.Show("请首先进行系统连接!");
+                    return;
+                }
                 GCSViews.ConfigurationView.ConfigHWCompass Compass = new GCSViews.ConfigurationView.ConfigHWCompass();
                 
                 Compass.Parent = tabPage2;
@@ -198,6 +209,11 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage3)
             {
+                if (!MainV2.comPort.BaseStream.IsOpen)
+                {
+                    CustomMessageBox.Show("请首先进行系统连接!");
+                    return;
+                }
                 GCSViews.ConfigurationView.ConfigAccelerometerCalibration Accel = new GCSViews.ConfigurationView.ConfigAccelerometerCalibration();
 
                 Accel.Parent = tabPage3;
@@ -208,6 +224,11 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage4)
             {
+                if (!MainV2.comPort.BaseStream.IsOpen)
+                {
+                    CustomMessageBox.Show("请首先进行系统连接!");
+                    return;
+                }
                 GCSViews.ConfigurationView.ConfigRadioInput Radio = new GCSViews.ConfigurationView.ConfigRadioInput();
 
                 Radio.Parent = tabPage4;
@@ -218,6 +239,11 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage5)
             {
+                if (!MainV2.comPort.BaseStream.IsOpen)
+                {
+                    CustomMessageBox.Show("请首先进行系统连接!");
+                    return;
+                }
                 GCSViews.ConfigurationView.ConfigESCCalibration ESC = new GCSViews.ConfigurationView.ConfigESCCalibration();
 
                 ESC.Parent = groupBoxEsc;
@@ -313,6 +339,11 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage9)
             {
+                if (!MainV2.comPort.BaseStream.IsOpen)
+                {
+                    CustomMessageBox.Show("请首先进行系统连接!");
+                    return;
+                }
                 GCSViews.ConfigurationView.ConfigBatteryMonitoring Radio = new GCSViews.ConfigurationView.ConfigBatteryMonitoring();
 
                 Radio.Parent = tabPage9;
@@ -323,6 +354,11 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage8)
             {
+                if (!MainV2.comPort.BaseStream.IsOpen)
+                {
+                    CustomMessageBox.Show("请首先进行系统连接!");
+                    return;
+                }
                 GCSViews.ConfigurationView.ConfigMount Radio = new GCSViews.ConfigurationView.ConfigMount();
 
                 Radio.Parent = tabPage8;
@@ -333,6 +369,11 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage11)
             {
+                if (!MainV2.comPort.BaseStream.IsOpen)
+                {
+                    CustomMessageBox.Show("请首先进行系统连接!");
+                    return;
+                }
                 GCSViews.ConfigurationView.ConfigArducopter Radio = new GCSViews.ConfigurationView.ConfigArducopter();
 
                 Radio.Parent = tabPage11;
@@ -343,6 +384,11 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage10)
             {
+                if (!MainV2.comPort.BaseStream.IsOpen)
+                {
+                    CustomMessageBox.Show("请首先进行系统连接!");
+                    return;
+                }
                 GCSViews.ConfigurationView.ConfigRawParams Radio = new GCSViews.ConfigurationView.ConfigRawParams();
 
                 Radio.Parent = tabPage10;
@@ -354,6 +400,11 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage12)
             {
+                if (!MainV2.comPort.BaseStream.IsOpen)
+                {
+                    CustomMessageBox.Show("请首先进行系统连接!");
+                    return;
+                }
                 GCSViews.ConfigurationView.ConfigRawParamsTree ParamsTree = new GCSViews.ConfigurationView.ConfigRawParamsTree();
 
                 ParamsTree.Parent = tabPage12;
@@ -365,6 +416,11 @@ namespace MissionPlanner.GCSViews
             }
             else if (TabInitConfig.SelectedTab == tabPage13)
             {
+                if (!MainV2.comPort.BaseStream.IsOpen)
+                {
+                    CustomMessageBox.Show("请首先进行系统连接!");
+                    return;
+                }
                 GCSViews.ConfigurationView.ConfigFailSafe Radio = new GCSViews.ConfigurationView.ConfigFailSafe();
 
                 Radio.Parent = tabPage13;
@@ -523,6 +579,19 @@ namespace MissionPlanner.GCSViews
         private void comboBoxSelectairframe_Click(object sender, EventArgs e)
         {
          
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                Process.Start("http://www.viga.com.cn/");
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.ERROR +
+                                      "http://www.viga.com.cn/");
+            }
         }
     }
 }

@@ -7360,11 +7360,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         }
 
         private void pictureBox17_Click(object sender, EventArgs e)
-        {   if (!MainV2.comPort.BaseStream.IsOpen)
-            {
-                CustomMessageBox.Show("请首先进行系统连接!");
-                return;
-            }
+        {   
             Form ConfigWindow = new InitConfig();
             ConfigWindow.Activate();
             ConfigWindow.Show();

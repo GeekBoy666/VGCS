@@ -711,6 +711,16 @@ namespace MissionPlanner.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap _6002001 {
+            get {
+                object obj = ResourceManager.GetObject("_6002001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
         public static System.Drawing.Icon _600201 {

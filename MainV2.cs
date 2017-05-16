@@ -234,12 +234,12 @@ namespace MissionPlanner
 
             public override Image connect
             {
-                get { return global::MissionPlanner.Properties.Resources.dark_connect_icon; }
+                get { return global::MissionPlanner.Properties.Resources.disconnect001; }
             }
 
             public override Image disconnect
             {
-                get { return global::MissionPlanner.Properties.Resources.dark_disconnect_icon; }
+                get { return global::MissionPlanner.Properties.Resources.connect001; }
             }
 
             public override Image bg
@@ -718,11 +718,11 @@ namespace MissionPlanner
             //        }
             //    }
 
-            //    if (ThemeManager.CurrentTheme == ThemeManager.Themes.HighContrast)
-            //    {
-            //        switchicons(new highcontrastmenuicons());
-            //    }
-            //}
+                if (ThemeManager.CurrentTheme == ThemeManager.Themes.HighContrast)
+                {
+                    switchicons(new highcontrastmenuicons());
+                }
+            
 
             if (Settings.Instance["showairports"] != null)
             {
