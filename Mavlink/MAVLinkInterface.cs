@@ -327,7 +327,7 @@ namespace MissionPlanner
             frmProgressReporter = new ProgressReporterDialogue
             {
                 StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen,
-                Text = Strings.ConnectingMavlink
+                Text = "系统初始化"
             };
 
             if (getparams)
@@ -338,7 +338,7 @@ namespace MissionPlanner
             {
                 frmProgressReporter.DoWork += FrmProgressReporterDoWorkNOParams;
             }
-            frmProgressReporter.UpdateProgressAndStatus(-1, Strings.MavlinkConnecting);
+            //frmProgressReporter.UpdateProgressAndStatus(-1, Strings.MavlinkConnecting);
             ThemeManager.ApplyThemeTo(frmProgressReporter);
 
             frmProgressReporter.RunBackgroundOperationAsync();
@@ -363,7 +363,7 @@ namespace MissionPlanner
 
         private void OpenBg(object PRsender, bool getparams, ProgressWorkerEventArgs progressWorkerEventArgs)
         {
-            frmProgressReporter.UpdateProgressAndStatus(-1, Strings.MavlinkConnecting);
+            //frmProgressReporter.UpdateProgressAndStatus(-1, Strings.MavlinkConnecting);
 
             giveComport = true;
 
@@ -1077,7 +1077,7 @@ Please check the following
             frmProgressReporter = new ProgressReporterDialogue
             {
                 StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen,
-                Text = Strings.GettingParams + " " + sysidcurrent
+                Text = "系统初始化"
             };
 
             frmProgressReporter.DoWork += FrmProgressReporterGetParams;
@@ -1261,7 +1261,7 @@ Please check the following
                         //Console.WriteLine(DateTime.Now.Millisecond + " gp3 ");
 
                         this.frmProgressReporter.UpdateProgressAndStatus((indexsreceived.Count*100)/param_total,
-                            Strings.Gotparam + paramID);
+                            Convert.ToString((indexsreceived.Count * 100) / param_total) + "%");
 
                         // we hit the last param - lets escape eq total = 176 index = 0-175
                         if (par.param_index == (param_total - 1))

@@ -288,7 +288,7 @@ namespace MissionPlanner
             // label15
             // 
             resources.ApplyResources(this.label15, "label15");
-            this.label15.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label15.ForeColor = System.Drawing.Color.Red;
             this.label15.Name = "label15";
             // 
             // label14
@@ -300,7 +300,7 @@ namespace MissionPlanner
             // label16
             // 
             resources.ApplyResources(this.label16, "label16");
-            this.label16.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label16.ForeColor = System.Drawing.Color.Blue;
             this.label16.Name = "label16";
             // 
             // label12
@@ -312,7 +312,7 @@ namespace MissionPlanner
             // label17
             // 
             resources.ApplyResources(this.label17, "label17");
-            this.label17.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label17.ForeColor = System.Drawing.Color.Green;
             this.label17.Name = "label17";
             // 
             // label11
@@ -461,7 +461,7 @@ namespace MissionPlanner
             this.myButton6.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.myButton6, "myButton6");
             this.myButton6.Name = "myButton6";
-            this.myButton6.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.myButton6.TextColor = System.Drawing.Color.Black;
             this.myButton6.UseVisualStyleBackColor = true;
             this.myButton6.Click += new System.EventHandler(this.myButton6_Click);
             // 
@@ -474,7 +474,7 @@ namespace MissionPlanner
             this.myButton5.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.myButton5, "myButton5");
             this.myButton5.Name = "myButton5";
-            this.myButton5.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.myButton5.TextColor = System.Drawing.Color.Black;
             this.myButton5.UseVisualStyleBackColor = true;
             this.myButton5.Click += new System.EventHandler(this.myButton5_Click);
             // 
@@ -487,7 +487,7 @@ namespace MissionPlanner
             this.myButton7.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.myButton7, "myButton7");
             this.myButton7.Name = "myButton7";
-            this.myButton7.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.myButton7.TextColor = System.Drawing.Color.Black;
             this.myButton7.UseVisualStyleBackColor = true;
             // 
             // myButton4
@@ -499,7 +499,7 @@ namespace MissionPlanner
             this.myButton4.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.myButton4, "myButton4");
             this.myButton4.Name = "myButton4";
-            this.myButton4.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.myButton4.TextColor = System.Drawing.Color.Black;
             this.myButton4.UseVisualStyleBackColor = true;
             this.myButton4.Click += new System.EventHandler(this.myButton4_Click);
             // 
@@ -535,7 +535,7 @@ namespace MissionPlanner
             resources.ApplyResources(this.BUT_ARM, "BUT_ARM");
             this.BUT_ARM.Name = "BUT_ARM";
             this.BUT_ARM.Outline = System.Drawing.Color.Gray;
-            this.BUT_ARM.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_ARM.TextColor = System.Drawing.Color.Black;
             this.BUT_ARM.UseVisualStyleBackColor = true;
             this.BUT_ARM.Click += new System.EventHandler(this.BUT_ARM_Click);
             // 
@@ -548,7 +548,7 @@ namespace MissionPlanner
             this.BUT_quickmanual.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_quickmanual, "BUT_quickmanual");
             this.BUT_quickmanual.Name = "BUT_quickmanual";
-            this.BUT_quickmanual.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_quickmanual.TextColor = System.Drawing.Color.Black;
             this.BUT_quickmanual.UseVisualStyleBackColor = true;
             this.BUT_quickmanual.Click += new System.EventHandler(this.BUT_quickmanual_Click);
             // 
@@ -561,7 +561,7 @@ namespace MissionPlanner
             this.BUT_quickrtl.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_quickrtl, "BUT_quickrtl");
             this.BUT_quickrtl.Name = "BUT_quickrtl";
-            this.BUT_quickrtl.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_quickrtl.TextColor = System.Drawing.Color.Black;
             this.BUT_quickrtl.UseVisualStyleBackColor = true;
             // 
             // BUT_quickauto
@@ -573,7 +573,7 @@ namespace MissionPlanner
             this.BUT_quickauto.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_quickauto, "BUT_quickauto");
             this.BUT_quickauto.Name = "BUT_quickauto";
-            this.BUT_quickauto.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_quickauto.TextColor = System.Drawing.Color.Black;
             this.BUT_quickauto.UseVisualStyleBackColor = true;
             this.BUT_quickauto.Click += new System.EventHandler(this.BUT_quickauto_Click);
             // 
@@ -595,7 +595,7 @@ namespace MissionPlanner
             this.BUT_setwp.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_setwp, "BUT_setwp");
             this.BUT_setwp.Name = "BUT_setwp";
-            this.BUT_setwp.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_setwp.TextColor = System.Drawing.Color.Black;
             this.BUT_setwp.UseVisualStyleBackColor = true;
             this.BUT_setwp.Click += new System.EventHandler(this.BUT_setwp_Click);
             // 
@@ -615,7 +615,7 @@ namespace MissionPlanner
             this.BUT_setmode.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_setmode, "BUT_setmode");
             this.BUT_setmode.Name = "BUT_setmode";
-            this.BUT_setmode.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_setmode.TextColor = System.Drawing.Color.Black;
             this.BUT_setmode.UseVisualStyleBackColor = true;
             this.BUT_setmode.Click += new System.EventHandler(this.BUT_setmode_Click);
             // 
@@ -636,7 +636,7 @@ namespace MissionPlanner
             this.BUT_Homealt.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_Homealt, "BUT_Homealt");
             this.BUT_Homealt.Name = "BUT_Homealt";
-            this.BUT_Homealt.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_Homealt.TextColor = System.Drawing.Color.Black;
             this.BUT_Homealt.UseVisualStyleBackColor = true;
             this.BUT_Homealt.Click += new System.EventHandler(this.BUT_Homealt_Click);
             // 
@@ -649,7 +649,7 @@ namespace MissionPlanner
             this.BUTactiondo.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUTactiondo, "BUTactiondo");
             this.BUTactiondo.Name = "BUTactiondo";
-            this.BUTactiondo.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUTactiondo.TextColor = System.Drawing.Color.Black;
             this.BUTactiondo.UseVisualStyleBackColor = true;
             this.BUTactiondo.Click += new System.EventHandler(this.BUTactiondo_Click);
             // 

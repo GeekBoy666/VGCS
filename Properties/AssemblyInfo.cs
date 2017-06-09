@@ -7,12 +7,12 @@ using System.Resources;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("Mission Planner")]
-[assembly: AssemblyDescription("Mission Planner")]
+[assembly: AssemblyTitle("VGCS")]
+[assembly: AssemblyDescription("VGCS")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Michael Oborne")]
-[assembly: AssemblyProduct("Mission Planner")]
-[assembly: AssemblyCopyright("Copyright © Michael Oborne 2010-2016")]
+[assembly: AssemblyCompany("VIGA")]
+[assembly: AssemblyProduct("VGCS0.7")]
+[assembly: AssemblyCopyright("Copyright © VIGA 2010-2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1720,7 +1720,7 @@ namespace MissionPlanner.Controls
                     }
 
                     int headvalue = (int)_heading;
-                    graphicsObjectGDIP.DrawString("偏航", new Font(new FontFamily("华文楷体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(-WidthLong * 3, -WidthLong * 4 - 23));
+                    graphicsObjectGDIP.DrawString("偏航", new Font(new FontFamily("黑体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(-WidthLong * 3, -WidthLong * 4 - 23));
                     graphicsObjectGDIP.DrawString(headvalue.ToString(), new Font(new FontFamily("黑体"), 18, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.White, new PointF(-WidthLong + 10, -WidthLong * 4 - 23));
 
                     int[] array = new int[] { 0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105,110,115,120,125,130,135,140,145,150,155,160,165,170,175,180,185,190,
@@ -1816,7 +1816,7 @@ namespace MissionPlanner.Controls
 
                 if (displayspeed)
                 {
-                    graphicsObjectGDIP.DrawString("校正空速", new Font(new FontFamily("华文楷体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(3, halfheight - halfheight + 28));
+                    graphicsObjectGDIP.DrawString("校正空速", new Font(new FontFamily("黑体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(3, halfheight - halfheight + 28));
                     graphicsObject.DrawRectangle(this._blackPen, scrollbg);
 
                     Point[] arrow = new Point[5];
@@ -1983,7 +1983,7 @@ namespace MissionPlanner.Controls
 
                 if (displayalt)
                 {
-                    graphicsObjectGDIP.DrawString("相对高度", new Font(new FontFamily("华文楷体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(this.Width - this.Width / 8 - 33, halfheight - halfheight + 28));
+                    graphicsObjectGDIP.DrawString("相对高度", new Font(new FontFamily("黑体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(this.Width - this.Width / 8 - 33, halfheight - halfheight + 28));
                     graphicsObject.DrawRectangle(this._blackPen, scrollbg);
 
                     Point[] arrow = new Point[5];
@@ -2217,7 +2217,7 @@ namespace MissionPlanner.Controls
                     graphicsObjectGDIP.DrawString("G", new Font(new FontFamily("黑体"), 20, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 - 18, 2));
                     graphicsObjectGDIP.DrawString("PS", new Font(new FontFamily("黑体"), 16, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 - 6, 8));
                     graphicsObjectGDIP.DrawString("：", new Font(new FontFamily("黑体"), 20, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 + 7, 3));
-                    graphicsObjectGDIP.DrawString(gps, new Font(new FontFamily("华文楷体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(this.Width / 2 + this.Width / 4 + 2, 8));
+                    graphicsObjectGDIP.DrawString(gps, new Font(new FontFamily("黑体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(this.Width / 2 + this.Width / 4 + 2, 8));
                 }
 
                 if (isNaN)
@@ -2293,7 +2293,7 @@ namespace MissionPlanner.Controls
 
                 if (failsafe == true)
                 {
-                    graphicsObjectGDIP.DrawString(HUDT.FAILSAFE, new Font(new FontFamily("华文楷体"), 20, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Red, new PointF(scrollbg.Left - 150, scrollbg.Bottom + 25));
+                    graphicsObjectGDIP.DrawString(HUDT.FAILSAFE, new Font(new FontFamily("黑体"), 20, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Red, new PointF(scrollbg.Left - 150, scrollbg.Bottom + 25));
                     statuslast = status;
                 }
 
@@ -2303,12 +2303,12 @@ namespace MissionPlanner.Controls
                     {
 
 
-                        graphicsObjectGDIP.DrawString("加速度未校准", new Font(new FontFamily("华文楷体"), 20, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Red, new PointF(scrollbg.Left - 150, scrollbg.Bottom + 25));
+                        graphicsObjectGDIP.DrawString("加速度未校准", new Font(new FontFamily("黑体"), 20, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Red, new PointF(scrollbg.Left - 150, scrollbg.Bottom + 25));
                     }
                     else
                     {
 
-                        graphicsObjectGDIP.DrawString(message, new Font(new FontFamily("华文楷体"), 20, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Red, new PointF(scrollbg.Left - 150, scrollbg.Bottom + 25));
+                        graphicsObjectGDIP.DrawString(message, new Font(new FontFamily("黑体"), 20, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Red, new PointF(scrollbg.Left - 150, scrollbg.Bottom + 25));
                     }
 
                 }

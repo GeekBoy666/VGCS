@@ -58,7 +58,7 @@
             this.myButton1.BGGradTop = System.Drawing.Color.DarkGray;
             resources.ApplyResources(this.myButton1, "myButton1");
             this.myButton1.Name = "myButton1";
-            this.myButton1.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.myButton1.TextColor = System.Drawing.Color.Black;
             this.myButton1.UseVisualStyleBackColor = true;
             this.myButton1.Click += new System.EventHandler(this.myButton1_Click);
             // 
