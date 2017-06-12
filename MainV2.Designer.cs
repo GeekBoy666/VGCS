@@ -94,7 +94,6 @@ namespace MissionPlanner
             this.checkListControl1 = new MissionPlanner.Controls.PreFlight.CheckListControl();
             this.tabTLogs = new System.Windows.Forms.TabPage();
             this.tableLayoutPaneltlogs = new System.Windows.Forms.TableLayoutPanel();
-            this.BUT_loadtelem = new MissionPlanner.Controls.MyButton();
             this.tracklog = new System.Windows.Forms.TrackBar();
             this.lbl_logpercent = new MissionPlanner.Controls.MyLabel();
             this.LBL_logfn = new MissionPlanner.Controls.MyLabel();
@@ -110,6 +109,7 @@ namespace MissionPlanner
             this.BUT_speed1_4 = new MissionPlanner.Controls.MyButton();
             this.BUT_speed1_10 = new MissionPlanner.Controls.MyButton();
             this.lbl_playbackspeed = new MissionPlanner.Controls.MyLabel();
+            this.BUT_loadtelem = new MissionPlanner.Controls.MyButton();
             this.DataFlashLog = new System.Windows.Forms.TabPage();
             this.myButton10 = new MissionPlanner.Controls.MyButton();
             this.myButton9 = new MissionPlanner.Controls.MyButton();
@@ -719,7 +719,6 @@ namespace MissionPlanner
             // tableLayoutPaneltlogs
             // 
             resources.ApplyResources(this.tableLayoutPaneltlogs, "tableLayoutPaneltlogs");
-            this.tableLayoutPaneltlogs.Controls.Add(this.BUT_loadtelem, 0, 0);
             this.tableLayoutPaneltlogs.Controls.Add(this.tracklog, 1, 1);
             this.tableLayoutPaneltlogs.Controls.Add(this.lbl_logpercent, 2, 1);
             this.tableLayoutPaneltlogs.Controls.Add(this.LBL_logfn, 1, 0);
@@ -727,20 +726,8 @@ namespace MissionPlanner
             this.tableLayoutPaneltlogs.Controls.Add(this.BUT_playlog, 0, 1);
             this.tableLayoutPaneltlogs.Controls.Add(this.panel4, 1, 2);
             this.tableLayoutPaneltlogs.Controls.Add(this.lbl_playbackspeed, 2, 2);
+            this.tableLayoutPaneltlogs.Controls.Add(this.BUT_loadtelem, 0, 0);
             this.tableLayoutPaneltlogs.Name = "tableLayoutPaneltlogs";
-            // 
-            // BUT_loadtelem
-            // 
-            this.BUT_loadtelem.BGGradBot = System.Drawing.Color.LightGray;
-            this.BUT_loadtelem.BGGradTop = System.Drawing.Color.DarkGray;
-            this.BUT_loadtelem.ColorMouseDown = System.Drawing.Color.Gray;
-            this.BUT_loadtelem.ColorMouseOver = System.Drawing.Color.Empty;
-            this.BUT_loadtelem.ColorNotEnabled = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.BUT_loadtelem, "BUT_loadtelem");
-            this.BUT_loadtelem.Name = "BUT_loadtelem";
-            this.BUT_loadtelem.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.BUT_loadtelem.UseVisualStyleBackColor = true;
-            this.BUT_loadtelem.Click += new System.EventHandler(this.BUT_loadtelem_Click);
             // 
             // tracklog
             // 
@@ -772,7 +759,7 @@ namespace MissionPlanner
             this.BUT_log2kml.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_log2kml, "BUT_log2kml");
             this.BUT_log2kml.Name = "BUT_log2kml";
-            this.BUT_log2kml.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_log2kml.TextColor = System.Drawing.Color.Black;
             this.BUT_log2kml.UseVisualStyleBackColor = true;
             this.BUT_log2kml.Click += new System.EventHandler(this.BUT_log2kml_Click);
             // 
@@ -785,7 +772,7 @@ namespace MissionPlanner
             this.BUT_playlog.ColorNotEnabled = System.Drawing.Color.Empty;
             resources.ApplyResources(this.BUT_playlog, "BUT_playlog");
             this.BUT_playlog.Name = "BUT_playlog";
-            this.BUT_playlog.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_playlog.TextColor = System.Drawing.Color.Black;
             this.BUT_playlog.UseVisualStyleBackColor = true;
             this.BUT_playlog.Click += new System.EventHandler(this.BUT_playlog_Click);
             // 
@@ -817,7 +804,7 @@ namespace MissionPlanner
             resources.ApplyResources(this.BUT_speed10, "BUT_speed10");
             this.BUT_speed10.Name = "BUT_speed10";
             this.BUT_speed10.Tag = "10";
-            this.BUT_speed10.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_speed10.TextColor = System.Drawing.Color.Black;
             this.BUT_speed10.UseVisualStyleBackColor = true;
             this.BUT_speed10.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
@@ -831,7 +818,7 @@ namespace MissionPlanner
             resources.ApplyResources(this.BUT_speed5, "BUT_speed5");
             this.BUT_speed5.Name = "BUT_speed5";
             this.BUT_speed5.Tag = "5";
-            this.BUT_speed5.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_speed5.TextColor = System.Drawing.Color.Black;
             this.BUT_speed5.UseVisualStyleBackColor = true;
             this.BUT_speed5.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
@@ -845,7 +832,7 @@ namespace MissionPlanner
             resources.ApplyResources(this.BUT_speed2, "BUT_speed2");
             this.BUT_speed2.Name = "BUT_speed2";
             this.BUT_speed2.Tag = "2";
-            this.BUT_speed2.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_speed2.TextColor = System.Drawing.Color.Black;
             this.BUT_speed2.UseVisualStyleBackColor = true;
             this.BUT_speed2.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
@@ -859,7 +846,7 @@ namespace MissionPlanner
             resources.ApplyResources(this.BUT_speed1, "BUT_speed1");
             this.BUT_speed1.Name = "BUT_speed1";
             this.BUT_speed1.Tag = "1";
-            this.BUT_speed1.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_speed1.TextColor = System.Drawing.Color.Black;
             this.BUT_speed1.UseVisualStyleBackColor = true;
             this.BUT_speed1.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
@@ -873,7 +860,7 @@ namespace MissionPlanner
             resources.ApplyResources(this.BUT_speed1_2, "BUT_speed1_2");
             this.BUT_speed1_2.Name = "BUT_speed1_2";
             this.BUT_speed1_2.Tag = "0.5";
-            this.BUT_speed1_2.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_speed1_2.TextColor = System.Drawing.Color.Black;
             this.BUT_speed1_2.UseVisualStyleBackColor = true;
             this.BUT_speed1_2.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
@@ -887,7 +874,7 @@ namespace MissionPlanner
             resources.ApplyResources(this.BUT_speed1_4, "BUT_speed1_4");
             this.BUT_speed1_4.Name = "BUT_speed1_4";
             this.BUT_speed1_4.Tag = "0.25";
-            this.BUT_speed1_4.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_speed1_4.TextColor = System.Drawing.Color.Black;
             this.BUT_speed1_4.UseVisualStyleBackColor = true;
             this.BUT_speed1_4.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
@@ -901,7 +888,7 @@ namespace MissionPlanner
             resources.ApplyResources(this.BUT_speed1_10, "BUT_speed1_10");
             this.BUT_speed1_10.Name = "BUT_speed1_10";
             this.BUT_speed1_10.Tag = "0.1";
-            this.BUT_speed1_10.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.BUT_speed1_10.TextColor = System.Drawing.Color.Black;
             this.BUT_speed1_10.UseVisualStyleBackColor = true;
             this.BUT_speed1_10.Click += new System.EventHandler(this.BUT_speed1_10_Click);
             // 
@@ -910,6 +897,19 @@ namespace MissionPlanner
             resources.ApplyResources(this.lbl_playbackspeed, "lbl_playbackspeed");
             this.lbl_playbackspeed.Name = "lbl_playbackspeed";
             this.lbl_playbackspeed.resize = false;
+            // 
+            // BUT_loadtelem
+            // 
+            this.BUT_loadtelem.BGGradBot = System.Drawing.Color.LightGray;
+            this.BUT_loadtelem.BGGradTop = System.Drawing.Color.DarkGray;
+            this.BUT_loadtelem.ColorMouseDown = System.Drawing.Color.Gray;
+            this.BUT_loadtelem.ColorMouseOver = System.Drawing.Color.Empty;
+            this.BUT_loadtelem.ColorNotEnabled = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.BUT_loadtelem, "BUT_loadtelem");
+            this.BUT_loadtelem.Name = "BUT_loadtelem";
+            this.BUT_loadtelem.TextColor = System.Drawing.Color.Black;
+            this.BUT_loadtelem.UseVisualStyleBackColor = true;
+            this.BUT_loadtelem.Click += new System.EventHandler(this.BUT_loadtelem_Click);
             // 
             // DataFlashLog
             // 
@@ -930,7 +930,7 @@ namespace MissionPlanner
             this.myButton10.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.myButton10, "myButton10");
             this.myButton10.Name = "myButton10";
-            this.myButton10.TextColor = System.Drawing.Color.White;
+            this.myButton10.TextColor = System.Drawing.Color.Black;
             this.myButton10.UseVisualStyleBackColor = true;
             this.myButton10.Click += new System.EventHandler(this.myButton10_Click);
             // 
@@ -941,7 +941,7 @@ namespace MissionPlanner
             this.myButton9.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.myButton9, "myButton9");
             this.myButton9.Name = "myButton9";
-            this.myButton9.TextColor = System.Drawing.Color.White;
+            this.myButton9.TextColor = System.Drawing.Color.Black;
             this.myButton9.UseVisualStyleBackColor = true;
             this.myButton9.Click += new System.EventHandler(this.myButton9_Click);
             // 
@@ -952,7 +952,7 @@ namespace MissionPlanner
             this.myButton8.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.myButton8, "myButton8");
             this.myButton8.Name = "myButton8";
-            this.myButton8.TextColor = System.Drawing.Color.White;
+            this.myButton8.TextColor = System.Drawing.Color.Black;
             this.myButton8.UseVisualStyleBackColor = true;
             this.myButton8.Click += new System.EventHandler(this.myButton8_Click);
             // 
@@ -963,7 +963,7 @@ namespace MissionPlanner
             this.myButton3.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.myButton3, "myButton3");
             this.myButton3.Name = "myButton3";
-            this.myButton3.TextColor = System.Drawing.Color.White;
+            this.myButton3.TextColor = System.Drawing.Color.Black;
             this.myButton3.UseVisualStyleBackColor = true;
             this.myButton3.Click += new System.EventHandler(this.myButton3_Click);
             // 
@@ -974,7 +974,7 @@ namespace MissionPlanner
             this.myButton2.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.myButton2, "myButton2");
             this.myButton2.Name = "myButton2";
-            this.myButton2.TextColor = System.Drawing.Color.White;
+            this.myButton2.TextColor = System.Drawing.Color.Black;
             this.myButton2.UseVisualStyleBackColor = true;
             this.myButton2.Click += new System.EventHandler(this.myButton2_Click);
             // 
@@ -985,7 +985,7 @@ namespace MissionPlanner
             this.myButton1.ColorMouseDown = System.Drawing.Color.Gray;
             resources.ApplyResources(this.myButton1, "myButton1");
             this.myButton1.Name = "myButton1";
-            this.myButton1.TextColor = System.Drawing.Color.White;
+            this.myButton1.TextColor = System.Drawing.Color.Black;
             this.myButton1.UseVisualStyleBackColor = true;
             this.myButton1.Click += new System.EventHandler(this.myButton1_Click);
             // 

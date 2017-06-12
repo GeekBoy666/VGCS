@@ -2148,8 +2148,8 @@ namespace MissionPlanner.Controls
                 graphicsObjectGDIP.FillRectangle(Brushes.White, batteryonTop);
                 graphicsObject.DrawRectangle(this._whitePen, batteryonB);
 
-                graphicsObjectGDIP.DrawString("V", new Font(new FontFamily("黑体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(this.Width / 52 + this.Width / 8, 2));
-                graphicsObjectGDIP.DrawString("A", new Font(new FontFamily("黑体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(this.Width / 52 + this.Width / 8, 14));
+                graphicsObjectGDIP.DrawString("V", new Font(new FontFamily("黑体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(this.Width / 52 + this.Width / 6, 2));
+                graphicsObjectGDIP.DrawString("A", new Font(new FontFamily("黑体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(this.Width / 52 + this.Width / 6, 14));
                 // battery
                 if (batteryon)
                 {
@@ -2214,10 +2214,10 @@ namespace MissionPlanner.Controls
                     {
                         gps = _fix.ToString();
                     }
-                    graphicsObjectGDIP.DrawString("G", new Font(new FontFamily("黑体"), 20, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 - 18, 2));
-                    graphicsObjectGDIP.DrawString("PS", new Font(new FontFamily("黑体"), 16, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 - 6, 8));
-                    graphicsObjectGDIP.DrawString("：", new Font(new FontFamily("黑体"), 20, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 5 + 7, 3));
-                    graphicsObjectGDIP.DrawString(gps, new Font(new FontFamily("黑体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(this.Width / 2 + this.Width / 4 + 2, 8));
+                    graphicsObjectGDIP.DrawString("G", new Font(new FontFamily("黑体"), 20, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 7 - 18, 2));
+                    graphicsObjectGDIP.DrawString("PS", new Font(new FontFamily("黑体"), 16, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 7 - 6, 8));
+                    graphicsObjectGDIP.DrawString("：", new Font(new FontFamily("黑体"), 20, FontStyle.Regular, GraphicsUnit.Pixel), Brushes.Red, new PointF(this.Width / 2 + this.Width / 7 + 7, 3));
+                    graphicsObjectGDIP.DrawString(gps, new Font(new FontFamily("黑体"), 15, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.WhiteSmoke, new PointF(this.Width / 2 + this.Width / 5 + 2, 8));
                 }
 
                 if (isNaN)

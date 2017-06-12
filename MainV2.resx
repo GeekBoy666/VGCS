@@ -181,7 +181,7 @@
     <value>NoControl</value>
   </data>
   <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 94</value>
+    <value>248, 104</value>
   </data>
   <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 18</value>
@@ -214,7 +214,7 @@
     <value>NoControl</value>
   </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 68</value>
+    <value>248, 78</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 18</value>
@@ -244,13 +244,13 @@
     <value>True</value>
   </data>
   <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 12pt</value>
+    <value>华文楷体, 12pt, style=Bold</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 136</value>
+    <value>3, 146</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
+    <value>42, 18</value>
   </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -276,11 +276,14 @@
   <data name="label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>华文楷体, 14.249999pt, style=Bold</value>
+  </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 2</value>
+    <value>3, 3</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 18</value>
+    <value>50, 21</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -307,13 +310,13 @@
     <value>True</value>
   </data>
   <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 10.499999pt</value>
+    <value>华文楷体, 10.499999pt, style=Bold</value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 137</value>
+    <value>145, 147</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 16</value>
+    <value>16, 16</value>
   </data>
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -339,11 +342,14 @@
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>华文楷体, 14.249999pt, style=Bold</value>
+  </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 2</value>
+    <value>138, 3</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 18</value>
+    <value>30, 21</value>
   </data>
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -370,13 +376,13 @@
     <value>True</value>
   </data>
   <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 10.499999pt</value>
+    <value>华文楷体, 10.499999pt, style=Bold</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 117</value>
+    <value>145, 127</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 16</value>
+    <value>16, 16</value>
   </data>
   <data name="label12.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -402,11 +408,14 @@
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>华文楷体, 14.249999pt, style=Bold</value>
+  </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 2</value>
+    <value>235, 3</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 18</value>
+    <value>50, 21</value>
   </data>
   <data name="label17.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -433,13 +442,13 @@
     <value>True</value>
   </data>
   <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 12pt</value>
+    <value>华文楷体, 12pt, style=Bold</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 116</value>
+    <value>3, 126</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 18</value>
+    <value>76, 18</value>
   </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -466,13 +475,13 @@
     <value>True</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 12pt</value>
+    <value>华文楷体, 12pt, style=Bold</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 23</value>
+    <value>3, 30</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
+    <value>42, 18</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -499,13 +508,13 @@
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 10.499999pt</value>
+    <value>华文楷体, 10.499999pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 24</value>
+    <value>145, 31</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 16</value>
+    <value>16, 16</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -532,13 +541,13 @@
     <value>True</value>
   </data>
   <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 10.499999pt</value>
+    <value>华文楷体, 10.499999pt, style=Bold</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 95</value>
+    <value>145, 105</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 16</value>
+    <value>16, 16</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -565,13 +574,13 @@
     <value>True</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 12pt</value>
+    <value>华文楷体, 12pt, style=Bold</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 23</value>
+    <value>250, 30</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 18</value>
+    <value>21, 18</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -598,13 +607,13 @@
     <value>True</value>
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 12pt</value>
+    <value>华文楷体, 12pt, style=Bold</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 94</value>
+    <value>3, 104</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
+    <value>59, 18</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -631,13 +640,13 @@
     <value>True</value>
   </data>
   <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 12pt</value>
+    <value>华文楷体, 12pt, style=Bold</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 43</value>
+    <value>3, 53</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
+    <value>59, 18</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -664,13 +673,13 @@
     <value>True</value>
   </data>
   <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 10.499999pt</value>
+    <value>华文楷体, 10.499999pt, style=Bold</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 44</value>
+    <value>145, 54</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 16</value>
+    <value>16, 16</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -697,13 +706,13 @@
     <value>True</value>
   </data>
   <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 10.499999pt</value>
+    <value>华文楷体, 10.499999pt, style=Bold</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 69</value>
+    <value>145, 79</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 16</value>
+    <value>16, 16</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -730,7 +739,7 @@
     <value>True</value>
   </data>
   <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 43</value>
+    <value>248, 53</value>
   </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 18</value>
@@ -760,13 +769,13 @@
     <value>True</value>
   </data>
   <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>华文楷体, 12pt</value>
+    <value>华文楷体, 12pt, style=Bold</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 68</value>
+    <value>3, 78</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
+    <value>59, 18</value>
   </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -793,13 +802,13 @@
     <value>True</value>
   </data>
   <data name="label21.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 9pt</value>
+    <value>宋体, 9pt, style=Bold</value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>242, 119</value>
+    <value>247, 129</value>
   </data>
   <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 12</value>
+    <value>26, 12</value>
   </data>
   <data name="label21.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -826,16 +835,16 @@
     <value>True</value>
   </data>
   <data name="label22.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 9pt</value>
+    <value>宋体, 9pt, style=Bold</value>
   </data>
   <data name="label22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>242, 139</value>
+    <value>247, 149</value>
   </data>
   <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 12</value>
+    <value>26, 12</value>
   </data>
   <data name="label22.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -859,13 +868,13 @@
     <value>华文楷体, 12pt, style=Bold</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 3</value>
+    <value>3, 3</value>
   </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 156</value>
+    <value>310, 166</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1063,7 +1072,7 @@
     <value>myButton6</value>
   </data>
   <data name="&gt;&gt;myButton6.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton6.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1093,7 +1102,7 @@
     <value>myButton5</value>
   </data>
   <data name="&gt;&gt;myButton5.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton5.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1123,7 +1132,7 @@
     <value>myButton7</value>
   </data>
   <data name="&gt;&gt;myButton7.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton7.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1153,7 +1162,7 @@
     <value>myButton4</value>
   </data>
   <data name="&gt;&gt;myButton4.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton4.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1174,7 +1183,7 @@
     <value>modifyandSetLoiterRad</value>
   </data>
   <data name="&gt;&gt;modifyandSetLoiterRad.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ModifyandSet, VGCS, Version=1.1.6369.27884, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ModifyandSet, VGCS, Version=1.1.6372.32251, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;modifyandSetLoiterRad.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1204,7 +1213,7 @@
     <value>BUT_ARM</value>
   </data>
   <data name="&gt;&gt;BUT_ARM.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_ARM.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1234,7 +1243,7 @@
     <value>BUT_quickmanual</value>
   </data>
   <data name="&gt;&gt;BUT_quickmanual.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_quickmanual.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1264,7 +1273,7 @@
     <value>BUT_quickrtl</value>
   </data>
   <data name="&gt;&gt;BUT_quickrtl.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_quickrtl.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1294,7 +1303,7 @@
     <value>BUT_quickauto</value>
   </data>
   <data name="&gt;&gt;BUT_quickauto.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_quickauto.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1348,7 +1357,7 @@
     <value>BUT_setwp</value>
   </data>
   <data name="&gt;&gt;BUT_setwp.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_setwp.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1399,7 +1408,7 @@
     <value>BUT_setmode</value>
   </data>
   <data name="&gt;&gt;BUT_setmode.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_setmode.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1450,7 +1459,7 @@
     <value>BUT_Homealt</value>
   </data>
   <data name="&gt;&gt;BUT_Homealt.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_Homealt.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1480,7 +1489,7 @@
     <value>BUTactiondo</value>
   </data>
   <data name="&gt;&gt;BUTactiondo.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUTactiondo.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1501,7 +1510,7 @@
     <value>modifyandSetSpeed</value>
   </data>
   <data name="&gt;&gt;modifyandSetSpeed.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ModifyandSet, VGCS, Version=1.1.6369.27884, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ModifyandSet, VGCS, Version=1.1.6372.32251, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;modifyandSetSpeed.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1522,7 +1531,7 @@
     <value>modifyandSetAlt</value>
   </data>
   <data name="&gt;&gt;modifyandSetAlt.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ModifyandSet, VGCS, Version=1.1.6369.27884, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ModifyandSet, VGCS, Version=1.1.6372.32251, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;modifyandSetAlt.Parent" xml:space="preserve">
     <value>tabActions</value>
@@ -1570,7 +1579,7 @@
     <value>checkListControl1</value>
   </data>
   <data name="&gt;&gt;checkListControl1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.PreFlight.CheckListControl, VGCS, Version=1.1.6369.27884, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.PreFlight.CheckListControl, VGCS, Version=1.1.6372.32251, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;checkListControl1.Parent" xml:space="preserve">
     <value>tabPagePreFlight</value>
@@ -1608,33 +1617,6 @@
   <data name="tableLayoutPaneltlogs.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="BUT_loadtelem.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="BUT_loadtelem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="BUT_loadtelem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 23</value>
-  </data>
-  <data name="BUT_loadtelem.TabIndex" type="System.Int32, mscorlib">
-    <value>71</value>
-  </data>
-  <data name="BUT_loadtelem.Text" xml:space="preserve">
-    <value>Load Log</value>
-  </data>
-  <data name="&gt;&gt;BUT_loadtelem.Name" xml:space="preserve">
-    <value>BUT_loadtelem</value>
-  </data>
-  <data name="&gt;&gt;BUT_loadtelem.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BUT_loadtelem.Parent" xml:space="preserve">
-    <value>tableLayoutPaneltlogs</value>
-  </data>
-  <data name="&gt;&gt;BUT_loadtelem.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tracklog.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1642,10 +1624,10 @@
     <value>NoControl</value>
   </data>
   <data name="tracklog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 36</value>
+    <value>85, 39</value>
   </data>
   <data name="tracklog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 29</value>
+    <value>131, 29</value>
   </data>
   <data name="tracklog.TabIndex" type="System.Int32, mscorlib">
     <value>75</value>
@@ -1660,13 +1642,16 @@
     <value>tableLayoutPaneltlogs</value>
   </data>
   <data name="&gt;&gt;tracklog.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="lbl_logpercent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <data name="lbl_logpercent.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
   <data name="lbl_logpercent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 36</value>
+    <value>243, 39</value>
   </data>
   <data name="lbl_logpercent.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 29</value>
@@ -1681,22 +1666,22 @@
     <value>lbl_logpercent</value>
   </data>
   <data name="&gt;&gt;lbl_logpercent.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbl_logpercent.Parent" xml:space="preserve">
     <value>tableLayoutPaneltlogs</value>
   </data>
   <data name="&gt;&gt;lbl_logpercent.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="LBL_logfn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="LBL_logfn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 3</value>
+    <value>85, 3</value>
   </data>
   <data name="LBL_logfn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 27</value>
+    <value>220, 30</value>
   </data>
   <data name="LBL_logfn.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
@@ -1705,70 +1690,76 @@
     <value>LBL_logfn</value>
   </data>
   <data name="&gt;&gt;LBL_logfn.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LBL_logfn.Parent" xml:space="preserve">
     <value>tableLayoutPaneltlogs</value>
   </data>
   <data name="&gt;&gt;LBL_logfn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
+  </data>
+  <data name="BUT_log2kml.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
   </data>
   <data name="BUT_log2kml.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="BUT_log2kml.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 71</value>
+    <value>3, 74</value>
   </data>
   <data name="BUT_log2kml.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 50</value>
   </data>
   <data name="BUT_log2kml.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 46</value>
+    <value>76, 46</value>
   </data>
   <data name="BUT_log2kml.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
   </data>
   <data name="BUT_log2kml.Text" xml:space="preserve">
-    <value>Tlog &gt; Kml or Graph</value>
+    <value>Tlog &gt; Kml 或图像</value>
   </data>
   <data name="&gt;&gt;BUT_log2kml.Name" xml:space="preserve">
     <value>BUT_log2kml</value>
   </data>
   <data name="&gt;&gt;BUT_log2kml.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_log2kml.Parent" xml:space="preserve">
     <value>tableLayoutPaneltlogs</value>
   </data>
   <data name="&gt;&gt;BUT_log2kml.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
+  </data>
+  <data name="BUT_playlog.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
   </data>
   <data name="BUT_playlog.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="BUT_playlog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 36</value>
+    <value>3, 39</value>
   </data>
   <data name="BUT_playlog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 29</value>
+    <value>76, 29</value>
   </data>
   <data name="BUT_playlog.TabIndex" type="System.Int32, mscorlib">
     <value>73</value>
   </data>
   <data name="BUT_playlog.Text" xml:space="preserve">
-    <value>Play/Pause</value>
+    <value>Play</value>
   </data>
   <data name="&gt;&gt;BUT_playlog.Name" xml:space="preserve">
     <value>BUT_playlog</value>
   </data>
   <data name="&gt;&gt;BUT_playlog.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_playlog.Parent" xml:space="preserve">
     <value>tableLayoutPaneltlogs</value>
   </data>
   <data name="&gt;&gt;BUT_playlog.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1801,16 +1792,16 @@
     <value>0</value>
   </data>
   <data name="BUT_speed10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6.75pt</value>
+    <value>Microsoft Sans Serif, 6.75pt, style=Bold</value>
   </data>
   <data name="BUT_speed10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="BUT_speed10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 49</value>
+    <value>80, 49</value>
   </data>
   <data name="BUT_speed10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
+    <value>40, 20</value>
   </data>
   <data name="BUT_speed10.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -1822,7 +1813,7 @@
     <value>BUT_speed10</value>
   </data>
   <data name="&gt;&gt;BUT_speed10.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed10.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1831,16 +1822,16 @@
     <value>1</value>
   </data>
   <data name="BUT_speed5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6.75pt</value>
+    <value>Microsoft Sans Serif, 6.75pt, style=Bold</value>
   </data>
   <data name="BUT_speed5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="BUT_speed5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 49</value>
+    <value>41, 49</value>
   </data>
   <data name="BUT_speed5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
+    <value>33, 20</value>
   </data>
   <data name="BUT_speed5.TabIndex" type="System.Int32, mscorlib">
     <value>82</value>
@@ -1852,7 +1843,7 @@
     <value>BUT_speed5</value>
   </data>
   <data name="&gt;&gt;BUT_speed5.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed5.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1861,16 +1852,16 @@
     <value>2</value>
   </data>
   <data name="BUT_speed2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6.75pt</value>
+    <value>Microsoft Sans Serif, 6.75pt, style=Bold</value>
   </data>
   <data name="BUT_speed2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="BUT_speed2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 49</value>
+    <value>3, 49</value>
   </data>
   <data name="BUT_speed2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
+    <value>32, 20</value>
   </data>
   <data name="BUT_speed2.TabIndex" type="System.Int32, mscorlib">
     <value>81</value>
@@ -1882,7 +1873,7 @@
     <value>BUT_speed2</value>
   </data>
   <data name="&gt;&gt;BUT_speed2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed2.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1891,13 +1882,13 @@
     <value>3</value>
   </data>
   <data name="BUT_speed1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6.75pt</value>
+    <value>Microsoft Sans Serif, 6.75pt, style=Bold</value>
   </data>
   <data name="BUT_speed1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="BUT_speed1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 23</value>
+    <value>97, 14</value>
   </data>
   <data name="BUT_speed1.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 20</value>
@@ -1912,7 +1903,7 @@
     <value>BUT_speed1</value>
   </data>
   <data name="&gt;&gt;BUT_speed1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed1.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1921,13 +1912,13 @@
     <value>4</value>
   </data>
   <data name="BUT_speed1_2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6.75pt</value>
+    <value>Microsoft Sans Serif, 6.75pt, style=Bold</value>
   </data>
   <data name="BUT_speed1_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="BUT_speed1_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 23</value>
+    <value>68, 15</value>
   </data>
   <data name="BUT_speed1_2.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 20</value>
@@ -1942,7 +1933,7 @@
     <value>BUT_speed1_2</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_2.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1951,13 +1942,13 @@
     <value>5</value>
   </data>
   <data name="BUT_speed1_4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6.75pt</value>
+    <value>Microsoft Sans Serif, 6.75pt, style=Bold</value>
   </data>
   <data name="BUT_speed1_4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="BUT_speed1_4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 23</value>
+    <value>39, 15</value>
   </data>
   <data name="BUT_speed1_4.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 20</value>
@@ -1972,7 +1963,7 @@
     <value>BUT_speed1_4</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_4.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_4.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -1981,16 +1972,16 @@
     <value>6</value>
   </data>
   <data name="BUT_speed1_10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 6.75pt</value>
+    <value>Microsoft Sans Serif, 6.75pt, style=Bold</value>
   </data>
   <data name="BUT_speed1_10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="BUT_speed1_10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 23</value>
+    <value>3, 15</value>
   </data>
   <data name="BUT_speed1_10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
+    <value>32, 20</value>
   </data>
   <data name="BUT_speed1_10.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
@@ -2002,7 +1993,7 @@
     <value>BUT_speed1_10</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_10.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_speed1_10.Parent" xml:space="preserve">
     <value>panel4</value>
@@ -2011,7 +2002,7 @@
     <value>7</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 71</value>
+    <value>85, 74</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 97</value>
@@ -2029,13 +2020,16 @@
     <value>tableLayoutPaneltlogs</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="lbl_playbackspeed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <data name="lbl_playbackspeed.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
   <data name="lbl_playbackspeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 71</value>
+    <value>243, 74</value>
   </data>
   <data name="lbl_playbackspeed.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 40</value>
@@ -2050,12 +2044,42 @@
     <value>lbl_playbackspeed</value>
   </data>
   <data name="&gt;&gt;lbl_playbackspeed.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyLabel, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbl_playbackspeed.Parent" xml:space="preserve">
     <value>tableLayoutPaneltlogs</value>
   </data>
   <data name="&gt;&gt;lbl_playbackspeed.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="BUT_loadtelem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="BUT_loadtelem.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BUT_loadtelem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="BUT_loadtelem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 30</value>
+  </data>
+  <data name="BUT_loadtelem.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="BUT_loadtelem.Text" xml:space="preserve">
+    <value>加载日志</value>
+  </data>
+  <data name="&gt;&gt;BUT_loadtelem.Name" xml:space="preserve">
+    <value>BUT_loadtelem</value>
+  </data>
+  <data name="&gt;&gt;BUT_loadtelem.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BUT_loadtelem.Parent" xml:space="preserve">
+    <value>tableLayoutPaneltlogs</value>
+  </data>
+  <data name="&gt;&gt;BUT_loadtelem.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="tableLayoutPaneltlogs.Location" type="System.Drawing.Point, System.Drawing">
@@ -2065,7 +2089,7 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPaneltlogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 168</value>
+    <value>308, 168</value>
   </data>
   <data name="tableLayoutPaneltlogs.TabIndex" type="System.Int32, mscorlib">
     <value>81</value>
@@ -2083,7 +2107,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPaneltlogs.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="BUT_loadtelem" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tracklog" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lbl_logpercent" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="LBL_logfn" Row="0" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="BUT_log2kml" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="BUT_playlog" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel4" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lbl_playbackspeed" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,20,Percent,49.30556,Percent,30.90278" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tracklog" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lbl_logpercent" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="LBL_logfn" Row="0" RowSpan="1" Column="1" ColumnSpan="2" /&gt;&lt;Control Name="BUT_log2kml" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="BUT_playlog" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel4" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lbl_playbackspeed" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="BUT_loadtelem" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,26.62338,Percent,44.48052,Percent,28.57143" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tabTLogs.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -2109,6 +2133,9 @@
   <data name="&gt;&gt;tabTLogs.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="myButton10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
   <data name="myButton10.Location" type="System.Drawing.Point, System.Drawing">
     <value>200, 47</value>
   </data>
@@ -2125,13 +2152,16 @@
     <value>myButton10</value>
   </data>
   <data name="&gt;&gt;myButton10.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton10.Parent" xml:space="preserve">
     <value>DataFlashLog</value>
   </data>
   <data name="&gt;&gt;myButton10.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="myButton9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
   </data>
   <data name="myButton9.Location" type="System.Drawing.Point, System.Drawing">
     <value>112, 47</value>
@@ -2149,13 +2179,16 @@
     <value>myButton9</value>
   </data>
   <data name="&gt;&gt;myButton9.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton9.Parent" xml:space="preserve">
     <value>DataFlashLog</value>
   </data>
   <data name="&gt;&gt;myButton9.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="myButton8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
   </data>
   <data name="myButton8.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 47</value>
@@ -2173,13 +2206,16 @@
     <value>myButton8</value>
   </data>
   <data name="&gt;&gt;myButton8.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton8.Parent" xml:space="preserve">
     <value>DataFlashLog</value>
   </data>
   <data name="&gt;&gt;myButton8.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="myButton3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
   </data>
   <data name="myButton3.Location" type="System.Drawing.Point, System.Drawing">
     <value>200, 3</value>
@@ -2197,13 +2233,16 @@
     <value>myButton3</value>
   </data>
   <data name="&gt;&gt;myButton3.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton3.Parent" xml:space="preserve">
     <value>DataFlashLog</value>
   </data>
   <data name="&gt;&gt;myButton3.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="myButton2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
   </data>
   <data name="myButton2.Location" type="System.Drawing.Point, System.Drawing">
     <value>112, 3</value>
@@ -2221,13 +2260,16 @@
     <value>myButton2</value>
   </data>
   <data name="&gt;&gt;myButton2.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton2.Parent" xml:space="preserve">
     <value>DataFlashLog</value>
   </data>
   <data name="&gt;&gt;myButton2.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="myButton1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
   </data>
   <data name="myButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 3</value>
@@ -2245,7 +2287,7 @@
     <value>myButton1</value>
   </data>
   <data name="&gt;&gt;myButton1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;myButton1.Parent" xml:space="preserve">
     <value>DataFlashLog</value>
@@ -2496,7 +2538,7 @@
     <value>hud1</value>
   </data>
   <data name="&gt;&gt;hud1.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.HUD, MissionPlanner.Controls, Version=1.0.6369.25015, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.HUD, MissionPlanner.Controls, Version=1.0.6369.31149, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;hud1.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -2598,7 +2640,7 @@
     <value>zedGraphControl1</value>
   </data>
   <data name="&gt;&gt;zedGraphControl1.Type" xml:space="preserve">
-    <value>ZedGraph.ZedGraphControl, ZedGraph, Version=5.1.5.25018, Culture=neutral, PublicKeyToken=null</value>
+    <value>ZedGraph.ZedGraphControl, ZedGraph, Version=5.1.5.31152, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;zedGraphControl1.Parent" xml:space="preserve">
     <value>panel3</value>
@@ -2860,7 +2902,7 @@
     <value>toolStripConnectionControl</value>
   </data>
   <data name="&gt;&gt;toolStripConnectionControl.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.ToolStripConnectionControl, VGCS, Version=1.1.6369.27884, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.ToolStripConnectionControl, VGCS, Version=1.1.6372.32251, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;bindingSourceQTab.Name" xml:space="preserve">
     <value>bindingSourceQTab</value>
