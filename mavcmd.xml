@@ -3,7 +3,7 @@
 <!-- TAGS ARE CASE SENSATIVE -->
 <CMD>
   <AC2>
-    <WAYPOINT>
+    <航点>
       <P1>Delay</P1>
       <P2></P2>
       <P3></P3>
@@ -11,8 +11,8 @@
       <X>Lat</X>
       <Y>Long</Y>
       <Z>Alt</Z>
-    </WAYPOINT>
-    <SPLINE_WAYPOINT>
+    </航点>
+    <曲线航点>
       <P1>Delay</P1>
       <P2></P2>
       <P3></P3>
@@ -20,8 +20,8 @@
       <X>Lat</X>
       <Y>Long</Y>
       <Z>Alt</Z>
-    </SPLINE_WAYPOINT>
-    <LOITER_TURNS>
+    </曲线航点>
+    <盘旋_圈数>
       <P1>Turns</P1>
       <P2></P2>
       <P3>Radius</P3>
@@ -29,8 +29,8 @@
       <X>Lat</X>
       <Y>Long</Y>
       <Z>Alt</Z>
-    </LOITER_TURNS>
-    <LOITER_TIME>
+    </盘旋_圈数>
+    <盘旋_时间>
       <P1>Time s</P1>
       <P2></P2>
       <P3></P3>
@@ -38,8 +38,8 @@
       <X>Lat</X>
       <Y>Long</Y>
       <Z>Alt</Z>
-    </LOITER_TIME>
-    <LOITER_UNLIM>
+    </盘旋_时间>
+    <盘旋_无限制>
       <P1></P1>
       <P2></P2>
       <P3></P3>
@@ -47,8 +47,8 @@
       <X>Lat</X>
       <Y>Long</Y>
       <Z>Alt</Z>
-    </LOITER_UNLIM>
-    <RETURN_TO_LAUNCH>
+    </盘旋_无限制>
+    <返回降落>
       <P1></P1>
       <P2></P2>
       <P3></P3>
@@ -56,8 +56,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </RETURN_TO_LAUNCH>
-    <LAND>
+    </返回降落>
+    <降落>
       <P1></P1>
       <P2></P2>
       <P3></P3>
@@ -65,8 +65,8 @@
       <X>Lat</X>
       <Y>Long</Y>
       <Z>Alt</Z>
-    </LAND>
-    <TAKEOFF>
+    </降落>
+    <起飞>
       <P1></P1>
       <P2></P2>
       <P3></P3>
@@ -74,8 +74,8 @@
       <X></X>
       <Y></Y>
       <Z>Alt</Z>
-    </TAKEOFF>
-    <DELAY>
+    </起飞>
+    <延时>
       <P1>Seconds (or -1)</P1>
       <P2>Hour UTC (or -1)</P2>
       <P3>Minute UTC (or -1)</P3>
@@ -83,8 +83,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DELAY>
-    <GUIDED_ENABLE>
+    </延时>
+    <引导模式使能>
       <P1>on=1/off=0</P1>
       <P2></P2>
       <P3></P3>
@@ -92,8 +92,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </GUIDED_ENABLE>
-    <PAYLOAD_PLACE>
+    </引导模式使能>
+    <载荷动作位置>
       <P1>max descent</P1>
       <P2></P2>
       <P3></P3>
@@ -101,8 +101,8 @@
       <X>Lat</X>
       <Y>Long</Y>
       <Z>Alt</Z>
-    </PAYLOAD_PLACE>
-    <DO_GUIDED_LIMITS>
+    </载荷动作位置>
+    <引导模式阈值>
       <P1>timeout S</P1>
       <P2>min alt</P2>
       <P3>max alt</P3>
@@ -110,8 +110,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_GUIDED_LIMITS>
-    <DO_SET_ROI>
+    </引导模式阈值>
+    <设置兴趣点>
       <P1></P1>
       <P2></P2>
       <P3></P3>
@@ -119,8 +119,8 @@
       <X>Lat</X>
       <Y>Long</Y>
       <Z>Alt</Z>
-    </DO_SET_ROI>
-    <CONDITION_DELAY>
+    </设置兴趣点>
+    <条件_延迟>
       <P1>Time (sec)</P1>
       <P2></P2>
       <P3></P3>
@@ -128,8 +128,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </CONDITION_DELAY>
-    <CONDITION_CHANGE_ALT>
+    </条件_延迟>
+    <条件_改变_高度>
       <P1>Rate (cm/sec)</P1>
       <P2></P2>
       <P3></P3>
@@ -137,8 +137,8 @@
       <X></X>
       <Y></Y>
       <Z>Alt</Z>
-    </CONDITION_CHANGE_ALT>
-    <CONDITION_DISTANCE>
+    </条件_改变_高度>
+    <条件_距离>
       <P1>Dist (m)</P1>
       <P2></P2>
       <P3></P3>
@@ -146,8 +146,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </CONDITION_DISTANCE>
-    <CONDITION_YAW>
+    </条件_距离>
+    <条件_偏航>
       <P1>Deg</P1>
       <P2>Sec</P2>
       <P3>Dir 1=CW</P3>
@@ -155,8 +155,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </CONDITION_YAW>
-    <DO_JUMP>
+    </条件_偏航>
+    <执行跳转>
       <P1>WP #</P1>
       <P2>Repeat#</P2>
       <P3></P3>
@@ -164,8 +164,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_JUMP>
-    <DO_CHANGE_SPEED>
+    </执行跳转>
+    <改变速度>
       <P1>speed m/s</P1>
       <P2>speed m/s</P2>
       <P3></P3>
@@ -173,8 +173,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_CHANGE_SPEED>
-    <DO_GRIPPER>
+    </改变速度>
+    <设置投掷器>
       <P1>Gripper No</P1>
       <P2>drop(0)/grab(1)</P2>
       <P3></P3>
@@ -182,8 +182,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_GRIPPER>
-    <DO_PARACHUTE>
+    </设置投掷器>
+    <开伞动作>
       <P1>Enable(1)/Release(2)</P1>
       <P2></P2>
       <P3></P3>
@@ -191,8 +191,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_PARACHUTE>
-    <DO_SET_CAM_TRIGG_DIST>
+    </开伞动作>
+    <相机距离触发>
       <P1>Dist (m)</P1>
       <P2></P2>
       <P3></P3>
@@ -200,8 +200,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_SET_CAM_TRIGG_DIST>
-    <DO_SET_RELAY>
+    </相机距离触发>
+    <设置继电器>
       <P1>Relay No</P1>
       <P2>off(0)/on(1)</P2>
       <P3></P3>
@@ -209,8 +209,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_SET_RELAY>
-    <DO_REPEAT_RELAY>
+    </设置继电器>
+    <继电器动作重复执行>
       <P1>Relay No</P1>
       <P2>Repeat#</P2>
       <P3>Delay (s)</P3>
@@ -218,8 +218,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_REPEAT_RELAY>
-    <DO_SET_SERVO>
+    </继电器动作重复执行>
+    <设置舵机>
       <P1>Ser No</P1>
       <P2>PWM</P2>
       <P3></P3>
@@ -227,8 +227,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_SET_SERVO>
-    <DO_REPEAT_SERVO>
+    </设置舵机>
+    <重复舵机>
       <P1>Ser No</P1>
       <P2>PWM</P2>
       <P3>Repeat#</P3>
@@ -236,8 +236,8 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_REPEAT_SERVO>
-    <DO_DIGICAM_CONFIGURE>
+    </重复舵机>
+    <相机配置>
       <P1>Mode</P1>
       <P2>Shutter Speed</P2>
       <P3>Aperture</P3>
@@ -245,8 +245,8 @@
       <X>ExposureMode</X>
       <Y>CommandID</Y>
       <Z></Z>
-    </DO_DIGICAM_CONFIGURE>
-    <DO_DIGICAM_CONTROL>
+    </相机配置>
+    <相机控制>
       <P1>On/Off</P1>
       <P2>Zoom Position</P2>
       <P3>Zoom Step</P3>
@@ -254,8 +254,8 @@
       <X>Shutter Cmd</X>
       <Y>CommandID</Y>
       <Z></Z>
-    </DO_DIGICAM_CONTROL>
-    <DO_MOUNT_CONTROL>
+    </相机控制>
+    <相机姿态设置>
       <P1>Pitch</P1>
       <P2>Roll</P2>
       <P3>Yaw</P3>
@@ -263,7 +263,7 @@
       <X></X>
       <Y></Y>
       <Z></Z>
-    </DO_MOUNT_CONTROL>
+    </相机姿态设置>
 
   </AC2>
   <!-- -->
