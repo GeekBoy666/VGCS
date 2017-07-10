@@ -44,7 +44,7 @@ namespace MissionPlanner
         public static bool threadrun;
         public static HUD myhud;
         AviWriter aviwriter;
-        double LogPlayBackSpeed = 1.0;
+        public double LogPlayBackSpeed = 1.0;
         int tickStart;
         bool playingLog;
         RollingPointPairList list1 = new RollingPointPairList(1200);
@@ -547,7 +547,7 @@ namespace MissionPlanner
             Application.DoEvents();
 
             instance = this;
-
+            
             //disable dpi scaling
             if (Font.Name != "宋体")
             {
@@ -867,6 +867,7 @@ namespace MissionPlanner
 
                 // make sure rates propogate
                 MainV2.comPort.MAV.cs.ResetInternals();
+              
 
                 if (Settings.Instance["speechenable"] != null)
                     MainV2.speechEnable = Settings.Instance.GetBoolean("speechenable");
@@ -5934,6 +5935,11 @@ namespace MissionPlanner
         private void myButton10_Click(object sender, EventArgs e)
         {
             MatLab.ProcessLog();
+        }
+
+        private void TakeOffByOneKey_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

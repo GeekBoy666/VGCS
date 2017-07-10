@@ -489,6 +489,7 @@ namespace MissionPlanner
             this.myButton7.Name = "myButton7";
             this.myButton7.TextColor = System.Drawing.Color.Black;
             this.myButton7.UseVisualStyleBackColor = true;
+            this.myButton7.Click += new System.EventHandler(this.TakeOffByOneKey_Click);
             // 
             // myButton4
             // 
@@ -1263,9 +1264,9 @@ namespace MissionPlanner
         private Controls.PreFlight.CheckListControl checkListControl1;
         private System.Windows.Forms.TabPage tabTLogs;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPaneltlogs;
-        private Controls.MyButton BUT_loadtelem;
-        private Controls.MyLabel lbl_playbackspeed;
-        private Controls.MyLabel lbl_logpercent;
+        public Controls.MyButton BUT_loadtelem;
+        public Controls.MyLabel lbl_playbackspeed;
+        public Controls.MyLabel lbl_logpercent;
         private Controls.MyLabel LBL_logfn;
         private Controls.MyButton BUT_log2kml;
         private Controls.MyButton BUT_playlog;
@@ -1305,7 +1306,7 @@ namespace MissionPlanner
         private System.Windows.Forms.TabPage tabPageStatustext;
         private System.Windows.Forms.Timer ZedTimer;
         private System.Windows.Forms.CheckBox CB_Dbug;
-        private System.Windows.Forms.TrackBar tracklog;
+        public  System.Windows.Forms.TrackBar tracklog;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Panel panel3;
         private ZedGraph.ZedGraphControl zedGraphControl1;

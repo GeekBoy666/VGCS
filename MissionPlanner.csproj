@@ -2988,8 +2988,8 @@
     <None Include="Lib.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="LogAnalyzer\py2exe\createexe.bat" />
-    <None Include="LogAnalyzer\upload.bat" />
+    <None Include="m3u\LogAnalyzer\py2exe\createexe.bat" />
+    <None Include="m3u\LogAnalyzer\upload.bat" />
     <None Include="NoFly\Mapa-Voa-na-Boa.kmz">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -3985,29 +3985,29 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Parachute.png" />
-    <Content Include="LogAnalyzer\py2exe\DataflashLog.py" />
-    <Content Include="LogAnalyzer\py2exe\example_output.xml" />
-    <Content Include="LogAnalyzer\py2exe\LogAnalyzer.py" />
-    <Content Include="LogAnalyzer\py2exe\runner.py" />
-    <Content Include="LogAnalyzer\py2exe\setup.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestAutotune.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestBrownout.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestCompass.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestDualGyroDrift.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestDupeLogData.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestEmpty.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestEvents.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestGPSGlitch.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestIMUMatch.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestMotorBalance.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestParams.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestPerformance.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestPitchRollCoupling.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestThrust.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestVCC.py" />
-    <Content Include="LogAnalyzer\py2exe\tests\TestVibration.py" />
-    <Content Include="LogAnalyzer\py2exe\UnitTest.py" />
-    <Content Include="LogAnalyzer\py2exe\VehicleType.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\DataflashLog.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\example_output.xml" />
+    <Content Include="m3u\LogAnalyzer\py2exe\LogAnalyzer.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\runner.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\setup.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestAutotune.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestBrownout.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestCompass.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestDualGyroDrift.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestDupeLogData.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestEmpty.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestEvents.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestGPSGlitch.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestIMUMatch.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestMotorBalance.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestParams.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestPerformance.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestPitchRollCoupling.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestThrust.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestVCC.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\tests\TestVibration.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\UnitTest.py" />
+    <Content Include="m3u\LogAnalyzer\py2exe\VehicleType.py" />
     <Content Include="mavgraphs.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
