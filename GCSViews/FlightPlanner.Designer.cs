@@ -168,6 +168,7 @@
             this.switchDockingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setHomeHereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cameraOverlapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearTrackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelBASE = new System.Windows.Forms.Panel();
             this.panelMap = new System.Windows.Forms.Panel();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
@@ -207,7 +208,6 @@
             this.MainMap = new MissionPlanner.Controls.myGMAP();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.clearTrackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.Commands)).BeginInit();
             this.panelWaypoints.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -1078,6 +1078,12 @@
             resources.ApplyResources(this.cameraOverlapToolStripMenuItem, "cameraOverlapToolStripMenuItem");
             this.cameraOverlapToolStripMenuItem.Click += new System.EventHandler(this.cameraOverlapToolStripMenuItem_Click);
             // 
+            // clearTrackToolStripMenuItem
+            // 
+            this.clearTrackToolStripMenuItem.Name = "clearTrackToolStripMenuItem";
+            resources.ApplyResources(this.clearTrackToolStripMenuItem, "clearTrackToolStripMenuItem");
+            this.clearTrackToolStripMenuItem.Click += new System.EventHandler(this.clearTrackToolStripMenuItem_Click);
+            // 
             // panelBASE
             // 
             this.panelBASE.Controls.Add(this.splitter2);
@@ -1463,12 +1469,6 @@
             // 
             this.timer1.Interval = 1200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // clearTrackToolStripMenuItem
-            // 
-            this.clearTrackToolStripMenuItem.Name = "clearTrackToolStripMenuItem";
-            resources.ApplyResources(this.clearTrackToolStripMenuItem, "clearTrackToolStripMenuItem");
-            this.clearTrackToolStripMenuItem.Click += new System.EventHandler(this.clearTrackToolStripMenuItem_Click);
             // 
             // FlightPlanner
             // 

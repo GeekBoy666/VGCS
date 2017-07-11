@@ -1166,6 +1166,7 @@ namespace MissionPlanner.GCSViews
                     if (fd_route == null)
                     {
                         fd_route = new GMapRoute(trackPoints, "track");
+                        fd_route.Stroke = new Pen(Color.Red, 5);
                         routes.Routes.Add(fd_route);
                     }
 

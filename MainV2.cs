@@ -2822,6 +2822,7 @@ namespace MissionPlanner
                 w1.MainMap.Position = new GMap.NET.PointLatLng(39.7716824, 116.5296914);
                 w1.MainMap.Zoom = 18;
                 w1.Dock = DockStyle.Fill;
+                w1.Deactivate();
                 w1.Activate();
                 w1.Visible = true;
                 w1.Focus();
