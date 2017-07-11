@@ -92,6 +92,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panelWaypoints = new BSE.Windows.Forms.Panel();
             this.splitter1 = new BSE.Windows.Forms.Splitter();
+            this.label_delay = new System.Windows.Forms.Label();
+            this.TXT_Delay = new System.Windows.Forms.TextBox();
             this.CMB_altmode = new System.Windows.Forms.ComboBox();
             this.CHK_splinedefault = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -503,6 +505,8 @@
             this.panelWaypoints.CaptionFont = new System.Drawing.Font("Segoe UI", 11.75F, System.Drawing.FontStyle.Bold);
             this.panelWaypoints.CaptionHeight = 21;
             this.panelWaypoints.ColorScheme = BSE.Windows.Forms.ColorScheme.Custom;
+            this.panelWaypoints.Controls.Add(this.label_delay);
+            this.panelWaypoints.Controls.Add(this.TXT_Delay);
             this.panelWaypoints.Controls.Add(this.CMB_altmode);
             this.panelWaypoints.Controls.Add(this.CHK_splinedefault);
             this.panelWaypoints.Controls.Add(this.label17);
@@ -545,6 +549,16 @@
             resources.ApplyResources(this.splitter1, "splitter1");
             this.splitter1.Name = "splitter1";
             this.splitter1.TabStop = false;
+            // 
+            // label_delay
+            // 
+            resources.ApplyResources(this.label_delay, "label_delay");
+            this.label_delay.Name = "label_delay";
+            // 
+            // TXT_Delay
+            // 
+            resources.ApplyResources(this.TXT_Delay, "TXT_Delay");
+            this.TXT_Delay.Name = "TXT_Delay";
             // 
             // CMB_altmode
             // 
@@ -1662,5 +1676,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AZ;
         private System.Windows.Forms.DataGridViewTextBoxColumn TagData;
         private System.Windows.Forms.ToolStripMenuItem clearTrackToolStripMenuItem;
+        private System.Windows.Forms.Label label_delay;
+        private System.Windows.Forms.TextBox TXT_Delay;
     }
 }

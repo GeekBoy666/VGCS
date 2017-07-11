@@ -320,10 +320,10 @@ namespace MissionPlanner.GCSViews
             convertFromGeographic(lat, lng);
 
             // Add more for other params
-            if (Commands.Columns[Param1.Index].HeaderText.Equals(cmdParamNames["航点"][1] /*"Delay"*/))
+            if (Commands.Columns[Param1.Index].HeaderText.Equals(cmdParamNames["航点"][0] /*"Delay"*/))
             {
                 cell = Commands.Rows[selectedrow].Cells[Param1.Index] as DataGridViewTextBoxCell;
-                cell.Value = p1;
+                cell.Value = double.Parse(TXT_Delay.Text);
                 cell.DataGridView.EndEdit();
             }
 
@@ -1013,7 +1013,7 @@ namespace MissionPlanner.GCSViews
 
         GMapOverlay polygons;
         GMapOverlay routes;
-        GMapRoute fd_route;
+        public GMapRoute fd_route;
         private void updateRoutePosition()
         {
             // not async

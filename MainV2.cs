@@ -569,7 +569,7 @@ namespace MissionPlanner
             //{
             //}
             //Utilities.ThemeManager.ApplyThemeTo(this);
-            MyView = new MainSwitcher(this);
+            MyView = new MainSwitcher(this.panel3);
 
             View = MyView;
 
@@ -2816,16 +2816,12 @@ namespace MissionPlanner
                 this.PerformLayout();
                 log.Info("show FlightPlanner");
 
-                GCSViews.FlightPlanner w1 = new GCSViews.FlightPlanner();
-                w1.Parent = panel3;
 
-                w1.MainMap.Position = new GMap.NET.PointLatLng(39.7716824, 116.5296914);
-                w1.MainMap.Zoom = 18;
-                w1.Dock = DockStyle.Fill;
-                w1.Deactivate();
-                w1.Activate();
-                w1.Visible = true;
-                w1.Focus();
+
+                GCSViews.FlightPlanner.instance.MainMap.Position= new GMap.NET.PointLatLng(39.7716824, 116.5296914);
+                GCSViews.FlightPlanner.instance.MainMap.Zoom = 18;
+                MyView.ShowScreen("FlightPlanner");
+
                 //MainMenu_ItemClicked(this, new ToolStripItemClickedEventArgs(MenuFlightData));
                 //MenuFlightData_Click(this, e);
                 log.Info("show FlightPlanner... Done");
@@ -5026,8 +5022,9 @@ namespace MissionPlanner
         GMapRoute route;
         private void myButton6_Click(object sender, EventArgs e)
         {
-            if (route != null)
-                route.Points.Clear();
+
+            if (GCSViews.FlightPlanner.instance.fd_route != null)
+                GCSViews.FlightPlanner.instance.fd_route.Points.Clear();
         }
 
         private void BUT_ARM_Click(object sender, EventArgs e)
@@ -5940,7 +5937,68 @@ namespace MissionPlanner
 
         private void TakeOffByOneKey_Click(object sender, EventArgs e)
         {
+            if (!MainV2.comPort.BaseStream.IsOpen)
+                return;
+            try
+            {
+                if (MainV2.comPort.MAV.cs.armed)
+                {
+                    // altitude
+                    string alt = "10";
 
+                    if (DialogResult.Cancel == InputBox.Show("Altitude", "Please enter your takeoff altitude", ref alt))
+                        return;
+
+                    int alti = -1;
+
+                    if (!int.TryParse(alt, out alti))
+                    {
+                        MessageBox.Show("Bad Alt");
+                        return;
+                    }
+
+                    // take off pitch
+                    int topi = 0;
+
+                    if (MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.ArduPlane ||
+                        MainV2.comPort.MAV.cs.firmware == MainV2.Firmwares.Ateryx)
+                    {
+                        string top = "15";
+
+                        if (DialogResult.Cancel == InputBox.Show("Takeoff Pitch", "Please enter your takeoff pitch", ref top))
+                            return;
+
+                        if (!int.TryParse(top, out topi))
+                        {
+                            MessageBox.Show("Bad Takeoff pitch");
+                            return;
+                        }
+                    }
+
+                    //selectedrow = Commands.Rows.Add();
+
+                    //Commands.Rows[selectedrow].Cells[Command.Index].Value = MAVLink.MAV_CMD.TAKEOFF.ToString();
+
+                    //Commands.Rows[selectedrow].Cells[Param1.Index].Value = topi;
+
+                    //Commands.Rows[selectedrow].Cells[Alt.Index].Value = alti;
+
+                    //ChangeColumnHeader(MAVLink.MAV_CMD.TAKEOFF.ToString());
+
+                    //writeKML();
+                }
+                //    if (CustomMessageBox.Show("Are you sure you want to Disarm?", "Disarm?", MessageBoxButtons.YesNo) !=
+                //        DialogResult.Yes)
+                //        return;
+
+                //bool ans = MainV2.comPort.doARM(!MainV2.comPort.MAV.cs.armed);
+                //if (ans == false)
+                //    CustomMessageBox.Show(Strings.ErrorRejectedByMAV, Strings.ERROR);
+            }
+            catch
+            {
+                CustomMessageBox.Show(Strings.ErrorNoResponce, Strings.ERROR);
+            }
         }
     }
 }

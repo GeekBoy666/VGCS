@@ -152,8 +152,8 @@ namespace MissionPlanner.Controls
                 ((IActivate)(nextscreen.Control)).Activate();
             }
 
-            if (ApplyTheme != null)
-                ApplyTheme(nextscreen.Control);
+           // if (ApplyTheme != null)
+                //ApplyTheme(nextscreen.Control);
 
             if (MainControl.InvokeRequired)
             {
