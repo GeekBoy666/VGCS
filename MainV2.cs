@@ -5938,16 +5938,22 @@ namespace MissionPlanner
         private void TakeOffByOneKey_Click(object sender, EventArgs e)
         {
             if (!MainV2.comPort.BaseStream.IsOpen)
+            {
+                CustomMessageBox.Show("请首先进行系统连接!");
                 return;
+            }
             try
             {
                 if (MainV2.comPort.MAV.cs.armed)
+                    if (CustomMessageBox.Show("Are you sure you want to Disarm?", "Disarm?", MessageBoxButtons.YesNo) !=
+                        DialogResult.Yes)
+                        return;
+
+                bool ans = MainV2.comPort.doARM(true);
+                if (ans == true)
                 {
                     // altitude
-                    string alt = "10";
-
-                    if (DialogResult.Cancel == InputBox.Show("Altitude", "Please enter your takeoff altitude", ref alt))
-                        return;
+                    string alt = TXT_TakeOff.Text;
 
                     int alti = -1;
 
@@ -5975,30 +5981,26 @@ namespace MissionPlanner
                         }
                     }
 
-                    //selectedrow = Commands.Rows.Add();
+                    GCSViews.FlightPlanner.instance.selectedrow = GCSViews.FlightPlanner.instance.Commands.Rows.Add();
 
-                    //Commands.Rows[selectedrow].Cells[Command.Index].Value = MAVLink.MAV_CMD.TAKEOFF.ToString();
+                    GCSViews.FlightPlanner.instance.Commands.Rows[GCSViews.FlightPlanner.instance.selectedrow].Cells[GCSViews.FlightPlanner.instance.Command.Index].Value = "起飞";
 
-                    //Commands.Rows[selectedrow].Cells[Param1.Index].Value = topi;
+                    GCSViews.FlightPlanner.instance.Commands.Rows[GCSViews.FlightPlanner.instance.selectedrow].Cells[GCSViews.FlightPlanner.instance.Param1.Index].Value = topi;
 
-                    //Commands.Rows[selectedrow].Cells[Alt.Index].Value = alti;
+                    GCSViews.FlightPlanner.instance.Commands.Rows[GCSViews.FlightPlanner.instance.selectedrow].Cells[GCSViews.FlightPlanner.instance.Alt.Index].Value = alti;
 
-                    //ChangeColumnHeader(MAVLink.MAV_CMD.TAKEOFF.ToString());
+                    GCSViews.FlightPlanner.instance.ChangeColumnHeader("起飞");
 
-                    //writeKML();
+                    GCSViews.FlightPlanner.instance.writeKML();
                 }
-                //    if (CustomMessageBox.Show("Are you sure you want to Disarm?", "Disarm?", MessageBoxButtons.YesNo) !=
-                //        DialogResult.Yes)
-                //        return;
-
-                //bool ans = MainV2.comPort.doARM(!MainV2.comPort.MAV.cs.armed);
-                //if (ans == false)
-                //    CustomMessageBox.Show(Strings.ErrorRejectedByMAV, Strings.ERROR);
+                else { CustomMessageBox.Show(Strings.ErrorRejectedByMAV, Strings.ERROR); }
+                    
             }
             catch
             {
                 CustomMessageBox.Show(Strings.ErrorNoResponce, Strings.ERROR);
             }
+           
         }
     }
 }

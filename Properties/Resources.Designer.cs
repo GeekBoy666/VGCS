@@ -401,7 +401,7 @@ namespace MissionPlanner.Properties {
         }
         
         /// <summary>
-        ///   查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
         public static System.Drawing.Icon _1020 {
             get {
@@ -721,7 +721,7 @@ namespace MissionPlanner.Properties {
         }
         
         /// <summary>
-        ///   查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
         public static System.Drawing.Icon _600201 {
             get {
@@ -1900,7 +1900,7 @@ namespace MissionPlanner.Properties {
         }
         
         /// <summary>
-        ///   查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
         public static System.Drawing.Icon mpdesktop {
             get {
@@ -1915,6 +1915,16 @@ namespace MissionPlanner.Properties {
         public static System.Drawing.Bitmap narrow {
             get {
                 object obj = ResourceManager.GetObject("narrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        public static System.Drawing.Bitmap navigator {
+            get {
+                object obj = ResourceManager.GetObject("navigator", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

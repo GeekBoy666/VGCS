@@ -49,7 +49,7 @@ namespace MissionPlanner.GCSViews
         public static bool FP_threadrun;
         private Point mouseOffset1; //记录鼠标指针的坐标
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-        int selectedrow;
+        public int selectedrow;
         public bool quickadd;
         bool isonline = true;
         bool sethome;
@@ -667,6 +667,7 @@ namespace MissionPlanner.GCSViews
 
             routes = new GMapOverlay("routes");
             MainMap.Overlays.Add(routes);
+
         }
 
         void updateMapType(object sender, System.Timers.ElapsedEventArgs e)
@@ -1592,7 +1593,7 @@ namespace MissionPlanner.GCSViews
             }
         }
 
-        private void ChangeColumnHeader(string command)
+        public void ChangeColumnHeader(string command)
         {
             try
             {
@@ -6561,7 +6562,7 @@ namespace MissionPlanner.GCSViews
             // altitude
             string alt = "10";
 
-            if (DialogResult.Cancel == InputBox.Show("Altitude", "Please enter your takeoff altitude", ref alt))
+            if (DialogResult.Cancel == InputBox.Show("高度", "请输入起飞高度", ref alt))
                 return;
 
             int alti = -1;
@@ -6592,13 +6593,13 @@ namespace MissionPlanner.GCSViews
 
             selectedrow = Commands.Rows.Add();
 
-            Commands.Rows[selectedrow].Cells[Command.Index].Value = MAVLink.MAV_CMD.TAKEOFF.ToString();
+            Commands.Rows[selectedrow].Cells[Command.Index].Value = "起飞";
 
             Commands.Rows[selectedrow].Cells[Param1.Index].Value = topi;
 
             Commands.Rows[selectedrow].Cells[Alt.Index].Value = alti;
 
-            ChangeColumnHeader(MAVLink.MAV_CMD.TAKEOFF.ToString());
+            ChangeColumnHeader("起飞");
 
             writeKML();
         }

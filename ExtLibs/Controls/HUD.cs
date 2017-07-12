@@ -1910,7 +1910,7 @@ namespace MissionPlanner.Controls
                     }
                     else if (_mode == "Auto")
                     {
-                        graphicsObjectGDIP.DrawString("自动模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
+                        graphicsObjectGDIP.DrawString("自主模式", new Font(new FontFamily("宋体"), 13, FontStyle.Bold, GraphicsUnit.Pixel), Brushes.Black, new PointF(scrollbg.Left, scrollbg.Bottom + 28));
                     }
                     else if (_mode == "Guided")
                     {

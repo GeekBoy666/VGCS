@@ -4121,6 +4121,7 @@
     <None Include="Resources\VIGA_lOGO.png" />
     <None Include="Resources\600200.png" />
     <None Include="Resources\600201.ico" />
+    <None Include="Resources\navigator.png" />
     <Content Include="Scripts\example7.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

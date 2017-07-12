@@ -72,6 +72,8 @@ namespace MissionPlanner
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.tabControlactions = new System.Windows.Forms.TabControl();
             this.tabActions = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.TXT_TakeOff = new System.Windows.Forms.TextBox();
             this.myButton6 = new MissionPlanner.Controls.MyButton();
             this.myButton5 = new MissionPlanner.Controls.MyButton();
             this.myButton7 = new MissionPlanner.Controls.MyButton();
@@ -429,6 +431,8 @@ namespace MissionPlanner
             // 
             // tabActions
             // 
+            this.tabActions.Controls.Add(this.label23);
+            this.tabActions.Controls.Add(this.TXT_TakeOff);
             this.tabActions.Controls.Add(this.myButton6);
             this.tabActions.Controls.Add(this.myButton5);
             this.tabActions.Controls.Add(this.myButton7);
@@ -451,6 +455,16 @@ namespace MissionPlanner
             this.tabActions.Name = "tabActions";
             this.tabActions.UseVisualStyleBackColor = true;
             this.tabActions.Click += new System.EventHandler(this.tabActions_Click);
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.Name = "label23";
+            // 
+            // TXT_TakeOff
+            // 
+            resources.ApplyResources(this.TXT_TakeOff, "TXT_TakeOff");
+            this.TXT_TakeOff.Name = "TXT_TakeOff";
             // 
             // myButton6
             // 
@@ -1018,7 +1032,6 @@ namespace MissionPlanner
             resources.ApplyResources(this.MenuConnect, "MenuConnect");
             this.MenuConnect.BackColor = System.Drawing.Color.DimGray;
             this.MenuConnect.ForeColor = System.Drawing.Color.Black;
-            this.MenuConnect.Image = global::MissionPlanner.Properties.Resources.disconnect001;
             this.MenuConnect.Margin = new System.Windows.Forms.Padding(0);
             this.MenuConnect.Name = "MenuConnect";
             this.MenuConnect.Click += new System.EventHandler(this.MenuConnect_Click);
@@ -1209,6 +1222,7 @@ namespace MissionPlanner
             this.splitContainer3.ResumeLayout(false);
             this.tabControlactions.ResumeLayout(false);
             this.tabActions.ResumeLayout(false);
+            this.tabActions.PerformLayout();
             this.tabPagePreFlight.ResumeLayout(false);
             this.tabTLogs.ResumeLayout(false);
             this.tableLayoutPaneltlogs.ResumeLayout(false);
@@ -1327,5 +1341,7 @@ namespace MissionPlanner
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox TXT_TakeOff;
     }
 }

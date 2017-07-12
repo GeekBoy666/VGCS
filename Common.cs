@@ -1000,7 +1000,7 @@ union px4_custom_mode {
         const float rad2deg = (float) (180/Math.PI);
         const float deg2rad = (float) (1.0/rad2deg);
 
-        private readonly Bitmap icon = global::MissionPlanner.Properties.Resources.quadicon;
+        private readonly Bitmap icon = global::MissionPlanner.Properties.Resources.navigator;
 
         float heading = 0;
         float cog = -1;

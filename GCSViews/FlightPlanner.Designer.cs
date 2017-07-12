@@ -1530,7 +1530,7 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView Commands;
+        public  System.Windows.Forms.DataGridView Commands;
         private Controls.MyButton BUT_Add;
         private System.Windows.Forms.Label LBL_WPRad;
         private System.Windows.Forms.Label LBL_defalutalt;
@@ -1655,14 +1655,14 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.ToolStripMenuItem cameraOverlapToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Command;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Param1;
+        public System.Windows.Forms.DataGridViewComboBoxColumn Command;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Param1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Param2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Param3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Param4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Alt;
+        public System.Windows.Forms.DataGridViewTextBoxColumn Alt;
         private System.Windows.Forms.DataGridViewTextBoxColumn coordZone;
         private System.Windows.Forms.DataGridViewTextBoxColumn coordEasting;
         private System.Windows.Forms.DataGridViewTextBoxColumn coordNorthing;
