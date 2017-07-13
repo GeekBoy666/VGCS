@@ -114,6 +114,7 @@
   <ItemGroup>
     <Content Include="Resources\arrow.png" />
     <Content Include="Resources\arrowshadow.png" />
+    <None Include="Resources\black.png" />
     <Content Include="Resources\black_small.png" />
     <Content Include="Resources\blue-dot.png" />
     <Content Include="Resources\blue-pushpin.png" />

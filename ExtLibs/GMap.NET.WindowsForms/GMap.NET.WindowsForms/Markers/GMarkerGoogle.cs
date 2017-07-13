@@ -16,6 +16,7 @@ namespace GMap.NET.WindowsForms.Markers
    {
       none = 0,
       arrow,
+      black,
       blue,
       blue_small,
       blue_dot,
@@ -101,7 +102,7 @@ namespace GMap.NET.WindowsForms.Markers
                BitmapShadow = arrowshadow;
             }
             break;
-
+            case GMarkerGoogleType.black:
             case GMarkerGoogleType.blue:
             case GMarkerGoogleType.blue_dot:
             case GMarkerGoogleType.green:

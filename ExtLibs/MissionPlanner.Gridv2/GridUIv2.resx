@@ -135,7 +135,7 @@
     <value>BUT_Accept</value>
   </data>
   <data name="&gt;&gt;BUT_Accept.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6402.24098, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.6402.25472, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;BUT_Accept.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -801,7 +801,7 @@
     <value>map</value>
   </data>
   <data name="&gt;&gt;map.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.myGMAP, MissionPlanner.Controls, Version=1.0.6402.24098, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.myGMAP, MissionPlanner.Controls, Version=1.0.6402.25472, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;map.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1398,7 +1398,7 @@
     <value>quickViewimagecount</value>
   </data>
   <data name="&gt;&gt;quickViewimagecount.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.24098, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.25472, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;quickViewimagecount.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1410,7 +1410,7 @@
     <value>quickViewgroundres</value>
   </data>
   <data name="&gt;&gt;quickViewgroundres.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.24098, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.25472, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;quickViewgroundres.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1422,7 +1422,7 @@
     <value>quickViewflighttime</value>
   </data>
   <data name="&gt;&gt;quickViewflighttime.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.24098, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.25472, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;quickViewflighttime.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1434,7 +1434,7 @@
     <value>quickViewarea</value>
   </data>
   <data name="&gt;&gt;quickViewarea.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.24098, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.25472, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;quickViewarea.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1482,7 +1482,7 @@
     <value>quickViewimagecount</value>
   </data>
   <data name="&gt;&gt;quickViewimagecount.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.24098, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.25472, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;quickViewimagecount.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1506,7 +1506,7 @@
     <value>quickViewgroundres</value>
   </data>
   <data name="&gt;&gt;quickViewgroundres.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.24098, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.25472, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;quickViewgroundres.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1530,7 +1530,7 @@
     <value>quickViewflighttime</value>
   </data>
   <data name="&gt;&gt;quickViewflighttime.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.24098, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.25472, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;quickViewflighttime.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1554,7 +1554,7 @@
     <value>quickViewarea</value>
   </data>
   <data name="&gt;&gt;quickViewarea.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.24098, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.QuickView, MissionPlanner.Controls, Version=1.0.6402.25472, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;quickViewarea.Parent" xml:space="preserve">
     <value>panel1</value>

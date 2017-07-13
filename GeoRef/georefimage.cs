@@ -1615,7 +1615,7 @@ namespace MissionPlanner.GeoRef
                 {
                     myGMAP1.Overlays[0].Markers.Add(
                         new GMarkerGoogle(new PointLatLngAlt(pictureLocation.Value.Lat, pictureLocation.Value.Lon,
-                            pictureLocation.Value.AltAMSL), GMarkerGoogleType.green)
+                            pictureLocation.Value.AltAMSL), GMarkerGoogleType.black)
                         {
                             IsHitTestVisible = true,
                             ToolTipMode = MarkerTooltipMode.OnMouseOver,

@@ -1477,6 +1477,7 @@
             this.MainMap.ShowTileGridLines = false;
             this.toolTip1.SetToolTip(this.MainMap, resources.GetString("MainMap.ToolTip"));
             this.MainMap.Zoom = 0D;
+            this.MainMap.OnPositionChanged += new GMap.NET.PositionChanged(this.MainMap_OnPositionChanged);
             this.MainMap.Paint += new System.Windows.Forms.PaintEventHandler(this.MainMap_Paint);
             // 
             // timer1

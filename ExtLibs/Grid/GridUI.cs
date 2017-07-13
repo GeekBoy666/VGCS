@@ -667,7 +667,7 @@ namespace MissionPlanner
 
                     if (CHK_internals.Checked)
                     {
-                        routesOverlay.Markers.Add(new GMarkerGoogle(item, GMarkerGoogleType.green) { ToolTipText = a.ToString(), ToolTipMode = MarkerTooltipMode.OnMouseOver });
+                        routesOverlay.Markers.Add(new GMarkerGoogle(item, GMarkerGoogleType.black) { ToolTipText = a.ToString(), ToolTipMode = MarkerTooltipMode.OnMouseOver });
                         a++;
 
                         segment.Add(prevpoint);

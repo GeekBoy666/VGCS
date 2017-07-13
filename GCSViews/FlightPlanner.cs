@@ -541,6 +541,9 @@ namespace MissionPlanner.GCSViews
 
             return base.ProcessCmdKey(ref msg, keyData);
         }
+   
+
+
 
         public FlightPlanner()
         {
@@ -1020,7 +1023,7 @@ namespace MissionPlanner.GCSViews
             // not async
             Invoke((MethodInvoker)delegate
             {
-                MainMap.UpdateRouteLocalPosition(route);
+                MainMap.UpdateRouteLocalPosition(fd_route);
             });
         }
         private void updateClearMissionRouteMarkers()
@@ -1031,6 +1034,15 @@ namespace MissionPlanner.GCSViews
                 polygons.Routes.Clear();
                 polygons.Markers.Clear();
                 routes.Markers.Clear();
+            });
+        }
+        private void updateClearRoutes()
+        {
+            // not async
+            Invoke((MethodInvoker)delegate
+            {
+                routes.Routes.Clear();
+                routes.Routes.Add(fd_route);
             });
         }
         private void updateClearRoutesMarkers()
@@ -1143,10 +1155,23 @@ namespace MissionPlanner.GCSViews
             while (FP_threadrun)
             {
 
-               // update vario info
+
+
+                if (!MainV2.comPort.logreadmode)
+                    Thread.Sleep(50); // max is only ever 10 hz but we go a little faster to empty the serial queue
+
+                if (this.IsDisposed)
+                {
+                    FP_threadrun = false;
+                    break;
+                }
+
+                // update vario info
                 Vario.SetValue(MainV2.comPort.MAV.cs.climbrate);
                 // update map
 
+                if (fd_route != null)
+                    fd_route.Dispose();
 
                 if (tracklast.AddSeconds(1.2) < DateTime.Now)
                 {
@@ -5284,49 +5309,49 @@ namespace MissionPlanner.GCSViews
         /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
-            try
-            {
-                if (isMouseDown || CurentRectMarker != null)
-                    return;
+            //try
+            //{
+            //    if (isMouseDown || CurentRectMarker != null)
+            //        return;
 
-                routesoverlay.Markers.Clear();
+            //    routesoverlay.Markers.Clear();
 
-                if (MainV2.comPort.MAV.cs.TrackerLocation != MainV2.comPort.MAV.cs.HomeLocation &&
-                    MainV2.comPort.MAV.cs.TrackerLocation.Lng != 0)
-                {
-                    addpolygonmarker("Tracker Home", MainV2.comPort.MAV.cs.TrackerLocation.Lng,
-                        MainV2.comPort.MAV.cs.TrackerLocation.Lat, (int)MainV2.comPort.MAV.cs.TrackerLocation.Alt,
-                        Color.Blue, routesoverlay);
-                }
+            //    if (MainV2.comPort.MAV.cs.TrackerLocation != MainV2.comPort.MAV.cs.HomeLocation &&
+            //        MainV2.comPort.MAV.cs.TrackerLocation.Lng != 0)
+            //    {
+             //       addpolygonmarker("Tracker Home", MainV2.comPort.MAV.cs.TrackerLocation.Lng,
+            //            MainV2.comPort.MAV.cs.TrackerLocation.Lat, (int)MainV2.comPort.MAV.cs.TrackerLocation.Alt,
+            //            Color.Blue, routesoverlay);
+            //    }
 
-                if (MainV2.comPort.MAV.cs.lat == 0 || MainV2.comPort.MAV.cs.lng == 0)
-                    return;
+            //    if (MainV2.comPort.MAV.cs.lat == 0 || MainV2.comPort.MAV.cs.lng == 0)
+            //        return;
 
-                var marker = Common.getMAVMarker(MainV2.comPort.MAV);
+            //    var marker = Common.getMAVMarker(MainV2.comPort.MAV);
 
-                routesoverlay.Markers.Add(marker);
+            //    routesoverlay.Markers.Add(marker);
 
-                if (MainV2.comPort.MAV.cs.mode.ToLower() == "guided" && MainV2.comPort.MAV.GuidedMode.x != 0)
-                {
-                    addpolygonmarker("Guided Mode", MainV2.comPort.MAV.GuidedMode.y, MainV2.comPort.MAV.GuidedMode.x,
-                        (int)MainV2.comPort.MAV.GuidedMode.z, Color.Blue, routesoverlay);
-                }
+            //    if (MainV2.comPort.MAV.cs.mode.ToLower() == "guided" && MainV2.comPort.MAV.GuidedMode.x != 0)
+            //    {
+            //        addpolygonmarker("Guided Mode", MainV2.comPort.MAV.GuidedMode.y, MainV2.comPort.MAV.GuidedMode.x,
+            //            (int)MainV2.comPort.MAV.GuidedMode.z, Color.Blue, routesoverlay);
+            //    }
 
-                //autopan
-                if (autopan)
-                {
-                    if (route.Points[route.Points.Count - 1].Lat != 0 && (mapupdate.AddSeconds(3) < DateTime.Now))
-                    {
-                        PointLatLng currentloc = new PointLatLng(MainV2.comPort.MAV.cs.lat, MainV2.comPort.MAV.cs.lng);
-                        updateMapPosition(currentloc);
-                        mapupdate = DateTime.Now;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                log.Warn(ex);
-            }
+            //    //autopan
+            //    if (autopan)
+            //    {
+            //        if (route.Points[route.Points.Count - 1].Lat != 0 && (mapupdate.AddSeconds(3) < DateTime.Now))
+            //        {
+            //            PointLatLng currentloc = new PointLatLng(MainV2.comPort.MAV.cs.lat, MainV2.comPort.MAV.cs.lng);
+            //            updateMapPosition(currentloc);
+            //            mapupdate = DateTime.Now;
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    log.Warn(ex);
+            //}
         }
 
         /// <summary>
@@ -5377,7 +5402,7 @@ namespace MissionPlanner.GCSViews
             try
             {
                 PointLatLng point = new PointLatLng(lat, lng);
-                GMarkerGoogle m = new GMarkerGoogle(point, GMarkerGoogleType.green);
+                GMarkerGoogle m = new GMarkerGoogle(point, GMarkerGoogleType.black);
                 m.ToolTipMode = MarkerTooltipMode.Always;
                 m.ToolTipText = tag;
                 m.Tag = tag;
@@ -8477,6 +8502,28 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         {
             if (fd_route != null)
                 fd_route.Points.Clear();
+        }
+
+        private void MainMap_OnPositionChanged(PointLatLng point)
+        {
+            //UpdateOverlayVisibility();
+        }
+        void UpdateOverlayVisibility()
+        {
+            // change overlay visability
+            if (MainMap.ViewArea != null)
+            {
+                var bounds = MainMap.ViewArea;
+                bounds.Inflate(1, 1);
+
+                foreach (var poly in kmlpolygons.Polygons)
+                {
+                    if (bounds.Contains(poly.Points[0]))
+                        poly.IsVisible = true;
+                    else
+                        poly.IsVisible = false;
+                }
+            }
         }
     }
 }
