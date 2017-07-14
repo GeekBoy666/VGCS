@@ -737,7 +737,7 @@ union px4_custom_mode {
                 {
                     txtsize = g.MeasureString(wpno, font);
 
-                    g.DrawString(wpno, font, Brushes.Black, new PointF(0, 0));
+                    g.DrawString(wpno, font, Brushes.Black, new PointF(2, 2));
                 }
                 fontBitmaps[wpno] = temp;
             }
