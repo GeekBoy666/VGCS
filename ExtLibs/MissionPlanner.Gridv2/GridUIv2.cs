@@ -329,7 +329,7 @@ namespace MissionPlanner
 
                     if (chk_internals.Checked)
                     {
-                        layerpolygons.Markers.Add(new GMarkerGoogle(item, GMarkerGoogleType.black) { ToolTipText = a.ToString(), ToolTipMode = MarkerTooltipMode.OnMouseOver });
+                        layerpolygons.Markers.Add(new GMarkerGoogle(item, GMarkerGoogleType.green1) { ToolTipText = a.ToString(), ToolTipMode = MarkerTooltipMode.OnMouseOver });
                         a++;
                     }
                     try
@@ -376,7 +376,7 @@ namespace MissionPlanner
                 {
                     strips++;
                     if (chk_markers.Checked)
-                        layerpolygons.Markers.Add(new GMarkerGoogle(item, GMarkerGoogleType.black) { ToolTipText = a.ToString(), ToolTipMode = MarkerTooltipMode.Always });
+                        layerpolygons.Markers.Add(new GMarkerGoogle(item, GMarkerGoogleType.green1) { ToolTipText = a.ToString(), ToolTipMode = MarkerTooltipMode.Always });
 
                     a++;
                 }

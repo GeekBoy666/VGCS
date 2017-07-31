@@ -126,6 +126,7 @@
     <Content Include="Resources\gray_small.png" />
     <Content Include="Resources\green-dot.png" />
     <Content Include="Resources\green.png" />
+    <None Include="Resources\green1.png" />
     <Content Include="Resources\green_small.png" />
     <Content Include="Resources\grn-pushpin.png" />
     <Content Include="Resources\lightblue.png" />

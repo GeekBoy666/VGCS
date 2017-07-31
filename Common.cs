@@ -724,7 +724,7 @@ union px4_custom_mode {
         static Font font;
 
         public GMapMarkerWP(PointLatLng p, string wpno)
-            : base(p, GMarkerGoogleType.black)
+            : base(p, GMarkerGoogleType.green1)
         {
             this.wpno = wpno;
             if (font == null)

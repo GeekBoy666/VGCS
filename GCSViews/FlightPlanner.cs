@@ -51,6 +51,7 @@ namespace MissionPlanner.GCSViews
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         public int selectedrow;
         public bool quickadd;
+        public bool ClearPoint = false;
         bool isonline = true;
         bool sethome;
         bool polygongridmode;
@@ -61,7 +62,6 @@ namespace MissionPlanner.GCSViews
         bool grid;
         bool playingLog;
         public static FlightPlanner instance;
-
         public bool autopan { get; set; }
 
         public List<PointLatLngAlt> pointlist = new List<PointLatLngAlt>(); // used to calc distance
@@ -1219,7 +1219,7 @@ namespace MissionPlanner.GCSViews
                     updateRoutePosition();
 
                     // update programed wp course
-                    if (waypoints.AddSeconds(5) < DateTime.Now)
+                    if ((waypoints.AddSeconds(5) < DateTime.Now)&& (ClearPoint==true))
                     {
                         //Console.WriteLine("Doing FD WP's");
                         updateClearMissionRouteMarkers();
@@ -1229,7 +1229,7 @@ namespace MissionPlanner.GCSViews
                         //distanceBar1.ClearWPDist();
                         MAVLink.mavlink_mission_item_t lastplla = new MAVLink.mavlink_mission_item_t();
                         MAVLink.mavlink_mission_item_t home = new MAVLink.mavlink_mission_item_t();
-
+                       
                         foreach (MAVLink.mavlink_mission_item_t plla in MainV2.comPort.MAV.wps.Values)
                         {
                             if (plla.x == 0 || plla.y == 0)
@@ -1275,7 +1275,7 @@ namespace MissionPlanner.GCSViews
                             catch
                             {
                             }
-
+                            
                             addpolygonmarker(tag, plla.y, plla.x, (int)plla.z, Color.White, polygons);
                         }
 
@@ -5118,6 +5118,7 @@ namespace MissionPlanner.GCSViews
 
         private void clearMissionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ClearPoint = false;
             quickadd = true;
 
             // mono fix
@@ -5402,7 +5403,7 @@ namespace MissionPlanner.GCSViews
             try
             {
                 PointLatLng point = new PointLatLng(lat, lng);
-                GMarkerGoogle m = new GMarkerGoogle(point, GMarkerGoogleType.black);
+                GMarkerGoogle m = new GMarkerGoogle(point, GMarkerGoogleType.green1);
                 m.ToolTipMode = MarkerTooltipMode.Always;
                 m.ToolTipText = tag;
                 m.Tag = tag;

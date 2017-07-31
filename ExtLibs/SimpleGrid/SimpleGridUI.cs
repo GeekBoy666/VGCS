@@ -173,7 +173,7 @@ namespace MissionPlanner.SimpleGrid
                 {
                     if (CHK_internals.Checked)
                     {
-                        layerpolygons.Markers.Add(new GMarkerGoogle(item, GMarkerGoogleType.black) { ToolTipText = a.ToString(), ToolTipMode = MarkerTooltipMode.Always });
+                        layerpolygons.Markers.Add(new GMarkerGoogle(item, GMarkerGoogleType.green1) { ToolTipText = a.ToString(), ToolTipMode = MarkerTooltipMode.Always });
                         a++;
                     }
                 }
@@ -183,7 +183,7 @@ namespace MissionPlanner.SimpleGrid
                     {
                         strips++;
                         if (chk_markers.Checked)
-                            layerpolygons.Markers.Add(new GMarkerGoogle(item, GMarkerGoogleType.black)
+                            layerpolygons.Markers.Add(new GMarkerGoogle(item, GMarkerGoogleType.green1)
                             {
                                 ToolTipText = a.ToString(),
                                 ToolTipMode = MarkerTooltipMode.Always

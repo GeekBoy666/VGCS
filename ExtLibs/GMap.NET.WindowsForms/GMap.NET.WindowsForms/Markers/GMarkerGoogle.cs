@@ -24,6 +24,7 @@ namespace GMap.NET.WindowsForms.Markers
       brown_small,
       gray_small,
       green,
+      green1,
       green_small,
       green_dot,
       green_pushpin,
@@ -106,6 +107,7 @@ namespace GMap.NET.WindowsForms.Markers
             case GMarkerGoogleType.blue:
             case GMarkerGoogleType.blue_dot:
             case GMarkerGoogleType.green:
+            case GMarkerGoogleType.green1:
             case GMarkerGoogleType.green_dot:
             case GMarkerGoogleType.yellow:
             case GMarkerGoogleType.yellow_dot:

@@ -4835,6 +4835,7 @@ namespace MissionPlanner
 
         private void BUT_loadtelem_Click(object sender, EventArgs e)
         {
+
             LBL_logfn.Text = "";
 
             if (MainV2.comPort.logplaybackfile != null)
@@ -4859,6 +4860,7 @@ namespace MissionPlanner
                 string file = fd.FileName;
                 LoadLogFile(file);
             }
+           GCSViews.FlightPlanner.instance.ClearPoint = true;
         }
         public void LoadLogFile(string file)
         {
