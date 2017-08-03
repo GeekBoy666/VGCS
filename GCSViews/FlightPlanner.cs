@@ -8526,5 +8526,32 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
             }
         }
+
+        private void panelMap_MouseMove(object sender, MouseEventArgs e)
+        {
+
+                
+        }
+
+        private void MainMap_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            Point ms = Control.MousePosition;
+            if (ms.X > panelMap.Width - tableLayoutPanel1.Width)
+            {
+                tableLayoutPanel1.Visible = true;
+            }
+            else
+            {
+                tableLayoutPanel1.Visible = false;
+            }
+            if (ms.Y < tableLayoutPanel2.Height)
+            {
+                tableLayoutPanel2.Visible = true;
+            }
+            else
+            {
+                tableLayoutPanel2.Visible = false;
+            }
+        }
     }
 }
